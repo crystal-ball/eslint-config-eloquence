@@ -1,0 +1,20 @@
+{
+  "name": "@crystal-ball/eslint-config-eloquence",
+  "version": "1.0.0",
+  "description": "Organization linting rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}
