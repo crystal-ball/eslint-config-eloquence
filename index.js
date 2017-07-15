@@ -122,7 +122,6 @@ module.exports = {
     'react/jsx-no-target-blank': 2, // Require rel='noreferrer noopener for anchors
     'react/jsx-no-undef': 2,
     'react/jsx-pascal-case': 2, // Pascal case component names
-    'react/jsx-space-before-closing': [2, 'always'], // Require space before closing slash
     'react/jsx-tag-spacing': [2, {
       closingSlash: 'never',
       beforeSelfClosing: 'always',
