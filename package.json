@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "eslint",
-    "eslintconfig"
-  ],
+  "keywords": ["eslint", "eslintconfig"],
   "author": "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)",
   "license": "ISC",
   "dependencies": {

@@ -41,11 +41,11 @@ module.exports = {
     'no-unexpected-multiline': 2,
 
     // Best Practices Rules
-    'curly': 2,
+    curly: 2,
     'default-case': 2,
     'dot-notation': 2,
     'dot-location': [2, 'property'],
-    'eqeqeq': 2,
+    eqeqeq: 2,
     'no-caller': 2,
     'no-div-regex': 2,
     'no-eq-null': 2,
@@ -66,25 +66,31 @@ module.exports = {
     'no-script-url': 2,
     'no-unused-expressions': 0,
     'no-with': 2,
-    'radix': 2,
+    radix: 2,
     'wrap-iife': [2, 'inside'],
-    'yoda': [2, 'never'],
-    'strict': 0,
+    yoda: [2, 'never'],
+    strict: 0,
 
     // Variable Rules
     'no-delete-var': 2,
     'no-shadow-restricted-names': 2,
-    'no-shadow': [2, {
-      'builtinGlobals': false,
-      'hoist': 'functions'
-    }],
+    'no-shadow': [
+      2,
+      {
+        builtinGlobals: false,
+        hoist: 'functions'
+      }
+    ],
     'no-undef-init': 2,
     'no-undef': 2,
     'no-undefined': 0,
-    'no-unused-vars': [2, {
-      'vars': 'all',
-      'args': 'none'
-    }],
+    'no-unused-vars': [
+      2,
+      {
+        vars: 'all',
+        args: 'none'
+      }
+    ],
 
     // Node Rules
     'callback-return': [2, ['callback', 'cb', 'next']],
@@ -100,19 +106,19 @@ module.exports = {
     'no-multi-spaces': 1, // Aligning variable declarations will trip this
     'no-trailing-spaces': 1,
     'object-curly-spacing': [1, 'always'],
-    'quotes': [1, 'single'],
-    'jsx-quotes': [1, 'prefer-single'],
-    'semi': [1, 'always'],
+    quotes: [1, 'single'],
+    'jsx-quotes': [1, 'prefer-double'], // Use Prettier!
+    semi: [1, 'always'],
 
     // ========================================================
     // React Rules
     // ========================================================
     'react/jsx-boolean-value': [2, 'never'], // No explicit true values
     'react/jsx-closing-bracket-location': [2, 'line-aligned'], // Closing multiline tag match opening tag
-    'react/jsx-curly-spacing': [2, 'never', { 'allowMultiline': true }], // no spacing around prop curlies
+    'react/jsx-curly-spacing': [2, 'never', { allowMultiline: true }], // no spacing around prop curlies
     'react/jsx-equals-spacing': [2, 'never'], // no spacing around props equals
     'react/jsx-first-prop-new-line': [2, 'multiline'], // first prop must be on newline when multiline
-    'react/jsx-indent': [2, 2], // 2 spaces for newlines
+    'react/jsx-indent': 0, // Use Prettier!
     'react/jsx-indent-props': [2, 2], // 2 spaces for props
     'react/jsx-key': 2, // No missing keys for iterable elements
     'react/jsx-no-bind': 2, // Use constructor or new components to handle binding methods
@@ -122,18 +128,24 @@ module.exports = {
     'react/jsx-no-target-blank': 2, // Require rel='noreferrer noopener for anchors
     'react/jsx-no-undef': 2,
     'react/jsx-pascal-case': 2, // Pascal case component names
-    'react/jsx-tag-spacing': [2, {
-      closingSlash: 'never',
-      beforeSelfClosing: 'always',
-      afterOpening: 'never'
-    }],
+    'react/jsx-tag-spacing': [
+      2,
+      {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never'
+      }
+    ],
     'react/jsx-uses-react': 2, // Mark React as used when JSX is used
     'react/jsx-uses-vars': 2, // Find variables used in JSX and mark
-    'react/jsx-wrap-multilines': [2, {
-      declaration: true,
-      assignment: true,
-      return: true
-    }],
+    'react/jsx-wrap-multilines': [
+      2,
+      {
+        declaration: true,
+        assignment: true,
+        return: true
+      }
+    ],
     'react/no-array-index-key': 2, // Don't use index as key
     'react/no-children-prop': 2, // Don't pass children as props
     'react/no-danger-with-children': 2, // Don't use dangerous html && children
@@ -147,11 +159,13 @@ module.exports = {
     'react/no-string-refs': 2,
     'react/no-unescaped-entities': 2,
     'react/no-unknown-property': 2,
-    'react/no-unused-prop-types': [2, {
-      customValidators: [
-      ],
-      skipShapeProps: true,
-    }], // Require validated props to be used
+    'react/no-unused-prop-types': [
+      2,
+      {
+        customValidators: [],
+        skipShapeProps: true
+      }
+    ], // Require validated props to be used
     'react/prefer-stateless-function': 2,
     'react/prop-types': 2,
     'react/react-in-jsx-scope': 2,
@@ -159,17 +173,20 @@ module.exports = {
     'react/self-closing-comp': 2,
     // Enforce component methods order
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-    'react/sort-comp': ['error', {
-      order: [
-        'static-methods',
-        'lifecycle',
-        'everything-else',
-        '/^on.+$/',
-        '/^render.+$/',
-        'render'
-      ],
-    }],
+    'react/sort-comp': [
+      'error',
+      {
+        order: [
+          'static-methods',
+          'lifecycle',
+          'everything-else',
+          '/^on.+$/',
+          '/^render.+$/',
+          'render'
+        ]
+      }
+    ],
     'react/sort-prop-types': 2, // Alphabetize prop types
-    'react/style-prop-object': 2, // Use an object for styles
+    'react/style-prop-object': 2 // Use an object for styles
   }
 };
