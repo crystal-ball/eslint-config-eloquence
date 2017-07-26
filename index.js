@@ -12,12 +12,6 @@ const config = {
   env: {
     browser: true,
     node: true
-  },
-
-  rules: {
-    // Disable Airbnb rules
-    'no-param-reassign': 0,
-    'no-continue': 0
   }
 };
 
