@@ -1,6 +1,6 @@
 {
   "name": "@crystal-ball/eslint-config-eloquence",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Organization linting rules",
   "main": "index.js",
   "scripts": {
