@@ -12,7 +12,8 @@ const config = {
   env: {
     browser: true,
     node: true
-  }
+  },
+  rules: {}
 };
 
 // Lint for prettier only in TEST envs
