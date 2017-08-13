@@ -13,12 +13,18 @@ const config = {
     browser: true,
     node: true
   },
-  rules: {}
+  rules: {
+    'react/jsx-indent': 0, // Prettier
+    'react/jsx-wrap-multilines': 0 // Prettier
+  }
 };
 
 // Lint for prettier only in TEST envs
 if (process.env.NODE_ENV === 'TEST') {
-  config.rules['prettier/prettier'] = ['error', { singleQuote: true, printWidth: 84 }];
+  config.rules['prettier/prettier'] = [
+    'error',
+    { singleQuote: true, printWidth: 84 }
+  ];
 }
 
 module.exports = config;
