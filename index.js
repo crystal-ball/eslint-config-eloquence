@@ -14,7 +14,9 @@ const config = {
     node: true
   },
   rules: {
+    'react/jsx-closing-bracket-location': 0, // Prettier
     'react/jsx-indent': 0, // Prettier
+    'react/jsx-indent-props': 0, // Prettier
     'react/jsx-wrap-multilines': 0 // Prettier
   }
 };
