@@ -14,10 +14,15 @@ const config = {
     node: true
   },
   rules: {
-    'react/jsx-closing-bracket-location': 0, // Prettier
-    'react/jsx-indent': 0, // Prettier
-    'react/jsx-indent-props': 0, // Prettier
-    'react/jsx-wrap-multilines': 0 // Prettier
+    // Allow use of named functions before declared, they are hoisted and this makes
+    // it possible to declare propTypes at top of component files
+    'no-use-before-define': [1, { functions: false }],
+
+    // Turn off JSX formatting rules that conflict with auto formatting done by Prettier
+    'react/jsx-closing-bracket-location': 0,
+    'react/jsx-indent': 0,
+    'react/jsx-indent-props': 0,
+    'react/jsx-wrap-multilines': 0
   }
 };
 
