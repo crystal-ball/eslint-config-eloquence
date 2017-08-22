@@ -11,3 +11,9 @@ Airbnb + Prettier + Eslint = :heart:
 module.exports = {
   extends: '@crystal-ball/eloquence'
 }
+```
+
+## JavaScript and TypeScript
+Linting TypeScript requires using the latest package version. For projects that are
+not using TypeScript, either override the parser config in your consuming
+`.eslintrc.js` or use version `^2.3.0`.
