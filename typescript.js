@@ -1,3 +1,10 @@
+/**
+ * TypeScript Configs:
+ * Extends Airbnb and uses Prettier for all formatting related linting.
+ * TypeScript parser is specified for ESLint and Prettier, rules that are better
+ * handled by TS compiler are turned off.
+ */
+
 const config = {
   extends: ['airbnb', 'prettier'],
   parserOptions: {
@@ -36,16 +43,16 @@ const config = {
     'no-unused-vars': 'off',
     'no-undef': 'off',
 
+    // Turn off eslint-plugin-import rules handled by TypeScript compiler
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'import/no-duplicates': 'off',
+
     // Turn off JSX formatting rules that conflict with auto formatting done by Prettier
     'react/jsx-closing-bracket-location': 'off',
     'react/jsx-indent': 'off',
     'react/jsx-indent-props': 'off',
-    'react/jsx-wrap-multilines': 'off',
-
-    // Turn off eslint-plugin-import rules handled by TypeScript compiler
-    'import/no-unresolved': 'off',
-    'import/extensions': 'off',
-    'import/no-duplicates': 'off'
+    'react/jsx-wrap-multilines': 'off'
   }
 }
 

@@ -1,19 +1,25 @@
 # Crystal Ball ESLint Configs
-<div><em>Write eloquent code with ease!</em></div>
+
 <div>
+
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 </div>
 
-Airbnb + Prettier + Eslint = :heart:
+Eslint + Airbnb + Prettier = :heart_eyes:
+
+
+## Usage
+The package exports separate `typescript.js` and `javascript.js`. Extend the
+appropriate config for your project:
 
 ```javascript
 // .eslintrc.js
 module.exports = {
-  extends: '@crystal-ball/eloquence'
+  extends: '@crystal-ball/eloquence/typescript'
 }
 ```
 
-## JavaScript and TypeScript
-Linting TypeScript requires using the latest package version. For projects that are
-not using TypeScript, either override the parser config in your consuming
-`.eslintrc.js` or use version `^2.3.0`.
+## Dependencies
+All dependencies required for running ESLint will be installed as dependencies of
+this package. This ensures that there are no conflicting versions of ESLint in a
+consuming project's dependencies.
