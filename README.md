@@ -1,9 +1,9 @@
+<div align="center">
+<img width="500" src="https://cdn.rawgit.com/crystal-ball/eslint-config-eloquence/master/assets/logos.png" alt="Extends Airbnb code quality rules with Prettier.js formatting">
+</div>
+
 # Crystal Ball ESLint Configs
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
-<div align="center">
-<img width="800" height="415" src="https://cdn.rawgit.com/crystal-ball/eslint-config-eloquence/master/assets/logos.png" alt="Extends Airbnb code quality rules with Prettier.js formatting">
-</div>
 
 ## Usage
 Extending this package's config will handle setting the base parserOptions, parser,
