@@ -2,9 +2,8 @@
  * JavaScript Configs:
  * Extends Airbnb and uses Prettier for all formatting related linting.
  */
-
 const config = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   parserOptions: {
     ecmaVersion: 8,
     sourceType: 'module',
@@ -21,17 +20,12 @@ const config = {
   rules: {
     // Allow use of named functions before declared, they are hoisted and this makes
     // it possible to declare propTypes at top of component files
-    'no-use-before-define': [1, { functions: false }],
-
-    // Turn off JSX formatting rules that conflict with auto formatting done by Prettier
-    'react/jsx-closing-bracket-location': 0,
-    'react/jsx-indent': 0,
-    'react/jsx-indent-props': 0,
-    'react/jsx-wrap-multilines': 0
+    'no-use-before-define': [1, { functions: false }]
   }
 }
 
 // Lint for prettier only in TEST envs
+// Watch https://github.com/prettier/eslint-plugin-prettier/issues/46 for .prettierrc
 if (process.env.NODE_ENV === 'TEST') {
   config.rules['prettier/prettier'] = [
     'error',
