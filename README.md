@@ -5,15 +5,32 @@
 # Crystal Ball ESLint Configs
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+## Installing:
+Add package as a dev dependency to your project:
+```sh
+npm i eslint-config-healthsparq -D
+```
+
+If you are using the webpack configs, install the webpack resolver as well:
+```sh
+npm i eslint-import-resolver-webpack -D
+```
+
 ## Usage
 Extending this package's config will handle setting the base parserOptions, parser,
-plugins and env:
+plugins and env. There are seperate configs for Node projects and Webpack projects
+to handle turning on/off features like JSX, webpack resolving, `.mjs` file
+extensions, etc. The configs are `node` and `webpack` and can be extended like so:
 
+#### Webpack Project
 ```javascript
 // .eslintrc.js
-module.exports = {
-  extends: '@crystal-ball/eloquence'
-}
+module.exports = { extends: '@crystal-ball/eloquence/webpack' }
+```
+#### Node Project
+```javascript
+// .eslintrc.js
+module.exports = { extends: '@crystal-ball/eloquence/node' }
 ```
 
 #### Overriden Rules
