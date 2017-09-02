@@ -4,9 +4,8 @@
  * TypeScript parser is specified for ESLint and Prettier, rules that are better
  * handled by TS compiler are turned off.
  */
-
 const config = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   parserOptions: {
     ecmaVersion: 8,
     sourceType: 'module',
@@ -38,6 +37,8 @@ const config = {
     // Allow use of named functions before declared, they are hoisted and this makes
     // it possible to declare propTypes at top of component files
     'no-use-before-define': ['error', { functions: false }],
+    // Allow console logs in development, and upgrade them to error in test
+    'no-console': 'off',
 
     // Turn off ESLint rules handled by TypeScript compiler
     'no-unused-vars': 'off',
@@ -46,22 +47,19 @@ const config = {
     // Turn off eslint-plugin-import rules handled by TypeScript compiler
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
-    'import/no-duplicates': 'off',
-
-    // Turn off JSX formatting rules that conflict with auto formatting done by Prettier
-    'react/jsx-closing-bracket-location': 'off',
-    'react/jsx-indent': 'off',
-    'react/jsx-indent-props': 'off',
-    'react/jsx-wrap-multilines': 'off'
+    'import/no-duplicates': 'off'
   }
 }
 
 // Lint for prettier only in TEST envs
-if (process.env.NODE_ENV === 'TEST') {
-  config.rules['prettier/prettier'] = [
-    'error',
-    { singleQuote: true, printWidth: 84, semi: false, parser: 'typescript' }
-  ]
+if (process.env.NODE_ENV === 'test') {
+  Object.assign(config.rules, {
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, printWidth: 84, semi: false }
+    ],
+    'no-console': 'error'
+  })
 }
 
 module.exports = config
