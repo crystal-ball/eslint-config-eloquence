@@ -11,21 +11,21 @@ Add package as a dev dependency to your project:
 npm i eslint-config-healthsparq -D
 ```
 
-If you are using the webpack configs, install the webpack resolver as well:
+If you are using the web configs, install the webpack resolver as well:
 ```sh
 npm i eslint-import-resolver-webpack -D
 ```
 
 ## Usage
 Extending this package's config will handle setting the base parserOptions, parser,
-plugins and env. There are seperate configs for Node projects and Webpack projects
+plugins and env. There are seperate configs for Node projects and web projects
 to handle turning on/off features like JSX, webpack resolving, `.mjs` file
-extensions, etc. The configs are `node` and `webpack` and can be extended like so:
+extensions, etc. The configs are `node` and `web` and can be extended like so:
 
 #### Webpack Project
 ```javascript
 // .eslintrc.js
-module.exports = { extends: '@crystal-ball/eloquence/webpack' }
+module.exports = { extends: '@crystal-ball/eloquence/web' }
 ```
 #### Node Project
 ```javascript

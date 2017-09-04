@@ -1,5 +1,5 @@
 /**
- * Client Configs:
+ * Web Client/Frontend Configs:
  * Extends Airbnb and uses Prettier for all formatting related linting. Configures
  * Webpack as resolver, enables jsx.
  */
