@@ -1,12 +1,12 @@
 /**
- * Web Client/Frontend Configs:
- * Extends Airbnb and uses Prettier for all formatting related linting. Configures
- * Webpack as resolver, enables jsx.
+ * ## Web Client/Frontend
+ * Adds prettier/react rules and ecmaFeatures for using JSX. Sets the resolver to
+ * Webpack for the import plugin.
  */
-const config = {
-  extends: [require.resolve('./index.js'), 'prettier/react'], // Add react formatting
+module.exports = {
+  extends: [require.resolve('./index.js'), 'prettier/react'], // React formatting
   parserOptions: {
-    ecmaFeatures: { jsx: true } // Enable JSX
+    ecmaFeatures: { jsx: true }
   },
   env: {
     browser: true,
@@ -22,5 +22,3 @@ const config = {
     'no-use-before-define': ['error', { functions: false }]
   }
 }
-
-module.exports = config

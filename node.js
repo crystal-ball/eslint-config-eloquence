@@ -1,9 +1,10 @@
 /**
- * Node Configs:
- * Projects should use @std/esm for ESModules in Node projects today. Node extend
- * sets the resolver to Node with config for .mjs files.
+ * ## Node
+ * Projects should use @std/esm for ESModules in Node projects today. Config sets
+ * resolver to parse any js/mjs/json file and updates extension requirements to
+ * exclude .mjs.
  */
-const config = {
+module.exports = {
   extends: [require.resolve('./index.js')],
   parserOptions: {},
   settings: {
@@ -21,5 +22,3 @@ const config = {
     'import/extensions': ['error', 'always', { js: 'never', mjs: 'never' }]
   }
 }
-
-module.exports = config
