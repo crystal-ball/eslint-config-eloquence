@@ -10,14 +10,14 @@
   "author": "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)",
   "license": "ISC",
   "dependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.5.0",
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.7.0",
     "eslint-config-airbnb": "15.1.0",
-    "eslint-config-prettier": "^2.3.0",
+    "eslint-config-prettier": "^2.5.0",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "7.3.0",
-    "prettier": "^1.6.1"
+    "prettier": "^1.7.0"
   }
 }
