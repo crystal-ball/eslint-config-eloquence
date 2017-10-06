@@ -6,15 +6,19 @@
 module.exports = {
   extends: [require.resolve('./index.js'), 'prettier/react'], // React formatting
   parserOptions: {
-    ecmaFeatures: { jsx: true }
+    ecmaFeatures: { jsx: true },
   },
   env: {
     browser: true,
-    node: false
+    node: false,
+  },
+  globals: {
+    // Allows accessing process.env.NODE_ENV
+    process: false,
   },
   settings: {
     // Use webpack resolver for resolving file extensions and file paths
-    'import/resolver': 'webpack'
+    'import/resolver': 'webpack',
   },
   rules: {
     // Allow use of named functions before declared, they are hoisted and this makes
@@ -22,6 +26,6 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false }],
     // Class ordering currently doesn't support class property syntax, which is 🙅
     // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
-    'react/sort-comp': 'off'
-  }
+    'react/sort-comp': 'off',
+  },
 }

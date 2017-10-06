@@ -11,7 +11,7 @@ const config = {
   parserOptions: {
     ecmaVersion: 8,
     // ES Modules. Everywhere. 🎉🎉🎉
-    sourceType: 'module'
+    sourceType: 'module',
   },
   parser: 'babel-eslint', // Required for experimental features like object rest spread
   plugins: ['prettier'],
@@ -19,8 +19,8 @@ const config = {
   env: { jest: true },
   rules: {
     // Allow console logs in development, and upgrade them to error in test
-    'no-console': 'off'
-  }
+    'no-console': 'off',
+  },
 }
 
 // Set of rules that are only checked in `test` environment, namely formatting
@@ -30,9 +30,9 @@ if (process.env.NODE_ENV === 'test') {
   Object.assign(config.rules, {
     'prettier/prettier': [
       'error',
-      { singleQuote: true, printWidth: 84, semi: false }
+      { singleQuote: true, printWidth: 84, semi: false },
     ],
-    'no-console': 'error'
+    'no-console': 'error',
   })
 }
 

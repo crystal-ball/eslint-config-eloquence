@@ -10,15 +10,15 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.mjs', '.json']
-      }
-    }
+        extensions: ['.js', '.mjs', '.json'],
+      },
+    },
   },
   env: {
     browser: false,
-    node: true
+    node: true,
   },
   rules: {
-    'import/extensions': ['error', 'always', { js: 'never', mjs: 'never' }]
-  }
+    'import/extensions': ['error', 'always', { js: 'never', mjs: 'never' }],
+  },
 }

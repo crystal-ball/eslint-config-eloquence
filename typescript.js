@@ -10,8 +10,8 @@ const config = {
     ecmaVersion: 8,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   parser: 'typescript-eslint-parser',
   plugins: ['prettier'],
@@ -31,7 +31,7 @@ const config = {
   // },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   rules: {
     // Allow use of named functions before declared, they are hoisted and this makes
@@ -47,8 +47,8 @@ const config = {
     // Turn off eslint-plugin-import rules handled by TypeScript compiler
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
-    'import/no-duplicates': 'off'
-  }
+    'import/no-duplicates': 'off',
+  },
 }
 
 // Lint for prettier only in TEST envs
@@ -56,9 +56,9 @@ if (process.env.NODE_ENV === 'test') {
   Object.assign(config.rules, {
     'prettier/prettier': [
       'error',
-      { singleQuote: true, printWidth: 84, semi: false }
+      { singleQuote: true, printWidth: 84, semi: false },
     ],
-    'no-console': 'error'
+    'no-console': 'error',
   })
 }
 
