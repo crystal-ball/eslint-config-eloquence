@@ -6,10 +6,12 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Installing:
-Add package as a dev dependency to your project:
+Add the package and Prettier as a dev dependencies to your project:
 ```sh
-npm i eslint-config-healthsparq -D
+npm i eslint-config-healthsparq prettier -D
 ```
+_We recommend adding Prettier as a project dependency. (Some editors will only use
+Prettier as a dependency if it is in the `package.json`)_
 
 If you are using the web configs, install the webpack resolver as well:
 ```sh
@@ -65,7 +67,6 @@ consuming project's dependencies. Installed dependencies include:
 - eslint-plugin-jsx-a11y
 - eslint-plugin-prettier
 - eslint-plugin-react
-- prettier
 
 ## TypeScript
 Linting for TypeScript is an opt-in. First, add the ESLint TS parser:
