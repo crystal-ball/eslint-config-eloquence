@@ -18,6 +18,9 @@ If you are using the web configs, install the webpack resolver as well:
 npm i eslint-import-resolver-webpack -D
 ```
 
+#### Flow
+Static typing using flow is supported through the `eslint-plugin-import` package.
+
 ## Usage
 Extending this package's config will handle setting the base parserOptions, parser,
 plugins and env. There are seperate configs for Node projects and web projects
@@ -59,10 +62,11 @@ is helpful when evaluating some new component.
 All dependencies required for running ESLint will be installed as dependencies of
 this package. This ensures that there are no conflicting versions of ESLint in a
 consuming project's dependencies. Installed dependencies include:
-- babel-eslint
 - eslint
+- babel-eslint
 - eslint-config-airbnb
 - eslint-config-prettier
+- eslint-plugin-flowtype
 - eslint-plugin-import
 - eslint-plugin-jsx-a11y
 - eslint-plugin-prettier
