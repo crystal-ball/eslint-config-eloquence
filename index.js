@@ -28,15 +28,11 @@ const config = {
   },
 }
 
-// Set of rules that are only checked in `test` environment, namely formatting
-// and console logs
-// Watch https://github.com/prettier/eslint-plugin-prettier/issues/46 for .prettierrc
+// Set of rules that are only checked in `test` environment. This allows relaxed
+// linting for development, (eg formatting and console.logs)
 if (process.env.NODE_ENV === 'test') {
   Object.assign(config.rules, {
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, printWidth: 84, semi: false },
-    ],
+    'prettier/prettier': 'error',
     'no-console': 'error',
   })
 }

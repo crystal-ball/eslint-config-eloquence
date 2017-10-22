@@ -21,9 +21,6 @@ module.exports = {
     'import/resolver': 'webpack',
   },
   rules: {
-    // Allow use of named functions before declared, they are hoisted and this makes
-    // it possible to declare propTypes at top of component files
-    'no-use-before-define': ['error', { functions: false }],
     // Class ordering currently doesn't support class property syntax, which is 🙅
     // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
     'react/sort-comp': 'off',

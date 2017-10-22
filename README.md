@@ -6,12 +6,12 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Installing:
-Add the package and Prettier as a dev dependencies to your project:
+Add the package and Prettier as dev dependencies to your project:
 ```sh
 npm i eslint-config-healthsparq prettier -D
 ```
-_We recommend adding Prettier as a project dependency. (Some editors will only use
-Prettier as a dependency if it is in the `package.json`)_
+_We recommend adding Prettier as an explicit project dependency because some editors
+will only use Prettier as a dependency if it is in the `package.json`_
 
 If you are using the web configs, install the webpack resolver as well:
 ```sh
@@ -22,10 +22,17 @@ npm i eslint-import-resolver-webpack -D
 Static typing using flow is supported through the `eslint-plugin-import` package.
 
 ## Usage
-Extending this package's config will handle setting the base parserOptions, parser,
-plugins and env. There are seperate configs for Node projects and web projects
-to handle turning on/off features like JSX, webpack resolving, `.mjs` file
-extensions, etc. The configs are `node` and `web` and can be extended like so:
+Extending this package's config will set the default:
+
+- `parserOptions`
+- `parser`
+- `env`
+- `plugins`
+- `rules`
+
+There are seperate configs for Node projects and web projects to handle turning
+on/off features like JSX, webpack resolving, `.mjs` file extensions, etc. The
+configs are `node` and `web` and can be extended like so:
 
 #### Webpack Project
 ```javascript
@@ -37,26 +44,6 @@ module.exports = { extends: '@crystal-ball/eloquence/web' }
 // .eslintrc.js
 module.exports = { extends: '@crystal-ball/eloquence/node' }
 ```
-
-#### Overriden Rules
-The only Airbnb code quality rule that is overriden is setting
-[no-use-before-define](https://eslint.org/docs/rules/no-use-before-define) to
-`{ functions: false }`. This allows propTypes of
-stateless functional components to be decalred before the component defintion using
-a function declarartion:
-
-```javascript
-Radical.propTypes = {
-  name: string.isRequired
-}
-
-export default function Radical({ name }) {
- return <h1>{name} is RADICAL!</h1>
-}
-```
-
-This lets us always declare our prop types before the component definition, which
-is helpful when evaluating some new component.
 
 #### Dependencies
 All dependencies required for running ESLint will be installed as dependencies of
@@ -71,19 +58,3 @@ consuming project's dependencies. Installed dependencies include:
 - eslint-plugin-jsx-a11y
 - eslint-plugin-prettier
 - eslint-plugin-react
-
-## TypeScript
-Linting for TypeScript is an opt-in. First, add the ESLint TS parser:
-
-```shell
-npm i typescript-eslint-parser
-```
-
-Then extend the TyepScript configuration:
-
-```javascript
-// .eslintrc.js
-module.exports = {
-  extends: '@crystal-ball/eloquence/typescript'
-}
-```
