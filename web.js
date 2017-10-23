@@ -24,5 +24,16 @@ module.exports = {
     // Class ordering currently doesn't support class property syntax, which is 🙅
     // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
     'react/sort-comp': 'off',
+
+    // Ensures anchor tags are valid, but Airbnb added the <Link> component without
+    // also including the `to` prop that configures the href 😑
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to'], // ADDITION FOR REACT ROUTER LINK PROP
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
   },
 }

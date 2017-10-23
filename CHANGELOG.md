@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [6.0.1] - 2017-10-23
+### Fixed
+- Added `specialLink` value `to` to `jsx-a11y/anchor-is-valid` so that React Router
+  `<Link/>` components validate correctly.
+
 ## [6.0.0] - 2017-10-22
 v6 updates the linting configurations to match the convention for typing in general
 and typing for React component props specifically.
