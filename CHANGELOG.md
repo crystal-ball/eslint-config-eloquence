@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [6.1.0] - 2017-11-17
+### Added
+- Warnings for low importance, tedious rules are now able to be downgraded during
+  normal development and linted as errors in test. This makes hacking easier 🎉
+  while still maintaining quality in tests.
+
+### Changed
+- Updated non Airbnb deps to latest.
+
 ## [6.0.1] - 2017-10-23
 ### Fixed
 - Added `specialLink` value `to` to `jsx-a11y/anchor-is-valid` so that React Router
