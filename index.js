@@ -18,7 +18,7 @@ const testRuleSet = {
 // Create dev rule set with warning linter levels
 const devRuleSet = {}
 Object.keys(testRuleSet).forEach(key => {
-  let rule = [...testRuleSet[key]]
+  const rule = [...testRuleSet[key]]
   rule.splice(0, 1, 'warn')
   devRuleSet[key] = rule
 })
@@ -41,36 +41,40 @@ const config = {
   plugins: ['prettier', 'flowtype'],
   // Jest can be used for testing in any env!
   env: { jest: true },
-  rules: {
-    // 🚫 Dev disabled rules
-    // ---------------------------------------------------------------------------
-    'no-console': 'off',
-    'no-debugger': 'off',
+  rules: Object.assign(
+    {
+      // 🚫 Dev disabled rules
+      // ---------------------------------------------------------------------------
+      'no-console': 'off',
+      'no-debugger': 'off',
 
-    // 🌬 Flow (https://github.com/gajus/eslint-plugin-flowtype)
-    // ---------------------------------------------------------------------------
-    'flowtype/define-flow-type': 'warn',
-    'flowtype/require-valid-file-annotation': 'warn',
-    'flowtype/use-flow-type': 'warn',
-
+      // 🌬 Flow (https://github.com/gajus/eslint-plugin-flowtype)
+      // ---------------------------------------------------------------------------
+      'flowtype/define-flow-type': 'warn',
+      'flowtype/require-valid-file-annotation': 'warn',
+      'flowtype/use-flow-type': 'warn',
+    },
     // ⚠️ Dev warnings level rules
     // ---------------------------------------------------------------------------
-    ...devRuleSet,
-  },
+    devRuleSet,
+  ),
 }
 
 // ✅ Test env level rules
 // ---------------------------------------------------------------------------
 if (process.env.NODE_ENV === 'test') {
-  Object.assign(config.rules, {
-    // Validate formatting is correct
-    'prettier/prettier': 'error',
-    // Turn dev warnings back to errors
-    'no-console': 'error',
-    'no-debugger': 'error',
+  Object.assign(
+    config.rules,
+    {
+      // Validate formatting is correct
+      'prettier/prettier': 'error',
+      // Turn dev warnings back to errors
+      'no-console': 'error',
+      'no-debugger': 'error',
+    },
     // Include original ruleset for 'error' level linting in test
-    ...testRuleSet,
-  })
+    testRuleSet,
+  )
 }
 
 module.exports = config

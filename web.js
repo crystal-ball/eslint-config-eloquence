@@ -17,7 +17,7 @@ const testRuleSet = {
 // Create dev rule set with warning linter levels
 const devRuleSet = {}
 Object.keys(testRuleSet).forEach(key => {
-  let rule = [...testRuleSet[key]]
+  const rule = [...testRuleSet[key]]
   rule.splice(0, 1, 'warn')
   devRuleSet[key] = rule
 })
@@ -69,9 +69,7 @@ const config = {
 // ✅ Test env level rules
 // ---------------------------------------------------------------------------
 if (process.env.NODE_ENV === 'test') {
-  Object.assign(config.rules, {
-    ...testRuleSet,
-  })
+  Object.assign(config.rules, testRuleSet)
 }
 
 module.exports = config
