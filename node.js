@@ -20,5 +20,7 @@ module.exports = {
   },
   rules: {
     'import/extensions': ['error', 'always', { js: 'never', mjs: 'never' }],
+    // It is best practice to console.log to stdout with Node(Docker) modules
+    'no-console': 'off',
   },
 }
