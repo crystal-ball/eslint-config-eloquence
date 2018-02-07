@@ -4,7 +4,8 @@
   "description": "Crystal Ball Componentry org ESLint configuration",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js node.js web.js"
+    "test": "eslint index.js node.js web.js",
+    "format": "prettier --write index.js node.js web.js"
   },
   "keywords": [
     "eslint",
@@ -28,5 +29,15 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "7.6.1"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-customizable": "^5.2.0",
+    "prettier": "^1.10.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
