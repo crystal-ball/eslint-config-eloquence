@@ -1,9 +1,9 @@
 const { resolve } = require('path')
 
 const airbnb = require.resolve('eslint-config-airbnb-base')
-const es6Rules = require(resolve(airbnb, '..', 'rules', 'es6.js'))
-const variablesRules = require(resolve(airbnb, '..', 'rules', 'variables.js'))
-const importsRules = require(resolve(airbnb, '..', 'rules', 'imports.js'))
+const es6Rules = require(resolve(airbnb, '../rules/es6.js'))
+const variablesRules = require(resolve(airbnb, '../rules/variables.js'))
+const importsRules = require(resolve(airbnb, '../rules/imports.js'))
 
 // Create dev vs test env rule sets
 // ---------------------------------------------------------------------------
@@ -56,7 +56,7 @@ const config = {
     },
     // ⚠️ Dev warnings level rules
     // ---------------------------------------------------------------------------
-    devRuleSet,
+    devRuleSet
   ),
 }
 
@@ -73,7 +73,7 @@ if (process.env.NODE_ENV === 'test') {
       'no-debugger': 'error',
     },
     // Include original ruleset for 'error' level linting in test
-    testRuleSet,
+    testRuleSet
   )
 }
 

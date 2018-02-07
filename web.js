@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 
 const airbnb = require.resolve('eslint-config-airbnb')
-const reactRules = require(resolve(airbnb, '..', 'rules', 'react.js'))
+const reactRules = require(resolve(airbnb, '../rules/react.js'))
 
 // Create dev vs test env rule sets
 // ---------------------------------------------------------------------------
@@ -65,7 +65,7 @@ const config = {
       // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
       'react/sort-comp': 'off',
     },
-    devRuleSet,
+    devRuleSet
   ),
 }
 

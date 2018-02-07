@@ -20,6 +20,8 @@ module.exports = {
   },
   rules: {
     'import/extensions': ['error', 'always', { js: 'never', mjs: 'never' }],
+    // Dynamic require is still valid in Node
+    'import/no-dynamic-require': 'off',
     // It is best practice to console.log to stdout with Node(Docker) modules
     'no-console': 'off',
   },
