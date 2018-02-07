@@ -11,8 +11,9 @@ const importsRules = require(resolve(airbnb, '../rules/imports.js'))
 // Test rule set matches airbnb defaults
 const testRuleSet = {
   'arrow-body-style': es6Rules.rules['arrow-body-style'],
-  'no-unused-vars': variablesRules.rules['no-unused-vars'],
   'import/first': importsRules.rules['import/first'],
+  'no-unused-vars': variablesRules.rules['no-unused-vars'],
+  'prefer-destructuring': es6Rules.rules['prefer-destructuring'],
 }
 
 // Create dev rule set with warning linter levels
