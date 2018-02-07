@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [6.3.0] 2018-02-07
+
+### Added
+
+* Additional warn in dev rules added
+
 ## [6.2.1] 2018-02-07
 
 ### Fixed

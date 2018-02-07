@@ -1,6 +1,6 @@
 {
   "name": "@crystal-ball/eslint-config-eloquence",
-  "version": "6.2.1",
+  "version": "6.3.0",
   "description": "Crystal Ball Componentry org ESLint configuration",
   "main": "index.js",
   "scripts": {
