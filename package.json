@@ -4,8 +4,8 @@
   "description": "Crystal Ball Componentry org ESLint configuration",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js node.js web.js",
-    "format": "prettier --write index.js node.js web.js"
+    "test": "eslint *.js",
+    "format": "prettier --write *.js"
   },
   "keywords": [
     "eslint",
