@@ -4,6 +4,9 @@
   <a href="https://travis-ci.org/crystal-ball/eslint-config-eloquence" alt="build status">
     <img src="https://travis-ci.org/crystal-ball/eslint-config-eloquence.svg?branch=master">
   </a>
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg" alt="Uses greenkeeper">
+  </a>
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
     <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg?style=flat-square" alt="current version">
   </a>
@@ -31,8 +34,6 @@ Project linting for code quality, style and formatting.
 * 🧐 Smart error vs warn rule levels per env
 
 ## Setup
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg)](https://greenkeeper.io/)
 
 #### Install Dependencies
 
