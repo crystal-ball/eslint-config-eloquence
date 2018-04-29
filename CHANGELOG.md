@@ -8,6 +8,17 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [7.0.0] 2018-04-29 - LevelUp
+
+Package v7 includes two important updates:
+
+* There is a single entry for node and browser project types. The duplicate
+  entry types weren't really needed. Browser projects that _do_ use webpack
+  custom resolution should specify it in the settings.
+* Rule customization levels based on environment is simplified to take advantage
+  of ESLint rule computation. It is possible to set the rule level for inherited
+  rules without specifying the rule options 🎉
+
 ## [6.3.0] 2018-02-07
 
 ### Added
