@@ -20,12 +20,19 @@
   >
 </div>
 
-## Installing:
+Project linting for code quality, style and formatting.
 
-Add the package and Prettier as dev dependencies to your project:
+* ✅ Extends Airbnb and Prettier
+* 🌬 Provides support for Flow
+* 🎉 Encourages ESModules everywhere
+* 🧐 Smart error vs warn rule levels per env
+
+## Setup
+
+#### Install Dependencies
 
 ```sh
-npm i eslint-config-healthsparq prettier -D
+npm i eslint-config-eloquence prettier -D
 ```
 
 _We recommend adding `prettier` as a project dependency to help ensure that all
@@ -33,44 +40,27 @@ editors use the locally installed Prettier for formatting. Some editors will use
 a global or bundled version (which may have formatting differences) if there
 isn't a `prettier` in the project's `package.json`._
 
-### Flow
-
-Static typing using flow is supported through the `eslint-plugin-flowtype`
-package.
-
-## Usage
-
-Extending this package's config will set the default:
-
-* `parserOptions`
-* `parser`
-* `env`
-* `plugins`
-* `rules`
-
-There are seperate configs for Node projects and web projects to handle enabling
-features like JSX, webpack resolving, `.mjs` file extensions, etc. The configs
-are `node` and `web`.
-
-#### Webpack Project
+#### Configure ESLint
 
 ```javascript
 // .eslintrc.js
-module.exports = { extends: '@crystal-ball/eloquence/web' }
+module.exports = {
+  root: true,
+  extends: 'eloquence',
+
+  /* ...any project overrides of default configurations */
+}
 ```
 
-#### Node Project
+## Batteries included
 
-```javascript
-// .eslintrc.js
-module.exports = { extends: '@crystal-ball/eloquence/node' }
-```
+This package includes all of the modules needed to run ESLint as dependencies.
+This makes installation easy (this package coordinates all dependency versions),
+and allows projects to use this package as the "owner" of ESLint. When possible
+ensure that the only version of `eslint` and `babel-eslint` included in a
+project are the versions specified by this package.
 
-## Dependencies
-
-All dependencies required for running ESLint will be installed as dependencies
-of this package. This ensures that there are no conflicting versions of ESLint
-in a consuming project's dependencies. Installed dependencies include:
+#### Included dependencies:
 
 * eslint
 * babel-eslint
