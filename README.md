@@ -32,6 +32,8 @@ Project linting for code quality, style and formatting.
 
 ## Setup
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg)](https://greenkeeper.io/)
+
 #### Install Dependencies
 
 ```sh
