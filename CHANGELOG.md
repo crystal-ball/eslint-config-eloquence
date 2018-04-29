@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [7.1.0] 2018-04-29
+
+### Added
+
+* Project type config to set webpack related project configs with
+  `process.env.ELOQUENCE_PROJECT_TYPE`
+
 ## [7.0.0] 2018-04-29 - LevelUp
 
 Package v7 includes two important updates:
