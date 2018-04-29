@@ -1,8 +1,7 @@
-const { NODE_ENV = 'development' } = process.env
-// ℹ️ If we need to start switching configs based on project type (node vs browser),
-// Use a `process.env.PROJECT_TYPE` environment variable set in the consuming
-// .elsintrc.js in order to switch project types while still using a single entry
-// point for both
+const { NODE_ENV = 'development', ELOQUENCE_PROJECT_TYPE = 'webpack' } = process.env
+
+const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
+const dev = NODE_ENV === 'development'
 
 /**
  * Environment specific rules
@@ -12,31 +11,30 @@ const { NODE_ENV = 'development' } = process.env
  * instead of error, don't include Prettier, etc. This speeds up developing
  * (especially when using webpack dev server hooked into the errors overlay 😉)
  */
-const envRules =
-  NODE_ENV === 'development'
-    ? {
-        // Allow dev tools in dev environment
-        'no-console': 'off',
-        'no-debugger': 'off',
+const envRules = dev
+  ? {
+      // Allow dev tools in dev environment
+      'no-console': 'off',
+      'no-debugger': 'off',
 
-        // These rules are non critical, stylistic rules, warn only in dev for them
-        'arrow-body-style': 'warn',
-        'no-unused-vars': 'warn',
-        'prefer-destructuring': 'warn',
+      // These rules are non critical, stylistic rules, warn only in dev for them
+      'arrow-body-style': 'warn',
+      'no-unused-vars': 'warn',
+      'prefer-destructuring': 'warn',
 
-        'react/default-props-match-prop-types': 'warn',
-        'react/forbid-prop-types': 'warn',
-        'react/jsx-filename-extension': 'warn',
-        'react/no-unused-prop-types': 'warn',
-        'react/no-unused-state': 'warn',
-        'react/prop-types': 'warn',
+      'react/default-props-match-prop-types': 'warn',
+      'react/forbid-prop-types': 'warn',
+      'react/jsx-filename-extension': 'warn',
+      'react/no-unused-prop-types': 'warn',
+      'react/no-unused-state': 'warn',
+      'react/prop-types': 'warn',
 
-        'import/first': 'warn',
-      }
-    : {
-        // Validate formatting is correct
-        'prettier/prettier': 'error',
-      }
+      'import/first': 'warn',
+    }
+  : {
+      // Validate formatting is correct
+      'prettier/prettier': 'error',
+    }
 
 /**
  * 😍 ESLint Configs
@@ -54,37 +52,36 @@ module.exports = {
     jsx: true,
   },
 
-  // Required for experimental features like object rest spread
   parser: 'babel-eslint',
 
   // Extend the plugins already included by the Airbnb base
   plugins: [/* react, jsx-a11y, import */ 'prettier', 'flowtype'],
 
-  // Jest can be used for testing in any env!
   env: {
-    browser: true,
+    browser: webpackProject,
     node: true,
     jest: true,
   },
 
   settings: {
-    // Add .mjs to resolved extensions
-    'import/resolver': { node: { extensions: ['.js', '.mjs', '.json'] } },
+    // For webpack projects use the `eslint-import-resolver-webpack` resolver, else
+    // default to standard Node resolver (with support for .mjs files)
+    'import/resolver': webpackProject
+      ? 'webpack'
+      : { node: { extensions: ['.js', '.mjs', '.json'] } },
   },
 
   rules: Object.assign(
     {
-      // 🌬 Flow (https://github.com/gajus/eslint-plugin-flowtype)
-      // ---------------------------------------------------------------------------
+      // --- 🌬 Flow
+      // See: https://github.com/gajus/eslint-plugin-flowtype
       'flowtype/define-flow-type': 'warn',
       'flowtype/require-valid-file-annotation': 'warn',
       'flowtype/use-flow-type': 'warn',
 
-      // ⬆️ Updates/Enhancements
-      // ---------------------------------------------------------------------------
-
-      // Enforcing .jsx file extensions doesn't provide a clear benefit and often
-      // ends up requiring additional custom configs elsewhere ¯\_(ツ)_/¯
+      // --- ⬆️ Updates/Enhancements
+      // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
+      // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
       'react/jsx-filename-extension': 'off',
       // Include .mjs file extension in list of file that shouldn't use ext
       'import/extensions': [
