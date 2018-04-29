@@ -1,8 +1,11 @@
 <h1 align="center">Crystal Ball ESLint Configs</h1>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@crystal-ball/eslint-config-eloquence">
-    <img src="https://img.shields.io/npm/v/@crystal-ball/eslint-config-eloquence.svg?style=flat-square" alt="current version">
+  <a href="https://travis-ci.org/crystal-ball/eslint-config-eloquence" alt="build status">
+    <img src="https://travis-ci.org/crystal-ball/eslint-config-eloquence.svg?branch=master">
+  </a>
+  <a href="https://www.npmjs.com/package/eslint-config-eloquence">
+    <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg?style=flat-square" alt="current version">
   </a>
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="Prettier">
