@@ -52,6 +52,26 @@ module.exports = {
 }
 ```
 
+#### Project types
+
+For webpack projects the project type can be specified to configure the import
+plugin to use the project `webpack.config.js` to resolve files matching webpack.
+
+```javascript
+process.env.ELOQUENCE_PROJECT_TYPE = 'webpack'
+
+// .eslintrc.js
+module.exports = {
+  root: true,
+  extends: 'eloquence',
+
+  /* ...any project overrides of default configurations */
+}
+```
+
+_⚠️ webpack projects require the `eslint-import-resolver-webpack` package which
+is NOT included in the dependencies of this project!_
+
 ## Batteries included
 
 This package includes all of the modules needed to run ESLint as dependencies.
