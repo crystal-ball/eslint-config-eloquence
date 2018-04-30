@@ -24,7 +24,6 @@ const envRules = dev
 
       'react/default-props-match-prop-types': 'warn',
       'react/forbid-prop-types': 'warn',
-      'react/jsx-filename-extension': 'warn',
       'react/no-unused-prop-types': 'warn',
       'react/no-unused-state': 'warn',
       'react/prop-types': 'warn',
