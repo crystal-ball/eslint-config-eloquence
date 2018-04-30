@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [7.1.1] 2018-04-30
+
+### Fixed
+
+* fix dev rule breaking package disabling rule
+
 ## [7.1.0] 2018-04-29
 
 ### Added
