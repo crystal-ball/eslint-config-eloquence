@@ -26,6 +26,7 @@ const envRules = dev
       'react/forbid-prop-types': 'warn',
       'react/no-unused-prop-types': 'warn',
       'react/no-unused-state': 'warn',
+      'react/prefer-stateless-function': 'warn',
       'react/prop-types': 'warn',
 
       'import/first': 'warn',
