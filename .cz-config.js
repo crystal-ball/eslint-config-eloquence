@@ -10,21 +10,17 @@ module.exports = {
         '🔩 refactor:   A code change that neither fixes a bug nor adds a feature',
     },
     {
-      value: 'perf',
-      name: '🏎  perf:       A code change that improves performance',
-    },
-    {
       value: 'test',
       name: '✅ test:       Updating tests or adding missing tests',
     },
     {
       value: 'chore',
       name:
-        '⬆️  chore:      Changes to the build process or development tools and libraries',
+        '⚙️  chore:      Changes to the build process, development tools, project configs, etc.',
     },
     { value: 'docs', name: '📝 docs:       Documentation only changes' },
-    { value: 'revert', name: '↩️  revert:     Revert to a commit' },
     { value: 'WIP', name: '🚧 wip:        Work in progress' },
+    { value: 'revert', name: '↩️  revert:     Revert to a commit' },
   ],
 
   allowCustomScopes: false,
