@@ -28,6 +28,7 @@ const envRules = dev
       'react/no-unused-state': 'warn',
       'react/prefer-stateless-function': 'warn',
       'react/prop-types': 'warn',
+      'react/require-default-props': 'warn',
 
       'import/first': 'warn',
     }
