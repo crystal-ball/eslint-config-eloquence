@@ -3,22 +3,22 @@
   "version": "7.2.0",
   "description": "Crystal Ball Componentry org ESLint configuration",
   "main": "index.js",
-  "scripts": {
-    "test": "eslint *.js",
-    "format": "prettier --write *.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
   },
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
-  },
   "contributors": [
     "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)"
   ],
   "license": "ISC",
+  "scripts": {
+    "test": "eslint *.js",
+    "format": "prettier --write *.js"
+  },
   "dependencies": {
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
