@@ -6,7 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to
 [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+<a name="7.2.0"></a>
+
+# 7.2.0 (https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.1.1...v7.2.0) (2018-04-30)
+
+### Features
+
+* log level warn in dev for prefer sfc (9ac8479
+  (https://github.com/crystal-ball/eslint-config-eloquence/commit/9ac8479))
 
 ## [7.1.1] 2018-04-30
 
