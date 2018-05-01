@@ -4,17 +4,17 @@
   <a href="https://travis-ci.org/crystal-ball/eslint-config-eloquence" alt="build status">
     <img src="https://travis-ci.org/crystal-ball/eslint-config-eloquence.svg?branch=master">
   </a>
-  <a href="https://greenkeeper.io/">
+  <a href="https://greenkeeper.io/" target="_blank" rel="noopener noreferrer">
     <img src="https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg" alt="Uses greenkeeper">
   </a>
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
     <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg?style=flat-square" alt="current version">
   </a>
-  <a href="https://github.com/prettier/prettier">
+  <a href="https://github.com/prettier/prettier" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="Prettier">
   </a>
-  <a href="http://commitizen.github.io/cz-cli/">
-    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen">
+  <a href="https://github.com/semantic-release/semantic-release" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="managed by semantic release">
   </a>
 </p>
 
@@ -88,18 +88,30 @@ project are the versions specified by this package.
 
 #### Included dependencies:
 
-* eslint
-* babel-eslint
-* eslint-config-airbnb
-* eslint-config-prettier
-* eslint-plugin-flowtype
-* eslint-plugin-import
-* eslint-plugin-jsx-a11y
-* eslint-plugin-prettier
-* eslint-plugin-react
+* [`eslint`][]
+* [`babel-eslint`][]
+* [`eslint-config-airbnb`][]
+* [`eslint-config-prettier`][]
+* [`eslint-plugin-flowtype`][]
+* [`eslint-plugin-import`][]
+* [`eslint-plugin-jsx-a11y`][]
+* [`eslint-plugin-prettier`][]
+* [`eslint-plugin-react`][]
 
 ## 😍 Contributing
 
 This is an open source project that welcomes and appreciates contributions from
 everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) and
 [Contributing](./.github/CONTRIBUTING.md) guides to get started.
+
+<!-- Links -->
+
+[`eslint`]: https://eslint.org/
+[`babel-eslint`]: https://github.com/babel/babel-eslint
+[`eslint-config-airbnb`]: https://github.com/airbnb/javascript
+[`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
+[`eslint-plugin-flowtype`]: https://github.com/gajus/eslint-plugin-flowtype
+[`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
+[`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
+[`eslint-plugin-prettier`]: https://github.com/prettier/eslint-plugin-prettier
+[`eslint-plugin-react`]: https://github.com/yannickcr/eslint-plugin-react
