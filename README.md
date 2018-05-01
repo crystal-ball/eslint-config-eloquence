@@ -33,7 +33,7 @@ Project linting for code quality, style and formatting.
 * 🎉 Encourages ESModules everywhere
 * 🧐 Smart error vs warn rule levels per env
 
-## Setup
+## ⚙️ Setup
 
 #### Install Dependencies
 
@@ -78,7 +78,7 @@ module.exports = {
 _⚠️ webpack projects require the `eslint-import-resolver-webpack` package which
 is NOT included in the dependencies of this project!_
 
-## Batteries included
+## 🔋 Batteries included
 
 This package includes all of the modules needed to run ESLint as dependencies.
 This makes installation easy (this package coordinates all dependency versions),
