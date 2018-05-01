@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eloquence",
-  "version": "7.2.0",
+  "version": "0.0.0-semantic",
   "description": "Crystal Ball Componentry org ESLint configuration",
   "main": "index.js",
   "repository": {
