@@ -20,6 +20,7 @@ const envRules = dev
       // These rules are non critical, stylistic rules, warn only in dev for them
       'arrow-body-style': 'warn',
       'no-unused-vars': 'warn',
+      'prefer-const': 'warn',
       'prefer-destructuring': 'warn',
 
       'react/default-props-match-prop-types': 'warn',
