@@ -1,4 +1,4 @@
-const { NODE_ENV = 'development', ELOQUENCE_PROJECT_TYPE = 'webpack' } = process.env
+const { NODE_ENV = 'development', ELOQUENCE_PROJECT_TYPE = 'node' } = process.env
 
 const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
 const dev = NODE_ENV === 'development'
