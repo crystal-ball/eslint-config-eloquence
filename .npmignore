@@ -1,5 +1,8 @@
 assets
+.github
+.cz-config.js
 .eslintrc.js
 .prettierignore
 .prettierrc
+.travis.yml
 icon.png
