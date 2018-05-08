@@ -1,0 +1,10 @@
+node_modules
+.github
+assets
+.cz-config.js
+.travis.yml
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+icon.png
+LICENSE.md
+README.md

@@ -2,13 +2,16 @@ language: node_js
 node_js:
   - "8"
 
-sudo: false
+sudo: required
 
-install:
-  - npm install
+services:
+  - docker
+
+before_install:
+  - docker build -t crystal-ball/eloquence .
 
 script:
- - npm test
+ - docker run crystal-ball/eloquence /bin/sh -c "cd /usr/src/app && npm test"
 
 deploy:
   provider: script
