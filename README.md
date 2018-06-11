@@ -1,8 +1,29 @@
-<h1 align="center">Crystal Ball ESLint Configs</h1>
+<div align="right">
+  <img src="./assets/eloquence.png" width="600" alt="Eloquence">
+</div>
+
+<hr>
+
+<div align="center">
+  <p><em>Adaptive ESLint configs that stay out of your way.</em></p>
+  <br>
+</div>
+
+<div align="center">
+  <img
+    width="300"
+    src="./assets/logos.png"
+    alt="Extends Airbnb code quality rules with Prettier.js formatting"
+  >
+</div>
+
+<br>
+
+<hr>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
-    <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg?style=flat-square" alt="current version">
+    <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg" alt="current version">
   </a>
   <a href="https://travis-ci.org/crystal-ball/eslint-config-eloquence" alt="build status">
     <img src="https://travis-ci.org/crystal-ball/eslint-config-eloquence.svg?branch=master">
@@ -18,20 +39,12 @@
   </a>
 </p>
 
-<div align="center">
-  <img
-    width="350"
-    src="https://cdn.rawgit.com/crystal-ball/eslint-config-eloquence/master/assets/logos.png"
-    alt="Extends Airbnb code quality rules with Prettier.js formatting"
-  >
-</div>
-
 Project linting for code quality, style and formatting.
 
-* ✅ Extends Airbnb and Prettier
-* 🌬 Provides support for Flow
-* 🎉 Encourages ESModules everywhere
-* 🧐 Smart error vs warn rule levels per env
+- ✅ Extends Airbnb and Prettier
+- 🌬 Provides support for Flow
+- 🎉 Encourages ESModules everywhere
+- 🧐 Smart error vs warn rule levels per env
 
 ## ⚙️ Setup
 
@@ -88,15 +101,15 @@ project are the versions specified by this package.
 
 #### Included dependencies:
 
-* [`eslint`][]
-* [`babel-eslint`][]
-* [`eslint-config-airbnb`][]
-* [`eslint-config-prettier`][]
-* [`eslint-plugin-flowtype`][]
-* [`eslint-plugin-import`][]
-* [`eslint-plugin-jsx-a11y`][]
-* [`eslint-plugin-prettier`][]
-* [`eslint-plugin-react`][]
+- [`eslint`][]
+- [`babel-eslint`][]
+- [`eslint-config-airbnb`][]
+- [`eslint-config-prettier`][]
+- [`eslint-plugin-flowtype`][]
+- [`eslint-plugin-import`][]
+- [`eslint-plugin-jsx-a11y`][]
+- [`eslint-plugin-prettier`][]
+- [`eslint-plugin-react`][]
 
 ## 😍 Contributing
 

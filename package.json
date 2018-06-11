@@ -16,8 +16,9 @@
   ],
   "license": "ISC",
   "scripts": {
+    "commit": "git cz",
     "test": "NODE_ENV=test eslint *.js",
-    "format": "prettier --write *.js"
+    "format": "prettier --write \"*.{js,md}\""
   },
   "dependencies": {
     "babel-eslint": "^8.2.3",
@@ -31,10 +32,10 @@
     "eslint-plugin-react": "^7.8.2"
   },
   "devDependencies": {
-    "commitizen": "^2.9.6",
+    "commitizen": "^2.10.1",
     "cz-customizable": "^5.2.0",
-    "prettier": "^1.12.1",
-    "semantic-release": "^15.5.0"
+    "prettier": "^1.13.5",
+    "semantic-release": "^15.5.2"
   },
   "config": {
     "commitizen": {
