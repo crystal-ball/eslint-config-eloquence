@@ -1,15 +1,18 @@
 {
   "name": "eslint-config-eloquence",
   "version": "0.0.0-semantic",
-  "description": "Crystal Ball Componentry org ESLint configuration",
+  "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
   },
   "keywords": [
+    "eloquent",
     "eslint",
-    "eslintconfig"
+    "eslintconfig",
+    "prettier",
+    "airbnb"
   ],
   "contributors": [
     "Dan Hedgecock <hedgecock.d@gmail.com> (https://danhedgecock.com)"
