@@ -1,42 +1,6 @@
 const { NODE_ENV = 'development', ELOQUENCE_PROJECT_TYPE = 'node' } = process.env
 
 const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
-const dev = NODE_ENV === 'development'
-
-/**
- * Environment specific rules
- *
- * Improve ESLint DX by adjusting severity of non-critical rules based on
- * environment. When not in test/production make common stylistic issues warn
- * instead of error, don't include Prettier, etc. This speeds up developing
- * (especially when using webpack dev server hooked into the errors overlay 😉)
- */
-const envRules = dev
-  ? {
-      // Allow dev tools in dev environment
-      'no-console': 'off',
-      'no-debugger': 'off',
-
-      // These rules are non critical, stylistic rules, warn only in dev for them
-      'arrow-body-style': 'warn',
-      'no-unused-vars': 'warn',
-      'prefer-const': 'warn',
-      'prefer-destructuring': 'warn',
-
-      'react/default-props-match-prop-types': 'warn',
-      'react/forbid-prop-types': 'warn',
-      'react/no-unused-prop-types': 'warn',
-      'react/no-unused-state': 'warn',
-      'react/prefer-stateless-function': 'warn',
-      'react/prop-types': 'warn',
-      'react/require-default-props': 'warn',
-
-      'import/first': 'warn',
-    }
-  : {
-      // Validate formatting is correct
-      'prettier/prettier': 'error',
-    }
 
 /**
  * 😍 ESLint Configs
@@ -49,9 +13,9 @@ module.exports = {
   extends: ['airbnb', 'prettier', 'prettier/react'],
 
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 9,
     sourceType: 'module',
-    jsx: true,
+    jsx: true
   },
 
   parser: 'babel-eslint',
@@ -62,7 +26,7 @@ module.exports = {
   env: {
     browser: webpackProject,
     node: true,
-    jest: true,
+    jest: true
   },
 
   settings: {
@@ -70,7 +34,7 @@ module.exports = {
     // default to standard Node resolver (with support for .mjs files)
     'import/resolver': webpackProject
       ? 'webpack'
-      : { node: { extensions: ['.js', '.mjs', '.json'] } },
+      : { node: { extensions: ['.js', '.mjs', '.json'] } }
   },
 
   rules: Object.assign(
@@ -89,7 +53,7 @@ module.exports = {
       'import/extensions': [
         'error',
         'always',
-        { js: 'never', jsx: 'never', mjs: 'never' },
+        { js: 'never', jsx: 'never', mjs: 'never' }
       ],
 
       // 🐛 Bugs
@@ -106,11 +70,45 @@ module.exports = {
         {
           components: ['Link'],
           specialLink: ['to'], // ADDITION FOR REACT ROUTER LINK PROP
-          aspects: ['noHref', 'invalidHref', 'preferButton'],
-        },
-      ],
+          aspects: ['noHref', 'invalidHref', 'preferButton']
+        }
+      ]
     },
-    // Merge rule udpates for the env and project type to get final ruleset
-    envRules
-  ),
+
+    // 🌍 Environment adjustments
+    // ---------------------------------------------------------------------------
+
+    /*
+     * Improve ESLint DX by adjusting severity of non-critical rules based on
+     * environment. When not in test/production make common stylistic issues warn
+     * instead of error, don't include Prettier, etc. This speeds up developing
+     * (especially when using webpack dev server hooked into the errors overlay 😉)
+     */
+    NODE_ENV === 'development'
+      ? {
+          // Allow dev tools in dev environment
+          'no-console': 'off',
+          'no-debugger': 'off',
+
+          // These rules are non critical, stylistic rules, warn only in dev for them
+          'arrow-body-style': 'warn',
+          'no-unused-vars': 'warn',
+          'prefer-const': 'warn',
+          'prefer-destructuring': 'warn',
+
+          'react/default-props-match-prop-types': 'warn',
+          'react/forbid-prop-types': 'warn',
+          'react/no-unused-prop-types': 'warn',
+          'react/no-unused-state': 'warn',
+          'react/prefer-stateless-function': 'warn',
+          'react/prop-types': 'warn',
+          'react/require-default-props': 'warn',
+
+          'import/first': 'warn'
+        }
+      : {
+          // Validate formatting is correct in test,prod,etc.
+          'prettier/prettier': 'error'
+        }
+  )
 }
