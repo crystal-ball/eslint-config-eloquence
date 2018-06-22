@@ -1,4 +1,4 @@
-const { NODE_ENV = 'development', ELOQUENCE_PROJECT_TYPE = 'node' } = process.env
+const { NODE_ENV, ELOQUENCE_PROJECT_TYPE = 'node' } = process.env
 
 const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
 
@@ -61,18 +61,7 @@ module.exports = {
 
       // Class ordering currently doesn't support class property syntax, which is 🙅
       // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
-      'react/sort-comp': 'off',
-      // Ensures anchor tags are valid, but Airbnb added the <Link> component without
-      // also including the `to` prop that configures the href 😑
-      // Update on: https://github.com/airbnb/javascript/pull/1648
-      'jsx-a11y/anchor-is-valid': [
-        'error',
-        {
-          components: ['Link'],
-          specialLink: ['to'], // ADDITION FOR REACT ROUTER LINK PROP
-          aspects: ['noHref', 'invalidHref', 'preferButton']
-        }
-      ]
+      'react/sort-comp': 'off'
     },
 
     // 🌍 Environment adjustments
@@ -80,12 +69,17 @@ module.exports = {
 
     /*
      * Improve ESLint DX by adjusting severity of non-critical rules based on
-     * environment. When not in test/production make common stylistic issues warn
+     * environment. When not in test env make common stylistic issues warn
      * instead of error, don't include Prettier, etc. This speeds up developing
-     * (especially when using webpack dev server hooked into the errors overlay 😉)
+     * (especially when using webpack dev server hooked into the errors overlay
+     * 😉)
      */
-    NODE_ENV === 'development'
+    NODE_ENV === 'test'
       ? {
+          // Validate formatting is correct in test,prod,etc.
+          'prettier/prettier': 'error'
+        }
+      : {
           // Allow dev tools in dev environment
           'no-console': 'off',
           'no-debugger': 'off',
@@ -105,10 +99,6 @@ module.exports = {
           'react/require-default-props': 'warn',
 
           'import/first': 'warn'
-        }
-      : {
-          // Validate formatting is correct in test,prod,etc.
-          'prettier/prettier': 'error'
         }
   )
 }
