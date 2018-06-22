@@ -50,7 +50,7 @@ formatting.
 - 🎉 Encourages ESModules everywhere
 
 The most important opinion of Eloquence is that we believe linters shouldn't get
-in your way while developing, so in dev environments all rules related to
+in your way while developing, so in non-test environments all rules related to
 styling are downgraded to warnings and all formatting rules are silenced. See
 [Rules](#rules) for details.
 
@@ -106,7 +106,7 @@ is NOT included in the dependencies of this project!_
 ## 👩‍🏫 Rules
 
 The Eloquence ruleset balances providing a rigorous, comprehensive ruleset with
-providing only valuable linting messaging during development workflows. A
+providing only valuable linting messaging during non-test workflows. A
 comprehensive ruleset helps people contribute to projects by programatically
 answering questions about the code conventions expected by a project. However a
 comprehensive ruleset can also inhibit creative problem solving by distracting
@@ -117,7 +117,7 @@ intelligently adjusts the linter error level for rule types by environment:
 
 | Env  | Quality | Style   | Formatting |
 | ---- | ------- | ------- | ---------- |
-| Prod | `error` | `error` | `error`    |
+| Test | `error` | `error` | `error`    |
 | Dev  | `error` | `warn`  | `off`      |
 
 So you always see feedback related to code quality, but during development non
