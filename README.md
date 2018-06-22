@@ -25,8 +25,8 @@
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
     <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg" alt="current version">
   </a>
-  <a href="https://travis-ci.org/crystal-ball/eslint-config-eloquence" alt="build status">
-    <img src="https://travis-ci.org/crystal-ball/eslint-config-eloquence.svg?branch=master">
+  <a href="https://travis-ci.com/crystal-ball/eslint-config-eloquence" alt="build status">
+    <img src="https://travis-ci.com/crystal-ball/eslint-config-eloquence.svg?branch=master">
   </a>
   <a href="https://greenkeeper.io/" target="_blank" rel="noopener noreferrer">
     <img src="https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg" alt="Uses greenkeeper">
