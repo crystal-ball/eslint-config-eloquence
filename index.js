@@ -37,32 +37,25 @@ module.exports = {
       : { node: { extensions: ['.js', '.mjs', '.json'] } }
   },
 
-  rules: Object.assign(
-    {
-      // --- 🌬 Flow
-      // See: https://github.com/gajus/eslint-plugin-flowtype
-      'flowtype/define-flow-type': 'warn',
-      'flowtype/require-valid-file-annotation': 'warn',
-      'flowtype/use-flow-type': 'warn',
+  rules: {
+    // --- 🌬 Flow
+    // See: https://github.com/gajus/eslint-plugin-flowtype
+    'flowtype/define-flow-type': 'warn',
+    'flowtype/require-valid-file-annotation': 'warn',
+    'flowtype/use-flow-type': 'warn',
 
-      // --- ⬆️ Updates/Enhancements
-      // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
-      // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
-      'react/jsx-filename-extension': 'off',
-      // Include .mjs file extension in list of file that shouldn't use ext
-      'import/extensions': [
-        'error',
-        'always',
-        { js: 'never', jsx: 'never', mjs: 'never' }
-      ],
+    // --- ⬆️ Updates/Enhancements
+    // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
+    // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
+    'react/jsx-filename-extension': 'off',
+    // Include .mjs file extension in list of file that shouldn't use ext
+    'import/extensions': ['error', 'always', { js: 'never', jsx: 'never', mjs: 'never' }],
 
-      // 🐛 Bugs
-      // ---------------------------------------------------------------------------
+    // --- 🐛 Bugs
 
-      // Class ordering currently doesn't support class property syntax, which is 🙅
-      // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
-      'react/sort-comp': 'off'
-    },
+    // Class ordering currently doesn't support class property syntax, which is 🙅
+    // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
+    'react/sort-comp': 'off',
 
     // 🌍 Environment adjustments
     // ---------------------------------------------------------------------------
@@ -74,7 +67,7 @@ module.exports = {
      * (especially when using webpack dev server hooked into the errors overlay
      * 😉)
      */
-    NODE_ENV === 'test'
+    ...(NODE_ENV === 'test'
       ? {
           // Validate formatting is correct in test,prod,etc.
           'prettier/prettier': 'error'
@@ -99,6 +92,6 @@ module.exports = {
           'react/require-default-props': 'warn',
 
           'import/first': 'warn'
-        }
-  )
+        })
+  }
 }
