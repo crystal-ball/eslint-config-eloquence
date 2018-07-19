@@ -24,21 +24,21 @@
     "format": "prettier --write \"*.{js,md}\""
   },
   "dependencies": {
-    "babel-eslint": "~8.2.3",
-    "eslint": "~5.0.1",
+    "babel-eslint": "~8.2.6",
+    "eslint": "~5.1.0",
     "eslint-config-airbnb": "17.0.0",
     "eslint-config-prettier": "~2.9.0",
-    "eslint-plugin-flowtype": "~2.49.3",
+    "eslint-plugin-flowtype": "~2.50.0",
     "eslint-plugin-import": "~2.13.0",
-    "eslint-plugin-jsx-a11y": "~6.0.3",
-    "eslint-plugin-prettier": "~2.6.1",
+    "eslint-plugin-jsx-a11y": "~6.1.1",
+    "eslint-plugin-prettier": "~2.6.2",
     "eslint-plugin-react": "~7.10.0"
   },
   "devDependencies": {
     "commitizen": "^2.10.1",
     "cz-customizable": "^5.2.0",
-    "prettier": "^1.13.6",
-    "semantic-release": "^15.6.0"
+    "prettier": "^1.13.7",
+    "semantic-release": "^15.8.1"
   },
   "config": {
     "commitizen": {
