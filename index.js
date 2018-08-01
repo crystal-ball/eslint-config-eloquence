@@ -49,6 +49,9 @@ module.exports = {
       // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
       // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
       'react/jsx-filename-extension': 'off',
+      // Don't enforce props destructuring, it's cumbersome when only a single
+      // prop is needed, and consistent destructuring provides no real benefit
+      'react/destructuring-assignment': 'off',
       // Include .mjs file extension in list of file that shouldn't use ext
       'import/extensions': [
         'error',

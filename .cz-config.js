@@ -24,5 +24,5 @@ module.exports = {
 
   allowCustomScopes: false,
   allowBreakingChanges: ['feat', 'fix', 'style', 'refactor', 'perf', 'chore'],
-  scopes: []
+  scopes: ['react']
 }
