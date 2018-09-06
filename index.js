@@ -88,7 +88,6 @@ module.exports = {
           'prefer-destructuring': 'warn',
 
           'react/default-props-match-prop-types': 'warn',
-          'react/destructuring-assignment': 'warn',
           'react/forbid-prop-types': 'warn',
           'react/jsx-boolean-value': 'warn',
           'react/no-multi-comp': 'warn',
