@@ -46,7 +46,7 @@ formatting.
   envs
 - ✅ Extends Airbnb and Prettier for a comprehensive, battle tested ruleset
 - 🔋 Manages dependencies for simplified setup and use of ESLint
-- 🌬 Includes support for Flow
+- 🌲 Includes plugin for Cypress
 - 🎉 Encourages ESModules everywhere
 
 The most important opinion of Eloquence is that we believe linters shouldn't get
@@ -156,6 +156,7 @@ this package.)_
 - [`babel-eslint`][]
 - [`eslint-config-airbnb`][]
 - [`eslint-config-prettier`][]
+- [`eslint-plugin-cypress`][]
 - [`eslint-plugin-flowtype`][]
 - [`eslint-plugin-import`][]
 - [`eslint-plugin-jsx-a11y`][]
@@ -175,6 +176,7 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`babel-eslint`]: https://github.com/babel/babel-eslint
 [`eslint-config-airbnb`]: https://github.com/airbnb/javascript
 [`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
+[`eslint-plugin-cypress`]: https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-flowtype`]: https://github.com/gajus/eslint-plugin-flowtype
 [`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
 [`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
