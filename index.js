@@ -10,7 +10,7 @@ const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
  */
 module.exports = {
   // Base: https://github.com/airbnb/javascript
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'plugin:cypress/recommended', 'prettier', 'prettier/react'],
 
   parserOptions: {
     ecmaVersion: 9,
@@ -21,12 +21,13 @@ module.exports = {
   parser: 'babel-eslint',
 
   // Extend the plugins already included by the Airbnb base
-  plugins: [/* react, jsx-a11y, import */ 'prettier', 'flowtype'],
+  plugins: [/* react, jsx-a11y, import */ 'prettier', 'flowtype', 'cypress'],
 
   env: {
     browser: webpackProject,
     node: true,
-    jest: true
+    jest: true,
+    'cypress/globals': true
   },
 
   settings: {
