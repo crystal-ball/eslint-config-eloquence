@@ -86,17 +86,20 @@ available format options.
 
 #### Project types
 
-For webpack projects an environment variable can be specified to configure the
-[import plugin][`eslint-plugin-import`] to use the project's `webpack.config.js`
-to resolve files.
+For webpack projects add a setting to the project `.eslintrc.js` to configure
+the [import plugin][`eslint-plugin-import`] to use the project's
+`webpack.config.js` to resolve files.
 
 ```javascript
-process.env.ELOQUENCE_PROJECT_TYPE = 'webpack'
-
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: 'eloquence'
+  extends: 'eloquence',
+  settings: {
+    eloquence: {
+      projectType: 'webpack'
+    }
+  }
 }
 ```
 
@@ -157,7 +160,6 @@ this package.)_
 - [`eslint-config-airbnb`][]
 - [`eslint-config-prettier`][]
 - [`eslint-plugin-cypress`][]
-- [`eslint-plugin-flowtype`][]
 - [`eslint-plugin-import`][]
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
@@ -177,7 +179,6 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`eslint-config-airbnb`]: https://github.com/airbnb/javascript
 [`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
 [`eslint-plugin-cypress`]: https://github.com/cypress-io/eslint-plugin-cypress
-[`eslint-plugin-flowtype`]: https://github.com/gajus/eslint-plugin-flowtype
 [`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
 [`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]: https://github.com/prettier/eslint-plugin-prettier

@@ -1,6 +1,7 @@
-const { NODE_ENV, ELOQUENCE_PROJECT_TYPE = 'node' } = process.env
+const checkProjectType = require('./lib/project-type')
 
-const webpackProject = ELOQUENCE_PROJECT_TYPE === 'webpack'
+const { NODE_ENV } = process.env
+const webpackProject = checkProjectType() === 'webpack'
 
 /**
  * 😍 ESLint Configs
@@ -13,7 +14,7 @@ module.exports = {
   extends: ['airbnb', 'plugin:cypress/recommended', 'prettier', 'prettier/react'],
 
   parserOptions: {
-    ecmaVersion: 9,
+    ecmaVersion: 10,
     sourceType: 'module',
     jsx: true
   },
@@ -21,11 +22,11 @@ module.exports = {
   parser: 'babel-eslint',
 
   // Extend the plugins already included by the Airbnb base
-  plugins: [/* react, jsx-a11y, import */ 'prettier', 'flowtype', 'cypress'],
+  plugins: [/* react, jsx-a11y, import */ 'prettier', 'cypress'],
 
   env: {
     browser: webpackProject,
-    node: true,
+    node: !webpackProject,
     jest: true,
     'cypress/globals': true
   },
@@ -39,11 +40,12 @@ module.exports = {
   },
 
   rules: {
-    // --- 🌬 Flow
-    // See: https://github.com/gajus/eslint-plugin-flowtype
-    'flowtype/define-flow-type': 'warn',
-    'flowtype/require-valid-file-annotation': 'warn',
-    'flowtype/use-flow-type': 'warn',
+    // --- ✅  Cypress
+    // https://github.com/cypress-io/eslint-plugin-cypress
+    // Prevent assigning return values of cy calls (use aliases instead)
+    'cypress/no-assigning-return-values': 'error',
+    // Prevent waiting for arbitrary time periods (use wait instead)
+    'cypress/no-unnecessary-waiting': 'error',
 
     // --- ⬆️ Updates/Enhancements
     // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
