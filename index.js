@@ -3,6 +3,14 @@ const checkProjectType = require('./lib/project-type')
 const { NODE_ENV } = process.env
 const webpackProject = checkProjectType() === 'webpack'
 
+// Allow accessing process.env injected variables in webpack builds
+const globals = webpackProject ? { process: false } : {}
+// For webpack projects use the `eslint-import-resolver-webpack` resolver, else
+// default to standard Node resolver (with support for .mjs files)
+const resolver = webpackProject
+  ? 'webpack'
+  : { node: { extensions: ['.js', '.mjs', '.json'] } }
+
 /**
  * 😍 ESLint Configs
  *
@@ -31,12 +39,10 @@ module.exports = {
     'cypress/globals': true
   },
 
+  globals,
+
   settings: {
-    // For webpack projects use the `eslint-import-resolver-webpack` resolver, else
-    // default to standard Node resolver (with support for .mjs files)
-    'import/resolver': webpackProject
-      ? 'webpack'
-      : { node: { extensions: ['.js', '.mjs', '.json'] } }
+    'import/resolver': resolver
   },
 
   rules: {
