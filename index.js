@@ -1,15 +1,6 @@
-const checkProjectType = require('./lib/project-type')
+'use strict'
 
 const { NODE_ENV } = process.env
-const webpackProject = checkProjectType() === 'webpack'
-
-// Allow accessing process.env injected variables in webpack builds
-const globals = webpackProject ? { process: false } : {}
-// For webpack projects use the `eslint-import-resolver-webpack` resolver, else
-// default to standard Node resolver (with support for .mjs files)
-const resolver = webpackProject
-  ? 'webpack'
-  : { node: { extensions: ['.js', '.mjs', '.json'] } }
 
 /**
  * 😍 ESLint Configs
@@ -19,41 +10,35 @@ const resolver = webpackProject
  */
 module.exports = {
   // Base: https://github.com/airbnb/javascript
-  extends: ['airbnb', 'plugin:cypress/recommended', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
 
   parserOptions: {
     ecmaVersion: 10,
+    // By default use modules, the Node configs override to script
     sourceType: 'module',
+    // Required for eslint-plugin-react
     jsx: true
   },
 
   parser: 'babel-eslint',
 
-  // Extend the plugins already included by the Airbnb base
-  plugins: [/* react, jsx-a11y, import */ 'prettier', 'cypress'],
-
-  env: {
-    browser: webpackProject,
-    node: !webpackProject,
-    jest: true,
-    'cypress/globals': true
-  },
-
-  globals,
-
   settings: {
-    'import/resolver': resolver
+    // Include React settings by default, Storybook uses them as well
+    react: {
+      pragma: 'React',
+      version: '16.18'
+    }
   },
+
+  // Extend the plugins already included by the Airbnb base
+  plugins: [/* react, jsx-a11y, import */ 'prettier'],
 
   rules: {
-    // --- ✅  Cypress
-    // https://github.com/cypress-io/eslint-plugin-cypress
-    // Prevent assigning return values of cy calls (use aliases instead)
-    'cypress/no-assigning-return-values': 'error',
-    // Prevent waiting for arbitrary time periods (use wait instead)
-    'cypress/no-unnecessary-waiting': 'error',
-
     // --- ⬆️ Updates/Enhancements
+
+    // Dev dependencies are used for writing stories and unit tests colocated in
+    // the source directory, include them in this rule
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // Don't enforce .jsx file extension, it doesn't provide a clear benefit and
     // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
     'react/jsx-filename-extension': 'off',

@@ -86,22 +86,13 @@ available format options.
 
 #### Project types
 
-For webpack projects add a setting to the project `.eslintrc.js` to configure
-the [import plugin][`eslint-plugin-import`] to use the project's
-`webpack.config.js` to resolve files.
+Project types are recommended and include additional configs for working with
+specific project requirements. The available entries are:
 
-```javascript
-// .eslintrc.js
-module.exports = {
-  root: true,
-  extends: 'eloquence',
-  settings: {
-    eloquence: {
-      projectType: 'webpack'
-    }
-  }
-}
-```
+- `eloquence/cypress` - for writing Cypress tests
+- `eloquence/node` - for writing Node services and packages
+- `eloquence/storybok` - for setting up Storybook
+- `eloquence/webpack` - for webpack bundled applications
 
 _⚠️ webpack projects require the `eslint-import-resolver-webpack` package which
 is NOT included in the dependencies of this project!_
