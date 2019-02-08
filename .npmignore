@@ -1,8 +1,12 @@
-assets
-.github
 .cz-config.js
+.dockerignore
 .eslintrc.js
+.github
 .prettierignore
 .prettierrc
 .travis.yml
+CODE_OF_CONDUCT.md
+Dockerfile
+Style_Guide.md
+assets
 icon.png
