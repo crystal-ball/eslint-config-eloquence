@@ -14,6 +14,8 @@ module.exports = {
   },
   rules: {
     // Enable setting use strict pragma b/c node envs are NOT in modules
-    strict: ['error', 'safe']
+    strict: ['error', 'safe'],
+    // Allow global require to prevent circular dependencies
+    'global-require': 'off'
   }
 }
