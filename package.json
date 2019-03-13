@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "commitizen": "~3.0.7",
-    "cz-customizable": "~5.4.0",
+    "cz-customizable": "~5.5.1",
     "prettier": "~1.16.4",
     "semantic-release": "~15.13.3"
   },
