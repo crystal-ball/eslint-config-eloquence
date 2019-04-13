@@ -202,6 +202,29 @@ only providing value added requirements.
 | `react/sort-comp`              | `off`  | Current bug: https://github.com/yannickcr/eslint-plugin-react/pull/685                                          |
 | `jsx-a11y/anchor-is-valid`     | `off`  | Current bug: https://github.com/airbnb/javascript/pull/1648                                                     |
 
+## 👮‍♀️ TypeScript
+
+TypeScript can be supported by extending the `eloquence/typescript` base, which
+will change the parser and add the `@typescript-eslint` plugin along with rules
+for linting TypeScript.
+
+```
+module.exports = {
+  root: true
+  extends: ['eloquence/webpack', 'eloquence/typescript'],
+  parserOptions: {
+    // Specify project TS config location
+    project: './tsconfig.json',
+  },
+}
+```
+
+#### Required dependencies
+
+- [`typescript`][]
+- [`@typescript-eslint/parser`][]
+- [`@typescript-eslint/eslint-plugin`][]
+
 ## 🔋 Batteries included
 
 This package will automatically include all of the packages needed to run
@@ -230,17 +253,21 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 
 <!-- Links -->
 
-[`babel-eslint`]: https://github.com/babel/babel-eslint
-[`eslint-config-airbnb`]: https://github.com/airbnb/javascript
-[`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
-[`eslint-formatter-pretty`]:
-  https://github.com/sindresorhus/eslint-formatter-pretty
-[`eslint-plugin-cypress`]: https://github.com/cypress-io/eslint-plugin-cypress
-[`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
-[`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
-[`eslint-plugin-prettier`]: https://github.com/prettier/eslint-plugin-prettier
-[`eslint-plugin-react`]: https://github.com/yannickcr/eslint-plugin-react
-[`eslint`]: https://eslint.org/
-[airbnb]: https://github.com/airbnb/javascript
-[prettier options]: https://prettier.io/docs/en/options.html
-[prettier]: https://prettier.io/
+<!-- prettier-ignore-start -->
+[`@typescript-eslint/eslint-plugin`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+[`@typescript-eslint/parser`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+[`babel-eslint`]:https://github.com/babel/babel-eslint
+[`eslint-config-airbnb`]:https://github.com/airbnb/javascript
+[`eslint-config-prettier`]:https://github.com/prettier/eslint-config-prettier
+[`eslint-formatter-pretty`]:https://github.com/sindresorhus/eslint-formatter-pretty
+[`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
+[`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
+[`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
+[`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
+[`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
+[`eslint`]:https://eslint.org/
+[`typescript`]:https://github.com/Microsoft/TypeScript
+[airbnb]:https://github.com/airbnb/javascript
+[prettier options]:https://prettier.io/docs/en/options.html
+[prettier]:https://prettier.io/
+<!-- prettier-ignore-end -->
