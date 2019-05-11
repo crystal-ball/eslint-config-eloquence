@@ -28,8 +28,8 @@
   <a href="https://travis-ci.com/crystal-ball/eslint-config-eloquence" alt="build status">
     <img src="https://travis-ci.com/crystal-ball/eslint-config-eloquence.svg?branch=master">
   </a>
-  <a href="https://greenkeeper.io/" target="_blank" rel="noopener noreferrer">
-    <img src="https://badges.greenkeeper.io/crystal-ball/eslint-config-eloquence.svg" alt="Uses greenkeeper">
+  <a href="https://renovatebot.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Renovate-enabled-32c3c2.svg" alt="dependencies managed by Renvoate">
   </a>
   <a href="https://github.com/prettier/prettier" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg" alt="Prettier">
