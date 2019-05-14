@@ -6,16 +6,16 @@
 module.exports = {
   extends: './index.js',
   parserOptions: {
-    sourceType: 'script'
+    sourceType: 'script',
   },
   env: {
     node: true,
-    jest: true
+    jest: true,
   },
   rules: {
     // Enable setting use strict pragma b/c node envs are NOT in modules
     strict: ['error', 'safe'],
     // Allow global require to prevent circular dependencies
-    'global-require': 'off'
-  }
+    'global-require': 'off',
+  },
 }

@@ -128,7 +128,7 @@ allowing projects to update Prettier versions on their own schedule._
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: 'eloquence'
+  extends: 'eloquence',
 
   /* ...any project overrides of default configurations */
 }

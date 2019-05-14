@@ -7,7 +7,7 @@ module.exports = {
   extends: ['./index.js', 'plugin:cypress/recommended'],
   env: {
     node: true,
-    'cypress/globals': true
+    'cypress/globals': true,
   },
   plugins: [/* react, jsx-a11y, import, 'prettier' */ 'cypress'],
   rules: {
@@ -25,6 +25,6 @@ module.exports = {
     'func-names': 'off',
     'prefer-arrow-callback': 'off',
     // Allow triple slash type directives
-    'spaced-comment': 'off'
-  }
+    'spaced-comment': 'off',
+  },
 }
