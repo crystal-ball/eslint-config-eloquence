@@ -6,8 +6,6 @@
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
-
-  // --- Language overrides
   overrides: [
     {
       files: '*.md',
