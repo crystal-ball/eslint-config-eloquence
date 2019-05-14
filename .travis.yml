@@ -1,20 +1,22 @@
 language: node_js
 node_js:
-  - '8'
+  # Use Atom's node version for compatibility testing
+  - '8.9.3'
 
-sudo: required
+# Cache dependencies
+cache: npm
 
-services:
-  - docker
+# Default for install is npm ci w/ package-lock.json
+# install
 
-before_install:
-  - docker build -t crystal-ball/eloquence .
+# Default for script lifecycle is npm test
+# script
 
-script:
-  - docker run crystal-ball/eloquence
-
+# Release with Semantic after tests pass
 deploy:
   provider: script
+   # Prevent Travis from resetting working directory after build
   skip_cleanup: true
-  script:
-    - npx semantic-release
+  script: npx semantic-release
+  on:
+    branch: master
