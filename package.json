@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eloquence",
-  "version": "0.0.0-semantic",
+  "version": "11.0.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "index.js",
   "repository": {
@@ -48,6 +48,5 @@
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
     }
-  },
-  "prettier": "@crystal-ball/prettier-base"
+  }
 }
