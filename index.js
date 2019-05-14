@@ -52,6 +52,7 @@ module.exports = {
 
     // Class ordering currently doesn't support class property syntax, which is 🙅
     // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
+    // TODO: this can be enabled now
     'react/sort-comp': 'off',
 
     // 🌍 Environment adjustments
