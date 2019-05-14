@@ -1,6 +1,6 @@
 # Target node version should match the version used by Atom, this ensures that
 # ESLint extensions in Atom can execute these settings
-FROM node:8.9-alpine
+FROM node:8.16-alpine
 
 WORKDIR /usr/src/app
 
