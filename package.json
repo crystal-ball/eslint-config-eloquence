@@ -48,5 +48,6 @@
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
     }
-  }
+  },
+  "prettier": "@crystal-ball/prettier-base"
 }
