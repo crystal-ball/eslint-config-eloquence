@@ -10,7 +10,7 @@ install:
   - docker build -t crystal-ball/eloquence .
 
 script:
-  -docker run crystal-ball/eloquence
+  - docker run crystal-ball/eloquence
 
 # Release with Semantic after tests pass
 deploy:
