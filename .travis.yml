@@ -1,16 +1,16 @@
 language: node_js
 node_js:
   # Use Atom's node version for compatibility testing
-  - '8.9.3'
+  - '10'
 
-# Cache dependencies
-cache: npm
+services:
+  - docker
 
-# Default for install is npm ci w/ package-lock.json
-# install
+install:
+  - docker build -t crystal-ball/eloquence .
 
-# Default for script lifecycle is npm test
-# script
+script:
+  - docker run crystal-ball/eloquence
 
 # Release with Semantic after tests pass
 deploy:

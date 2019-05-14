@@ -17,7 +17,7 @@ module.exports = {
     // By default use modules, the Node configs override to script
     sourceType: 'module',
     // Required for eslint-plugin-react
-    jsx: true
+    jsx: true,
   },
 
   parser: 'babel-eslint',
@@ -26,8 +26,8 @@ module.exports = {
     // Include React settings by default, Storybook uses them as well
     react: {
       pragma: 'React',
-      version: '16.18'
-    }
+      version: '16.18',
+    },
   },
 
   // Extend the plugins already included by the Airbnb base
@@ -68,7 +68,7 @@ module.exports = {
     ...(NODE_ENV === 'test'
       ? {
           // Validate formatting is correct in test,prod,etc.
-          'prettier/prettier': 'error'
+          'prettier/prettier': 'error',
         }
       : {
           // Allow dev tools in dev environment
@@ -94,7 +94,7 @@ module.exports = {
           'react/require-default-props': 'warn',
           'react/self-closing-comp': 'warn',
 
-          'import/first': 'warn'
-        })
-  }
+          'import/first': 'warn',
+        }),
+  },
 }
