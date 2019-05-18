@@ -140,6 +140,16 @@ Creating a `.prettierrc` is optional. If you don't include one Prettier will use
 its default configurations when formatting. See [Prettier options][] for
 available format options.
 
+#### Pretty output
+
+The [`eslint-formatter-pretty`][] package is included in the dependencies and
+can be used to output pretty formatted results. The pretty printed results
+include hyperlinks to the rule docs and the files.
+
+```
+eslint --format=pretty file.js
+```
+
 #### Project types
 
 Project types are recommended and include additional configs for working with
@@ -220,15 +230,17 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 
 <!-- Links -->
 
-[airbnb]: https://github.com/airbnb/javascript
-[`eslint`]: https://eslint.org/
 [`babel-eslint`]: https://github.com/babel/babel-eslint
 [`eslint-config-airbnb`]: https://github.com/airbnb/javascript
 [`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
+[`eslint-formatter-pretty`]:
+  https://github.com/sindresorhus/eslint-formatter-pretty
 [`eslint-plugin-cypress`]: https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
 [`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]: https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]: https://github.com/yannickcr/eslint-plugin-react
-[prettier]: https://prettier.io/
+[`eslint`]: https://eslint.org/
+[airbnb]: https://github.com/airbnb/javascript
 [prettier options]: https://prettier.io/docs/en/options.html
+[prettier]: https://prettier.io/
