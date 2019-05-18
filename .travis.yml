@@ -3,10 +3,15 @@ node_js:
   # Use Atom's node version for compatibility testing
   - '10'
 
+# Cache npm packages
+cache: npm
+
 services:
   - docker
 
 install:
+  # Dependencies must be installed for release workflow
+  - npm install
   - docker build -t crystal-ball/eloquence .
 
 script:
