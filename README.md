@@ -103,7 +103,7 @@ formatting.
 - ✅ Extends Airbnb and Prettier for a comprehensive, battle tested ruleset
 - 🔋 Manages dependencies for simplified setup and use of ESLint
 - 🌲 Includes plugin for Cypress
-- 🎉 Encourages ESModules everywhere
+- 👮‍♀️ Supports linting TypeScript projects
 
 The most important opinion of Eloquence is that we believe linters shouldn't get
 in your way while developing, so in non-test environments all rules related to
@@ -115,7 +115,7 @@ styling are downgraded to warnings and all formatting rules are silenced. See
 #### Install Dependencies
 
 ```sh
-npm i eslint-config-eloquence prettier@1.13.5 -D
+npm i eslint-config-eloquence prettier -D
 ```
 
 _We recommend adding [Prettier][] as an exact version project dependency to
@@ -140,7 +140,7 @@ Creating a `.prettierrc` is optional. If you don't include one Prettier will use
 its default configurations when formatting. See [Prettier options][] for
 available format options.
 
-#### Pretty output
+#### Pretty print output
 
 The [`eslint-formatter-pretty`][] package is included in the dependencies and
 can be used to output pretty formatted results. The pretty printed results
@@ -150,6 +150,8 @@ include hyperlinks to the rule docs and the files.
 eslint --format=pretty file.js
 ```
 
+![Pretty prints links](./assets/pretty.png)
+
 #### Project types
 
 Project types are recommended and include additional configs for working with
@@ -158,10 +160,10 @@ specific project requirements. The available entries are:
 - `eloquence/cypress` - for writing Cypress tests
 - `eloquence/node` - for writing Node services and packages
 - `eloquence/storybok` - for setting up Storybook
-- `eloquence/webpack` - for webpack bundled applications
+- `eloquence/webpack` - for webpack bundled clients
 
-_⚠️ webpack projects require the `eslint-import-resolver-webpack` package which
-is NOT included in the dependencies of this project!_
+_⚠️ webpack projects require the [`eslint-import-resolver-webpack`][] package
+which is NOT included in the dependencies of this project!_
 
 ## 👩‍🏫 Rules
 
@@ -202,6 +204,50 @@ only providing value added requirements.
 | `react/sort-comp`              | `off`  | Current bug: https://github.com/yannickcr/eslint-plugin-react/pull/685                                          |
 | `jsx-a11y/anchor-is-valid`     | `off`  | Current bug: https://github.com/airbnb/javascript/pull/1648                                                     |
 
+## 👮‍♀️ TypeScript
+
+TypeScript can be supported by extending the `eloquence/typescript` base, which
+will change the parser and add the `@typescript-eslint` plugin along with rules
+for linting TypeScript.
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true
+  extends: ['eloquence/webpack', 'eloquence/typescript'],
+  parserOptions: {
+    // Specify project TS config location
+    project: './tsconfig.json',
+  },
+}
+```
+
+#### VSCode
+
+By default the ESLint extension for VSCode is only configured to lint JS
+language files and you need to add the TypeScript and TypeScript+React languages
+if you haven't.
+
+```json
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
+```
+
+#### Required dependencies
+
+_The TypeScript dependencies are not included in the package and must be
+installed by the project._
+
+- [`typescript`][]
+- [`@typescript-eslint/parser`][]
+- [`@typescript-eslint/eslint-plugin`][]
+
 ## 🔋 Batteries included
 
 This package will automatically include all of the packages needed to run
@@ -221,6 +267,7 @@ this package.)_
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
 - [`eslint-plugin-react`][]
+- [`eslint-formatter-pretty`][]
 
 ## 😍 Contributing
 
@@ -230,17 +277,22 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 
 <!-- Links -->
 
-[`babel-eslint`]: https://github.com/babel/babel-eslint
-[`eslint-config-airbnb`]: https://github.com/airbnb/javascript
-[`eslint-config-prettier`]: https://github.com/prettier/eslint-config-prettier
-[`eslint-formatter-pretty`]:
-  https://github.com/sindresorhus/eslint-formatter-pretty
-[`eslint-plugin-cypress`]: https://github.com/cypress-io/eslint-plugin-cypress
-[`eslint-plugin-import`]: https://github.com/benmosher/eslint-plugin-import
-[`eslint-plugin-jsx-a11y`]: https://github.com/evcohen/eslint-plugin-jsx-a11y
-[`eslint-plugin-prettier`]: https://github.com/prettier/eslint-plugin-prettier
-[`eslint-plugin-react`]: https://github.com/yannickcr/eslint-plugin-react
-[`eslint`]: https://eslint.org/
-[airbnb]: https://github.com/airbnb/javascript
-[prettier options]: https://prettier.io/docs/en/options.html
-[prettier]: https://prettier.io/
+<!-- prettier-ignore-start -->
+[`@typescript-eslint/eslint-plugin`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
+[`@typescript-eslint/parser`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
+[`babel-eslint`]:https://github.com/babel/babel-eslint
+[`eslint-config-airbnb`]:https://github.com/airbnb/javascript
+[`eslint-config-prettier`]:https://github.com/prettier/eslint-config-prettier
+[`eslint-formatter-pretty`]:https://github.com/sindresorhus/eslint-formatter-pretty
+[`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
+[`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
+[`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
+[`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
+[`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
+[`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
+[`eslint`]:https://eslint.org/
+[`typescript`]:https://github.com/Microsoft/TypeScript
+[airbnb]:https://github.com/airbnb/javascript
+[prettier options]:https://prettier.io/docs/en/options.html
+[prettier]:https://prettier.io/
+<!-- prettier-ignore-end -->
