@@ -1,3 +1,10 @@
+# [11.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.1.0...v11.2.0) (2019-05-19)
+
+
+### New
+
+* Add configs for TypeScript projects (#49) ([6761247300fabcae424a18158371b8402f8dde6b](https://github.com/crystal-ball/eslint-config-eloquence/commit/6761247300fabcae424a18158371b8402f8dde6b)), closes [#49](https://github.com/crystal-ball/eslint-config-eloquence/issues/49)
+
 # [11.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.0.0...v11.1.0) (2019-05-18)
 
 
