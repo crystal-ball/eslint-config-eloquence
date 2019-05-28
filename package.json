@@ -35,14 +35,13 @@
     "eslint-plugin-react": "7.13.0"
   },
   "devDependencies": {
-    "@crystal-ball/commitizen-base": "1.0.0",
+    "@crystal-ball/commit-semantics": "1.0.0",
     "@crystal-ball/prettier-base": "1.0.0",
-    "@crystal-ball/semantic-release-base": "1.0.1",
     "husky": "2.3.0"
   },
   "config": {
     "commitizen": {
-      "path": "cz-adapter-eslint"
+      "path": "@crystal-ball/commitizen-adapter"
     }
   },
   "husky": {
