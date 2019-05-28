@@ -53,7 +53,7 @@
     />
   </a>
   <a
-    href="https://github.com/prettier/prettier"
+    href="https://prettier.io/"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -63,7 +63,7 @@
     />
   </a>
   <a
-    href="https://github.com/semantic-release/semantic-release"
+    href="https://semantic-release.gitbook.io/semantic-release/"
     target="_blank"
     rel="noopener noreferrer"
   >
