@@ -1,77 +1,77 @@
-# [11.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.1.0...v11.2.0) (2019-05-19)
+# eslint-config-eloquence changelog
+
+This project strictly adheres to semver and will err on the side of releasing majors when
+changes could possibly introduce breaking changes. This changelog is dynamically generated
+with [Semantic Release](https://semantic-release.gitbook.io/semantic-release/) configured
+with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/semantic-release-base).
+
+> Changelog tags
+>
+> - 💥 - Breaking change
+> - 🔖 - Release notes
+> - 💖 - New feature
+> - ✨ - Updates
+> - 🛠 - Fixes
 
 
-### New
-
-* Add configs for TypeScript projects (#49) ([6761247300fabcae424a18158371b8402f8dde6b](https://github.com/crystal-ball/eslint-config-eloquence/commit/6761247300fabcae424a18158371b8402f8dde6b)), closes [#49](https://github.com/crystal-ball/eslint-config-eloquence/issues/49)
-
-# [11.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.0.0...v11.1.0) (2019-05-18)
+## [11.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.1.0...v11.2.0) (2019-05-19)
 
 
-### chore
+### 💖 New
 
-* configure Renovate (#51) ([0ceb0ad806dcf012992f43e4e638899a81c8adf8](https://github.com/crystal-ball/eslint-config-eloquence/commit/0ceb0ad806dcf012992f43e4e638899a81c8adf8)), closes [#51](https://github.com/crystal-ball/eslint-config-eloquence/issues/51)
+* Add configs for TypeScript projects (#49) ([6761247](https://github.com/crystal-ball/eslint-config-eloquence/commit/6761247300fabcae424a18158371b8402f8dde6b)), closes [#49](https://github.com/crystal-ball/eslint-config-eloquence/issues/49)
 
-### Chore
 
-* Pin dependencies (#54) ([6446a5a6142e333b48c8a007af181ee90eacfbcd](https://github.com/crystal-ball/eslint-config-eloquence/commit/6446a5a6142e333b48c8a007af181ee90eacfbcd)), closes [#54](https://github.com/crystal-ball/eslint-config-eloquence/issues/54)
-* Update dependency eslint to ~5.16.0 (#56) ([3a4a9c8ed4087c9759cfb37a305f661c487981ac](https://github.com/crystal-ball/eslint-config-eloquence/commit/3a4a9c8ed4087c9759cfb37a305f661c487981ac)), closes [#56](https://github.com/crystal-ball/eslint-config-eloquence/issues/56)
-* Update dependency eslint-config-prettier to ~4.2.0 (#57) ([cce72c94dca0c7bed735ba0e07f50328af6e5d69](https://github.com/crystal-ball/eslint-config-eloquence/commit/cce72c94dca0c7bed735ba0e07f50328af6e5d69)), closes [#57](https://github.com/crystal-ball/eslint-config-eloquence/issues/57)
-* Update dependency eslint-plugin-import to ~2.17.0 (#58) ([248b69ffa32fc3ab231f6e9d49ec3398ec2a87b2](https://github.com/crystal-ball/eslint-config-eloquence/commit/248b69ffa32fc3ab231f6e9d49ec3398ec2a87b2)), closes [#58](https://github.com/crystal-ball/eslint-config-eloquence/issues/58)
-* Update dependency eslint-plugin-prettier to ~3.1.0 (#59) ([30a629c2e75a3d91fbb6fa5c9905b832b46d4f9a](https://github.com/crystal-ball/eslint-config-eloquence/commit/30a629c2e75a3d91fbb6fa5c9905b832b46d4f9a)), closes [#59](https://github.com/crystal-ball/eslint-config-eloquence/issues/59)
-* Update dependency eslint-plugin-react to ~7.13.0 (#60) ([e5248b78f1687d4d6dfd33924f087b81a5ad0f84](https://github.com/crystal-ball/eslint-config-eloquence/commit/e5248b78f1687d4d6dfd33924f087b81a5ad0f84)), closes [#60](https://github.com/crystal-ball/eslint-config-eloquence/issues/60)
-* Update Node.js to v8.16 (#55) ([31ce38916de2badef5b36fff35eeedb7782348cb](https://github.com/crystal-ball/eslint-config-eloquence/commit/31ce38916de2badef5b36fff35eeedb7782348cb)), closes [#55](https://github.com/crystal-ball/eslint-config-eloquence/issues/55)
-* Use Travis to target Node version instead of Docker (#62) ([080c66bb34fe4818890363d8ae6e0647d05f47d5](https://github.com/crystal-ball/eslint-config-eloquence/commit/080c66bb34fe4818890363d8ae6e0647d05f47d5)), closes [#62](https://github.com/crystal-ball/eslint-config-eloquence/issues/62)
+## [11.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.0.0...v11.1.0) (2019-05-18)
 
-### docs
 
-* addl badge awesomeness 💖 (#61) ([89279cc9245bfe2ef0f469d79442f37fe2235ec1](https://github.com/crystal-ball/eslint-config-eloquence/commit/89279cc9245bfe2ef0f469d79442f37fe2235ec1)), closes [#61](https://github.com/crystal-ball/eslint-config-eloquence/issues/61)
-* replace Greenkeeper badge with Renovate badge (#53) ([807b6979dde49709133f65fc62b7b72a25f642bf](https://github.com/crystal-ball/eslint-config-eloquence/commit/807b6979dde49709133f65fc62b7b72a25f642bf)), closes [#53](https://github.com/crystal-ball/eslint-config-eloquence/issues/53)
+### 💖 New
 
-### New
+* Add pretty formatter dependency 💖 (#67) ([bd62aaf](https://github.com/crystal-ball/eslint-config-eloquence/commit/bd62aaf8a41786f1515b829f4b2c0a4042f644fa)), closes [#67](https://github.com/crystal-ball/eslint-config-eloquence/issues/67)
 
-* Add pretty formatter dependency 💖 (#67) ([bd62aaf8a41786f1515b829f4b2c0a4042f644fa](https://github.com/crystal-ball/eslint-config-eloquence/commit/bd62aaf8a41786f1515b829f4b2c0a4042f644fa)), closes [#67](https://github.com/crystal-ball/eslint-config-eloquence/issues/67)
+### ✨ Update
 
-### Update
+* Update dependencies and workflows (#63) ([66b2b60](https://github.com/crystal-ball/eslint-config-eloquence/commit/66b2b6081d1ce8da244fc74d114bc5feca9ffe73)), closes [#63](https://github.com/crystal-ball/eslint-config-eloquence/issues/63)
+* Update dependency husky to v2.3.0 (#66) ([7c5c497](https://github.com/crystal-ball/eslint-config-eloquence/commit/7c5c497aa4991a00667d94974451639ba026d9db)), closes [#66](https://github.com/crystal-ball/eslint-config-eloquence/issues/66)
 
-* Update dependencies and workflows (#63) ([66b2b6081d1ce8da244fc74d114bc5feca9ffe73](https://github.com/crystal-ball/eslint-config-eloquence/commit/66b2b6081d1ce8da244fc74d114bc5feca9ffe73)), closes [#63](https://github.com/crystal-ball/eslint-config-eloquence/issues/63)
-* Update dependency husky to v2.3.0 (#66) ([7c5c497aa4991a00667d94974451639ba026d9db](https://github.com/crystal-ball/eslint-config-eloquence/commit/7c5c497aa4991a00667d94974451639ba026d9db)), closes [#66](https://github.com/crystal-ball/eslint-config-eloquence/issues/66)
+### Docs, Upgrade, Chore
 
-### Upgrade
+* Configure Renovate (#51) ([0ceb0ad](https://github.com/crystal-ball/eslint-config-eloquence/commit/0ceb0ad806dcf012992f43e4e638899a81c8adf8)), closes [#51](https://github.com/crystal-ball/eslint-config-eloquence/issues/51)
+* Pin dependencies (#54) ([6446a5a](https://github.com/crystal-ball/eslint-config-eloquence/commit/6446a5a6142e333b48c8a007af181ee90eacfbcd)), closes [#54](https://github.com/crystal-ball/eslint-config-eloquence/issues/54)
+* Update dependency eslint to ~5.16.0 (#56) ([3a4a9c8](https://github.com/crystal-ball/eslint-config-eloquence/commit/3a4a9c8ed4087c9759cfb37a305f661c487981ac)), closes [#56](https://github.com/crystal-ball/eslint-config-eloquence/issues/56)
+* Update dependency eslint-config-prettier to ~4.2.0 (#57) ([cce72c9](https://github.com/crystal-ball/eslint-config-eloquence/commit/cce72c94dca0c7bed735ba0e07f50328af6e5d69)), closes [#57](https://github.com/crystal-ball/eslint-config-eloquence/issues/57)
+* Update dependency eslint-plugin-import to ~2.17.0 (#58) ([248b69f](https://github.com/crystal-ball/eslint-config-eloquence/commit/248b69ffa32fc3ab231f6e9d49ec3398ec2a87b2)), closes [#58](https://github.com/crystal-ball/eslint-config-eloquence/issues/58)
+* Update dependency eslint-plugin-prettier to ~3.1.0 (#59) ([30a629c](https://github.com/crystal-ball/eslint-config-eloquence/commit/30a629c2e75a3d91fbb6fa5c9905b832b46d4f9a)), closes [#59](https://github.com/crystal-ball/eslint-config-eloquence/issues/59)
+* Update dependency eslint-plugin-react to ~7.13.0 (#60) ([e5248b7](https://github.com/crystal-ball/eslint-config-eloquence/commit/e5248b78f1687d4d6dfd33924f087b81a5ad0f84)), closes [#60](https://github.com/crystal-ball/eslint-config-eloquence/issues/60)
+* Update Node.js to v8.16 (#55) ([31ce389](https://github.com/crystal-ball/eslint-config-eloquence/commit/31ce38916de2badef5b36fff35eeedb7782348cb)), closes [#55](https://github.com/crystal-ball/eslint-config-eloquence/issues/55)
+* Use Travis to target Node version instead of Docker (#62) ([080c66b](https://github.com/crystal-ball/eslint-config-eloquence/commit/080c66bb34fe4818890363d8ae6e0647d05f47d5)), closes [#62](https://github.com/crystal-ball/eslint-config-eloquence/issues/62)
+* Addl badge awesomeness 💖 (#61) ([89279cc](https://github.com/crystal-ball/eslint-config-eloquence/commit/89279cc9245bfe2ef0f469d79442f37fe2235ec1)), closes [#61](https://github.com/crystal-ball/eslint-config-eloquence/issues/61)
+* Replace Greenkeeper badge with Renovate badge (#53) ([807b697](https://github.com/crystal-ball/eslint-config-eloquence/commit/807b6979dde49709133f65fc62b7b72a25f642bf)), closes [#53](https://github.com/crystal-ball/eslint-config-eloquence/issues/53)
+* Update dependency eslint-config-prettier to v4.3.0 (#65) ([fde33e4](https://github.com/crystal-ball/eslint-config-eloquence/commit/fde33e42144c6006d9d3b7fe09895e9f935dcb9c)), closes [#65](https://github.com/crystal-ball/eslint-config-eloquence/issues/65)
 
-* Update dependency eslint-config-prettier to v4.3.0 (#65) ([fde33e42144c6006d9d3b7fe09895e9f935dcb9c](https://github.com/crystal-ball/eslint-config-eloquence/commit/fde33e42144c6006d9d3b7fe09895e9f935dcb9c)), closes [#65](https://github.com/crystal-ball/eslint-config-eloquence/issues/65)
 
-# Changelog
+## [7.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.1.1...v7.2.0) (2018-04-30)
 
-All notable changes to this project will be documented in this file.
+### ✨ Update
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to
-[Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+- log level warn in dev for prefer sfc ([9ac8479](https://github.com/crystal-ball/eslint-config-eloquence/commit/9ac8479))
 
-<a name="7.2.0"></a>
+### [7.1.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.1.0...v7.1.1) (2018-04-30)
 
-# 7.2.0 (https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.1.1...v7.2.0) (2018-04-30)
-
-### Features
-
-- log level warn in dev for prefer sfc (9ac8479
-  (https://github.com/crystal-ball/eslint-config-eloquence/commit/9ac8479))
-
-## [7.1.1] 2018-04-30
-
-### Fixed
+### 🛠 Fixed
 
 - fix dev rule breaking package disabling rule
 
-## [7.1.0] 2018-04-29
+## [7.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.0.0...v7.1.0) (2018-04-29)
 
-### Added
+### 💖 New
 
 - Project type config to set webpack related project configs with
   `process.env.ELOQUENCE_PROJECT_TYPE`
 
-## [7.0.0] 2018-04-29 - LevelUp
+## [7.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.3.0...v7.0.0) LevelUp (2018-04-29)
+
+### 🔖 Release Notes
 
 Package v7 includes two important updates:
 
@@ -82,46 +82,48 @@ Package v7 includes two important updates:
   of ESLint rule computation. It is possible to set the rule level for inherited
   rules without specifying the rule options 🎉
 
-## [6.3.0] 2018-02-07
+## [6.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.2.1...v6.3.0) (2018-02-07)
 
-### Added
+### 💖 New
 
 - Additional warn in dev rules added
 
-## [6.2.1] 2018-02-07
+### [6.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.2.0...v6.2.1) (2018-02-07)
 
-### Fixed
+### 🛠 Fix
 
 - Function trailing commas removed to provide Node v7.4 compatability for Atom
   editors.
 
-## [6.2.0] - 2017-12-11
+## [6.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.1.0...v6.2.0) (2017-12-11)
 
-### Changed
+### ✨ Update
 
 - Node projects can now follow best practices and use `console.log` for
   outputting to stdout.
 
-## [6.1.0] - 2017-11-17
+## [6.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.0.1...v6.1.0) (2017-11-17)
 
-### Added
+### 💖 New
 
 - Warnings for low importance, tedious rules are now able to be downgraded
   during normal development and linted as errors in test. This makes hacking
   easier 🎉 while still maintaining quality in tests.
 
-### Changed
+### Upgrade
 
 - Updated non Airbnb deps to latest.
 
-## [6.0.1] - 2017-10-23
+### [6.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v6.0.0...v6.0.1) (2017-10-23)
 
-### Fixed
+### 🛠 Fix
 
 - Added `specialLink` value `to` to `jsx-a11y/anchor-is-valid` so that React
   Router `<Link/>` components validate correctly.
 
-## [6.0.0] - 2017-10-22
+## 6.0.0 (2017-10-22)
+
+### 🔖 Release Notes
 
 v6 updates the linting configurations to match the convention for typing in
 general and typing for React component props specifically.
