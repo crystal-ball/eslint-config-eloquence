@@ -50,6 +50,37 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 * Update dependency eslint-config-prettier to v4.3.0 (#65) ([fde33e4](https://github.com/crystal-ball/eslint-config-eloquence/commit/fde33e42144c6006d9d3b7fe09895e9f935dcb9c)), closes [#65](https://github.com/crystal-ball/eslint-config-eloquence/issues/65)
 
 
+## [11.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v10.1.0...v11.0.0) (2019-02-08)
+
+### 💥 Breaking Changes
+
+Project types should be specified using entry files instead of settings
+
+### 💖 New
+
+* Entry files for project types created ([1e23bb0](https://github.com/crystal-ball/eslint-config-eloquence/commit/1e23bb0)), closes ([#37](https://github.com/crystal-ball/eslint-config-eloquence/issues/37))
+
+
+## [10.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v10.0.0...v10.1.0) (2019-02-08)
+
+### ✨ Update
+
+* Add process global (#36) ([2126ced](https://github.com/crystal-ball/eslint-config-eloquence/commit/2126ced)), closes ([#35](https://github.com/crystal-ball/eslint-config-eloquence/issues/35))
+
+
+## [10.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v9.6.0...v10.0.0) (2019-02-08)
+
+### 💥 Breaking Changes
+
+The flow plugin and rules are no longer included. The project type must be configured in the project
+.eslintrc.js
+
+### ✨ Update
+
+* Update deps, add project type resolver, remove flow plugin ([473ba06](https://github.com/crystal-ball/eslint-config-eloquence/commit/473ba06))
+
+<!-- Missing releases: 7.3, 7.3.1, 7.3.2, 7.4, 7.5, 8.0, 9.0, 9.1, 9.2, 9.3, 9.3.1, 9.3.2, 9.4, 9.5, 9.5.1, 9.6 -->
+
 ## [7.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v7.1.1...v7.2.0) (2018-04-30)
 
 ### ✨ Update
