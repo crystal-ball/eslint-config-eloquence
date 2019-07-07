@@ -1,3 +1,24 @@
+# [12.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.2.0...v12.0.0) (2019-07-07)
+
+
+### Chore
+
+* Update to project commit semantics 🔮✨ (#72) ([8e46a737cb7d360d7b5e4980e15a3f7c73360a30](https://github.com/crystal-ball/eslint-config-eloquence/commit/8e46a737cb7d360d7b5e4980e15a3f7c73360a30)), closes [#72](https://github.com/crystal-ball/eslint-config-eloquence/issues/72)
+
+### Docs
+
+* Add some of the missing releases to changelog 📝 ([da639ea68b84c6dc50936467a962924e5872651e](https://github.com/crystal-ball/eslint-config-eloquence/commit/da639ea68b84c6dc50936467a962924e5872651e))
+* Format Changelog 📝 ([c82898741d93fd95afb05a5d4bbacde750316ce0](https://github.com/crystal-ball/eslint-config-eloquence/commit/c82898741d93fd95afb05a5d4bbacde750316ce0))
+
+### New
+
+* Define rule configurations in repository 💖⏫ (#85) ([3f57e7a636166cc46810d759d268490c8e1384d4](https://github.com/crystal-ball/eslint-config-eloquence/commit/3f57e7a636166cc46810d759d268490c8e1384d4)), closes [#85](https://github.com/crystal-ball/eslint-config-eloquence/issues/85)
+
+### Upgrade
+
+* Update dependency eslint-plugin-import to v2.17.3 (#69) ([955a541985c2a4497edf3a619a710cc28d0a2e0e](https://github.com/crystal-ball/eslint-config-eloquence/commit/955a541985c2a4497edf3a619a710cc28d0a2e0e)), closes [#69](https://github.com/crystal-ball/eslint-config-eloquence/issues/69)
+* Update dependency husky to v2.7.0 (#73) ([8c7076313783ec0abcee32d2add300c2c47f959a](https://github.com/crystal-ball/eslint-config-eloquence/commit/8c7076313783ec0abcee32d2add300c2c47f959a)), closes [#73](https://github.com/crystal-ball/eslint-config-eloquence/issues/73)
+
 # eslint-config-eloquence changelog
 
 This project strictly adheres to semver and will err on the side of releasing majors when
