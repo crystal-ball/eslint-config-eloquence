@@ -5,7 +5,7 @@
  * are colocated in /src and use webpack configs)
  */
 module.exports = {
-  extends: './index.js',
+  extends: ['./react.js'],
   env: {
     node: true,
   },

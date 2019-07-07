@@ -10,7 +10,7 @@ seriously and contributors are required to adhere to the guidelines.
 
 ## Node target
 
-This package supports Node >=7.4, and must not use language features not
-supported by Node 7.4. These configs are consumed and executed by editors, and
-the Node version used by Electron inside Atom is 7.4. Unsupported syntax
+This package supports Node >=8.9, and must not use language features not
+supported by Node 8.9. These configs are consumed and executed by editors, and
+the Node version used by Electron inside Atom is 8.9. Unsupported syntax
 features in this package will break linting in Atom!
