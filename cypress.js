@@ -1,30 +1,22 @@
 'use strict'
 
+const cypress = require('./src/rules/cypress')
+
 /**
- * Extend base config for writing Cypress tests
+ * Rules for writing A++ Cypress acceptance tests in a React project
+ * https://github.com/cypress-io/eslint-plugin-cypress
  */
 module.exports = {
-  extends: ['./index.js', 'plugin:cypress/recommended'],
+  extends: ['./react.js'],
+
+  plugins: ['cypress'],
+
   env: {
     node: true,
     'cypress/globals': true,
   },
-  plugins: [/* react, jsx-a11y, import, 'prettier' */ 'cypress'],
+
   rules: {
-    // --- ✅  Cypress
-    // https://github.com/cypress-io/eslint-plugin-cypress
-    // Prevent assigning return values of cy calls (use aliases instead)
-    'cypress/no-assigning-return-values': 'error',
-    // Prevent waiting for arbitrary time periods (use wait instead)
-    'cypress/no-unnecessary-waiting': 'error',
-
-    // --- ⬆️ Updates
-
-    // Accessing `this` for references from test setup like beforeEach requires
-    // using standard functions over arrow functions for context
-    'func-names': 'off',
-    'prefer-arrow-callback': 'off',
-    // Allow triple slash type directives
-    'spaced-comment': 'off',
+    ...cypress,
   },
 }

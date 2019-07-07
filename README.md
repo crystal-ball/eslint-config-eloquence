@@ -1,24 +1,7 @@
 <div align="center">
   <img src="./assets/eloquence.png" width="600" alt="Eloquence">
 </div>
-
-<hr>
-
-<div align="center">
-  <p><em>Adaptive ESLint configs that stay out of your way.</em></p>
-  <br>
-</div>
-
-<div align="center">
-  <img
-    width="300"
-    src="./assets/logos.png"
-    alt="Extends Airbnb code quality rules with Prettier.js formatting"
-  >
-</div>
-
 <br>
-
 <hr>
 
 <p align="center">
@@ -28,86 +11,64 @@
       alt="current version"
     />
   </a>
-  <a
-    href="https://travis-ci.com/crystal-ball/eslint-config-eloquence"
-    alt="build status"
-  >
+  <a href="https://travis-ci.com/crystal-ball/eslint-config-eloquence">
     <img
       src="https://travis-ci.com/crystal-ball/eslint-config-eloquence.svg?branch=master"
+      alt="Travis build status"
     />
   </a>
-  <a href="https://renovatebot.com/" target="_blank" rel="noopener noreferrer">
+  <a href="https://renovatebot.com/">
     <img
       src="https://img.shields.io/badge/Renovate-enabled-32c3c2.svg"
-      alt="dependencies managed by Renvoate"
+      alt="Dependency versions managed by Renovate"
     />
   </a>
-  <a
-    href="https://github.com/crystal-ball/eslint-config-eloquence#zenhub"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://github.com/crystal-ball/eslint-config-eloquence#zenhub">
     <img
       src="https://img.shields.io/badge/Shipping_faster_with-ZenHub-5e60ba.svg?style=flat-square"
-      alt="ZenHub"
+      alt="Issues managed using ZenHub"
     />
   </a>
-  <a
-    href="https://prettier.io/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://prettier.io/">
     <img
       src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"
-      alt="Prettier"
+      alt="Formatted with Prettier"
     />
   </a>
-  <a
-    href="https://semantic-release.gitbook.io/semantic-release/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://semantic-release.gitbook.io/semantic-release/">
     <img
       src="https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-semantic_release-e10079.svg"
-      alt="managed by semantic release"
+      alt="Release management by semantic release"
     />
   </a>
   <br />
-  <a
-    href="https://github.com/crystal-ball"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://github.com/crystal-ball">
     <img
       src="https://img.shields.io/badge/%F0%9F%94%AE%E2%9C%A8-contains_magic-D831D7.svg"
       alt="Contains magic"
     />
   </a>
-  <a
-    href="https://github.com/crystal-ball/crystal-ball.github.io"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href="https://github.com/crystal-ball/crystal-ball.github.io">
     <img
       src="https://img.shields.io/badge/%F0%9F%92%96%F0%9F%8C%88-full_of_love-F5499E.svg"
-      alt="full of love"
+      alt="Full of love"
     />
   </a>
 </p>
 
-Eloquence is a robust and adaptive ESLint ruleset for code quality, style and
-formatting.
+Eloquence is a robust and adaptive ESLint configuration set for code linting
+code quality, style and formatting.
 
-- 🧐 Intelligently adjusts error levels for style and formatting rules in dev
-  envs
-- ✅ Extends Airbnb and Prettier for a comprehensive, battle tested ruleset
-- 🔋 Manages dependencies for simplified setup and use of ESLint
-- 🌲 Includes plugin for Cypress
+- 🧐 Intelligently adjusts error severity for style and formatting rules for
+  development workflows
+- 🔋 Manages all ESLint dependencies for simple setup and version maintenance
+- 😍 Fully integrated with linting for Prettier formatting
+- 🌲 Includes Cypress tests specific ruleset
 - 👮‍♀️ Supports linting TypeScript projects
 
-The most important opinion of Eloquence is that we believe linters shouldn't get
-in your way while developing, so in non-test environments all rules related to
-styling are downgraded to warnings and all formatting rules are silenced. See
+The most important opinion of Eloquence is that linters shouldn't get in your
+way while developing, so outside test environments all rules related to styling
+are downgraded to warnings and all formatting rules are silenced. See
 [Rules](#rules) for details.
 
 ## ⚙️ Setup
@@ -115,7 +76,11 @@ styling are downgraded to warnings and all formatting rules are silenced. See
 #### Install Dependencies
 
 ```sh
+# All projects:
 npm i eslint-config-eloquence prettier -D
+
+# React projects using webpack
+npm i eslint-import-resolver-webpack -D
 ```
 
 _We recommend adding [Prettier][] as an exact version project dependency to
@@ -128,17 +93,9 @@ allowing projects to update Prettier versions on their own schedule._
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: 'eloquence',
-
-  /* ...any project overrides of default configurations */
+  extends: 'eloquence/react',
 }
 ```
-
-#### Configure Prettier
-
-Creating a `.prettierrc` is optional. If you don't include one Prettier will use
-its default configurations when formatting. See [Prettier options][] for
-available format options.
 
 #### Pretty print output
 
@@ -154,16 +111,19 @@ eslint --format=pretty file.js
 
 #### Project types
 
-Project types are recommended and include additional configs for working with
-specific project requirements. The available entries are:
+Eloquence supports Node.js services and React applications with two separate
+configurations optimized for the project type. Use the project configuration for
+the `.eslintrc.js` config in the root of your project:
 
-- `eloquence/cypress` - for writing Cypress tests
-- `eloquence/node` - for writing Node services and packages
-- `eloquence/storybok` - for setting up Storybook
-- `eloquence/webpack` - for webpack bundled clients
+- `eloquence/node` - for Node services and NPM packages
+- `eloquence/react` - for React applications bundled with webpack
 
-_⚠️ webpack projects require the [`eslint-import-resolver-webpack`][] package
-which is NOT included in the dependencies of this project!_
+Additional configurations are available for linting files related to specific
+tools:
+
+- `eloquence/cypress` - for Cypress acceptance test files
+- `eloquence/storybook` - for Storybook configuration files
+- `eloquence/typescript` - for really strict projects
 
 ## 👩‍🏫 Rules
 
@@ -177,32 +137,23 @@ intelligently adjusts the linter error level for rule types by environment:
 
 #### Error levels
 
-| Env  | Quality | Style   | Formatting |
-| ---- | ------- | ------- | ---------- |
-| Test | `error` | `error` | `error`    |
-| Dev  | `error` | `warn`  | `off`      |
+| Env  | Quality rules | Style rules | Formatting rules |
+| ---- | ------------- | ----------- | ---------------- |
+| Test | `error`       | `error`     | `error`          |
+| Dev  | `error`       | `warn`      | `off`            |
 
-So you always see feedback related to code quality, but during development non
-critical feedback related to code style and formatting is moderated.
+This means linting related to code quality is always surfaced as a priority, but
+during development non critical feedback related to code style and formatting is
+moderated.
 
-#### Rule composition
+#### Linting philosphy
 
-1.  The [Airbnb][] ruleset provides a rigorous, battle tested, community
-    endorsed foundational ruleset for code quality and style.
-2.  The [Prettier][] ruleset provides formatting requirements.
-3.  Eloquence uses `NODE_ENV` to adjust the error level of all style and
-    formatting rules based on environment.
+In general, the Eloquence ruleset tries to encourage these coding practices:
 
-#### Eloquence rules
-
-Eloquence updates a few of the rules set by the Airbnb base in the spirit of
-only providing value added requirements.
-
-| Rule                           | Config | Motivation                                                                                                      |
-| ------------------------------ | ------ | --------------------------------------------------------------------------------------------------------------- |
-| `react/jsx-filename-extension` | `off`  | Using a different file extension for files with JSX typically complicates project tooling without adding value. |
-| `react/sort-comp`              | `off`  | Current bug: https://github.com/yannickcr/eslint-plugin-react/pull/685                                          |
-| `jsx-a11y/anchor-is-valid`     | `off`  | Current bug: https://github.com/airbnb/javascript/pull/1648                                                     |
+- Readable, explicit code is always preferred over clever code.
+- Premature abstraction leads to more issues than duplicated code.
+- Whenever possible try to write simple code that can be read through without
+  puzzle solving.
 
 ## 👮‍♀️ TypeScript
 
@@ -214,11 +165,7 @@ for linting TypeScript.
 // .eslintrc.js
 module.exports = {
   root: true
-  extends: ['eloquence/webpack', 'eloquence/typescript'],
-  parserOptions: {
-    // Specify project TS config location
-    project: './tsconfig.json',
-  },
+  extends: ['eloquence/node', 'eloquence/typescript']
 }
 ```
 
@@ -274,6 +221,11 @@ this package.)_
 This is an open source project that welcomes and appreciates contributions from
 everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) and
 [Contributing](./.github/CONTRIBUTING.md) guides to get started.
+
+## Thank You!
+
+- The base ESLint rules for this project began with the Airbnb ESLint
+  configuration and have evolved to the current rule definitions.
 
 <!-- Links -->
 
