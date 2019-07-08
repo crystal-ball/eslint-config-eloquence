@@ -27,6 +27,6 @@ High level overview of the issue...
 
 ## Environment Information
 
-* OS: <!-- e.g. macOS Sierra 10.12.1 -->
-* Node/NPM Version: <!-- e.g. Node 8.9.1 with npm 5.6.0 -->
-* Browser: <!-- e.g. Chrome 55 or IE 11 -->
+- OS: <!-- e.g. macOS Sierra 10.12.1 -->
+- Node/NPM Version: <!-- e.g. Node 8.9.1 with npm 5.6.0 -->
+- Browser: <!-- e.g. Chrome 55 or IE 11 -->
