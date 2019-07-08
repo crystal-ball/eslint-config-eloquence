@@ -1,24 +1,3 @@
-# [12.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.2.0...v12.0.0) (2019-07-07)
-
-
-### Chore
-
-* Update to project commit semantics 🔮✨ (#72) ([8e46a737cb7d360d7b5e4980e15a3f7c73360a30](https://github.com/crystal-ball/eslint-config-eloquence/commit/8e46a737cb7d360d7b5e4980e15a3f7c73360a30)), closes [#72](https://github.com/crystal-ball/eslint-config-eloquence/issues/72)
-
-### Docs
-
-* Add some of the missing releases to changelog 📝 ([da639ea68b84c6dc50936467a962924e5872651e](https://github.com/crystal-ball/eslint-config-eloquence/commit/da639ea68b84c6dc50936467a962924e5872651e))
-* Format Changelog 📝 ([c82898741d93fd95afb05a5d4bbacde750316ce0](https://github.com/crystal-ball/eslint-config-eloquence/commit/c82898741d93fd95afb05a5d4bbacde750316ce0))
-
-### New
-
-* Define rule configurations in repository 💖⏫ (#85) ([3f57e7a636166cc46810d759d268490c8e1384d4](https://github.com/crystal-ball/eslint-config-eloquence/commit/3f57e7a636166cc46810d759d268490c8e1384d4)), closes [#85](https://github.com/crystal-ball/eslint-config-eloquence/issues/85)
-
-### Upgrade
-
-* Update dependency eslint-plugin-import to v2.17.3 (#69) ([955a541985c2a4497edf3a619a710cc28d0a2e0e](https://github.com/crystal-ball/eslint-config-eloquence/commit/955a541985c2a4497edf3a619a710cc28d0a2e0e)), closes [#69](https://github.com/crystal-ball/eslint-config-eloquence/issues/69)
-* Update dependency husky to v2.7.0 (#73) ([8c7076313783ec0abcee32d2add300c2c47f959a](https://github.com/crystal-ball/eslint-config-eloquence/commit/8c7076313783ec0abcee32d2add300c2c47f959a)), closes [#73](https://github.com/crystal-ball/eslint-config-eloquence/issues/73)
-
 # eslint-config-eloquence changelog
 
 This project strictly adheres to semver and will err on the side of releasing majors when
@@ -33,6 +12,42 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 💖 - New feature
 > - ✨ - Updates
 > - 🛠 - Fixes
+
+
+# [12.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.2.0...v12.0.0) (2019-07-07)
+
+### 💥 Breaking Changes
+
+Rename any configuration using `eloquence/webpack` to `eloquence/react`. This
+better reflects the project type rather than the tools used for the project.
+
+### 🔖 Release Notes
+
+This release cleans up the dependencies and rule definitions for Eloquence, most
+importantly the dependency on the Airbnb package is removed and those rules are
+copied into this repo. Reasons for this include:
+
+- Better access to rules to handle switching between dev and test severity
+  levels
+- Faster releases to rules and linting issues
+- More fine grained control of which rules are applied to which lint-set, eg
+  Node.js and React rules are only applied to those lint sets.
+
+Going forward this also has the benefit of consolidating all of the lint rules
+applied for each set to this repo, allowing this repo to serve as the manager of
+ESLint dependencies and rules.
+
+### 💖 New
+
+* Define rule configurations in repository 💖⏫ (#85) ([3f57e7a](https://github.com/crystal-ball/eslint-config-eloquence/commit/3f57e7a636166cc46810d759d268490c8e1384d4)), closes [#85](https://github.com/crystal-ball/eslint-config-eloquence/issues/85)
+
+### Docs, Upgrade, Chore
+
+* Update to project commit semantics 🔮✨ (#72) ([8e46a73](https://github.com/crystal-ball/eslint-config-eloquence/commit/8e46a737cb7d360d7b5e4980e15a3f7c73360a30)), closes [#72](https://github.com/crystal-ball/eslint-config-eloquence/issues/72)
+* Add some of the missing releases to changelog 📝 ([da639ea](https://github.com/crystal-ball/eslint-config-eloquence/commit/da639ea68b84c6dc50936467a962924e5872651e))
+* Format Changelog 📝 ([c828987](https://github.com/crystal-ball/eslint-config-eloquence/commit/c82898741d93fd95afb05a5d4bbacde750316ce0))
+* Update dependency eslint-plugin-import to v2.17.3 (#69) ([955a541](https://github.com/crystal-ball/eslint-config-eloquence/commit/955a541985c2a4497edf3a619a710cc28d0a2e0e)), closes [#69](https://github.com/crystal-ball/eslint-config-eloquence/issues/69)
+* Update dependency husky to v2.7.0 (#73) ([8c70763](https://github.com/crystal-ball/eslint-config-eloquence/commit/8c7076313783ec0abcee32d2add300c2c47f959a)), closes [#73](https://github.com/crystal-ball/eslint-config-eloquence/issues/73)
 
 
 ## [11.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v11.1.0...v11.2.0) (2019-05-19)
