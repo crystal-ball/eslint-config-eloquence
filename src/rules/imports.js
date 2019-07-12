@@ -49,11 +49,11 @@ module.exports = {
   'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
 
   // ensure named imports coupled with named exports
-  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
   'import/named': 'error',
 
   // ensure default import coupled with default export
-  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
+  // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
   'import/default': 'off',
 
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
@@ -145,9 +145,10 @@ module.exports = {
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
   'import/newline-after-import': 'error',
 
-  // Require modules with a single export to use a default export
+  // Using named exports is a good practice for ensuring consistency across the codebase
+  // so this rule is off
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-  'import/prefer-default-export': 'error',
+  'import/prefer-default-export': 'off',
 
   // Restrict which files can be imported in a given folder
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
@@ -197,7 +198,7 @@ module.exports = {
   // Reports if a module's default export is unnamed
   // https://github.com/benmosher/eslint-plugin-import/blob/d9b712ac7fd1fddc391f7b234827925c160d956f/docs/rules/no-anonymous-default-export.md
   'import/no-anonymous-default-export': [
-    'off',
+    'error',
     {
       allowArray: false,
       allowArrowFunction: false,
@@ -219,7 +220,7 @@ module.exports = {
   // https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/group-exports.md
   'import/group-exports': 'off',
 
-  // forbid default exports. this is a terrible rule, do not use it.
+  // Default exports are ok!
   // https://github.com/benmosher/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-default-export.md
   'import/no-default-export': 'off',
 
