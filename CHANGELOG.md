@@ -1,3 +1,14 @@
+## [12.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.0.0...v12.0.1) (2019-07-12)
+
+
+### Docs
+
+* Fix changelog docs and update to latest dev deps 🔧 (#86) ([c87073253e9cc7ca17094f93b0c9f24490972b98](https://github.com/crystal-ball/eslint-config-eloquence/commit/c87073253e9cc7ca17094f93b0c9f24490972b98)), closes [#86](https://github.com/crystal-ball/eslint-config-eloquence/issues/86)
+
+### Fix
+
+* Fix import and continue rule definitions ✨ (#87) ([0948beb5de9419fda13a1113c03c31d2e657203b](https://github.com/crystal-ball/eslint-config-eloquence/commit/0948beb5de9419fda13a1113c03c31d2e657203b)), closes [#87](https://github.com/crystal-ball/eslint-config-eloquence/issues/87) [#70](https://github.com/crystal-ball/eslint-config-eloquence/issues/70) [#71](https://github.com/crystal-ball/eslint-config-eloquence/issues/71)
+
 # eslint-config-eloquence changelog
 
 This project strictly adheres to semver and will err on the side of releasing majors when
