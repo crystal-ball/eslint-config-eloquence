@@ -1,3 +1,10 @@
+## [12.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.2.0...v12.2.1) (2019-07-27)
+
+
+### Fix
+
+* Allow importing path in Storybook configs 🔧 (#96) ([dc47118ce0ad07391202dbd27712be83a44dc8f0](https://github.com/crystal-ball/eslint-config-eloquence/commit/dc47118ce0ad07391202dbd27712be83a44dc8f0)), closes [#96](https://github.com/crystal-ball/eslint-config-eloquence/issues/96) [#88](https://github.com/crystal-ball/eslint-config-eloquence/issues/88)
+
 # [12.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.1.0...v12.2.0) (2019-07-27)
 
 
