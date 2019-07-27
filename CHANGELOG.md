@@ -1,3 +1,10 @@
+# [12.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.1.0...v12.2.0) (2019-07-27)
+
+
+### Update
+
+* Allow anonymous array, object and literal default exports (#95) ([645436d16bf975af8dffe08076bcd5b4792accaf](https://github.com/crystal-ball/eslint-config-eloquence/commit/645436d16bf975af8dffe08076bcd5b4792accaf)), closes [#95](https://github.com/crystal-ball/eslint-config-eloquence/issues/95) [#93](https://github.com/crystal-ball/eslint-config-eloquence/issues/93)
+
 # [12.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.0.1...v12.1.0) (2019-07-27)
 
 
