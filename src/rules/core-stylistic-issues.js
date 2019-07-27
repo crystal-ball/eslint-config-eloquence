@@ -168,8 +168,10 @@ module.exports = {
   // specify the maximum depth callbacks can be nested
   'max-nested-callbacks': 'off',
 
-  // limits the number of parameters that can be used in the function declaration.
-  'max-params': ['off', 3],
+  // Limit fns to 3 params to help keep them understandable at the *call* site.
+  // Anymore than 3 params should probably use an options object param
+  // https://eslint.org/docs/rules/max-params
+  'max-params': ['error', 3],
 
   // specify the maximum number of statement allowed in a function
   'max-statements': ['off', 10],
