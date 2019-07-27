@@ -1,3 +1,10 @@
+# [12.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.0.1...v12.1.0) (2019-07-27)
+
+
+### Update
+
+* Dependencies update 🆙 ([1fbc4a2e1e36649ab2a9fc67a8d24e870ac432bd](https://github.com/crystal-ball/eslint-config-eloquence/commit/1fbc4a2e1e36649ab2a9fc67a8d24e870ac432bd))
+
 ## [12.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.0.0...v12.0.1) (2019-07-12)
 
 
