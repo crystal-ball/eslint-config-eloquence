@@ -195,17 +195,18 @@ module.exports = {
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
   'import/no-named-default': 'error',
 
-  // Reports if a module's default export is unnamed
+  // Reports if a module's default export is unnamed, only enforced for fns and classes
+  // to encourage better debug-ability
   // https://github.com/benmosher/eslint-plugin-import/blob/d9b712ac7fd1fddc391f7b234827925c160d956f/docs/rules/no-anonymous-default-export.md
   'import/no-anonymous-default-export': [
     'error',
     {
-      allowArray: false,
       allowArrowFunction: false,
       allowAnonymousClass: false,
       allowAnonymousFunction: false,
-      allowLiteral: false,
-      allowObject: false,
+      allowArray: true,
+      allowLiteral: true,
+      allowObject: true,
     },
   ],
 
