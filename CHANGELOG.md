@@ -1,3 +1,10 @@
+# [12.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.2.1...v12.3.0) (2019-07-27)
+
+
+### Update
+
+* Provide rule for function max parameters 💖 (#97) ([96f6d47f61c6290984a30bfa074b1527af544083](https://github.com/crystal-ball/eslint-config-eloquence/commit/96f6d47f61c6290984a30bfa074b1527af544083)), closes [#97](https://github.com/crystal-ball/eslint-config-eloquence/issues/97)
+
 ## [12.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.2.0...v12.2.1) (2019-07-27)
 
 
