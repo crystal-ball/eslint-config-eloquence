@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "babel-eslint": "10.0.2",
-    "confusing-browser-globals": "1.0.7",
+    "confusing-browser-globals": "1.0.8",
     "eslint": "6.1.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-formatter-pretty": "2.1.1",
