@@ -1,3 +1,14 @@
+# [12.4.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.3.0...v12.4.0) (2019-08-26)
+
+
+### Chore
+
+* Group non-major upgrades 🔧 (#107) ([03b0c3356de7278f06dcbf6be319d42a7e442435](https://github.com/crystal-ball/eslint-config-eloquence/commit/03b0c3356de7278f06dcbf6be319d42a7e442435)), closes [#107](https://github.com/crystal-ball/eslint-config-eloquence/issues/107)
+
+### Update
+
+* Dependencies update ✨ (#108) ([739bb750fbbe2fca57fbe78c52bd27a72313ce8b](https://github.com/crystal-ball/eslint-config-eloquence/commit/739bb750fbbe2fca57fbe78c52bd27a72313ce8b)), closes [#108](https://github.com/crystal-ball/eslint-config-eloquence/issues/108)
+
 # [12.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.2.1...v12.3.0) (2019-07-27)
 
 
