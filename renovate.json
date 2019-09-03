@@ -4,6 +4,7 @@
   "labels": ["Renovate"],
   "masterIssue": true,
   "schedule": ["every weekend"],
+  "ignoreDeps": ["node"],
   "packageRules": [
     {
       "packagePatterns": ["*"],
