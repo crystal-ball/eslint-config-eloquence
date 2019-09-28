@@ -13,6 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      # Test package on Node versions used by Atom/VSCode for compatability
       matrix:
         node-version: ['12', '10']
     name: Node ${{ matrix.node }} test
@@ -32,3 +33,9 @@ jobs:
         uses: actions/npm@master
         with:
           args: test
+      - name: Release
+        if: success() && github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ secrets.SEMANTIC_GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.SEMANTIC_NPM_TOKEN }}
+        run: npx semantic-release
