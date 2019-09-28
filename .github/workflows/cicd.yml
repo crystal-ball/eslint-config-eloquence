@@ -1,0 +1,37 @@
+name: CI/CD
+
+# Run action on all PRS and on change to master branch in order to test PRs for
+# continuous integration and deploy master for continuous deployment
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      # Test package on Node versions used by Atom/VSCode for compatability
+      matrix:
+        node-version: ['12', '10']
+    name: Node ${{ matrix.node }} test
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install
+        run: npm install
+        env:
+          CI: true
+      - name: Test
+        run: npm test
+      - name: Release
+        if: success() && github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ secrets.SEMANTIC_GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.SEMANTIC_NPM_TOKEN }}
+        run: npx semantic-release
