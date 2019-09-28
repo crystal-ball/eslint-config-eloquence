@@ -30,7 +30,6 @@ jobs:
       - name: Test
         run: npm test
       - name: Release
-        if: success() && github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.SEMANTIC_NPM_TOKEN }}
