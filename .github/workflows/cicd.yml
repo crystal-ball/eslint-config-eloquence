@@ -1,19 +1,31 @@
 name: CI/CD
-on: [push, pull_request]
+
+# Run action on all PRS and on change to master branch in order to test PRs for
+# continuous integration and deploy master for continuous deployment
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - master
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['12', '10']
+    name: Node ${{ matrix.node }} test
     steps:
       - uses: actions/checkout@v1
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '10'
+          node-version: ${{ matrix.node-version }}
       - name: NPM Install
         uses: actions/npm@master
         with:
-          args: ci
+          args: install
         env:
           CI: true
       - name: Test
