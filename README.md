@@ -8,8 +8,8 @@
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
     <img src="https://img.shields.io/npm/v/eslint-config-eloquence.svg" alt="NPM version"/>
   </a>
-  <a href="https://travis-ci.com/crystal-ball/eslint-config-eloquence">
-    <img src="https://travis-ci.com/crystal-ball/eslint-config-eloquence.svg?branch=master" alt="Travis build status"/>
+  <a href="https://github.com/crystal-ball/eslint-config-eloquence/actions?workflow=CI%2FCD">
+    <img src="https://github.com/crystal-ball/eslint-config-eloquence/workflows/CI%2FCD/badge.svg" alt="Build status" />
   </a>
   <a href="https://renovatebot.com/">
     <img src="https://img.shields.io/badge/Renovate-enabled-32c3c2.svg" alt="Dependency versions managed by Renovate"/>
