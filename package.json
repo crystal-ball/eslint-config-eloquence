@@ -24,15 +24,15 @@
   },
   "dependencies": {
     "babel-eslint": "10.0.3",
-    "confusing-browser-globals": "1.0.8",
-    "eslint": "6.3.0",
-    "eslint-config-prettier": "6.1.0",
+    "confusing-browser-globals": "1.0.9",
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "6.4.0",
     "eslint-formatter-pretty": "2.1.1",
-    "eslint-plugin-cypress": "2.6.1",
+    "eslint-plugin-cypress": "2.7.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-prettier": "3.1.0",
-    "eslint-plugin-react": "7.14.3"
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0"
   },
   "devDependencies": {
     "@crystal-ball/commit-semantics": "2.0.0",
