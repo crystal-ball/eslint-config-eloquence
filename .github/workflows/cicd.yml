@@ -11,12 +11,12 @@ on:
 
 jobs:
   test:
+    name: Continuous Integration - Node v${{ matrix.node-version }}
     runs-on: ubuntu-latest
     strategy:
       # Test package on Node versions used by Atom/VSCode for compatability
       matrix:
         node-version: ['12', '10']
-    name: Node ${{ matrix.node-version }} test
     steps:
       - uses: actions/checkout@v1
       - name: Setup Node.js
@@ -30,7 +30,7 @@ jobs:
       - name: Test
         run: npm test
   publish:
-    name: 'Publish'
+    name: Continuous Deployment
     needs: test
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
