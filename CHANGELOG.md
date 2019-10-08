@@ -1,3 +1,40 @@
+# eslint-config-eloquence changelog
+
+This project strictly adheres to semver and will err on the side of releasing majors when
+changes could possibly introduce breaking changes. This changelog is dynamically generated
+with [Semantic Release](https://semantic-release.gitbook.io/semantic-release/) configured
+with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/semantic-release-base).
+
+> Changelog tags
+>
+> - 💥 - Breaking change
+> - 🔖 - Release notes
+> - 💖 - New feature
+> - ✨ - Updates
+> - 🛠 - Fixes
+
+
+## [12.5.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.4.0...v12.5.0) (2019-10-08)
+
+
+#### ✨ Update
+
+* Update all non-major dependencies 🆙 (#126)([8413119](https://github.com/crystal-ball/eslint-config-eloquence/commit/84131195d291b4a99d30f5dc0f900489b7223a60)), closes [#126](https://github.com/crystal-ball/eslint-config-eloquence/issue/126)
+
+#### Upgrade, Chore
+
+* Commit-semantics 🆙([5a71a28](https://github.com/crystal-ball/eslint-config-eloquence/commit/5a71a282f6df4909a9ca0624abb630132fc9915a))
+* Update all non-major dependencies (#109)([d099551](https://github.com/crystal-ball/eslint-config-eloquence/commit/d099551299beee3f38d3d1de1e6e1dde5652cbd8)), closes [#109](https://github.com/crystal-ball/eslint-config-eloquence/issue/109)
+* Allow semantic to check branch ⚙️([6c32b89](https://github.com/crystal-ball/eslint-config-eloquence/commit/6c32b894c2b12320a07523fcd6898129b034dee7))
+* Fix Semantic Release CI/CD ⚙️ (#115)([e8e785e](https://github.com/crystal-ball/eslint-config-eloquence/commit/e8e785e77549cf4b16265a0050b7dd14078abb8a)), closes [#115](https://github.com/crystal-ball/eslint-config-eloquence/issue/115)
+* Reconfigure Renovate (#111)([5a7f879](https://github.com/crystal-ball/eslint-config-eloquence/commit/5a7f879960ff5d23d25ec4c2f494e0325a8a95d1)), closes [#111](https://github.com/crystal-ball/eslint-config-eloquence/issue/111)
+* Reconfigure Renovate ⚙️ (#118)([26ab05b](https://github.com/crystal-ball/eslint-config-eloquence/commit/26ab05b04a0c00efd2cfb8442d45417dec191c1b)), closes [#118](https://github.com/crystal-ball/eslint-config-eloquence/issue/118)
+* Reconfigure Renovate ⚙️ (#119)([e099462](https://github.com/crystal-ball/eslint-config-eloquence/commit/e099462bf07344045966f7e5c3549c79b79df365)), closes [#119](https://github.com/crystal-ball/eslint-config-eloquence/issue/119)
+* Reconfigure Renovate ⚙️ (#125)([c6e3077](https://github.com/crystal-ball/eslint-config-eloquence/commit/c6e307767900b6c6c50a5f1f6faa2ce1c0cd1527)), closes [#125](https://github.com/crystal-ball/eslint-config-eloquence/issue/125)
+* Remove Travis configs ⚙️ (#117)([77c1898](https://github.com/crystal-ball/eslint-config-eloquence/commit/77c1898d5c65ae4206b3a52c41b05f2b256701bf)), closes [#117](https://github.com/crystal-ball/eslint-config-eloquence/issue/117)
+* Setup Github action for testing repo ⚙️ (#113)([d5fc213](https://github.com/crystal-ball/eslint-config-eloquence/commit/d5fc213cdbad5499b8586b0dc5467e65143118d4)), closes [#113](https://github.com/crystal-ball/eslint-config-eloquence/issue/113)
+* Use names for GH Actions jobs 📝 (#116)([979a2b0](https://github.com/crystal-ball/eslint-config-eloquence/commit/979a2b06c0fe40b5f137d45f839c823cf6ff7de9)), closes [#116](https://github.com/crystal-ball/eslint-config-eloquence/issue/116)
+
 # [12.4.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.3.0...v12.4.0) (2019-08-26)
 
 
