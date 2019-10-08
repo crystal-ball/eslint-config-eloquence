@@ -18,15 +18,19 @@
       "packagePatterns": ["*"],
       "commitMessagePrefix": "Chore: ",
       "commitMessageSuffix": " 🆙",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false
+      "minor": {
+        "groupName": "all non-major devDependencies",
+        "groupSlug": "all-minor-devDependencies"
+      }
     },
     {
       "depTypeList": ["dependencies"],
       "commitMessagePrefix": "Update: ",
       "commitMessageSuffix": " 🆙",
-      "separateMajorMinor": true,
-      "separateMinorPatch": false
+      "minor": {
+        "groupName": "all non-major dependencies",
+        "groupSlug": "all-minor-dependencies"
+      }
     }
   ]
 }
