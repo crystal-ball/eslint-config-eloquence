@@ -1,17 +1,31 @@
 {
-  "extends": ["config:base"],
-  "commitMessagePrefix": "Upgrade: ",
+  "automerge": false,
+  "ignorePaths": ["**/node_modules/**"],
+  "ignoreUnstable": true,
   "labels": ["Renovate"],
+  "lockFileMaintenance": {
+    "enabled": false
+  },
   "masterIssue": true,
+  "rangeStrategy": "auto",
   "schedule": ["every weekend"],
-  "ignoreDeps": ["node"],
+  "prCreation": "immediate",
+  "updateNotScheduled": true,
+
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "minor": {
-        "groupName": "all non-major dependencies",
-        "groupSlug": "all-minor-patch"
-      }
+      "commitMessagePrefix": "Chore: ",
+      "commitMessageSuffix": " 🆙",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "commitMessagePrefix": "Update: ",
+      "commitMessageSuffix": " 🆙",
+      "separateMajorMinor": true,
+      "separateMinorPatch": false
     }
   ]
 }
