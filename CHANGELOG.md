@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.6.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.5.0...v12.6.0) (2019-10-09)
+
+
+#### 💖 New
+
+* Rules added in new ESLint and plugin versions 💖 (#130)([4e70da4](https://github.com/crystal-ball/eslint-config-eloquence/commit/4e70da461311c8204157cbe5bcf55787848719ee)), closes [#130](https://github.com/crystal-ball/eslint-config-eloquence/issue/130) [#129](https://github.com/crystal-ball/eslint-config-eloquence/issue/129)
+
+#### Chore
+
+* Match workflows filename convention 🔮✨ (#128)([4820d05](https://github.com/crystal-ball/eslint-config-eloquence/commit/4820d0538253b75abe854f870cdc9efbc624af46)), closes [#128](https://github.com/crystal-ball/eslint-config-eloquence/issue/128)
+* Use commitizen-base ⚙️ (#127)([758183f](https://github.com/crystal-ball/eslint-config-eloquence/commit/758183f909e4aa45eac3416915aaa0c7feca4a3a)), closes [#127](https://github.com/crystal-ball/eslint-config-eloquence/issue/127)
+
 ## [12.5.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.4.0...v12.5.0) (2019-10-08)
 
 
