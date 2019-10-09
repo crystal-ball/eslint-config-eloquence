@@ -20,7 +20,7 @@
   "license": "ISC",
   "scripts": {
     "test": "NODE_ENV=test eslint *.js",
-    "format": "prettier --write \"*.{js,md}\" \"{.github,src}/**/*.{js,md}\""
+    "format": "prettier --write '*.{md,js,json}' '{.github,src}/**/*.{md,js,json}'"
   },
   "dependencies": {
     "babel-eslint": "10.0.3",
@@ -35,13 +35,14 @@
     "eslint-plugin-react": "7.16.0"
   },
   "devDependencies": {
-    "@crystal-ball/commit-semantics": "2.0.0",
+    "@crystal-ball/commitizen-base": "2.0.0",
+    "@crystal-ball/semantic-release-base": "2.0.0",
     "@crystal-ball/prettier-base": "1.5.0",
     "husky": "3.0.8"
   },
   "config": {
     "commitizen": {
-      "path": "@crystal-ball/commitizen-adapter"
+      "path": "@crystal-ball/commitizen-base"
     }
   },
   "husky": {
