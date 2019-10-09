@@ -19,6 +19,10 @@ module.exports = {
   // https://eslint.org/docs/rules/no-dupe-class-members
   'no-dupe-class-members': 'error',
 
+  // disallow assignments, increments, and decrements of imported bindings
+  // https://eslint.org/docs/rules/no-import-assign
+  'no-import-assign': 'error',
+
   // disallow symbol constructor
   // https://eslint.org/docs/rules/no-new-symbol
   'no-new-symbol': 'error',

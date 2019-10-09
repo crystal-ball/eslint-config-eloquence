@@ -9,6 +9,14 @@ module.exports = {
   // often requires addl configs on other tooling, do less ¯\_(ツ)_/¯
   'react/jsx-filename-extension': 'off',
 
+  // Disallow including useless fragments
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
+  'react/jsx-no-useless-fragment': 'error',
+
+  // Require that default props are sorted alphabetically
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
+  'react/jsx-sort-default-props': 'error',
+
   // Don't enforce props destructuring, it's cumbersome when only a single
   // prop is needed, and consistent destructuring provides no real benefit
   'react/destructuring-assignment': 'off',
@@ -232,10 +240,9 @@ module.exports = {
   'react/self-closing-comp': 'error',
 
   // Enforce component methods order
-  // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/sort-comp.md
-  // TODO: does this work now? it doesn't really matter since functional components can
-  // be used for everything...
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
   // Update on: https://github.com/yannickcr/eslint-plugin-react/pull/685
+  // TODO: I think this works after 7.16 which added support for static and instance properties/methods
   'react/sort-comp': [
     'error',
     {

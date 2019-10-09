@@ -9,6 +9,15 @@ module.exports = {
   // strict by default
   strict: 'error',
 
+  // Params with defaults are optional and should be last in a set of fn params
+  // so that they can be ommitted
+  // https://eslint.org/docs/rules/default-param-last
+  'default-param-last': 'error',
+
+  // require regex are created with literals unless it contains dynamic parts
+  // https://eslint.org/docs/rules/prefer-regex-literals
+  'prefer-regex-literals': 'error',
+
   // require a Symbol description
   // https://eslint.org/docs/rules/symbol-description
   'symbol-description': 'error',
