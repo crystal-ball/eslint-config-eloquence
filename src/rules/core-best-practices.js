@@ -375,9 +375,10 @@ module.exports = {
   // require use of the second argument for parseInt()
   radix: 'error',
 
-  // require `await` in `async function`
+  // allow using async fns without explicitly using await, it can be useful
+  // when you know a fn should be async
   // https://eslint.org/docs/rules/require-await
-  'require-await': 'error',
+  'require-await': 'off',
 
   // Enforce the use of u flag on RegExp
   // https://eslint.org/docs/rules/require-unicode-regexp
