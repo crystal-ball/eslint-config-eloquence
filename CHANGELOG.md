@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [12.7.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.7.0...v12.7.1) (2019-10-14)
+
+
+#### 🛠 Fix
+
+* Allow using async fns without await declarations (#134)([3f1fa03](https://github.com/crystal-ball/eslint-config-eloquence/commit/3f1fa03f2920c36d000ad5822550e4942e3359c3)), closes [#134](https://github.com/crystal-ball/eslint-config-eloquence/issue/134) [#131](https://github.com/crystal-ball/eslint-config-eloquence/issue/131)
+
 ## [12.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.6.0...v12.7.0) (2019-10-14)
 
 
