@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [12.7.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.7.1...v12.7.2) (2019-10-14)
+
+
+#### 🛠 Fix
+
+* Set import sorts to 'warn' in non strict runs (#135)([30892ef](https://github.com/crystal-ball/eslint-config-eloquence/commit/30892ef0b4fc145c59a58eed01bf953323871a28)), closes [#135](https://github.com/crystal-ball/eslint-config-eloquence/issue/135)
+
 ### [12.7.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.7.0...v12.7.1) (2019-10-14)
 
 
