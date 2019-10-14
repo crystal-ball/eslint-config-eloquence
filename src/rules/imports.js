@@ -8,7 +8,7 @@ module.exports = {
   // by import member)
   // https://eslint.org/docs/rules/sort-imports
   'sort-imports': [
-    strictMode ? 'error' : 'warning',
+    strictMode ? 'error' : 'warn',
     {
       ignoreCase: false,
       ignoreDeclarationSort: true,
@@ -122,7 +122,7 @@ module.exports = {
   // ensure absolute imports are above relative imports and that unassigned imports are ignored
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
   'import/order': [
-    strictMode ? 'error' : 'warning',
+    strictMode ? 'error' : 'warn',
     {
       groups: [
         // Node built-ins and external packages are grouped together
