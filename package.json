@@ -25,8 +25,8 @@
   "dependencies": {
     "babel-eslint": "10.0.3",
     "confusing-browser-globals": "1.0.9",
-    "eslint": "6.5.1",
-    "eslint-config-prettier": "6.4.0",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
     "eslint-formatter-pretty": "2.1.1",
     "eslint-plugin-cypress": "2.7.0",
     "eslint-plugin-import": "2.18.2",
