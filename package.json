@@ -19,7 +19,7 @@
   ],
   "license": "ISC",
   "scripts": {
-    "test": "NODE_ENV=test eslint *.js",
+    "test": "NODE_ENV=test eslint --format=pretty *.js src",
     "format": "prettier --write '*.{md,js,json}' '{.github,src}/**/*.{md,js,json}'"
   },
   "dependencies": {

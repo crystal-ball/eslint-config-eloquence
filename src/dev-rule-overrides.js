@@ -35,6 +35,7 @@ module.exports = project => {
           'react/default-props-match-prop-types': 'warn',
           'react/forbid-prop-types': 'warn',
           'react/jsx-boolean-value': 'warn',
+          'react/jsx-sort-default-props': 'warn',
           'react/no-multi-comp': 'warn',
           'react/no-unescaped-entities': 'warn',
           'react/no-unused-prop-types': 'warn',
