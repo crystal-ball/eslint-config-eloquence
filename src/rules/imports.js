@@ -70,7 +70,13 @@ module.exports = {
   'import/no-extraneous-dependencies': [
     'error',
     // globs allow using devDependencies in story and test files
-    { devDependencies: ['**/*.{spec,stories}.js'] },
+    {
+      devDependencies: [
+        '**/*.{spec,stories}.js',
+        'webpack.config.js',
+        '{.jest,.storybook,cypress}/**/*',
+      ],
+    },
   ],
 
   // Forbid mutable exports
