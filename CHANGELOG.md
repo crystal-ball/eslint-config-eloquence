@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.9.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.8.0...v12.9.0) (2019-11-07)
+
+
+#### ✨ Update
+
+* Add test and story dirs to extraneous deps ignore (#141)([835947d](https://github.com/crystal-ball/eslint-config-eloquence/commit/835947d7b7ab7b1debab6e18606df955083bf17f)), closes [#141](https://github.com/crystal-ball/eslint-config-eloquence/issue/141) [#140](https://github.com/crystal-ball/eslint-config-eloquence/issue/140)
+
+#### Chore
+
+* Update package dev dependencies 🆙([285f0a6](https://github.com/crystal-ball/eslint-config-eloquence/commit/285f0a60dd5e88e7825bc80d38e40b28d3b82d92))
+
 ## [12.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.7.2...v12.8.0) (2019-11-01)
 
 

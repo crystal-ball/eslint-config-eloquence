@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eloquence",
-  "version": "12.8.0",
+  "version": "12.9.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "index.js",
   "repository": {
