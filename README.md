@@ -47,12 +47,7 @@
   </a>
   <code>:flair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
   <!-- prettier-ignore-end -->
-
-<p align="center">
-  <a href="https://github.com/crystal-ball/eslint-config-eloquence#zenhub">
-    <img src="https://img.shields.io/badge/Shipping_faster_with-ZenHub-5e60ba.svg?style=flat-square" alt="Issues managed using ZenHub"/>
-  </a>
-</p>
+</div>
 
 Eloquence is a robust and adaptive ESLint configuration set for code linting
 code quality, style and formatting.
