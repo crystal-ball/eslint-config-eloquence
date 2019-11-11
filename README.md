@@ -1,8 +1,7 @@
-<div align="center">
+<h1 align="center">
   <img src="./docs/assets/eloquence.png" width="600" alt="Eloquence">
-</div>
+</h1>
 <br>
-<hr>
 
 <div align="right">
   <!-- prettier-ignore-start -->
@@ -47,6 +46,8 @@
   </a>
   <code>:flair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
   <!-- prettier-ignore-end -->
+
+  <br />
 </div>
 
 Eloquence is a robust and adaptive ESLint configuration set for code linting
