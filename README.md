@@ -46,9 +46,9 @@
   </a>
   <code>:flair&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>
   <!-- prettier-ignore-end -->
-
-  <br />
 </div>
+
+---
 
 Eloquence is a robust and adaptive ESLint configuration set for code linting
 code quality, style and formatting.
