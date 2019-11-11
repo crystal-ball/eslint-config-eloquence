@@ -5,10 +5,6 @@
 <hr>
 
 <div align="right">
-  <h1>
-    <img height=75 src="./docs/assets/readme-header.png" alt="Crystal Ball Projects documentation"/>
-  </h1>
-
   <!-- prettier-ignore-start -->
   <a href="https://www.npmjs.com/package/eslint-config-eloquence">
     <img src="https://img.shields.io/npm/v/eslint-config-eloquence" alt="Package version" valign="text-top"/>
