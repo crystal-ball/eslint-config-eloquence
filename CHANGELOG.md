@@ -14,6 +14,20 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.10.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.9.1...v12.10.0) (2019-11-13)
+
+
+#### ✨ Update
+
+* Package eslint-formatter-pretty upgrades to v3 🆙 (#147)([64181f3](https://github.com/crystal-ball/eslint-config-eloquence/commit/64181f368e0d471493037b5950e2ea79156e95ef)), closes [#147](https://github.com/crystal-ball/eslint-config-eloquence/issue/147)
+
+#### Chore
+
+* Prune unnecessary template file([6bd1cdc](https://github.com/crystal-ball/eslint-config-eloquence/commit/6bd1cdc9975264956b3edb23e4dad060c7c236ca))
+* Reconfigure Renovate 🆙 (#144)([ef45c05](https://github.com/crystal-ball/eslint-config-eloquence/commit/ef45c05c9eba083d0b9c06834ff08cc65a7c384f)), closes [#144](https://github.com/crystal-ball/eslint-config-eloquence/issue/144)
+* Update Code of Conduct and Contributing files 🔮✨ (#143)([25e7cc3](https://github.com/crystal-ball/eslint-config-eloquence/commit/25e7cc36678a162beaf3df490cb03572913a6e61)), closes [#143](https://github.com/crystal-ball/eslint-config-eloquence/issue/143)
+* Update dev dependencies 🆙 (#146)([81e13e9](https://github.com/crystal-ball/eslint-config-eloquence/commit/81e13e93c68732ff45316fe811dd36cfdcda831a)), closes [#146](https://github.com/crystal-ball/eslint-config-eloquence/issue/146)
+
 ### [12.9.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.9.0...v12.9.1) (2019-11-07)
 
 
