@@ -20,8 +20,7 @@
   "license": "ISC",
   "scripts": {
     "test": "NODE_ENV=test eslint --format=pretty *.js src",
-    "test:format": "prettier --check src/** cypress.js node.js react.js storybook.js typescript.js",
-    "format": "prettier --write src/** cypress.js node.js react.js storybook.js typescript.js"
+    "format": "prettier --write  '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
     "babel-eslint": "10.0.3",
