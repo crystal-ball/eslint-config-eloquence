@@ -2,6 +2,7 @@
 
 const react = require('./rules/react')
 const reactA11y = require('./rules/react-a11y')
+const reactHooks = require('./rules/react-hooks')
 
 /**
  * Extend base config for writing React applications bundled with webpack
@@ -11,7 +12,7 @@ module.exports = {
     jsx: true,
   },
 
-  plugins: ['react', 'jsx-a11y'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y'],
 
   settings: {
     // --- Import plugin settings
@@ -42,5 +43,6 @@ module.exports = {
   rules: {
     ...react,
     ...reactA11y,
+    ...reactHooks,
   },
 }
