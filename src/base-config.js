@@ -1,6 +1,7 @@
 'use strict'
 
 const coreBestPractices = require('./rules/core-best-practices')
+const coreEcmaScript = require('./rules/core-ecma-script')
 const corePossibleErrors = require('./rules/core-possible-errors')
 const coreStylisticIssues = require('./rules/core-stylistic-issues')
 const coreVariables = require('./rules/core-variables')
@@ -31,6 +32,7 @@ module.exports = {
   rules: {
     // --- ESLint core rules configuration ---
     ...coreBestPractices,
+    ...coreEcmaScript,
     ...corePossibleErrors,
     ...coreStylisticIssues,
     ...coreVariables,
