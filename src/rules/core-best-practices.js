@@ -5,6 +5,18 @@
  * to avoid common errors.
  */
 module.exports = {
+  // Enforce getter/setter pairs in objects
+  // https://eslint.org/docs/rules/accessor-pairs
+  'accessor-pairs': 'error',
+
+  // verify super() is called in constructors
+  // https://eslint.org/docs/rules/constructor-super
+  'constructor-super': 'error',
+
+  // disallow modifying variables of class declarations
+  // https://eslint.org/docs/rules/no-class-assign
+  'no-class-assign': 'error',
+
   // Match the default `module` prevent adding 'use strict' as ESModules are
   // strict by default
   strict: 'error',
@@ -21,6 +33,10 @@ module.exports = {
   // require a Symbol description
   // https://eslint.org/docs/rules/symbol-description
   'symbol-description': 'error',
+
+  // Prevent return statements in constructors
+  // https://eslint.org/docs/rules/no-constructor-return
+  'no-constructor-return': 'error',
 
   // disallow unnecessary constructor
   // https://eslint.org/docs/rules/no-useless-constructor
@@ -41,9 +57,6 @@ module.exports = {
   // suggest using Reflect methods where applicable
   // https://eslint.org/docs/rules/prefer-reflect
   'prefer-reflect': 'off',
-
-  // enforces getter/setter pairs in objects
-  'accessor-pairs': 'off',
 
   // enforces return statements in callbacks of array's methods
   // https://eslint.org/docs/rules/array-callback-return

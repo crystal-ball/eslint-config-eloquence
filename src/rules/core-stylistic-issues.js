@@ -39,6 +39,10 @@ module.exports = {
     },
   ],
 
+  // Prefer using ** over Math.pow()
+  // https://eslint.org/docs/rules/prefer-exponentiation-operator
+  'prefer-exponentiation-operator': 'error',
+
   // disallow parseInt() in favor of binary, octal, and hexadecimal literals
   // https://eslint.org/docs/rules/prefer-numeric-literals
   'prefer-numeric-literals': 'error',
@@ -321,4 +325,6 @@ module.exports = {
       },
     },
   ],
+
+  // TODO: wrap-regex
 }

@@ -5,50 +5,19 @@
  * or logic errors
  */
 module.exports = {
-  // disallow modifying variables of class declarations
-  // https://eslint.org/docs/rules/no-class-assign
-  'no-class-assign': 'error',
-
-  // verify super() callings in constructors
-  'constructor-super': 'error',
-
-  // disallow modifying variables that are declared using const
-  'no-const-assign': 'error',
-
-  // disallow duplicate class members
-  // https://eslint.org/docs/rules/no-dupe-class-members
-  'no-dupe-class-members': 'error',
-
-  // disallow assignments, increments, and decrements of imported bindings
-  // https://eslint.org/docs/rules/no-import-assign
-  'no-import-assign': 'error',
-
-  // disallow symbol constructor
-  // https://eslint.org/docs/rules/no-new-symbol
-  'no-new-symbol': 'error',
-
-  // disallow to use this/super before super() calling in constructors.
-  // https://eslint.org/docs/rules/no-this-before-super
-  'no-this-before-super': 'error',
-
-  // disallow generator functions that do not have yield
-  // https://eslint.org/docs/rules/require-yield
-  'require-yield': 'error',
-
-  // Enforce “for” loop update clause moving the counter in the right direction
+  // enforce “for” loop update clause moving the counter in the right direction
   // https://eslint.org/docs/rules/for-direction
   'for-direction': 'error',
 
-  // Enforces that a return statement is present in property getters
+  // enforce a return statement is present in property getters
   // https://eslint.org/docs/rules/getter-return
   'getter-return': ['error', { allowImplicit: true }],
 
   // disallow using an async function as a Promise executor
   // https://eslint.org/docs/rules/no-async-promise-executor
-  // TODO: enable, semver-major
-  'no-async-promise-executor': 'off',
+  'no-async-promise-executor': 'error',
 
-  // Disallow await inside of loops
+  // disallow await inside of loops
   // https://eslint.org/docs/rules/no-await-in-loop
   'no-await-in-loop': 'error',
 
@@ -74,6 +43,10 @@ module.exports = {
   // disallow duplicate arguments in functions
   'no-dupe-args': 'error',
 
+  // prevent duplicate conditions in else/if
+  // https://eslint.org/docs/rules/no-dupe-else-if
+  'no-dupe-else-if': 'error',
+
   // disallow duplicate keys when creating object literals
   'no-dupe-keys': 'error',
 
@@ -93,8 +66,19 @@ module.exports = {
   // https://eslint.org/docs/rules/no-extra-boolean-cast
   'no-extra-boolean-cast': 'error',
 
+  // TODO: enable in a large codebase and see what happens
+  'no-extra-parens': 'off',
+
+  // forbid extra semi colons
+  // https://eslint.org/docs/rules/no-extra-semi
+  'no-extra-semi': 'error',
+
   // disallow overwriting functions written as function declarations
   'no-func-assign': 'error',
+
+  // disallow assignments, increments, and decrements of imported bindings
+  // https://eslint.org/docs/rules/no-import-assign
+  'no-import-assign': 'error',
 
   // disallow function or variable declarations in nested blocks
   'no-inner-declarations': 'error',
@@ -107,10 +91,10 @@ module.exports = {
 
   // Disallow characters which are made with multiple code points in character class syntax
   // https://eslint.org/docs/rules/no-misleading-character-class
-  // TODO: enable, semver-major
-  'no-misleading-character-class': 'off',
+  'no-misleading-character-class': 'error',
 
   // disallow the use of object properties of the global object (Math and JSON) as functions
+  // https://eslint.org/docs/rules/no-obj-calls
   'no-obj-calls': 'error',
 
   // disallow use of Object.prototypes builtins directly
@@ -118,16 +102,27 @@ module.exports = {
   'no-prototype-builtins': 'error',
 
   // disallow multiple spaces in a regular expression literal
+  // https://eslint.org/docs/rules/no-regex-spaces
   'no-regex-spaces': 'error',
 
-  // disallow sparse arrays
+  // disallow returning values in ES6 setters
+  // https://eslint.org/docs/rules/no-setter-return
+  'no-setter-return': 'error',
+
+  // disallow initializing arrays with missing elements
+  // https://eslint.org/docs/rules/no-sparse-arrays
   'no-sparse-arrays': 'error',
 
   // Disallow template literal placeholder syntax in regular strings
   // https://eslint.org/docs/rules/no-template-curly-in-string
   'no-template-curly-in-string': 'error',
 
+  // Prevent confusing multiline expressions that could cause errors without semis
+  // https://eslint.org/docs/rules/no-unexpected-multiline
+  'no-unexpected-multiline': 'error',
+
   // disallow unreachable statements after a return, throw, continue, or break statement
+  // https://eslint.org/docs/rules/no-unreachable
   'no-unreachable': 'error',
 
   // disallow return/throw/break/continue inside finally blocks
@@ -137,21 +132,14 @@ module.exports = {
   // disallow negating the left operand of relational operators
   // https://eslint.org/docs/rules/no-unsafe-negation
   'no-unsafe-negation': 'error',
-  // disallow negation of the left operand of an in expression
-  // deprecated in favor of no-unsafe-negation
-  'no-negated-in-lhs': 'off',
 
   // Disallow assignments that can lead to race conditions due to usage of await or yield
   // https://eslint.org/docs/rules/require-atomic-updates
-  // TODO: enable, semver-major
-  'require-atomic-updates': 'off',
+  'require-atomic-updates': 'error',
 
   // disallow comparisons with the value NaN
+  // https://eslint.org/docs/rules/use-isnan
   'use-isnan': 'error',
-
-  // ensure JSDoc comments are valid
-  // https://eslint.org/docs/rules/valid-jsdoc
-  'valid-jsdoc': 'off',
 
   // ensure that the results of typeof are compared against a valid string
   // https://eslint.org/docs/rules/valid-typeof
