@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.15.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.14.0...v12.15.0) (2019-12-02)
+
+
+#### ✨ Update
+
+* Upgrade rule settings for sorting in React components (#156)([9984dab](https://github.com/crystal-ball/eslint-config-eloquence/commit/9984dab890c9f7633303ed2b5e8d6e1eed3fab35)), closes [#156](https://github.com/crystal-ball/eslint-config-eloquence/issue/156)
+
 ## [12.14.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.13.0...v12.14.0) (2019-12-02)
 
 
