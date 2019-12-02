@@ -13,10 +13,6 @@ module.exports = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
   'react/jsx-no-useless-fragment': 'error',
 
-  // Require that default props are sorted alphabetically
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
-  'react/jsx-sort-default-props': 'error',
-
   // Don't enforce props destructuring, it's cumbersome when only a single
   // prop is needed, and consistent destructuring provides no real benefit
   'react/destructuring-assignment': 'off',
@@ -78,22 +74,17 @@ module.exports = {
     },
   ],
 
-  // Validate JSX has key prop when in array or iterator
+  // Require keys for elements in a list
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-  'react/jsx-key': 'off',
+  'react/jsx-key': 'error',
 
-  // Prevent usage of .bind() in JSX props
+  // The no-bind rule attempts to prevent "bad code" that creates new functions on each
+  // render by essentially requiring fns are hoised out of the render scope somehow.
+  // But this is a premature optimization, we allow fns to be written in functional
+  // components and then wrap them in `useCallback` if they're passed to a memoized child
+  // component
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-  'react/jsx-no-bind': [
-    'error',
-    {
-      ignoreRefs: true,
-      allowArrowFunctions: true,
-      allowFunctions: false,
-      allowBind: false,
-      ignoreDOMComponents: true,
-    },
-  ],
+  'react/jsx-no-bind': 'off',
 
   // Prevent duplicate props in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -101,7 +92,7 @@ module.exports = {
 
   // Prevent usage of unwrapped JSX strings
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
-  'react/jsx-no-literals': ['off', { noStrings: true }],
+  'react/jsx-no-literals': 'off',
 
   // Disallow undeclared variables in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
@@ -117,29 +108,23 @@ module.exports = {
     },
   ],
 
+  // Require that default props are sorted alphabetically
+  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
+  'react/jsx-sort-default-props': 'error',
+
   // Enforce propTypes declarations alphabetical sorting
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-  'react/sort-prop-types': [
-    'off',
-    {
-      ignoreCase: true,
-      callbacksLast: false,
-      requiredFirst: false,
-      sortShapeProp: true,
-    },
-  ],
+  'react/sort-prop-types': 'error',
 
-  // Deprecated in favor of react/jsx-sort-props
-  'react/jsx-sort-prop-types': 'off',
-
-  // Enforce props alphabetical sorting
+  // Enforce props are alphabetically sorted, with reserved props and shorthand props first,
+  // and callbacks last
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
   'react/jsx-sort-props': [
-    'off',
+    'error',
     {
-      ignoreCase: true,
-      callbacksLast: false,
-      shorthandFirst: false,
+      ignoreCase: false,
+      callbacksLast: true,
+      shorthandFirst: true,
       shorthandLast: false,
       noSortAlphabetically: false,
       reservedFirst: true,
@@ -148,7 +133,7 @@ module.exports = {
 
   // Prevent React to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
-  'react/jsx-uses-react': ['error'],
+  'react/jsx-uses-react': 'error',
 
   // Prevent variables used in JSX to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
@@ -160,7 +145,7 @@ module.exports = {
 
   // Prevent usage of deprecated methods
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
-  'react/no-deprecated': ['error'],
+  'react/no-deprecated': 'error',
 
   // Prevent usage of setState in componentDidMount
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
@@ -205,7 +190,7 @@ module.exports = {
 
   // Require stateless functions when not using lifecycle methods, setState or ref
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-  'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
+  'react/prefer-stateless-function': 'error',
 
   // Prevent missing props validation in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
