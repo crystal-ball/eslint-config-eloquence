@@ -126,7 +126,7 @@ module.exports = {
       callbacksLast: true,
       shorthandFirst: true,
       shorthandLast: false,
-      noSortAlphabetically: false,
+      noSortAlphabetically: true,
       reservedFirst: true,
     },
   ],
