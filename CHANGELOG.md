@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [12.15.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.15.0...v12.15.1) (2019-12-04)
+
+
+#### 🛠 Fix
+
+* Only enforce props order, not alphabetical sorting ✓ (#157)([602b3fe](https://github.com/crystal-ball/eslint-config-eloquence/commit/602b3fea587f7332b179682ed2c7db11ce32f5db)), closes [#157](https://github.com/crystal-ball/eslint-config-eloquence/issue/157)
+
 ## [12.15.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.14.0...v12.15.0) (2019-12-02)
 
 
