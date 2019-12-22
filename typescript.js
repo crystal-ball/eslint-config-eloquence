@@ -1,5 +1,7 @@
 'use strict'
 
+const devRuleOverrides = require('./src/dev-rule-overrides')
+
 /**
  * Config to enable TypeScript in a project
  */
@@ -21,5 +23,6 @@ module.exports = {
   // --- TS rules
   rules: {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
+    ...devRuleOverrides('typescript'),
   },
 }

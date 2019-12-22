@@ -1,5 +1,7 @@
 'use strict'
 
+const devRuleOverrides = require('./src/dev-rule-overrides')
+
 /**
  * Extend base config for writing Storybook setup configs (individual stories
  * are colocated in /src and use webpack configs)
@@ -16,5 +18,9 @@ module.exports = {
 
   env: {
     node: true,
+  },
+
+  rules: {
+    ...devRuleOverrides('storybook'),
   },
 }
