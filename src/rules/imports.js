@@ -1,14 +1,12 @@
 'use strict'
 
-const strictMode = process.env.NODE_ENV === 'test'
-
 module.exports = {
   // Require that multiple member imports are sorted alphabetically (ignore
   // the declaration order, it's nice to sort them by import path instead of
   // by import member)
   // https://eslint.org/docs/rules/sort-imports
   'sort-imports': [
-    strictMode ? 'error' : 'warn',
+    'error',
     {
       ignoreCase: false,
       ignoreDeclarationSort: true,
@@ -128,7 +126,7 @@ module.exports = {
   // ensure absolute imports are above relative imports and that unassigned imports are ignored
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
   'import/order': [
-    strictMode ? 'error' : 'warn',
+    'error',
     {
       groups: [
         // Node built-ins and external packages are grouped together

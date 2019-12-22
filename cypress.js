@@ -1,6 +1,7 @@
 'use strict'
 
 const cypress = require('./src/rules/cypress')
+const devRuleOverrides = require('./src/dev-rule-overrides')
 
 /**
  * Rules for writing A++ Cypress acceptance tests in a React project
@@ -18,5 +19,6 @@ module.exports = {
 
   rules: {
     ...cypress,
+    ...devRuleOverrides('cypress'),
   },
 }
