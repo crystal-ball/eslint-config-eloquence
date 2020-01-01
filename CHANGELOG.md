@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.17.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.16.0...v12.17.0) (2020-01-01)
+
+
+#### ✨ Update
+
+* Package eslint-config-prettier upgrades to v6.9.0 🆙 (#162)([9098ddc](https://github.com/crystal-ball/eslint-config-eloquence/commit/9098ddcdbab42cd222918a102013c13520e1d2d5)), closes [#162](https://github.com/crystal-ball/eslint-config-eloquence/issue/162)
+
+#### Chore
+
+* Update package @crystal-ball/semantic-release-base to v2.9.0 🆙 (#161)([ebd2bac](https://github.com/crystal-ball/eslint-config-eloquence/commit/ebd2bac824b24f5a389a7a59e22da8427dba1692)), closes [#161](https://github.com/crystal-ball/eslint-config-eloquence/issue/161)
+
 ## [12.16.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.15.1...v12.16.0) (2019-12-22)
 
 
