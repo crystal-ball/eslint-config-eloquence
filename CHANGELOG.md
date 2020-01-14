@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.18.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.17.0...v12.18.0) (2020-01-14)
+
+
+#### ✨ Update
+
+* Package eslint-plugin-import upgrades to v2.20.0 🆙 (#163)([46c8988](https://github.com/crystal-ball/eslint-config-eloquence/commit/46c8988736b79fcd6f5e99531f435065b6d15ee1)), closes [#163](https://github.com/crystal-ball/eslint-config-eloquence/issue/163)
+
+#### Chore
+
+* Update package husky to v4 🆙 (#164)([f377017](https://github.com/crystal-ball/eslint-config-eloquence/commit/f377017237b4ed74743b44f5d1e68c18ef2c88d9)), closes [#164](https://github.com/crystal-ball/eslint-config-eloquence/issue/164)
+
 ## [12.17.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.16.0...v12.17.0) (2020-01-01)
 
 
