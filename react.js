@@ -13,7 +13,6 @@ module.exports = {
 
     // Prettier override
     'prettier',
-    'prettier/react',
   ],
 
   rules: {
