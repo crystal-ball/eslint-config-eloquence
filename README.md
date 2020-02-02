@@ -53,9 +53,11 @@
 Eloquence is a robust and adaptive ESLint configuration set for code linting
 code quality, style and formatting.
 
+- 🔋 Manages all ESLint dependencies for simple setup and version maintenance
 - 🧐 Intelligently adjusts error severity for style and formatting rules for
   development workflows
-- 🔋 Manages all ESLint dependencies for simple setup and version maintenance
+- 😲 Smartly overrides configurations for Storybook, Cypress, webpack and Jest
+  files.
 - 😍 Fully integrated with linting for Prettier formatting
 - 🌲 Includes Cypress tests specific ruleset
 - 👮‍♀️ Supports linting TypeScript projects
@@ -90,7 +92,7 @@ allowing projects to update Prettier versions on their own schedule._
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: 'eloquence/{cypress|node|react|storybook}',
+  extends: 'eloquence/{node|react}',
 }
 ```
 
@@ -115,11 +117,16 @@ the `.eslintrc.js` config in the root of your project:
 - `eloquence/node` - for Node services and NPM packages
 - `eloquence/react` - for React applications bundled with webpack
 
-Additional configurations are available for linting files related to specific
-tools:
+### File overrides
 
-- `eloquence/cypress` - for Cypress acceptance test files
-- `eloquence/storybook` - for Storybook configuration files
+Eloquence overrides the base project rules and settings for specific file
+patterns to eliminate the need for ESLint configuration comments:
+
+| Files                                                                 | Updates                                                              |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `*.spec.js`                                                           | Adds Jest globals                                                    |
+| `cypress/**/*`                                                        | Adds Cypress globals and rules                                       |
+| `.storybook/main.js`, `cypress/plugins/index.js`, `webpack.config.js` | Add Node globals and sets the import resolver to use Node resolution |
 
 ## 👩‍🏫 Rules
 
