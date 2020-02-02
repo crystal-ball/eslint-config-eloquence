@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [12.21.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.20.0...v12.21.0) (2020-02-02)
+
+
+#### ✨ Update
+
+* Improved React rules 🆙 (#169)([caa1f42](https://github.com/crystal-ball/eslint-config-eloquence/commit/caa1f424f4dc4e1f199510d89fa49cecf2d0d260)), closes [#169](https://github.com/crystal-ball/eslint-config-eloquence/issue/169)
+
 ## [12.20.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.19.0...v12.20.0) (2020-02-02)
 
 
