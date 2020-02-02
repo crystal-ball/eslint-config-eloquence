@@ -14,6 +14,27 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [13.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.21.0...v13.0.0) (2020-02-02)
+
+
+### 💥 Breaking Changes!
+
+* Storybook and Cypress entry files are removed
+
+### 🔖 Release Notes
+
+* Remove eloquence/storybook and eloquence/cypress config files, remove eslint comments for webpack.config.js
+
+
+#### 💖 New
+
+* Add file overrides to Node and React projects 💖 (#170)([86c5a8e](https://github.com/crystal-ball/eslint-config-eloquence/commit/86c5a8e4d0875813dd60b03f3abb6b90abd0eafa)), closes [#170](https://github.com/crystal-ball/eslint-config-eloquence/issue/170)
+
+#### Chore, Docs
+
+* Update package docs 📝([0fc7366](https://github.com/crystal-ball/eslint-config-eloquence/commit/0fc7366104e6ff8b2075ec9cb04b7886f35b5144))
+* Update project and TypeScript docs 📝([258a3d0](https://github.com/crystal-ball/eslint-config-eloquence/commit/258a3d054f4aad023f749f4c86316d64312e371f))
+
 ## [12.21.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.20.0...v12.21.0) (2020-02-02)
 
 
