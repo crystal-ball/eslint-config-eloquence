@@ -75,6 +75,9 @@ npm i eslint-config-eloquence prettier -D
 
 # React projects using webpack
 npm i eslint-import-resolver-webpack -D
+
+# TypeScript projects
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
 _We recommend adding [Prettier][] as an exact version project dependency to
@@ -87,7 +90,7 @@ allowing projects to update Prettier versions on their own schedule._
 // .eslintrc.js
 module.exports = {
   root: true,
-  extends: 'eloquence/react',
+  extends: 'eloquence/{cypress|node|react|storybook}',
 }
 ```
 
@@ -98,7 +101,7 @@ can be used to output pretty formatted results. The pretty printed results
 include hyperlinks to the rule docs and the files.
 
 ```
-eslint --format=pretty file.js
+eslint --format=pretty src
 ```
 
 ![Pretty prints links](./docs/assets/pretty.png)
@@ -117,7 +120,6 @@ tools:
 
 - `eloquence/cypress` - for Cypress acceptance test files
 - `eloquence/storybook` - for Storybook configuration files
-- `eloquence/typescript` - for really strict projects
 
 ## 👩‍🏫 Rules
 
