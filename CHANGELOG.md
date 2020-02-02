@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [13.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.0.0...v13.0.1) (2020-02-02)
+
+
+#### 🛠 Fix
+
+* Env severity regression 🦺 (#171)([6a5b6e8](https://github.com/crystal-ball/eslint-config-eloquence/commit/6a5b6e81552de76749dac73baa8c37a2c22d51e5)), closes [#171](https://github.com/crystal-ball/eslint-config-eloquence/issue/171)
+
 ## [13.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v12.21.0...v13.0.0) (2020-02-02)
 
 
