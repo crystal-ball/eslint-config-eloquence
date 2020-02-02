@@ -6,11 +6,11 @@ const corePossibleErrors = require('./src/core-possible-errors')
 const coreStylisticIssues = require('./src/core-stylistic-issues')
 const coreVariables = require('./src/core-variables')
 const imports = require('./src/imports')
-const devRuleOverrides = require('./src/dev-rule-overrides')
 const react = require('./src/react')
 const reactA11y = require('./src/react-a11y')
 const reactHooks = require('./src/react-hooks')
 const cypress = require('./src/cypress')
+const envRuleSeverities = require('./src/env-rule-severities')
 
 /**
  * React applications use the base ruleset extended with the React ruleset.
@@ -64,7 +64,7 @@ module.exports = {
     process: false,
   },
 
-  rules: {
+  rules: envRuleSeverities({
     // --- ESLint core rules configuration ---
     ...coreBestPractices,
     ...coreEcmaScript,
@@ -83,10 +83,7 @@ module.exports = {
     // Prettier formatting enforcement via Prettier *plugin*
     // (this is different from the rule overrides set in the Prettier *config*)
     'prettier/prettier': 'error',
-
-    // --- Env aware overrides ---
-    ...devRuleOverrides('react'),
-  },
+  }),
 
   // Report on unused eslint-disable comments
   reportUnusedDisableDirectives: true,
@@ -104,7 +101,13 @@ module.exports = {
 
     // ⚙️ Configuration files - Sets Node env and resolver used for tooling setup
     {
-      files: ['.storybook/main.js', 'cypress/plugins/index.js', 'webpack.config.js'],
+      files: [
+        '.storybook/main.js',
+        'cypress/plugins/index.js',
+        'babel.config.js',
+        'jest.config.js',
+        'webpack.config.js',
+      ],
       env: {
         node: true,
       },
