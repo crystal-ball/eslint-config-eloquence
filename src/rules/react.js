@@ -43,7 +43,7 @@ module.exports = {
 
   // Prevent missing displayName in a React component definition
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-  'react/display-name': ['off', { ignoreTranspilerName: false }],
+  'react/display-name': 'off',
 
   // Forbid certain propTypes (any, array, object)
   // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/forbid-prop-types.md
@@ -58,7 +58,7 @@ module.exports = {
 
   // Forbid certain props on DOM Nodes
   // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/forbid-dom-props.md
-  'react/forbid-dom-props': ['off', { forbid: [] }],
+  'react/forbid-dom-props': 'off',
 
   // Enforce boolean attributes notation in JSX
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
@@ -162,7 +162,7 @@ module.exports = {
 
   // Prevent direct mutation of this.state
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
-  'react/no-direct-mutation-state': 'off',
+  'react/no-direct-mutation-state': 'error',
 
   // Prevent usage of isMounted
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
@@ -275,7 +275,7 @@ module.exports = {
 
   // require a shouldComponentUpdate method, or PureRenderMixin
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
-  'react/require-optimization': ['off', { allowDecorators: [] }],
+  'react/require-optimization': 'off',
 
   // warn against using findDOMNode()
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
@@ -283,11 +283,11 @@ module.exports = {
 
   // Forbid certain props on Components
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
-  'react/forbid-component-props': ['off', { forbid: [] }],
+  'react/forbid-component-props': 'off',
 
   // Forbid certain elements
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md
-  'react/forbid-elements': ['off', { forbid: [] }],
+  'react/forbid-elements': 'off',
 
   // Prevent problem with children and props.dangerouslySetInnerHTML
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
@@ -352,14 +352,7 @@ module.exports = {
 
   // Enforces consistent naming for boolean props
   // https://github.com/yannickcr/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/boolean-prop-naming.md
-  'react/boolean-prop-naming': [
-    'off',
-    {
-      propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
-      rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
-      message: '',
-    },
-  ],
+  'react/boolean-prop-naming': 'off',
 
   // Prevents common casing typos
   // https://github.com/yannickcr/eslint-plugin-react/blob/73abadb697034b5ccb514d79fb4689836fe61f91/docs/rules/no-typos.md
@@ -394,38 +387,43 @@ module.exports = {
 
   // Prevent usage of UNSAFE_ methods
   // https://github.com/yannickcr/eslint-plugin-react/blob/157cc932be2cfaa56b3f5b45df6f6d4322a2f660/docs/rules/no-unsafe.md
-  'react/no-unsafe': 'off',
+  'react/no-unsafe': 'error',
 
   // Enforce shorthand or standard form for React fragments
   // https://github.com/yannickcr/eslint-plugin-react/blob/bc976b837abeab1dffd90ac6168b746a83fc83cc/docs/rules/jsx-fragments.md
-  // TODO: enable, semver-major
-  'react/jsx-fragments': ['off', 'syntax'],
+  'react/jsx-fragments': ['error', 'syntax'],
 
   // Enforce state initialization style
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
-  // TODO: enable, semver-minor
-  // TODO: set to "always" once babel-preset-airbnb supports public class fields
-  'react/state-in-constructor': ['off', 'never'],
+  'react/state-in-constructor': ['error', 'never'],
 
   // Enforces where React component static properties should be positioned
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
-  // TODO: enable, semver-minor
-  // TODO: set to "static public field" once babel-preset-airbnb supports public class fields
-  'react/static-property-placement': ['off', 'property assignment'],
+  'react/static-property-placement': ['error', 'static public field'],
 
   // Disallow JSX props spreading
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-  // TODO: enable, semver-major
-  'react/jsx-props-no-spreading': [
-    'off',
-    {
-      html: 'enforce',
-      custom: 'enforce',
-      exceptions: [],
-    },
-  ],
+  'react/jsx-props-no-spreading': 'off',
 
-  // Enforce that props are read-only
+  // Enforce that Flow props types are read-only
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
   'react/prefer-read-only-props': 'off',
+
+  // --- Prettier managed rules ---------------------------
+  // https://github.com/prettier/eslint-config-prettier/blob/master/react.js
+
+  'react/jsx-child-element-spacing': 'off',
+  'react/jsx-closing-bracket-location': 'off',
+  'react/jsx-closing-tag-location': 'off',
+  'react/jsx-curly-newline': 'off',
+  'react/jsx-curly-spacing': 'off',
+  'react/jsx-equals-spacing': 'off',
+  'react/jsx-first-prop-new-line': 'off',
+  'react/jsx-indent': 'off',
+  'react/jsx-indent-props': 'off',
+  'react/jsx-max-props-per-line': 'off',
+  'react/jsx-one-expression-per-line': 'off',
+  'react/jsx-props-no-multi-spaces': 'off',
+  'react/jsx-tag-spacing': 'off',
+  'react/jsx-wrap-multilines': 'off',
 }
