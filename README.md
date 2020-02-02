@@ -201,13 +201,13 @@ this package.)_
 
 - [`eslint`][]
 - [`babel-eslint`][]
-- [`eslint-config-airbnb`][]
 - [`eslint-config-prettier`][]
 - [`eslint-plugin-cypress`][]
 - [`eslint-plugin-import`][]
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
 - [`eslint-plugin-react`][]
+- [`eslint-plugin-react-hooks`][]
 - [`eslint-formatter-pretty`][]
 
 ## 😍 Contributing
@@ -227,7 +227,6 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`@typescript-eslint/eslint-plugin`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
 [`@typescript-eslint/parser`]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser
 [`babel-eslint`]:https://github.com/babel/babel-eslint
-[`eslint-config-airbnb`]:https://github.com/airbnb/javascript
 [`eslint-config-prettier`]:https://github.com/prettier/eslint-config-prettier
 [`eslint-formatter-pretty`]:https://github.com/sindresorhus/eslint-formatter-pretty
 [`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
@@ -236,9 +235,9 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
+[`eslint-plugin-react-hooks`]:https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
 [`eslint`]:https://eslint.org/
 [`typescript`]:https://github.com/Microsoft/TypeScript
-[airbnb]:https://github.com/airbnb/javascript
 [prettier options]:https://prettier.io/docs/en/options.html
 [prettier]:https://prettier.io/
 <!-- prettier-ignore-end -->
