@@ -7,7 +7,7 @@ const coreStylisticIssues = require('./src/core-stylistic-issues')
 const coreVariables = require('./src/core-variables')
 const imports = require('./src/imports')
 const node = require('./src/node')
-const devRuleOverrides = require('./src/dev-rule-overrides')
+const envRuleSeverities = require('./src/env-rule-severities')
 
 /**
  * Node.js services use the base ruleset extended with the Node ruleset.
@@ -34,7 +34,7 @@ module.exports = {
     node: true,
   },
 
-  rules: {
+  rules: envRuleSeverities({
     // --- ESLint core rules configuration ---
     ...coreBestPractices,
     ...coreEcmaScript,
@@ -52,10 +52,7 @@ module.exports = {
     // Prettier formatting enforcement via Prettier *plugin*
     // (this is different from the rule overrides set in the Prettier *config*)
     'prettier/prettier': 'error',
-
-    // --- Env aware overrides ---
-    ...devRuleOverrides('node'),
-  },
+  }),
 
   // Report on unused eslint-disable comments
   reportUnusedDisableDirectives: true,
