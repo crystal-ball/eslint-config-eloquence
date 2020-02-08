@@ -52,9 +52,9 @@ module.exports = rules => {
     if (rules[rule]) {
       if (Array.isArray(rules[rule])) {
         rules[rule][0] = severityOverrides[rule]
+      } else {
+        rules[rule] = severityOverrides[rule]
       }
-    } else {
-      rules[rule] = severityOverrides[rule]
     }
     /* eslint-enable no-param-reassign */
   })

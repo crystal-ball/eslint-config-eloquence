@@ -27,6 +27,11 @@ module.exports = {
   settings: {
     // Increase import cache lifetime to 60s
     'import/cache': 60,
+    'import/resolver': {
+      node: {
+        extensions: ['.mjs', '.js', '.json', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 
   env: {
@@ -63,6 +68,10 @@ module.exports = {
     // ✅ Spec files - Adds Jest globals used by tests
     {
       files: ['*.spec.js'],
+      parserOptions: {
+        // Using Babel parser allows writing tests as ESModules now
+        sourceType: 'module',
+      },
       env: {
         jest: true,
       },
