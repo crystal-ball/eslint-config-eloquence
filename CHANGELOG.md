@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [13.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.0.2...v13.1.0) (2020-02-09)
+
+
+#### 💖 New
+
+* Allow defining jest.mocks before import calls 🔮✨([7b70e10](https://github.com/crystal-ball/eslint-config-eloquence/commit/7b70e105b24c9fb1df4b3e083c025bc77b9615fc))
+
 ### [13.0.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.0.1...v13.0.2) (2020-02-08)
 
 
