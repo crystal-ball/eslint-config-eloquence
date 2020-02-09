@@ -97,6 +97,12 @@ module.exports = {
       env: {
         jest: true,
       },
+      rules: {
+        // In Jest test files allow defining `jest.mock()` calls before imports
+        // Under the hood Jest hoists these to the top of the file and it helps
+        // visually distinguish modules that are being replaced with mocks
+        'import/first': 'off',
+      },
     },
 
     // ⚙️ Configuration files - Sets Node env and resolver used for tooling setup
