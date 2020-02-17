@@ -39,7 +39,7 @@
     "@crystal-ball/commitizen-base": "2.3.0",
     "@crystal-ball/semantic-release-base": "2.13.0",
     "@crystal-ball/prettier-base": "1.6.0",
-    "husky": "4.2.1"
+    "husky": "4.2.3"
   },
   "config": {
     "commitizen": {
