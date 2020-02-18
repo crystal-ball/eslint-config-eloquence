@@ -52,12 +52,6 @@ module.exports = ({ target }) => {
       // Increase import cache lifetime to 60s
       'import/cache': 60,
 
-      // Match everything
-      'import/extensions': ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts', '.json'],
-
-      // Ignore types dir from the get-go
-      'import/external-module-folders': ['node_modules', 'node_modules/@types'],
-
       // Use webpack to resolve projects to handle src alias
       'import/resolver': 'eslint-config-eloquence/resolver',
 
@@ -121,12 +115,18 @@ module.exports = ({ target }) => {
         parserOptions: {
           // TS always supports ESM
           sourceType: 'module',
+          // Projects must provide a TS config
+          project: './tsconfig.json',
         },
 
         // Enable Typescript rules
         plugins: ['@typescript-eslint'],
 
         settings: {
+          // Import extension overrides
+          // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
+          'import/extensions': ['.ts', '.tsx', '.d.ts', '.js', '.jsx'],
+          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
           'import/parsers': {
             '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
           },
@@ -165,6 +165,14 @@ module.exports = ({ target }) => {
           'cypress/globals': true,
         },
         rules: cypress,
+      },
+
+      // --- 📚 Storybook files
+      {
+        files: ['.storybook/**/*'],
+        parserOptions: {
+          sourceType: 'module',
+        },
       },
 
       // --- ⚙️ Configuration files
