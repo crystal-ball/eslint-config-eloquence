@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [13.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.2.0...v13.2.1) (2020-02-18)
+
+
+#### 🛠 Fix
+
+* Typescript and Storybook configs (#178)([1322321](https://github.com/crystal-ball/eslint-config-eloquence/commit/1322321f0308e9e79d987d7c8561fed3f0071f03)), closes [#178](https://github.com/crystal-ball/eslint-config-eloquence/issue/178)
+
 ## [13.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.1.0...v13.2.0) (2020-02-18)
 
 
