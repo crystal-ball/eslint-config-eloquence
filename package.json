@@ -2,6 +2,7 @@
   "name": "eslint-config-eloquence",
   "version": "13.1.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
@@ -28,6 +29,7 @@
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-formatter-pretty": "3.0.1",
+    "eslint-import-resolver-node": "0.3.3",
     "eslint-plugin-cypress": "2.9.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
@@ -39,7 +41,7 @@
     "@crystal-ball/commitizen-base": "2.3.0",
     "@crystal-ball/semantic-release-base": "2.13.0",
     "@crystal-ball/prettier-base": "1.6.0",
-    "husky": "4.2.1"
+    "husky": "4.2.3"
   },
   "config": {
     "commitizen": {
