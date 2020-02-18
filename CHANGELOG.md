@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [13.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.1.0...v13.2.0) (2020-02-18)
+
+
+#### 💖 New
+
+* Computed index entry for Babel projects 🤩 (#177)([01277d8](https://github.com/crystal-ball/eslint-config-eloquence/commit/01277d8a6ad3a80d227adddccafe8c1dc5592394)), closes [#177](https://github.com/crystal-ball/eslint-config-eloquence/issue/177)
+
+#### Chore
+
+* Update package @crystal-ball/semantic-release-base to v2.13.0 🆙 (#174)([5676e5d](https://github.com/crystal-ball/eslint-config-eloquence/commit/5676e5d510dfaeddb0bfb9c5386aa84a50446cc4)), closes [#174](https://github.com/crystal-ball/eslint-config-eloquence/issue/174)
+
 ## [13.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.0.2...v13.1.0) (2020-02-09)
 
 
