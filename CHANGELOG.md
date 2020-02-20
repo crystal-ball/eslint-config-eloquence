@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [13.2.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.2.1...v13.2.2) (2020-02-20)
+
+
+#### 🛠 Fix
+
+* Add babel config to allowed dev deps override (#179)([db81b32](https://github.com/crystal-ball/eslint-config-eloquence/commit/db81b326beb70c70b851749c0b0018ee148bc7e6)), closes [#179](https://github.com/crystal-ball/eslint-config-eloquence/issue/179)
+
 ### [13.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.2.0...v13.2.1) (2020-02-18)
 
 
