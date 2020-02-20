@@ -10,6 +10,9 @@ module.exports = {
   // Use closures to access the async values returned by Commands
   'cypress/no-assigning-return-values': 'error',
 
+  // Disallow using force:true with action commands
+  'cypress/no-force': 'error',
+
   // Use route aliases or assertions instead of `cy.wait` calls
   'cypress/no-unnecessary-waiting': 'error',
 
