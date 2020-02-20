@@ -71,6 +71,7 @@ module.exports = {
     {
       devDependencies: [
         '**/*.{spec,stories}.js',
+        'babel.config.js',
         'webpack.config.js',
         '{.jest,.storybook,cypress,test}/**/*',
       ],
