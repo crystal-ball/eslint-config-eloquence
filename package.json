@@ -22,8 +22,8 @@
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.20.0",
-    "@typescript-eslint/parser": "2.20.0",
+    "@typescript-eslint/eslint-plugin": "2.21.0",
+    "@typescript-eslint/parser": "2.21.0",
     "babel-eslint": "10.0.3",
     "confusing-browser-globals": "1.0.9",
     "eslint": "6.8.0",
@@ -38,8 +38,8 @@
     "eslint-plugin-react-hooks": "2.4.0"
   },
   "devDependencies": {
-    "@crystal-ball/commitizen-base": "2.3.0",
-    "@crystal-ball/semantic-release-base": "2.13.0",
+    "@crystal-ball/commitizen-base": "2.4.0",
+    "@crystal-ball/semantic-release-base": "2.14.0",
     "@crystal-ball/prettier-base": "1.6.0",
     "husky": "4.2.3"
   },
