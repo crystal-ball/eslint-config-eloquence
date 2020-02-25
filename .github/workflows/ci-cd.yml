@@ -1,13 +1,5 @@
 name: CI/CD
-
-# Run action on all PRS and on change to master branch in order to test PRs for
-# continuous integration and deploy master for continuous deployment
-on:
-  pull_request:
-    types: [opened, synchronize, reopened]
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   skip:
@@ -17,14 +9,15 @@ jobs:
     steps:
       - name: Skip CI Commit
         run: echo "Skip CI commit success"
+
   test:
     if: contains(github.event.head_commit.message, 'skip ci') == false
     name: Continuous Integration - Node v${{ matrix.node-version }}
     runs-on: ubuntu-latest
     strategy:
-      # Test package on Node versions used by Atom/VSCode for compatability
+      # Test package on Node versions used by editors for compatability
       matrix:
-        node-version: ['12', '10']
+        node-version: ['12']
     steps:
       - uses: actions/checkout@v1
       - name: Setup Node.js
@@ -32,11 +25,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install
-        run: npm install
-        env:
-          CI: 'true'
+        run: CI=true npm install
       - name: Test
         run: npm test
+
   publish:
     name: Continuous Deployment
     needs: test
@@ -47,11 +39,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '10'
+          node-version: '12'
       - name: Install
-        run: npm install
-        env:
-          CI: 'true'
+        run: CI=true npm install
       - name: Release
         if: github.ref == 'refs/heads/master'
         run: npx semantic-release
