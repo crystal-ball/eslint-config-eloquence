@@ -14,7 +14,7 @@ exports.resolve = function resolve(source, file, config) {
   const aliases = config && config.aliases ? config.aliases : defaultAliases
   let dealiasedSource = source
 
-  Object.keys(aliases).forEach(alias => {
+  Object.keys(aliases).forEach((alias) => {
     // Use the alias plus a directory separator to make sure we don't match
     // package names that start with some alias
     const osAlias = alias + path.sep

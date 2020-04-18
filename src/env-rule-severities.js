@@ -38,7 +38,7 @@ const severityOverrides = {
   'react/self-closing-comp': 'warn',
 }
 
-module.exports = rules => {
+module.exports = (rules) => {
   // During tests linting, rule severity levels are not overridden
   if (process.env.NODE_ENV === 'test') return rules
 
@@ -47,7 +47,7 @@ module.exports = rules => {
   // only by keeping the original rule settings and overriding the level only
   // which makes this a super convenient list of severity overrides that won't
   // affect the rule custom settings
-  Object.keys(severityOverrides).forEach(rule => {
+  Object.keys(severityOverrides).forEach((rule) => {
     /* eslint-disable no-param-reassign */
     if (rules[rule]) {
       if (Array.isArray(rules[rule])) {

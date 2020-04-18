@@ -56,7 +56,7 @@ module.exports = ({ target }) => {
       'import/resolver': 'eslint-config-eloquence/resolver',
 
       // --- React plugin settings ---
-      react: {
+      'react': {
         pragma: 'React',
         version: 'detect',
         // Components used as alternatives to <a> for linking, eg. <Link to={ url } />

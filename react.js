@@ -42,7 +42,7 @@ module.exports = {
     'import/cache': 60,
 
     // --- React plugin settings ---
-    react: {
+    'react': {
       pragma: 'React',
       version: 'detect',
       // Components used as alternatives to <a> for linking, eg. <Link to={ url } />

@@ -39,5 +39,5 @@ module.exports = {
   'no-sync': 'off',
 
   // Require setting 'use strict' pragma in common JS node modules
-  strict: ['error', 'safe'],
+  'strict': ['error', 'safe'],
 }

@@ -46,7 +46,7 @@ module.exports = {
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'valid-typeof': 'off',
-        camelcase: 'off',
+        'camelcase': 'off',
 
         // --- Recommended rules --------------------------
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json

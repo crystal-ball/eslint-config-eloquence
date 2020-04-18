@@ -131,7 +131,7 @@ module.exports = {
   'import/order': [
     'error',
     {
-      groups: [
+      'groups': [
         // Node built-ins and external packages are grouped together
         ['builtin', 'external'],
         // The webpack `@` imports resolve as 'unknown'
