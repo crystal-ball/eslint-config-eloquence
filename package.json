@@ -40,7 +40,7 @@
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.4.0",
     "@crystal-ball/semantic-release-base": "2.16.0",
-    "@crystal-ball/prettier-base": "2.0.0",
+    "@crystal-ball/prettier-base": "2.1.0",
     "husky": "4.2.5"
   },
   "config": {
