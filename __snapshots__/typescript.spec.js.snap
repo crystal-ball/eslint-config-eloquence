@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TypeScript configs The configs match the snapshot 1`] = `
+Object {
+  "overrides": Array [
+    Object {
+      "files": Array [
+        "*.ts",
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": Object {
+        "sourceType": "module",
+      },
+      "plugins": Array [
+        "@typescript-eslint",
+      ],
+      "rules": Object {
+        "@typescript-eslint/adjacent-overload-signatures": "error",
+        "@typescript-eslint/ban-ts-ignore": "error",
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/brace-style": "off",
+        "@typescript-eslint/camelcase": "error",
+        "@typescript-eslint/class-name-casing": Array [
+          "error",
+          Object {
+            "allowUnderscorePrefix": false,
+          },
+        ],
+        "@typescript-eslint/comma-spacing": "off",
+        "@typescript-eslint/consistent-type-assertions": "error",
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "@typescript-eslint/func-call-spacing": "off",
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/interface-name-prefix": "error",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/no-array-constructor": "error",
+        "@typescript-eslint/no-dupe-class-members": "error",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-empty-interface": "error",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-extra-parens": "off",
+        "@typescript-eslint/no-extra-semi": "off",
+        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-namespace": "error",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/no-this-alias": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-use-before-define": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/prefer-namespace-keyword": "error",
+        "@typescript-eslint/quotes": "off",
+        "@typescript-eslint/semi": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/triple-slash-reference": "error",
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "camelcase": "off",
+        "getter-return": "off",
+        "no-array-constructor": "off",
+        "no-const-assign": "off",
+        "no-dupe-args": "off",
+        "no-dupe-class-members": "off",
+        "no-dupe-keys": "off",
+        "no-empty-function": "off",
+        "no-new-symbol": "off",
+        "no-redeclare": "off",
+        "no-this-before-super": "off",
+        "no-undef": "off",
+        "no-unreachable": "off",
+        "no-unused-vars": "off",
+        "no-use-before-define": "off",
+        "valid-typeof": "off",
+      },
+      "settings": Object {
+        "import/extensions": Array [
+          ".ts",
+          ".tsx",
+          ".d.ts",
+          ".js",
+          ".jsx",
+        ],
+        "import/external-module-folders": Array [
+          "node_modules",
+          "node_modules/@types",
+        ],
+        "import/parsers": Object {
+          "@typescript-eslint/parser": Array [
+            ".ts",
+            ".tsx",
+            ".d.ts",
+          ],
+        },
+      },
+    },
+  ],
+}
+`;
