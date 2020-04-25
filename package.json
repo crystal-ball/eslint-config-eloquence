@@ -18,7 +18,9 @@
   ],
   "license": "ISC",
   "scripts": {
-    "test": "NODE_ENV=test eslint --format=pretty *.js src",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "NODE_ENV=test eslint --format=pretty *.js src",
+    "test:unit": "jest *.spec.js",
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
@@ -39,9 +41,11 @@
   },
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.4.0",
-    "@crystal-ball/semantic-release-base": "2.16.0",
     "@crystal-ball/prettier-base": "2.1.0",
-    "husky": "4.2.5"
+    "@crystal-ball/semantic-release-base": "2.16.0",
+    "@types/jest": "25.2.1",
+    "husky": "4.2.5",
+    "jest": "25.4.0"
   },
   "config": {
     "commitizen": {
