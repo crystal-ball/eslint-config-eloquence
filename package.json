@@ -18,7 +18,8 @@
   ],
   "license": "ISC",
   "scripts": {
-    "test": "NODE_ENV=test eslint --format=pretty *.js src",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "NODE_ENV=test eslint --format=pretty *.js src",
     "test:unit": "jest *.spec.js",
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
