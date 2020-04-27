@@ -14,6 +14,20 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [13.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.7.0...v13.8.0) (2020-04-27)
+
+
+#### ✨ Update
+
+* Package dependencies 🆙 (#193)([18d430a](https://github.com/crystal-ball/eslint-config-eloquence/commit/18d430a4c15779f84ff8dc40e883da4ac8072248)), closes [#193](https://github.com/crystal-ball/eslint-config-eloquence/issue/193)
+
+#### Chore
+
+* Add unit tests ✅ (#190)([da8c312](https://github.com/crystal-ball/eslint-config-eloquence/commit/da8c3126ba28de2327b21e08bfb36063b93557ec)), closes [#190](https://github.com/crystal-ball/eslint-config-eloquence/issue/190)
+* Reconfigure Renovate ⚙️ (#191)([a229be2](https://github.com/crystal-ball/eslint-config-eloquence/commit/a229be2b5df7506eda3fe6b0ee795237398f73c9)), closes [#191](https://github.com/crystal-ball/eslint-config-eloquence/issue/191)
+* Update package @crystal-ball/commitizen-base to v2.5.0 🆙 (#192)([76efc6a](https://github.com/crystal-ball/eslint-config-eloquence/commit/76efc6ab8c3e69417b096226eb836f15088b2cfa)), closes [#192](https://github.com/crystal-ball/eslint-config-eloquence/issue/192)
+* Update package @crystal-ball/prettier-base to v2.1.0 🆙 (#189)([d81e929](https://github.com/crystal-ball/eslint-config-eloquence/commit/d81e929fa599b62f3133c65252bebe08955cb798)), closes [#189](https://github.com/crystal-ball/eslint-config-eloquence/issue/189)
+
 ## [13.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.6.0...v13.7.0) (2020-04-18)
 
 
