@@ -36,11 +36,14 @@ const severityOverrides = {
   'react/prop-types': 'warn',
   'react/require-default-props': 'warn',
   'react/self-closing-comp': 'warn',
+
+  // Allow dev tools writing tests
+  'testing-library/no-debug': 'off',
 }
 
-module.exports = (rules) => {
+module.exports = (env, rules) => {
   // During tests linting, rule severity levels are not overridden
-  if (process.env.NODE_ENV === 'test') return rules
+  if (env === 'test') return rules
 
   // Outside tests linting, downgrade severity levels for style and formatting
   // rules by setting the rule level. ESLint handles rule extends with a level

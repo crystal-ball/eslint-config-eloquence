@@ -1,16 +1,18 @@
+/* eslint-disable node/no-sync */
+
 'use strict'
 
 const fs = require('fs')
 const path = require('path')
 const nodeResolver = require('eslint-import-resolver-node')
 
-exports.interfaceVersion = 2
+const interfaceVersion = 2
 
 const defaultAliases = {
   '@': path.resolve(fs.realpathSync(process.cwd()), 'src'),
 }
 
-exports.resolve = function resolve(source, file, config) {
+const resolve = function resolve(source, file, config) {
   const aliases = config && config.aliases ? config.aliases : defaultAliases
   let dealiasedSource = source
 
@@ -32,3 +34,5 @@ exports.resolve = function resolve(source, file, config) {
     ...config,
   })
 }
+
+module.exports = { interfaceVersion, resolve }

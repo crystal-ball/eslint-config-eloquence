@@ -2,7 +2,7 @@
   "name": "eslint-config-eloquence",
   "version": "13.8.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
-  "main": "./index.js",
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
@@ -20,32 +20,35 @@
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "NODE_ENV=test eslint --format=pretty *.js src",
-    "test:unit": "jest *.spec.js",
+    "test:unit": "NODE_ENV=test jest src",
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.29.0",
-    "@typescript-eslint/parser": "2.29.0",
+    "@typescript-eslint/eslint-plugin": "3.0.0",
+    "@typescript-eslint/parser": "3.0.0",
     "babel-eslint": "10.1.0",
     "confusing-browser-globals": "1.0.9",
-    "eslint": "6.8.0",
+    "eslint": "7.0.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-formatter-pretty": "3.0.1",
     "eslint-import-resolver-node": "0.3.3",
     "eslint-plugin-cypress": "2.10.3",
     "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest-dom": "2.1.0",
     "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.3",
-    "eslint-plugin-react": "7.19.0",
-    "eslint-plugin-react-hooks": "3.0.0"
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.2",
+    "eslint-plugin-testing-library": "3.1.3"
   },
   "devDependencies": {
-    "@crystal-ball/commitizen-base": "2.6.0",
+    "@crystal-ball/commitizen-base": "2.7.1",
     "@crystal-ball/prettier-base": "2.2.0",
-    "@crystal-ball/semantic-release-base": "2.17.0",
-    "@types/jest": "25.2.1",
+    "@crystal-ball/semantic-release-base": "2.18.1",
+    "@types/jest": "25.2.3",
     "husky": "4.2.5",
-    "jest": "25.4.0"
+    "jest": "26.0.1"
   },
   "prettier": "@crystal-ball/prettier-base",
   "config": {

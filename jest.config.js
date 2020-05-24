@@ -1,5 +1,7 @@
 'use strict'
 
+const { ENABLE_JEST_NOTIFICATIONS } = process.env
+
 module.exports = {
   // Provides nice test output of what's being run
   verbose: true,
@@ -9,7 +11,7 @@ module.exports = {
 
   // OS notifications of test results is an opt in feature, enable by setting
   // a truthy env value in your shell environment
-  notify: Boolean(process.env.ENABLE_JEST_NOTIFICATIONS),
+  notify: Boolean(ENABLE_JEST_NOTIFICATIONS),
 
   // Ignore Cypress acceptance tests
   testPathIgnorePatterns: ['/node_modules/'],
