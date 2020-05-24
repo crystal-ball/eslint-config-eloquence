@@ -193,6 +193,7 @@ module.exports = ({ target, esm = true }) => {
       // --- ⚙️ Configuration files  --------------------------
       {
         files: [
+          '.eslintrc.js',
           '.storybook/main.js',
           'cypress/plugins/index.js',
           'babel.config.js',

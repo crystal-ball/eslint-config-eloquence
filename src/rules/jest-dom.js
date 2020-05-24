@@ -6,6 +6,6 @@ module.exports = {
   'jest-dom/prefer-enabled-disabled': 'error',
   'jest-dom/prefer-focus': 'error',
   'jest-dom/prefer-required': 'error',
-  'jest-dom/pefer-to-have-attribute': 'error',
-  'jest-dom/prefer-to-have-content': 'error',
+  'jest-dom/prefer-to-have-attribute': 'error',
+  'jest-dom/prefer-to-have-text-content': 'error',
 }
