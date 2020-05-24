@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.1.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.1.0...v14.1.1) (2020-05-24)
+
+
+#### 🛠 Fix
+
+* Jest-dom rule typos and .eslintrc.js configs (#204)([0cc1c52](https://github.com/crystal-ball/eslint-config-eloquence/commit/0cc1c521bc7c23fe2448ebc348d8733a2279f7b3)), closes [#204](https://github.com/crystal-ball/eslint-config-eloquence/issue/204)
+
 ## [14.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.0.0...v14.1.0) (2020-05-24)
 
 
