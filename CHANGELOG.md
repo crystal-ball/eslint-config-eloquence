@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [14.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.0.0...v14.1.0) (2020-05-24)
+
+
+#### ✨ Update
+
+* Package eslint to v7.1.0 🆙 (#197)([4843f9f](https://github.com/crystal-ball/eslint-config-eloquence/commit/4843f9f0bb41db8dbb45f47403337caba2ac0cf8)), closes [#197](https://github.com/crystal-ball/eslint-config-eloquence/issue/197)
+
+#### Chore
+
+* Add Code Climate config ⚙️ (#203)([302e4ae](https://github.com/crystal-ball/eslint-config-eloquence/commit/302e4ae28bd36a74b8d814757082bd6090ce37f6)), closes [#203](https://github.com/crystal-ball/eslint-config-eloquence/issue/203)
+
 ## [14.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.8.0...v14.0.0) (2020-05-24)
 
 
