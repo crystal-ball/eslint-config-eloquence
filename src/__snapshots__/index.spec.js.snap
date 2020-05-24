@@ -130,6 +130,7 @@ Object {
         "node": true,
       },
       "files": Array [
+        ".eslintrc.js",
         ".storybook/main.js",
         "cypress/plugins/index.js",
         "babel.config.js",
@@ -301,6 +302,7 @@ Object {
       Object {
         "devDependencies": Array [
           "**/*.{spec,stories}.js",
+          ".eslintrc.js",
           "babel.config.js",
           "webpack.config.js",
           "{.jest,.storybook,cypress,test}/**/*",
@@ -1143,6 +1145,7 @@ Object {
         "node": true,
       },
       "files": Array [
+        ".eslintrc.js",
         ".storybook/main.js",
         "cypress/plugins/index.js",
         "babel.config.js",
@@ -1335,6 +1338,7 @@ Object {
       Object {
         "devDependencies": Array [
           "**/*.{spec,stories}.js",
+          ".eslintrc.js",
           "babel.config.js",
           "webpack.config.js",
           "{.jest,.storybook,cypress,test}/**/*",
@@ -1385,13 +1389,13 @@ Object {
     "import/prefer-default-export": "off",
     "import/unambiguous": "off",
     "init-declarations": "off",
-    "jest-dom/pefer-to-have-attribute": "error",
     "jest-dom/prefer-checked": "error",
     "jest-dom/prefer-empty": "error",
     "jest-dom/prefer-enabled-disabled": "error",
     "jest-dom/prefer-focus": "error",
     "jest-dom/prefer-required": "error",
-    "jest-dom/prefer-to-have-content": "error",
+    "jest-dom/prefer-to-have-attribute": "error",
+    "jest-dom/prefer-to-have-text-content": "error",
     "jsx-a11y/accessible-emoji": "error",
     "jsx-a11y/alt-text": Array [
       "error",
