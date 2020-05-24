@@ -1,5 +1,7 @@
 'use strict'
 
+jest.mock('path')
+
 const eloquence = require('./index')
 
 describe('Node configs', () => {

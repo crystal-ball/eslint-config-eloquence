@@ -20,7 +20,7 @@
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "NODE_ENV=test eslint --format=pretty *.js src",
-    "test:unit": "jest src",
+    "test:unit": "NODE_ENV=test jest src",
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {

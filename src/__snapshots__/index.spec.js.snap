@@ -998,7 +998,7 @@ Object {
       ".tsx",
       ".d.ts",
     ],
-    "import/resolver": "/Users/danhedgecock/Code/eslint-config-eloquence/src/resolver",
+    "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
         Object {
@@ -2424,7 +2424,7 @@ Object {
       ".tsx",
       ".d.ts",
     ],
-    "import/resolver": "/Users/danhedgecock/Code/eslint-config-eloquence/src/resolver",
+    "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
         Object {
