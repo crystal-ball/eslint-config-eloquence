@@ -14,6 +14,29 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [14.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.8.0...v14.0.0) (2020-05-24)
+
+
+### 💥 Breaking Changes!
+
+* Extends entry points removed, all users must now import eloquence and generate base
+configs with a target.
+
+### 🔖 Release Notes
+
+* Rules for Jest DOM and React Testing Library added and rules for Node.js improved by
+switching to the eslint-plugin-node plugin.
+
+
+#### 💖 New
+
+* ESLint 7, jest-dom, react-testing-library and node plugins 💖 (#202)([1d79ae9](https://github.com/crystal-ball/eslint-config-eloquence/commit/1d79ae9cda02604191108b7ddabc6dea961c8189)), closes [#202](https://github.com/crystal-ball/eslint-config-eloquence/issue/202) [#201](https://github.com/crystal-ball/eslint-config-eloquence/issue/201)
+
+#### Chore
+
+* Reconfigure Renovate ⚙️ (#195)([df5f3bf](https://github.com/crystal-ball/eslint-config-eloquence/commit/df5f3bf28114cdf9db368d6bf866d6e17017b905)), closes [#195](https://github.com/crystal-ball/eslint-config-eloquence/issue/195)
+* Update dev dependencies 🆙 (#194)([cd5f099](https://github.com/crystal-ball/eslint-config-eloquence/commit/cd5f099498fb6fbcb065c3d4ce5aecfb893b0363)), closes [#194](https://github.com/crystal-ball/eslint-config-eloquence/issue/194)
+
 ## [13.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v13.7.0...v13.8.0) (2020-04-27)
 
 
