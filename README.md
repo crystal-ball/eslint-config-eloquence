@@ -58,6 +58,7 @@ code quality, style and formatting.
   development workflows
 - 😲 Smartly overrides configurations for Storybook, Cypress, webpack and Jest
   files.
+- ✅ React Testing Library and Jest DOM rules
 - 😍 Fully integrated with linting for Prettier formatting
 - 🌲 Includes Cypress tests specific ruleset
 - 👮‍♀️ Supports linting TypeScript projects
@@ -90,11 +91,18 @@ allowing projects to update Prettier versions on their own schedule._
 
 ```javascript
 // .eslintrc.js
-module.exports = {
-  root: true,
-  extends: 'eloquence/{node|react}',
-}
+'use strict'
+
+const eloquence = require('eslint-config-eloquence')
+
+module.exports =  = eloquence({ target: 'react|node' })
 ```
+
+Eloquence supports Node.js services and React applications using the `target`
+configuration.
+
+- Pass `'node'` - for Node services and NPM packages
+- Pass `'react'` - for React applications bundled with webpack
 
 #### Pretty print output
 
@@ -108,25 +116,21 @@ eslint --format=pretty src
 
 ![Pretty prints links](./docs/assets/pretty.png)
 
-#### Project types
-
-Eloquence supports Node.js services and React applications with two separate
-configurations optimized for the project type. Use the project configuration for
-the `.eslintrc.js` config in the root of your project:
-
-- `eloquence/node` - for Node services and NPM packages
-- `eloquence/react` - for React applications bundled with webpack
-
 ### File overrides
 
 Eloquence overrides the base project rules and settings for specific file
 patterns to eliminate the need for ESLint configuration comments:
 
-| Files                                                                 | Updates                                                              |
-| --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `*.spec.js`                                                           | Adds Jest globals                                                    |
-| `cypress/**/*`                                                        | Adds Cypress globals and rules                                       |
-| `.storybook/main.js`, `cypress/plugins/index.js`, `webpack.config.js` | Add Node globals and sets the import resolver to use Node resolution |
+| Files                 | Updates                        |
+| --------------------- | ------------------------------ |
+| `['*.ts', '*.tsx']`   | TypeScript rules enabled       |
+| `['*.spec.js']`       | Adds Jest globals              |
+| `['cypress/**/*']`    | Adds Cypress globals and rules |
+| `['.storybook/**/*']` | Support ESmodules              |
+
+Finally, configuration files for Storybook, Cypress, Babel, Jest, and webpack
+are all set to CommonJS modules with Node globals for configuring tooling
+executed by Node.js.
 
 ## 👩‍🏫 Rules
 
@@ -134,9 +138,9 @@ The Eloquence ruleset balances providing a rigorous, comprehensive ruleset with
 providing only valuable linting messaging during non-test workflows. A
 comprehensive ruleset helps people contribute to projects by programatically
 answering questions about the code conventions expected by a project. However a
-comprehensive ruleset can also inhibit creative problem solving by distracting
-developers with non-critical messaging. To solve this issue Eloquence
-intelligently adjusts the linter error level for rule types by environment:
+comprehensive ruleset can also be really noisy and problematically irritating.
+To solve this issue Eloquence intelligently adjusts the linter error level for
+rule types by environment:
 
 #### Error levels
 
@@ -160,17 +164,10 @@ In general, the Eloquence ruleset tries to encourage these coding practices:
 
 ## 👮‍♀️ TypeScript
 
-TypeScript can be supported by extending the `eloquence/typescript` base, which
-will change the parser and add the `@typescript-eslint` plugin along with rules
-for linting TypeScript.
-
-```js
-// .eslintrc.js
-module.exports = {
-  root: true
-  extends: ['eloquence/node', 'eloquence/typescript']
-}
-```
+TypeScript rules are supported out of the box for React and Node configurations
+using an `override`. Projects using TS must install
+`@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` and provide a
+`tsconfig` in the project root.
 
 #### VSCode
 
@@ -189,15 +186,6 @@ if you haven't.
 }
 ```
 
-#### Required dependencies
-
-_The TypeScript dependencies are not included in the package and must be
-installed by the project._
-
-- [`typescript`][]
-- [`@typescript-eslint/parser`][]
-- [`@typescript-eslint/eslint-plugin`][]
-
 ## 🔋 Batteries included
 
 This package will automatically include all of the packages needed to run
@@ -213,10 +201,12 @@ this package.)_
 - [`eslint-config-prettier`][]
 - [`eslint-plugin-cypress`][]
 - [`eslint-plugin-import`][]
+- [`eslint-plugin-jest-dom`][]
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
 - [`eslint-plugin-react`][]
 - [`eslint-plugin-react-hooks`][]
+- [`eslint-plugin-testing-library`][]
 - [`eslint-formatter-pretty`][]
 
 ## 😍 Contributing
@@ -241,10 +231,12 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
 [`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
+[`eslint-plugin-jest-dom]:https://github.com/testing-library/eslint-plugin-jest-dom
 [`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
 [`eslint-plugin-react-hooks`]:https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+[`eslint-plugin-testing-library]:https://github.com/testing-library/eslint-plugin-testing-library
 [`eslint`]:https://eslint.org/
 [`typescript`]:https://github.com/Microsoft/TypeScript
 [prettier options]:https://prettier.io/docs/en/options.html
