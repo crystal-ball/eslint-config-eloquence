@@ -53,25 +53,6 @@ module.exports = {
   'node/shebang': 'error',
 
   // --------------------------------------------------------
-  // --- Imports
-
-  // Modules must be declared in package.json
-  'node/no-extraneous-import': 'error',
-  'node/no-extraneous-require': 'error',
-
-  // Referenced modules must exist
-  'node/no-missing-import': 'error',
-  'node/no-missing-require': 'error',
-
-  // Use import plugin to restrict module usage
-  'node/no-restricted-import': 'off',
-  'node/no-restricted-require': 'off',
-
-  // Any referenced module must be published
-  'node/no-unpublished-import': 'error',
-  'node/no-unpublished-require': 'error',
-
-  // --------------------------------------------------------
   // --- Stylistic
 
   // Enforce using return with callbacks to prevent accidentally calling them
@@ -112,4 +93,23 @@ module.exports = {
   // Prefer promises over callbacks
   'node/prefer-promises/dns': 'error',
   'node/prefer-promises/fs': 'error',
+
+  // --------------------------------------------------------
+  // --- Imports
+
+  // Prefer import/no-extraneous-dependencies
+  'node/no-extraneous-import': 'off',
+  'node/no-extraneous-require': 'off',
+
+  // Prefer import/no-unresolved
+  'node/no-missing-import': 'off',
+  'node/no-missing-require': 'off',
+
+  // Prefer no-restricted-imports
+  'node/no-restricted-import': 'off',
+  'node/no-restricted-require': 'off',
+
+  // Prefer import/no-extraneous-dependencies
+  'node/no-unpublished-import': 'off',
+  'node/no-unpublished-require': 'off',
 }
