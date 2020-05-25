@@ -16,6 +16,7 @@ const severityOverrides = {
   // Imports style preferences rules
   'import/first': 'warn',
   'import/order': 'warn',
+  'import/no-unused-modules': 'off',
 
   // Don't show any Prettier formatting errors during dev b/c they're SUPER
   // noisy and annoying and NOT helpful at that time

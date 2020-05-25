@@ -92,10 +92,6 @@ Object {
           ".tsx",
           ".d.ts",
         ],
-        "import/external-module-folders": Array [
-          "node_modules",
-          "node_modules/@types",
-        ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
             ".ts",
@@ -257,7 +253,7 @@ Object {
     "id-blacklist": "off",
     "id-length": "off",
     "id-match": "off",
-    "import/default": "off",
+    "import/default": "error",
     "import/dynamic-import-chunkname": Array [
       "error",
       Object {
@@ -282,7 +278,7 @@ Object {
     "import/group-exports": "off",
     "import/max-dependencies": "off",
     "import/named": "error",
-    "import/namespace": "off",
+    "import/namespace": "error",
     "import/newline-after-import": "error",
     "import/no-absolute-path": "error",
     "import/no-amd": "error",
@@ -305,7 +301,7 @@ Object {
       },
     ],
     "import/no-default-export": "off",
-    "import/no-deprecated": "off",
+    "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-dynamic-require": "error",
     "import/no-extraneous-dependencies": Array [
@@ -326,12 +322,12 @@ Object {
     "import/no-named-as-default-member": "error",
     "import/no-named-default": "error",
     "import/no-named-export": "off",
-    "import/no-namespace": "error",
+    "import/no-namespace": "off",
     "import/no-nodejs-modules": "off",
     "import/no-relative-parent-imports": "off",
     "import/no-restricted-paths": "off",
     "import/no-self-import": "error",
-    "import/no-unassigned-import": "off",
+    "import/no-unassigned-import": "error",
     "import/no-unresolved": Array [
       "error",
       Object {
@@ -340,23 +336,27 @@ Object {
       },
     ],
     "import/no-unused-modules": "off",
-    "import/no-useless-path-segments": "error",
+    "import/no-useless-path-segments": Array [
+      "error",
+      Object {
+        "noUselessIndex": true,
+      },
+    ],
     "import/no-webpack-loader-syntax": "error",
     "import/order": Array [
       "error",
       Object {
+        "alphabetize": Object {
+          "order": "ignore",
+        },
         "groups": Array [
-          Array [
-            "builtin",
-            "external",
-          ],
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
           "unknown",
-          Array [
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-          ],
         ],
         "newlines-between": "ignore",
       },
@@ -1003,6 +1003,7 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
+    "import/internal-regex": /\\^@\\\\//,
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
@@ -1109,10 +1110,6 @@ Object {
           ".ts",
           ".tsx",
           ".d.ts",
-        ],
-        "import/external-module-folders": Array [
-          "node_modules",
-          "node_modules/@types",
         ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
@@ -1296,7 +1293,7 @@ Object {
     "id-blacklist": "off",
     "id-length": "off",
     "id-match": "off",
-    "import/default": "off",
+    "import/default": "error",
     "import/dynamic-import-chunkname": Array [
       "error",
       Object {
@@ -1321,7 +1318,7 @@ Object {
     "import/group-exports": "off",
     "import/max-dependencies": "off",
     "import/named": "error",
-    "import/namespace": "off",
+    "import/namespace": "error",
     "import/newline-after-import": "error",
     "import/no-absolute-path": "error",
     "import/no-amd": "error",
@@ -1344,7 +1341,7 @@ Object {
       },
     ],
     "import/no-default-export": "off",
-    "import/no-deprecated": "off",
+    "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-dynamic-require": "error",
     "import/no-extraneous-dependencies": Array [
@@ -1365,12 +1362,12 @@ Object {
     "import/no-named-as-default-member": "error",
     "import/no-named-default": "error",
     "import/no-named-export": "off",
-    "import/no-namespace": "error",
+    "import/no-namespace": "off",
     "import/no-nodejs-modules": "off",
     "import/no-relative-parent-imports": "off",
     "import/no-restricted-paths": "off",
     "import/no-self-import": "error",
-    "import/no-unassigned-import": "off",
+    "import/no-unassigned-import": "error",
     "import/no-unresolved": Array [
       "error",
       Object {
@@ -1378,24 +1375,34 @@ Object {
         "commonjs": true,
       },
     ],
-    "import/no-unused-modules": "off",
-    "import/no-useless-path-segments": "error",
+    "import/no-unused-modules": Array [
+      "error",
+      Object {
+        "missingExports": true,
+        "unusedExports": true,
+      },
+    ],
+    "import/no-useless-path-segments": Array [
+      "error",
+      Object {
+        "noUselessIndex": true,
+      },
+    ],
     "import/no-webpack-loader-syntax": "error",
     "import/order": Array [
       "error",
       Object {
+        "alphabetize": Object {
+          "order": "ignore",
+        },
         "groups": Array [
-          Array [
-            "builtin",
-            "external",
-          ],
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
           "unknown",
-          Array [
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-          ],
         ],
         "newlines-between": "ignore",
       },
@@ -2434,6 +2441,7 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
+    "import/internal-regex": /\\^@\\\\//,
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [

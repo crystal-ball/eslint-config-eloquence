@@ -116,21 +116,18 @@ eslint --format=pretty src
 
 ![Pretty prints links](./docs/assets/pretty.png)
 
-### File overrides
+## ⚙️ Imports customizations
 
-Eloquence overrides the base project rules and settings for specific file
-patterns to eliminate the need for ESLint configuration comments:
+Repositories can configure custom rules to enforce some common requirements:
 
-| Files                 | Updates                        |
-| --------------------- | ------------------------------ |
-| `['*.ts', '*.tsx']`   | TypeScript rules enabled       |
-| `['*.spec.js']`       | Adds Jest globals              |
-| `['cypress/**/*']`    | Adds Cypress globals and rules |
-| `['.storybook/**/*']` | Support ESmodules              |
-
-Finally, configuration files for Storybook, Cypress, Babel, Jest, and webpack
-are all set to CommonJS modules with Node globals for configuring tooling
-executed by Node.js.
+- Restrict importing a specific module by setting a `no-restricted-imports`
+  value. This can be useful for things like preventing React Router's Link
+  component from being used instead of an application Link component.
+- Restrict where certain modules can be imported by setting an
+  `import/no-restricted-paths` value. This can be useful for enforcing
+  boundaries between modules, like separating Electron client code from main
+  code, or for enforcing that an index file is used for a component library
+  directory
 
 ## 👩‍🏫 Rules
 
@@ -185,6 +182,22 @@ if you haven't.
   ]
 }
 ```
+
+## File overrides
+
+Eloquence overrides the base project rules and settings for specific file
+patterns to eliminate the need for ESLint configuration comments:
+
+| Files                 | Updates                        |
+| --------------------- | ------------------------------ |
+| `['*.ts', '*.tsx']`   | TypeScript rules enabled       |
+| `['*.spec.js']`       | Adds Jest globals              |
+| `['cypress/**/*']`    | Adds Cypress globals and rules |
+| `['.storybook/**/*']` | Support ESmodules              |
+
+Finally, configuration files for Storybook, Cypress, Babel, Jest, and webpack
+are all set to CommonJS modules with Node globals for configuring tooling
+executed by Node.js.
 
 ## 🔋 Batteries included
 

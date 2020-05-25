@@ -20,17 +20,21 @@ const corePossibleErrors = require('./rules/core-possible-errors')
 const coreStylisticIssues = require('./rules/core-stylistic-issues')
 const coreVariables = require('./rules/core-variables')
 
-const cypress = require('./rules/cypress')
-const imports = require('./rules/imports')
-const jestDom = require('./rules/jest-dom')
-const node = require('./rules/node')
-const react = require('./rules/react')
-const reactA11y = require('./rules/react-a11y')
-const reactHooks = require('./rules/react-hooks')
-const testingLibrary = require('./rules/testing-library')
-const typescript = require('./rules/typescript')
+const pluginCypress = require('./rules/plugin-cypress')
+const pluginImport = require('./rules/plugin-import')
+const pluginJestDom = require('./rules/plugin-jest-dom')
+const pluginNode = require('./rules/plugin-node')
+const pluginReact = require('./rules/plugin-react')
+const pluginReactA11y = require('./rules/plugin-react-a11y')
+const pluginReactHooks = require('./rules/plugin-react-hooks')
+const pluginTestingLibrary = require('./rules/plugin-testing-library')
+const pluginTypescript = require('./rules/plugin-typescript')
 
-const envRuleSeverities = require('./env-rule-severities')
+const targetNode = require('./rules/target-node')
+const targetReact = require('./rules/target-react')
+const targetTypeScript = require('./rules/target-typescript')
+
+const envRuleSeverities = require('./rule-severities')
 
 const { NODE_ENV } = process.env
 
@@ -41,7 +45,8 @@ const targetConfigs = {
     extends: ['plugin:node/recommended'],
     plugins: ['node'],
     rules: {
-      ...node,
+      ...pluginNode,
+      ...targetNode,
     },
   },
   // --- REACT TARGET CONFIGS
@@ -49,11 +54,12 @@ const targetConfigs = {
     extends: ['prettier/react'],
     plugins: ['jest-dom', 'jsx-a11y', 'react', 'react-hooks', 'testing-library'],
     rules: {
-      ...jestDom,
-      ...react,
-      ...reactA11y,
-      ...reactHooks,
-      ...testingLibrary,
+      ...pluginJestDom,
+      ...pluginReact,
+      ...pluginReactA11y,
+      ...pluginReactHooks,
+      ...pluginTestingLibrary,
+      ...targetReact,
     },
   },
 }
@@ -93,6 +99,9 @@ module.exports = ({ target, esm = true }) => {
       // Increase import cache lifetime to 60s
       'import/cache': 60,
 
+      // Mark `@/..` imports as "internal", used by the `import/order` rule
+      'import/internal-regex': /^@\//,
+
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
 
@@ -120,13 +129,11 @@ module.exports = ({ target, esm = true }) => {
       ...coreStylisticIssues,
       ...coreVariables,
 
-      // --- Target rules ---
-
-      ...targetConfigs[target].rules,
-
       // --- Plugin rules ---
+      ...pluginImport,
 
-      ...imports,
+      // --- Target rules ---
+      ...targetConfigs[target].rules,
 
       // Prettier formatting enforcement via Prettier *plugin*
       // (this is different from the rule overrides set in the Prettier *config*)
@@ -155,13 +162,15 @@ module.exports = ({ target, esm = true }) => {
         settings: {
           // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
           'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
           'import/parsers': {
             '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
           },
         },
 
-        rules: envRuleSeverities(NODE_ENV, typescript),
+        rules: envRuleSeverities(NODE_ENV, {
+          ...pluginTypescript,
+          ...targetTypeScript,
+        }),
       },
 
       // --- ✅ Test files --------------------------
@@ -186,7 +195,7 @@ module.exports = ({ target, esm = true }) => {
         env: {
           'cypress/globals': true,
         },
-        rules: cypress,
+        rules: pluginCypress,
       },
 
       // --- ⚙️ Configuration files  --------------------------
