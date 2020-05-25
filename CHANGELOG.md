@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.1.3](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.1.2...v14.1.3) (2020-05-25)
+
+
+#### 🛠 Fix
+
+* Duplicated import linting ⚙️ (#207)([e575586](https://github.com/crystal-ball/eslint-config-eloquence/commit/e5755865ed0b5137b6baa944010e5414b55cfa05)), closes [#207](https://github.com/crystal-ball/eslint-config-eloquence/issue/207)
+
+#### Docs
+
+* Add notes.md for tracking ideas 📝 (#206)([e6d1271](https://github.com/crystal-ball/eslint-config-eloquence/commit/e6d1271882b748d9f18dece9a36d4a61cf1147a3)), closes [#206](https://github.com/crystal-ball/eslint-config-eloquence/issue/206)
+
 ### [14.1.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.1.1...v14.1.2) (2020-05-25)
 
 
