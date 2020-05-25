@@ -335,13 +335,7 @@ Object {
         "commonjs": true,
       },
     ],
-    "import/no-unused-modules": Array [
-      "error",
-      Object {
-        "missingExports": true,
-        "unusedExports": true,
-      },
-    ],
+    "import/no-unused-modules": "off",
     "import/no-useless-path-segments": Array [
       "error",
       Object {
@@ -352,21 +346,19 @@ Object {
     "import/order": Array [
       "error",
       Object {
-        "alphabetize": false,
+        "alphabetize": Object {
+          "order": "ignore",
+        },
         "groups": Array [
-          Array [
-            "builtin",
-            "external",
-          ],
-          Array [
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "unknown",
-          ],
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "unknown",
         ],
-        "newlines-between": "always-and-inside-groups",
+        "newlines-between": "ignore",
       },
     ],
     "import/prefer-default-export": "off",
@@ -1400,21 +1392,19 @@ Object {
     "import/order": Array [
       "error",
       Object {
-        "alphabetize": false,
+        "alphabetize": Object {
+          "order": "ignore",
+        },
         "groups": Array [
-          Array [
-            "builtin",
-            "external",
-          ],
-          Array [
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "unknown",
-          ],
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "unknown",
         ],
-        "newlines-between": "always-and-inside-groups",
+        "newlines-between": "ignore",
       },
     ],
     "import/prefer-default-export": "off",

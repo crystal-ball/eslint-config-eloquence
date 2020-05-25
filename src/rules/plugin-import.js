@@ -168,26 +168,22 @@ module.exports = {
     'error',
     {
       'groups': [
-        // Group 1: Node built-ins and node_modules
-        [
-          'builtin',
-          'external', // includes configured `import/external-module-folders`
-        ],
-        // Group 2: Source code modules
-        [
-          'internal', // includes configured `import/internal-regex`
-          'parent',
-          'sibling',
-          'index',
-          'unknown',
-        ],
+        'builtin',
+        'external', // includes configured `import/external-module-folders`
+        'internal', // includes configured `import/internal-regex`
+        'parent',
+        'sibling',
+        'index',
+        'unknown',
       ],
       // Currently not enforced... validate that alphabetize doesn't require mixing
       // within larger groups, eg node built-in and a node_module
-      'alphabetize': false,
+      'alphabetize': {
+        order: 'ignore',
+      },
       // Require a newline between builtins+external and source code modules.
       // Allow but don't require a newline inside groups
-      'newlines-between': 'always-and-inside-groups',
+      'newlines-between': 'ignore',
     },
   ],
 
