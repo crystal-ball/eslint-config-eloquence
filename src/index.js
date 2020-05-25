@@ -93,6 +93,9 @@ module.exports = ({ target, esm = true }) => {
       // Increase import cache lifetime to 60s
       'import/cache': 60,
 
+      // Mark `@/..` imports as "internal", used by the `import/order` rule
+      'import/internal-regex': /^@\//,
+
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
 
@@ -155,7 +158,6 @@ module.exports = ({ target, esm = true }) => {
         settings: {
           // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
           'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
           'import/parsers': {
             '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
           },
