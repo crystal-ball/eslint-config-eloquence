@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.1.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.1.1...v14.1.2) (2020-05-25)
+
+
+#### 🛠 Fix
+
+* Minor rule failures around TypeScript and Node plugins ⚙️ (#205)([d4c9f4f](https://github.com/crystal-ball/eslint-config-eloquence/commit/d4c9f4f4850ec818f61006321c6307c5583c039f)), closes [#205](https://github.com/crystal-ball/eslint-config-eloquence/issue/205)
+
 ### [14.1.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.1.0...v14.1.1) (2020-05-24)
 
 
