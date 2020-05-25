@@ -90,13 +90,8 @@ module.exports = ({ target, esm = true }) => {
     plugins: ['import', 'prettier', ...targetConfigs[target].plugins],
 
     settings: {
-      // --- Import plugin settings
-
       // Increase import cache lifetime to 60s
       'import/cache': 60,
-
-      // Handle Node and TS extensions
-      'import/extensions': ['.cjs', 'mjs', '.js', '.ts', '.tsx', '.d.ts'],
 
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
@@ -145,6 +140,7 @@ module.exports = ({ target, esm = true }) => {
       // --- 🚔 TypeScript --------------------------
       {
         files: ['*.ts', '*.tsx'],
+
         // Parser is required for linting types, the Babel TS plugin only strips
         // types out
         parser: '@typescript-eslint/parser',
@@ -154,14 +150,17 @@ module.exports = ({ target, esm = true }) => {
           // Projects must provide a TS config
           project: './tsconfig.json',
         },
+
         plugins: ['@typescript-eslint'],
         settings: {
-          // Import extension overrides
           // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
+          'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
           'import/parsers': {
             '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
           },
         },
+
         rules: envRuleSeverities(NODE_ENV, typescript),
       },
 

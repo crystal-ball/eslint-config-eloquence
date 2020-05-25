@@ -85,6 +85,17 @@ Object {
         "valid-typeof": "off",
       },
       "settings": Object {
+        "import/extensions": Array [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".d.ts",
+        ],
+        "import/external-module-folders": Array [
+          "node_modules",
+          "node_modules/@types",
+        ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
             ".ts",
@@ -838,7 +849,7 @@ Object {
     "node/no-unpublished-import": "error",
     "node/no-unpublished-require": "error",
     "node/no-unsupported-features/es-builtins": "error",
-    "node/no-unsupported-features/es-syntax": "error",
+    "node/no-unsupported-features/es-syntax": "off",
     "node/no-unsupported-features/node-builtins": "error",
     "node/prefer-global/buffer": Array [
       "error",
@@ -992,14 +1003,6 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
-    "import/extensions": Array [
-      ".cjs",
-      "mjs",
-      ".js",
-      ".ts",
-      ".tsx",
-      ".d.ts",
-    ],
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
@@ -1100,6 +1103,17 @@ Object {
         "valid-typeof": "off",
       },
       "settings": Object {
+        "import/extensions": Array [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".d.ts",
+        ],
+        "import/external-module-folders": Array [
+          "node_modules",
+          "node_modules/@types",
+        ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
             ".ts",
@@ -2420,14 +2434,6 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
-    "import/extensions": Array [
-      ".cjs",
-      "mjs",
-      ".js",
-      ".ts",
-      ".tsx",
-      ".d.ts",
-    ],
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
