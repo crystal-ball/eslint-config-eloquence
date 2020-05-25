@@ -40,8 +40,11 @@ module.exports = {
 
   // Don't use unsupported features
   'node/no-unsupported-features/es-builtins': 'error',
-  'node/no-unsupported-features/es-syntax': 'error',
   'node/no-unsupported-features/node-builtins': 'error',
+
+  // There are enough projects with Node+Cypress or browser imports that this
+  // rule is more irritating than helpful
+  'node/no-unsupported-features/es-syntax': 'off',
 
   // Updates ESLint to treat process.exit similar to throwing an error
   'node/process-exit-as-throw': 'error',
