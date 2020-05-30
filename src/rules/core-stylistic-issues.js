@@ -231,8 +231,8 @@ module.exports = {
   // https://eslint.org/docs/rules/no-negated-condition
   'no-negated-condition': 'off',
 
-  // disallow nested ternary expressions
-  'no-nested-ternary': 'error',
+  // disallow nested ternary expressions -- allow because they're not that bad
+  'no-nested-ternary': 'off',
 
   // disallow use of the Object constructor
   'no-new-object': 'error',
