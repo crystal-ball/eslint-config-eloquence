@@ -144,6 +144,28 @@ module.exports = ({ target, esm = true }) => {
     // File overrides
 
     overrides: [
+      // --- 1️⃣ Source --------------------------
+      {
+        files: ['src/**'],
+        rules: {
+          // *only in /src because only project source files need to execute in
+          // production
+          'import/no-extraneous-dependencies': [
+            'error',
+            // Allow imports from devDependencies in story and test files
+            { devDependencies: ['**/*.{spec,stories}.{cjs,mjs,js}'] },
+          ],
+
+          // Check for unused modules in src only, configuration files are often
+          // not imported explicitly elsewhere. (Note this rule doesn't work with
+          // CommonJS modules)
+          'import/no-unused-modules': [
+            esm ? 'error' : 'off',
+            { missingExports: true, unusedExports: true },
+          ],
+        },
+      },
+
       // --- 🚔 TypeScript --------------------------
       {
         files: ['*.ts', '*.tsx'],

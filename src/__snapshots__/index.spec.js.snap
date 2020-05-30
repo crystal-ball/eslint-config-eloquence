@@ -14,6 +14,28 @@ Object {
   "overrides": Array [
     Object {
       "files": Array [
+        "src/**",
+      ],
+      "rules": Object {
+        "import/no-extraneous-dependencies": Array [
+          "error",
+          Object {
+            "devDependencies": Array [
+              "**/*.{spec,stories}.{cjs,mjs,js}",
+            ],
+          },
+        ],
+        "import/no-unused-modules": Array [
+          "error",
+          Object {
+            "missingExports": true,
+            "unusedExports": true,
+          },
+        ],
+      },
+    },
+    Object {
+      "files": Array [
         "*.ts",
         "*.tsx",
       ],
@@ -263,17 +285,7 @@ Object {
     ],
     "import/export": "error",
     "import/exports-last": "off",
-    "import/extensions": Array [
-      "error",
-      "ignorePackages",
-      Object {
-        "js": "never",
-        "jsx": "never",
-        "mjs": "never",
-        "ts": "never",
-        "tsx": "never",
-      },
-    ],
+    "import/extensions": "off",
     "import/first": "error",
     "import/group-exports": "off",
     "import/max-dependencies": "off",
@@ -304,18 +316,7 @@ Object {
     "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-dynamic-require": "error",
-    "import/no-extraneous-dependencies": Array [
-      "error",
-      Object {
-        "devDependencies": Array [
-          "**/*.{spec,stories}.js",
-          ".eslintrc.js",
-          "babel.config.js",
-          "webpack.config.js",
-          "{.jest,.storybook,cypress,test}/**/*",
-        ],
-      },
-    ],
+    "import/no-extraneous-dependencies": "off",
     "import/no-internal-modules": "off",
     "import/no-mutable-exports": "error",
     "import/no-named-as-default": "error",
@@ -1033,6 +1034,28 @@ Object {
   "overrides": Array [
     Object {
       "files": Array [
+        "src/**",
+      ],
+      "rules": Object {
+        "import/no-extraneous-dependencies": Array [
+          "error",
+          Object {
+            "devDependencies": Array [
+              "**/*.{spec,stories}.{cjs,mjs,js}",
+            ],
+          },
+        ],
+        "import/no-unused-modules": Array [
+          "error",
+          Object {
+            "missingExports": true,
+            "unusedExports": true,
+          },
+        ],
+      },
+    },
+    Object {
+      "files": Array [
         "*.ts",
         "*.tsx",
       ],
@@ -1308,8 +1331,6 @@ Object {
       "ignorePackages",
       Object {
         "js": "never",
-        "jsx": "never",
-        "mjs": "never",
         "ts": "never",
         "tsx": "never",
       },
@@ -1344,18 +1365,7 @@ Object {
     "import/no-deprecated": "error",
     "import/no-duplicates": "error",
     "import/no-dynamic-require": "error",
-    "import/no-extraneous-dependencies": Array [
-      "error",
-      Object {
-        "devDependencies": Array [
-          "**/*.{spec,stories}.js",
-          ".eslintrc.js",
-          "babel.config.js",
-          "webpack.config.js",
-          "{.jest,.storybook,cypress,test}/**/*",
-        ],
-      },
-    ],
+    "import/no-extraneous-dependencies": "off",
     "import/no-internal-modules": "off",
     "import/no-mutable-exports": "error",
     "import/no-named-as-default": "error",
@@ -1375,13 +1385,7 @@ Object {
         "commonjs": true,
       },
     ],
-    "import/no-unused-modules": Array [
-      "error",
-      Object {
-        "missingExports": true,
-        "unusedExports": true,
-      },
-    ],
+    "import/no-unused-modules": "off",
     "import/no-useless-path-segments": Array [
       "error",
       Object {

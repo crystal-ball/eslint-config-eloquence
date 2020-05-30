@@ -88,29 +88,18 @@ module.exports = {
   // Prevents imports marked as deprecated with JSDoc
   'import/no-deprecated': 'error',
 
-  // Require that any module used in production code is part of
-  // `dependencies`. This helps ensure all modules are available after installing
-  // only production deps.
-  'import/no-extraneous-dependencies': [
-    'error',
-    // globs allow using devDependencies in configuration, story, and test files
-    {
-      devDependencies: [
-        '**/*.{spec,stories}.js',
-        '.eslintrc.js',
-        'babel.config.js',
-        'webpack.config.js',
-        '{.jest,.storybook,cypress,test}/**/*',
-      ],
-    },
-  ],
+  // Require that any imported module in production code is installed by
+  // requiring the module is listed in `dependencies`.
+  // ⚙️ Configured explicitly in /src override
+  'import/no-extraneous-dependencies': 'off',
 
   // Forbid mutable exports, they can easily lead to difficult to maintain code.
   'import/no-mutable-exports': 'error',
 
-  // Reports modules without any exports, and modules with unused exports, helps
-  // clean up dead code
-  'import/no-unused-modules': ['error', { missingExports: true, unusedExports: true }],
+  // Reports modules without any exports and modules with unused exports to help
+  // identify dead code.
+  // ⚙️ Configured explicitly in /src override
+  'import/no-unused-modules': 'off',
 
   // --------------------------------------------------------
   // Module systems
@@ -150,17 +139,8 @@ module.exports = {
   'import/no-namespace': 'off',
 
   // Ensure consistent use of file extension within the import path
-  'import/extensions': [
-    'error',
-    'ignorePackages',
-    {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-      ts: 'never',
-      tsx: 'never',
-    },
-  ],
+  // ⚙️ Configured explicitly by Node/React target
+  'import/extensions': 'off',
 
   // Require that Node built-ins and node_module imports are grouped before
   // application imports.

@@ -3,6 +3,7 @@
   "version": "14.1.4",
   "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "./src/index.js",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
