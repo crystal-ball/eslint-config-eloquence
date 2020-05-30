@@ -160,8 +160,13 @@ module.exports = ({ target, esm = true }) => {
           // not imported explicitly elsewhere. (Note this rule doesn't work with
           // CommonJS modules)
           'import/no-unused-modules': [
-            esm ? 'error' : 'off',
-            { missingExports: true, unusedExports: true },
+            esm && NODE_ENV === 'test' ? 'error' : esm ? 'warn' : 'off',
+            {
+              missingExports: true,
+              unusedExports: true,
+              // Ignore entry file and test files
+              ignoreExports: ['src/index.{js,ts}', '**/*.spec.js'],
+            },
           ],
         },
       },

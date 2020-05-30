@@ -28,6 +28,10 @@ Object {
         "import/no-unused-modules": Array [
           "error",
           Object {
+            "ignoreExports": Array [
+              "src/index.{js,ts}",
+              "**/*.spec.js",
+            ],
             "missingExports": true,
             "unusedExports": true,
           },
@@ -556,7 +560,7 @@ Object {
     "no-multi-str": "error",
     "no-native-reassign": "off",
     "no-negated-condition": "off",
-    "no-nested-ternary": "error",
+    "no-nested-ternary": "off",
     "no-new": "error",
     "no-new-func": "error",
     "no-new-object": "error",
@@ -1048,6 +1052,10 @@ Object {
         "import/no-unused-modules": Array [
           "error",
           Object {
+            "ignoreExports": Array [
+              "src/index.{js,ts}",
+              "**/*.spec.js",
+            ],
             "missingExports": true,
             "unusedExports": true,
           },
@@ -1826,7 +1834,7 @@ Object {
     "no-multi-str": "error",
     "no-native-reassign": "off",
     "no-negated-condition": "off",
-    "no-nested-ternary": "error",
+    "no-nested-ternary": "off",
     "no-new": "error",
     "no-new-func": "error",
     "no-new-object": "error",
