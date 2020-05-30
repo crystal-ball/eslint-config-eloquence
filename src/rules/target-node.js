@@ -1,7 +1,15 @@
 'use strict'
 
-module.exports = {
-  // This rule only checks for ESM references, disable in Node envs until ESM is
-  // available
-  'import/no-unused-modules': 'off',
-}
+module.exports = (esm) => ({
+  // Extensions must be provided for ESM usage
+  'import/extensions': [
+    esm ? 'error' : 'off',
+    'always',
+    'ignorePackages',
+    {
+      cjs: 'always',
+      mjs: 'always',
+      ts: 'always',
+    },
+  ],
+})
