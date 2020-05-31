@@ -76,18 +76,17 @@ are downgraded to warnings and all formatting rules are silenced. See
 # All projects:
 npm i eslint-config-eloquence prettier -D
 
-# React projects using webpack
-npm i eslint-import-resolver-webpack -D
-
 # TypeScript projects
 npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
-_We recommend adding [Prettier][] as an exact version project dependency to
-ensure all contributors are using the same version of Prettier, while still
+_Eloquence recommends adding [Prettier][] as an exact version project dependency
+to ensure all contributors are using the same version of Prettier, while still
 allowing projects to update Prettier versions on their own schedule._
 
 #### Configure ESLint
+
+The minimum configuration is the `target` option:
 
 ```javascript
 // .eslintrc.js
@@ -95,11 +94,8 @@ allowing projects to update Prettier versions on their own schedule._
 
 const eloquence = require('eslint-config-eloquence')
 
-module.exports =  = eloquence({ target: 'react|node' })
+module.exports = eloquence({ target: 'react|node' })
 ```
-
-Eloquence supports Node.js services and React applications using the `target`
-configuration.
 
 - Pass `'node'` - for Node services and NPM packages
 - Pass `'react'` - for React applications bundled with webpack
@@ -131,6 +127,32 @@ eslint --format=pretty src
 ```
 
 ![Pretty prints links](./docs/assets/pretty.png)
+
+### Recommended linting command
+
+The recommended `package.json` command for linting runs on the entire directory,
+and uses the configuration `ignorePatterns` to ignore files or directories. By
+default `node_modules` and all dotfiles other than `.eslintrc.js` are ignored.
+The below config and command will lint all `.js`, `.ts`, and `.tsx` files in the
+repo, including dotfiles and directories starting with a dot, except for the
+public directory.
+
+```json
+{
+  "test:lint": "NODE_ENV=test eslint --format=pretty ."
+}
+```
+
+```javascript
+'use strict'
+
+const eloquence = require('eslint-config-eloquence')
+
+module.exports = eloquence({
+  target: 'react',
+  ignorePatterns: ['!.*', 'public/*'],
+})
+```
 
 ## ⚙️ Imports customizations
 
