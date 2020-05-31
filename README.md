@@ -104,6 +104,22 @@ configuration.
 - Pass `'node'` - for Node services and NPM packages
 - Pass `'react'` - for React applications bundled with webpack
 
+#### Option `esm`
+
+The `esm` option can be used to explicitly declare whether a project is using
+ESModules or CommonJS. The default value is `true`.
+
+#### Option `ignorePatterns`
+
+Files and directories can be ignored by passing an array of string patterns. Ref
+[ignorePatterns in config files](https://eslint.org/docs/user-guide/configuring#ignorepatterns-in-config-files)
+
+#### Option `rules`
+
+Final rule values can be overridden in a project by passing a `rules` option
+with the override values. _(Values are used as is, it isn't possible to pass
+only a severity override at this time.)_
+
 #### Pretty print output
 
 The [`eslint-formatter-pretty`][] package is included in the dependencies and
