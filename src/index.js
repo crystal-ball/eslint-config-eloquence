@@ -67,15 +67,25 @@ const targetConfigs = {
 /**
  * Eloquence ESLint configs generator
  * @param {Object} opts
+ * @param {boolean} [opts.esm]
+ * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
+ * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
- * @param {boolean} opts.esm
  */
-module.exports = ({ target, esm = true }) => {
+module.exports = function eloquence({
+  esm = true,
+  ignorePatterns = [],
+  rules = {},
+  target,
+}) {
   const sourceType = esm ? 'module' : 'script'
 
   return {
-    // Configs are intended to be used as root, with overrides where appropriate
+    // Default expectation is a single config at root of project, with overrides
+    // for directory and file customizations
     root: true,
+
+    ignorePatterns,
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
@@ -138,6 +148,9 @@ module.exports = ({ target, esm = true }) => {
       // Prettier formatting enforcement via Prettier *plugin*
       // (this is different from the rule overrides set in the Prettier *config*)
       'prettier/prettier': 'error',
+
+      // Project specified rules have priority
+      ...rules,
     }),
 
     // --------------------------------------------------------

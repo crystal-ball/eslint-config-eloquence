@@ -11,6 +11,7 @@ Object {
     "prettier",
     "plugin:node/recommended",
   ],
+  "ignorePatterns": Array [],
   "overrides": Array [
     Object {
       "files": Array [
@@ -1024,6 +1025,7 @@ Object {
     "prettier",
     "prettier/react",
   ],
+  "ignorePatterns": Array [],
   "overrides": Array [
     Object {
       "files": Array [
