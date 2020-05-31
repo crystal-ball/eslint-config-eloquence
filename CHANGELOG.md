@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.3.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.3.0...v14.3.1) (2020-05-31)
+
+
+#### 🛠 Fix
+
+* Disable atomic updates rule ✅ (#214)([7a1ca42](https://github.com/crystal-ball/eslint-config-eloquence/commit/7a1ca42f373f3652d1d96b873da755dfdeb028dc)), closes [#214](https://github.com/crystal-ball/eslint-config-eloquence/issue/214)
+
 ## [14.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.2.1...v14.3.0) (2020-05-31)
 
 
