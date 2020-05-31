@@ -134,8 +134,10 @@ module.exports = {
   'no-unsafe-negation': 'error',
 
   // Disallow assignments that can lead to race conditions due to usage of await or yield
-  // https://eslint.org/docs/rules/require-atomic-updates
-  'require-atomic-updates': 'error',
+  // Disabled b/c rule is too agressive and causes many false positives, eg React refs
+  // or Express middleware assignments
+  // Ref https://github.com/eslint/eslint/issues/11899
+  'require-atomic-updates': 'off',
 
   // disallow comparisons with the value NaN
   // https://eslint.org/docs/rules/use-isnan
