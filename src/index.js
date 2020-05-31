@@ -155,19 +155,6 @@ module.exports = ({ target, esm = true }) => {
             // Allow imports from devDependencies in story and test files
             { devDependencies: ['**/*.{spec,stories}.{cjs,mjs,js}'] },
           ],
-
-          // Check for unused modules in src only, configuration files are often
-          // not imported explicitly elsewhere. (Note this rule doesn't work with
-          // CommonJS modules)
-          'import/no-unused-modules': [
-            esm && NODE_ENV === 'test' ? 'error' : esm ? 'warn' : 'off',
-            {
-              missingExports: true,
-              unusedExports: true,
-              // Ignore entry file and test files
-              ignoreExports: ['src/index.{js,ts}', '**/*.spec.js'],
-            },
-          ],
         },
       },
 

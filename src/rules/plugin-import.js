@@ -96,9 +96,8 @@ module.exports = {
   // Forbid mutable exports, they can easily lead to difficult to maintain code.
   'import/no-mutable-exports': 'error',
 
-  // Reports modules without any exports and modules with unused exports to help
-  // identify dead code.
-  // ⚙️ Configured explicitly in /src override
+  // Reports modules without any exports and modules with unused exports. In
+  // theory a great way to identify dead code, but in practice just too finnicky
   'import/no-unused-modules': 'off',
 
   // --------------------------------------------------------
