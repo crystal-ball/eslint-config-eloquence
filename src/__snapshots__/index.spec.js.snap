@@ -25,17 +25,6 @@ Object {
             ],
           },
         ],
-        "import/no-unused-modules": Array [
-          "error",
-          Object {
-            "ignoreExports": Array [
-              "src/index.{js,ts}",
-              "**/*.spec.js",
-            ],
-            "missingExports": true,
-            "unusedExports": true,
-          },
-        ],
       },
     },
     Object {
@@ -1047,17 +1036,6 @@ Object {
             "devDependencies": Array [
               "**/*.{spec,stories}.{cjs,mjs,js}",
             ],
-          },
-        ],
-        "import/no-unused-modules": Array [
-          "error",
-          Object {
-            "ignoreExports": Array [
-              "src/index.{js,ts}",
-              "**/*.spec.js",
-            ],
-            "missingExports": true,
-            "unusedExports": true,
           },
         ],
       },
