@@ -48,6 +48,15 @@ const targetConfigs = {
       ...pluginNode,
       ...targetNode,
     },
+    src: {
+      // ℹ️ In project source code ensure that access to process.env is
+      // controlled.
+      'node/no-process-env': 'error',
+
+      // ℹ️ Calling process.exit outside project source code isn't
+      // problematic
+      'node/no-process-exit': 'error',
+    },
   },
   // --- REACT TARGET CONFIGS
   react: {
@@ -61,6 +70,7 @@ const targetConfigs = {
       ...pluginTestingLibrary,
       ...targetReact,
     },
+    src: {},
   },
 }
 
@@ -161,13 +171,19 @@ module.exports = function eloquence({
       {
         files: ['src/**'],
         rules: {
-          // *only in /src because only project source files need to execute in
-          // production
+          // ℹ️ Prevent forgotten console.logs only needed in project source
+          // code
+          'no-console': NODE_ENV === 'test' ? 'error' : 'off',
+
+          // ℹ️ Imported modules in project source need to be declared as
+          // dependencies to ensure they're available in production
           'import/no-extraneous-dependencies': [
             'error',
             // Allow imports from devDependencies in story and test files
             { devDependencies: ['**/*.{spec,stories}.{cjs,mjs,js}'] },
           ],
+
+          ...targetConfigs[target].src,
         },
       },
 
@@ -241,10 +257,6 @@ module.exports = function eloquence({
         },
         env: {
           node: true,
-        },
-        rules: {
-          // Allow using process.env in tooling configuration files
-          'node/no-process-env': 'off',
         },
       },
     ],

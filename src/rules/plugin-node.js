@@ -5,6 +5,9 @@
  * https://github.com/mysticatea/eslint-plugin-node
  */
 module.exports = {
+  // Disable duplicated no-process-exit included by ESLint Node plugin
+  'no-process-exit': 'off',
+
   // --------------------------------------------------------
   // Possible errors
 
@@ -33,7 +36,8 @@ module.exports = {
   // Disallow process.exit(), ansyc stdout operations or logging may be terminated
   // it's better to call process.exitCode() and use an exception to allow Node
   // to terminate the process.
-  'node/no-process-exit': 'error',
+  // ⚙️ Explicitly set in src overrides
+  'node/no-process-exit': 'off',
 
   // Any bin file must be published
   'node/no-unpublished-bin': 'error',
@@ -75,8 +79,9 @@ module.exports = {
   'node/no-mixed-requires': ['error', { grouping: true, allowCall: false }],
 
   // Prefer accessing environment variables in a single location that manages
-  // service configs
-  'node/no-process-env': 'error',
+  // service configs.
+  // ⚙️ Configured explicitly in /src override
+  'node/no-process-env': 'off',
 
   // Prefer async methods whenever possible
   'node/no-sync': 'error',
