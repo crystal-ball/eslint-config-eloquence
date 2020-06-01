@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.3.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.3.1...v14.3.2) (2020-06-01)
+
+
+#### 🛠 Fix
+
+* Node projects linting 🎊 (#215)([ede0fb8](https://github.com/crystal-ball/eslint-config-eloquence/commit/ede0fb88f1a8f0dcaf448f06c303b00232940056)), closes [#215](https://github.com/crystal-ball/eslint-config-eloquence/issue/215)
+
 ### [14.3.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.3.0...v14.3.1) (2020-05-31)
 
 
