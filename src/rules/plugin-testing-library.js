@@ -10,6 +10,10 @@ module.exports = {
   'testing-library/no-manual-cleanup': 'error',
   'testing-library/no-wait-for-empty-callback': 'error',
   'testing-library/prefer-explicit-assert': 'error',
+
+  // Prefer using `findBy*` instead of `waitFor`+`getBy`
+  'testing-library/prefer-find-by': 'error',
+
   'testing-library/prefer-presence-queries': 'error',
   'testing-library/prefer-screen-queries': 'error',
   'testing-library/prefer-wait-for': 'error',
