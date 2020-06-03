@@ -46,7 +46,15 @@ Object {
       ],
       "rules": Object {
         "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/ban-ts-comment": Array [
+          "error",
+          Object {
+            "ts-check": "allow-with-description",
+            "ts-expect-error": "allow-with-description",
+            "ts-ignore": "allow-with-description",
+            "ts-nocheck": "allow-with-description",
+          },
+        ],
         "@typescript-eslint/ban-types": "error",
         "@typescript-eslint/brace-style": "off",
         "@typescript-eslint/comma-spacing": "off",
@@ -1059,7 +1067,15 @@ Object {
       ],
       "rules": Object {
         "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/ban-ts-comment": Array [
+          "error",
+          Object {
+            "ts-check": "allow-with-description",
+            "ts-expect-error": "allow-with-description",
+            "ts-ignore": "allow-with-description",
+            "ts-nocheck": "allow-with-description",
+          },
+        ],
         "@typescript-eslint/ban-types": "error",
         "@typescript-eslint/brace-style": "off",
         "@typescript-eslint/comma-spacing": "off",
@@ -2417,6 +2433,7 @@ Object {
     "testing-library/no-manual-cleanup": "error",
     "testing-library/no-wait-for-empty-callback": "error",
     "testing-library/prefer-explicit-assert": "error",
+    "testing-library/prefer-find-by": "error",
     "testing-library/prefer-presence-queries": "error",
     "testing-library/prefer-screen-queries": "error",
     "testing-library/prefer-wait-for": "error",
