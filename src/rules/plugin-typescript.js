@@ -34,7 +34,19 @@ module.exports = {
   'no-extra-semi': 'off',
   'no-unused-vars': 'off',
   '@typescript-eslint/adjacent-overload-signatures': 'error',
-  '@typescript-eslint/ban-ts-comment': 'error',
+
+  // Bans using `// @ts-*` directives unless a comment is included (to explain
+  // why the directive is needed)
+  '@typescript-eslint/ban-ts-comment': [
+    'error',
+    {
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': 'allow-with-description',
+      'ts-nocheck': 'allow-with-description',
+      'ts-check': 'allow-with-description',
+    },
+  ],
+
   '@typescript-eslint/ban-types': 'error',
   '@typescript-eslint/explicit-module-boundary-types': 'warn',
   '@typescript-eslint/no-array-constructor': 'error',
