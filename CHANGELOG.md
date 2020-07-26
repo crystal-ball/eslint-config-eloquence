@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [14.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.7.0...v14.8.0) (2020-07-26)
+
+
+#### ✨ Update
+
+* Dependencies 🆙 (#226)([d1f0650](https://github.com/crystal-ball/eslint-config-eloquence/commit/d1f0650f0a4628ff8060640884b9472d2564fbf2)), closes [#226](https://github.com/crystal-ball/eslint-config-eloquence/issue/226)
+
+#### Chore
+
+* Update package @types/jest to v26.0.5 🆙 (#227)([2094a80](https://github.com/crystal-ball/eslint-config-eloquence/commit/2094a80bdc580540f4cca3a972b63c10ede78c6e)), closes [#227](https://github.com/crystal-ball/eslint-config-eloquence/issue/227)
+
 ## [14.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.6.0...v14.7.0) (2020-07-08)
 
 
