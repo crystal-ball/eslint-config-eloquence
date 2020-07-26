@@ -282,12 +282,12 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
 [`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
-[`eslint-plugin-jest-dom]:https://github.com/testing-library/eslint-plugin-jest-dom
+[`eslint-plugin-jest-dom`]:https://github.com/testing-library/eslint-plugin-jest-dom
 [`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
 [`eslint-plugin-react-hooks`]:https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
-[`eslint-plugin-testing-library]:https://github.com/testing-library/eslint-plugin-testing-library
+[`eslint-plugin-testing-library`]:https://github.com/testing-library/eslint-plugin-testing-library
 [`eslint`]:https://eslint.org/
 [`typescript`]:https://github.com/Microsoft/TypeScript
 [prettier options]:https://prettier.io/docs/en/options.html
