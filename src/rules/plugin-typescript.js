@@ -14,17 +14,23 @@ module.exports = {
   'no-import-assign': 'off', // ts(2539) & ts(2540)
   'no-new-symbol': 'off', // ts(2588)
   'no-obj-calls': 'off', // ts(2349)
-  'no-redeclare': 'off', // ts(2451)
   'no-setter-return': 'off', // ts(2408)
   'no-this-before-super': 'off', // ts(2376)
-  'no-undef': 'off', // ts(2304)
   'no-unreachable': 'off', // ts(7027)
   'no-unsafe-negation': 'off', // ts(2365) & ts(2360) & ts(2358)
-  'valid-typeof': 'off', // ts(2367)
   'no-var': 'error', // ts transpiles let/const to var, so no need for vars any more
   'prefer-const': 'error', // ts provides better types with const
   'prefer-rest-params': 'error', // ts provides better types with rest args over arguments
   'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
+  'valid-typeof': 'off', // ts(2367)
+
+  // Disable ESLint scope analysis, see "TypeScript Scope Analysis"
+  // https://github.com/typescript-eslint/typescript-eslint/releases/tag/v4.0.0
+  'no-redeclare': 'off',
+  'no-shadow': 'off',
+  'no-undef': 'off',
+  'no-unused-vars': 'off',
+  'no-use-before-define': 'off',
 
   // --- Recommended rules --------------------------
   // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
@@ -32,9 +38,8 @@ module.exports = {
   'no-array-constructor': 'off',
   'no-empty-function': 'off',
   'no-extra-semi': 'off',
-  'no-unused-vars': 'off',
-  '@typescript-eslint/adjacent-overload-signatures': 'error',
 
+  '@typescript-eslint/adjacent-overload-signatures': 'error',
   // Bans using `// @ts-*` directives unless a comment is included (to explain
   // why the directive is needed)
   '@typescript-eslint/ban-ts-comment': [
@@ -46,7 +51,6 @@ module.exports = {
       'ts-check': 'allow-with-description',
     },
   ],
-
   '@typescript-eslint/ban-types': 'error',
   '@typescript-eslint/explicit-module-boundary-types': 'warn',
   '@typescript-eslint/no-array-constructor': 'error',
@@ -54,7 +58,6 @@ module.exports = {
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-explicit-any': 'warn',
   '@typescript-eslint/no-extra-non-null-assertion': 'error',
-  '@typescript-eslint/no-extra-semi': 'error',
   '@typescript-eslint/no-inferrable-types': 'error',
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
@@ -76,6 +79,7 @@ module.exports = {
   '@typescript-eslint/keyword-spacing': 'off',
   '@typescript-eslint/member-delimiter-style': 'off',
   '@typescript-eslint/no-extra-parens': 'off',
+  '@typescript-eslint/no-extra-semi': 'off',
   '@typescript-eslint/quotes': 'off',
   '@typescript-eslint/semi': 'off',
   '@typescript-eslint/space-before-function-paren': 'off',
