@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.11.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.11.0...v14.11.1) (2020-09-05)
+
+
+#### 🛠 Fix
+
+* TS scope rules 🎊 (#238)([8e6e2a9](https://github.com/crystal-ball/eslint-config-eloquence/commit/8e6e2a94dba1bdbc275512f77a699c0ab3553f38)), closes [#238](https://github.com/crystal-ball/eslint-config-eloquence/issue/238)
+
 ## [14.11.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.10.0...v14.11.0) (2020-09-04)
 
 
