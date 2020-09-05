@@ -58,7 +58,6 @@ module.exports = {
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-explicit-any': 'warn',
   '@typescript-eslint/no-extra-non-null-assertion': 'error',
-  // '@typescript-eslint/no-extra-semi': 'error',
   '@typescript-eslint/no-inferrable-types': 'error',
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
