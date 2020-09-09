@@ -48,7 +48,7 @@
     "@crystal-ball/prettier-base": "2.3.0",
     "@crystal-ball/semantic-release-base": "2.20.0",
     "@types/jest": "26.0.13",
-    "husky": "4.2.5",
+    "husky": "4.3.0",
     "jest": "26.4.2"
   },
   "prettier": "@crystal-ball/prettier-base",
