@@ -1,10 +1,12 @@
 /**                                                             Eloquence ESLint
  * -----------------------------------------------------------------------------
  *
- * ## ℹ️ Notes
+ * ℹ️ Package notes
+ *
  * ESModules: Package defaults to using ESM for ESLint `sourceType`
  * configuration, with overrides for Node executed tooling like Jest. Node ESM
  * using cjs and mjs file extensions not yet handled.
+ *
  * @module
  */
 
@@ -60,11 +62,11 @@ const targetConfigs = {
   },
   // --- REACT TARGET CONFIGS
   react: {
-    extends: ['prettier/react'],
+    extends: [],
     plugins: ['jest-dom', 'jsx-a11y', 'react', 'react-hooks', 'testing-library'],
     rules: {
-      ...pluginJestDom,
       ...pluginReact,
+      ...pluginJestDom,
       ...pluginReactA11y,
       ...pluginReactHooks,
       ...pluginTestingLibrary,
@@ -77,43 +79,48 @@ const targetConfigs = {
 /**
  * Eloquence ESLint configs generator
  * @param {Object} opts
- * @param {boolean} [opts.esm]
+ * @param {boolean} [opts.enableESM] Enables ESModule linting features
+ * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
  */
 module.exports = function eloquence({
-  esm = true,
-  ignorePatterns = [],
+  enableESM = true,
+  enableTS = true,
+  ignorePatterns,
   rules = {},
   target,
 }) {
-  const sourceType = esm ? 'module' : 'script'
-
-  return {
+  const baseConfigs = {
     // Default expectation is a single config at root of project, with overrides
     // for directory and file customizations
     root: true,
 
-    ignorePatterns,
+    // Project custom ignore patterns, defaults to ignoring build directories
+    // and forcing linting of dot files and directories
+    ignorePatterns: ignorePatterns || ['!.*', 'public/*', 'dist/*'],
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
-    // Override Espree parser with Babel
-    parser: 'babel-eslint',
-
-    // Default parser to latest ECMA version and ESModules with the goal of
+    // Set parser to Babel using latest ECMA version and ESModules with the goal of
     // staying as close to current syntax as possible
+    parser: 'babel-eslint',
     parserOptions: {
-      ecmaVersion: 11,
-      sourceType,
+      ecmaVersion: 12,
+      sourceType: enableESM ? 'module' : 'script',
       ecmaFeatures: {
         jsx: true,
       },
     },
 
     // Plugins for imports, accessibility and react
-    plugins: ['import', 'prettier', ...targetConfigs[target].plugins],
+    plugins: [
+      '@typescript-eslint',
+      'import',
+      'prettier',
+      ...targetConfigs[target].plugins,
+    ],
 
     settings: {
       // Increase import cache lifetime to 60s
@@ -125,9 +132,19 @@ module.exports = function eloquence({
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
 
+      // ℹ️ Import plugin TS configs apply to all projects, ref plugin:import/typescript
+
       // Extensions that will be parsed to check for exports, including JS, TS,
       // React extenions, Node ESM, and type definitions
       'import/extensions': ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'],
+
+      // Ensure that types are considered external imports
+      'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+
+      'import/parsers': {
+        // Use the ESLint-TS parser when parsing TS and type definition files
+        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+      },
 
       // --- React plugin settings ---
       'react': {
@@ -153,18 +170,18 @@ module.exports = function eloquence({
       ...coreStylisticIssues,
       ...coreVariables,
 
-      // --- Plugin rules ---
+      // --- Plugin import rules ---
       ...pluginImport,
 
       // --- Target rules ---
       ...targetConfigs[target].rules,
 
+      // Custom project rules have priority over package rules
+      ...rules,
+
       // Prettier formatting enforcement via Prettier *plugin*
       // (this is different from the rule overrides set in the Prettier *config*)
       'prettier/prettier': 'error',
-
-      // Project specified rules have priority
-      ...rules,
     }),
 
     // --------------------------------------------------------
@@ -174,6 +191,7 @@ module.exports = function eloquence({
       // --- 1️⃣ Source --------------------------
       {
         files: ['src/**'],
+
         rules: {
           // ℹ️ Prevent forgotten console.logs only needed in project source
           // code
@@ -205,16 +223,6 @@ module.exports = function eloquence({
           project: './tsconfig.json',
         },
 
-        plugins: ['@typescript-eslint'],
-        settings: {
-          // Config from plugin:import/typescript
-          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
-          'import/parsers': {
-            // Use the ESLint-TS parser when parsing TS and type definition files
-            '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
-          },
-        },
-
         rules: envRuleSeverities(NODE_ENV, {
           ...pluginTypescript,
           ...targetTypeScript,
@@ -224,6 +232,7 @@ module.exports = function eloquence({
       // --- ✅ Test files --------------------------
       {
         files: ['*.spec.js'],
+
         env: {
           jest: true,
         },
@@ -238,7 +247,7 @@ module.exports = function eloquence({
       // --- 🌲 Cypress files --------------------------
       {
         files: ['cypress/**/*'],
-        // Enable Cypress test writing best practice rules
+
         plugins: ['cypress'],
         env: {
           'cypress/globals': true,
@@ -256,8 +265,9 @@ module.exports = function eloquence({
           'jest.config.js',
           'webpack.config.js',
         ],
+
         parserOptions: {
-          // Ensure that configs read by Node are scripts (override Cypress)
+          // Ensure that configs read by Node are scripts
           sourceType: 'script',
         },
         env: {
@@ -266,4 +276,15 @@ module.exports = function eloquence({
       },
     ],
   }
+
+  // IF TypeScript isn't enabled remove configs that will break ESLint
+  if (!enableTS) {
+    baseConfigs.plugins = baseConfigs.plugins.filter(
+      (plugin) => !plugin.includes('@typescript-eslint'),
+    )
+
+    delete baseConfigs.settings['import/parsers']['@typescript-eslint/parser']
+  }
+
+  return baseConfigs
 }

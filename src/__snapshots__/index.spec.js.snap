@@ -11,7 +11,11 @@ Object {
     "prettier",
     "plugin:node/recommended",
   ],
-  "ignorePatterns": Array [],
+  "ignorePatterns": Array [
+    "!.*",
+    "public/*",
+    "dist/*",
+  ],
   "overrides": Array [
     Object {
       "files": Array [
@@ -41,9 +45,6 @@ Object {
         "project": "./tsconfig.json",
         "sourceType": "module",
       },
-      "plugins": Array [
-        "@typescript-eslint",
-      ],
       "rules": Object {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/ban-ts-comment": Array [
@@ -113,19 +114,6 @@ Object {
         "prefer-spread": "error",
         "valid-typeof": "off",
       },
-      "settings": Object {
-        "import/external-module-folders": Array [
-          "node_modules",
-          "node_modules/@types",
-        ],
-        "import/parsers": Object {
-          "@typescript-eslint/parser": Array [
-            ".ts",
-            ".tsx",
-            ".d.ts",
-          ],
-        },
-      },
     },
     Object {
       "env": Object {
@@ -180,10 +168,11 @@ Object {
     "ecmaFeatures": Object {
       "jsx": true,
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module",
   },
   "plugins": Array [
+    "@typescript-eslint",
     "import",
     "prettier",
     "node",
@@ -1014,7 +1003,18 @@ Object {
       ".tsx",
       ".d.ts",
     ],
+    "import/external-module-folders": Array [
+      "node_modules",
+      "node_modules/@types",
+    ],
     "import/internal-regex": /\\^@\\\\//,
+    "import/parsers": Object {
+      "@typescript-eslint/parser": Array [
+        ".ts",
+        ".tsx",
+        ".d.ts",
+      ],
+    },
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
@@ -1039,9 +1039,12 @@ Object {
   },
   "extends": Array [
     "prettier",
-    "prettier/react",
   ],
-  "ignorePatterns": Array [],
+  "ignorePatterns": Array [
+    "!.*",
+    "public/*",
+    "dist/*",
+  ],
   "overrides": Array [
     Object {
       "files": Array [
@@ -1069,9 +1072,6 @@ Object {
         "project": "./tsconfig.json",
         "sourceType": "module",
       },
-      "plugins": Array [
-        "@typescript-eslint",
-      ],
       "rules": Object {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/ban-ts-comment": Array [
@@ -1141,19 +1141,6 @@ Object {
         "prefer-spread": "error",
         "valid-typeof": "off",
       },
-      "settings": Object {
-        "import/external-module-folders": Array [
-          "node_modules",
-          "node_modules/@types",
-        ],
-        "import/parsers": Object {
-          "@typescript-eslint/parser": Array [
-            ".ts",
-            ".tsx",
-            ".d.ts",
-          ],
-        },
-      },
     },
     Object {
       "env": Object {
@@ -1208,10 +1195,11 @@ Object {
     "ecmaFeatures": Object {
       "jsx": true,
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module",
   },
   "plugins": Array [
+    "@typescript-eslint",
     "import",
     "prettier",
     "jest-dom",
@@ -2463,7 +2451,18 @@ Object {
       ".tsx",
       ".d.ts",
     ],
+    "import/external-module-folders": Array [
+      "node_modules",
+      "node_modules/@types",
+    ],
     "import/internal-regex": /\\^@\\\\//,
+    "import/parsers": Object {
+      "@typescript-eslint/parser": Array [
+        ".ts",
+        ".tsx",
+        ".d.ts",
+      ],
+    },
     "import/resolver": "/mock/test/path",
     "react": Object {
       "linkComponents": Array [
