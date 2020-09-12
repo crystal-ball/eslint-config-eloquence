@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [14.12.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.11.1...v14.12.0) (2020-09-12)
+
+
+#### ✨ Update
+
+* Dependencies 🆙 (#240)([a351f57](https://github.com/crystal-ball/eslint-config-eloquence/commit/a351f5751adfe4fa1a7dc7e9061a40317033f8cc)), closes [#240](https://github.com/crystal-ball/eslint-config-eloquence/issue/240)
+
+#### Chore
+
+* Update package husky to v4.3.0 🆙 (#239)([0c40177](https://github.com/crystal-ball/eslint-config-eloquence/commit/0c40177369954eace392999e59ff9d233de5a599)), closes [#239](https://github.com/crystal-ball/eslint-config-eloquence/issue/239)
+
 ### [14.11.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.11.0...v14.11.1) (2020-09-05)
 
 
