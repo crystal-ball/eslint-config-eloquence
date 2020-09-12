@@ -125,6 +125,10 @@ module.exports = function eloquence({
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
 
+      // Extensions that will be parsed to check for exports, including JS, TS,
+      // React extenions, Node ESM, and type definitions
+      'import/extensions': ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'],
+
       // --- React plugin settings ---
       'react': {
         pragma: 'React',
@@ -203,9 +207,10 @@ module.exports = function eloquence({
 
         plugins: ['@typescript-eslint'],
         settings: {
-          // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
-          'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+          // Config from plugin:import/typescript
+          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
           'import/parsers': {
+            // Use the ESLint-TS parser when parsing TS and type definition files
             '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
           },
         },
