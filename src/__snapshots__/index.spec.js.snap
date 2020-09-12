@@ -1417,6 +1417,7 @@ Object {
     "jest-dom/prefer-focus": "error",
     "jest-dom/prefer-required": "error",
     "jest-dom/prefer-to-have-attribute": "error",
+    "jest-dom/prefer-to-have-style": "error",
     "jest-dom/prefer-to-have-text-content": "error",
     "jsx-a11y/accessible-emoji": "error",
     "jsx-a11y/alt-text": Array [
@@ -2417,7 +2418,6 @@ Object {
     "symbol-description": "error",
     "testing-library/await-async-query": "error",
     "testing-library/await-async-utils": "error",
-    "testing-library/await-fire-event": "error",
     "testing-library/no-await-sync-query": "error",
     "testing-library/no-debug": "error",
     "testing-library/no-dom-import": Array [
@@ -2425,7 +2425,9 @@ Object {
       "react",
     ],
     "testing-library/no-manual-cleanup": "error",
+    "testing-library/no-render-in-setup": "error",
     "testing-library/no-wait-for-empty-callback": "error",
+    "testing-library/no-wait-for-snapshot": "error",
     "testing-library/prefer-explicit-assert": "error",
     "testing-library/prefer-find-by": "error",
     "testing-library/prefer-presence-queries": "error",

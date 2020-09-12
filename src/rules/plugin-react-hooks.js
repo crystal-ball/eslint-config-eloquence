@@ -1,9 +1,12 @@
 'use strict'
 
-// https://reactjs.org/docs/hooks-rules.html
+/**
+ * Plugin rules for React hooks
+ *
+ * 📝 https://reactjs.org/docs/hooks-rules.html
+ */
 module.exports = {
-  // Enforce that deps used in effects are included in watched deps
-  // https://github.com/facebook/react/issues/14920
+  // Enforce that references used in hooks are included in hook dependency arrays
   'react-hooks/exhaustive-deps': 'error',
 
   // Enforce that hooks are only called inside components or other hooks, and

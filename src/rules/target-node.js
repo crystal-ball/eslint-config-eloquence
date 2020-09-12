@@ -1,5 +1,8 @@
 'use strict'
 
+/**
+ * Node.js specific rules
+ */
 module.exports = (esm) => ({
   // Extensions must be provided for ESM usage
   'import/extensions': [

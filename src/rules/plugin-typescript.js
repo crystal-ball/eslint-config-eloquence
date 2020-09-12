@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Plugin rules for TypeScript
+ *
+ * 📝 https://github.com/typescript-eslint/typescript-eslint
+ */
 module.exports = {
   // --- Disabled ESLint rules ----------------------
   // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts

@@ -1,18 +1,20 @@
 'use strict'
 
 /**
- * Import plugin rules
- * https://github.com/benmosher/eslint-plugin-import
+ * Plugin rules for linting imports
+ *
+ * 📝 https://github.com/benmosher/eslint-plugin-import
  *
  * ## Cookbook
  *
  * - Restrict importing a specific module by setting a `no-restricted-imports`
- *   value. This can be useful for things like preventing React Router's Link component
- *   from being used instead of an application Link component.
- * - Restrict where modules can be imported by setting an `import/no-restricted-paths` value.
- *   This can be useful for enforcing boundaries between modules, like separating Electron
- *   client code from main code, or for enforcing that an index file is used for a Design
- *   System directory
+ *   value. This can be useful for things like preventing React Router's Link
+ *   component from being used instead of an application Link component.
+ * - Restrict where modules can be imported by setting an
+ *   `import/no-restricted-paths` value. This can be useful for enforcing
+ *   boundaries between modules, like separating Electron client code from main
+ *   code, or for enforcing that an index file is used for a Design System
+ *   directory
  */
 module.exports = {
   // --------------------------------------------------------
