@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [14.12.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.12.0...v14.12.1) (2020-09-12)
+
+
+#### 🛠 Fix
+
+* Check for exports from TS files always 🎊 (#241)([83d22d4](https://github.com/crystal-ball/eslint-config-eloquence/commit/83d22d4db19013dcc29a9ce610bb14f01ecd1999)), closes [#241](https://github.com/crystal-ball/eslint-config-eloquence/issue/241)
+
 ## [14.12.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.11.1...v14.12.0) (2020-09-12)
 
 
