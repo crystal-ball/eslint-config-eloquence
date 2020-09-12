@@ -62,11 +62,11 @@ const targetConfigs = {
   },
   // --- REACT TARGET CONFIGS
   react: {
-    extends: ['prettier/react'],
+    extends: [],
     plugins: ['jest-dom', 'jsx-a11y', 'react', 'react-hooks', 'testing-library'],
     rules: {
-      ...pluginJestDom,
       ...pluginReact,
+      ...pluginJestDom,
       ...pluginReactA11y,
       ...pluginReactHooks,
       ...pluginTestingLibrary,
@@ -79,25 +79,27 @@ const targetConfigs = {
 /**
  * Eloquence ESLint configs generator
  * @param {Object} opts
- * @param {boolean} [opts.esm]
+ * @param {boolean} [opts.enableESM] Enables ESModule linting features
+ * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
  */
 module.exports = function eloquence({
-  esm = true,
-  ignorePatterns = [],
+  enableESM = true,
+  enableTS = true,
+  ignorePatterns,
   rules = {},
   target,
 }) {
-  const sourceType = esm ? 'module' : 'script'
-
-  return {
+  const baseConfigs = {
     // Default expectation is a single config at root of project, with overrides
     // for directory and file customizations
     root: true,
 
-    ignorePatterns,
+    // Project custom ignore patterns, defaults to ignoring build directories
+    // and forcing linting of dot files and directories
+    ignorePatterns: ignorePatterns || ['!.*', 'public/*', 'dist/*'],
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
@@ -105,8 +107,8 @@ module.exports = function eloquence({
     // staying as close to current syntax as possible
     parser: 'babel-eslint',
     parserOptions: {
-      ecmaVersion: 11,
-      sourceType,
+      ecmaVersion: 12,
+      sourceType: enableESM ? 'module' : 'script',
       ecmaFeatures: {
         jsx: true,
       },
@@ -168,18 +170,18 @@ module.exports = function eloquence({
       ...coreStylisticIssues,
       ...coreVariables,
 
-      // --- Plugin rules ---
+      // --- Plugin import rules ---
       ...pluginImport,
 
       // --- Target rules ---
       ...targetConfigs[target].rules,
 
+      // Custom project rules have priority over package rules
+      ...rules,
+
       // Prettier formatting enforcement via Prettier *plugin*
       // (this is different from the rule overrides set in the Prettier *config*)
       'prettier/prettier': 'error',
-
-      // Project specified rules have priority
-      ...rules,
     }),
 
     // --------------------------------------------------------
@@ -245,7 +247,7 @@ module.exports = function eloquence({
       // --- 🌲 Cypress files --------------------------
       {
         files: ['cypress/**/*'],
-        // Enable Cypress test writing best practice rules
+
         plugins: ['cypress'],
         env: {
           'cypress/globals': true,
@@ -265,7 +267,7 @@ module.exports = function eloquence({
         ],
 
         parserOptions: {
-          // Ensure that configs read by Node are scripts (override Cypress)
+          // Ensure that configs read by Node are scripts
           sourceType: 'script',
         },
         env: {
@@ -274,4 +276,15 @@ module.exports = function eloquence({
       },
     ],
   }
+
+  // IF TypeScript isn't enabled remove configs that will break ESLint
+  if (!enableTS) {
+    baseConfigs.plugins = baseConfigs.plugins.filter(
+      (plugin) => !plugin.includes('@typescript-eslint'),
+    )
+
+    delete baseConfigs.settings['import/parsers']['@typescript-eslint/parser']
+  }
+
+  return baseConfigs
 }

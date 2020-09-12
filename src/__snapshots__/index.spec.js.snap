@@ -11,7 +11,11 @@ Object {
     "prettier",
     "plugin:node/recommended",
   ],
-  "ignorePatterns": Array [],
+  "ignorePatterns": Array [
+    "!.*",
+    "public/*",
+    "dist/*",
+  ],
   "overrides": Array [
     Object {
       "files": Array [
@@ -164,7 +168,7 @@ Object {
     "ecmaFeatures": Object {
       "jsx": true,
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module",
   },
   "plugins": Array [
@@ -1035,9 +1039,12 @@ Object {
   },
   "extends": Array [
     "prettier",
-    "prettier/react",
   ],
-  "ignorePatterns": Array [],
+  "ignorePatterns": Array [
+    "!.*",
+    "public/*",
+    "dist/*",
+  ],
   "overrides": Array [
     Object {
       "files": Array [
@@ -1188,7 +1195,7 @@ Object {
     "ecmaFeatures": Object {
       "jsx": true,
     },
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module",
   },
   "plugins": Array [
