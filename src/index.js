@@ -1,10 +1,12 @@
 /**                                                             Eloquence ESLint
  * -----------------------------------------------------------------------------
  *
- * ## ℹ️ Notes
+ * ℹ️ Package notes
+ *
  * ESModules: Package defaults to using ESM for ESLint `sourceType`
  * configuration, with overrides for Node executed tooling like Jest. Node ESM
  * using cjs and mjs file extensions not yet handled.
+ *
  * @module
  */
 
@@ -99,11 +101,9 @@ module.exports = function eloquence({
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
-    // Override Espree parser with Babel
-    parser: 'babel-eslint',
-
-    // Default parser to latest ECMA version and ESModules with the goal of
+    // Set parser to Babel using latest ECMA version and ESModules with the goal of
     // staying as close to current syntax as possible
+    parser: 'babel-eslint',
     parserOptions: {
       ecmaVersion: 11,
       sourceType,
@@ -113,7 +113,12 @@ module.exports = function eloquence({
     },
 
     // Plugins for imports, accessibility and react
-    plugins: ['import', 'prettier', ...targetConfigs[target].plugins],
+    plugins: [
+      '@typescript-eslint',
+      'import',
+      'prettier',
+      ...targetConfigs[target].plugins,
+    ],
 
     settings: {
       // Increase import cache lifetime to 60s
@@ -125,9 +130,19 @@ module.exports = function eloquence({
       // Use webpack to resolve projects to handle src alias
       'import/resolver': path.resolve(__dirname, 'resolver'),
 
+      // ℹ️ Import plugin TS configs apply to all projects, ref plugin:import/typescript
+
       // Extensions that will be parsed to check for exports, including JS, TS,
       // React extenions, Node ESM, and type definitions
       'import/extensions': ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'],
+
+      // Ensure that types are considered external imports
+      'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+
+      'import/parsers': {
+        // Use the ESLint-TS parser when parsing TS and type definition files
+        '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+      },
 
       // --- React plugin settings ---
       'react': {
@@ -174,6 +189,7 @@ module.exports = function eloquence({
       // --- 1️⃣ Source --------------------------
       {
         files: ['src/**'],
+
         rules: {
           // ℹ️ Prevent forgotten console.logs only needed in project source
           // code
@@ -205,16 +221,6 @@ module.exports = function eloquence({
           project: './tsconfig.json',
         },
 
-        plugins: ['@typescript-eslint'],
-        settings: {
-          // Config from plugin:import/typescript
-          'import/external-module-folders': ['node_modules', 'node_modules/@types'],
-          'import/parsers': {
-            // Use the ESLint-TS parser when parsing TS and type definition files
-            '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
-          },
-        },
-
         rules: envRuleSeverities(NODE_ENV, {
           ...pluginTypescript,
           ...targetTypeScript,
@@ -224,6 +230,7 @@ module.exports = function eloquence({
       // --- ✅ Test files --------------------------
       {
         files: ['*.spec.js'],
+
         env: {
           jest: true,
         },
@@ -256,6 +263,7 @@ module.exports = function eloquence({
           'jest.config.js',
           'webpack.config.js',
         ],
+
         parserOptions: {
           // Ensure that configs read by Node are scripts (override Cypress)
           sourceType: 'script',
