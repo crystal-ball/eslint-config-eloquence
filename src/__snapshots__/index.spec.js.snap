@@ -114,12 +114,9 @@ Object {
         "valid-typeof": "off",
       },
       "settings": Object {
-        "import/extensions": Array [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
-          ".d.ts",
+        "import/external-module-folders": Array [
+          "node_modules",
+          "node_modules/@types",
         ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
@@ -1009,6 +1006,14 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
+    "import/extensions": Array [
+      ".js",
+      ".jsx",
+      ".mjs",
+      ".ts",
+      ".tsx",
+      ".d.ts",
+    ],
     "import/internal-regex": /\\^@\\\\//,
     "import/resolver": "/mock/test/path",
     "react": Object {
@@ -1137,12 +1142,9 @@ Object {
         "valid-typeof": "off",
       },
       "settings": Object {
-        "import/extensions": Array [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
-          ".d.ts",
+        "import/external-module-folders": Array [
+          "node_modules",
+          "node_modules/@types",
         ],
         "import/parsers": Object {
           "@typescript-eslint/parser": Array [
@@ -2453,6 +2455,14 @@ Object {
   },
   "settings": Object {
     "import/cache": 60,
+    "import/extensions": Array [
+      ".js",
+      ".jsx",
+      ".mjs",
+      ".ts",
+      ".tsx",
+      ".d.ts",
+    ],
     "import/internal-regex": /\\^@\\\\//,
     "import/resolver": "/mock/test/path",
     "react": Object {
