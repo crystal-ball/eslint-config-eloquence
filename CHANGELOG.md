@@ -14,6 +14,19 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [15.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.12.1...v15.0.0) (2020-09-12)
+
+
+### 💥 Breaking Changes!
+
+* Use `enableTS` and `enableESM` to disable TypeScript and ESModule configs when
+necessary.
+
+
+#### 💖 New
+
+* TS by default support 💖 (#243)([7ade772](https://github.com/crystal-ball/eslint-config-eloquence/commit/7ade7724eb94cd0101a983482b2952634ef6c146)), closes [#243](https://github.com/crystal-ball/eslint-config-eloquence/issue/243)
+
 ### [14.12.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v14.12.0...v14.12.1) (2020-09-12)
 
 
