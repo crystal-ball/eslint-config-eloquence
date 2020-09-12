@@ -1,5 +1,8 @@
 'use strict'
 
+/**
+ * TypeScript specific rules
+ */
 module.exports = {
   // --- prettier/@typescript-eslint
   '@typescript-eslint/quotes': 'off',

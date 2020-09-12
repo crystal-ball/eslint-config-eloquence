@@ -1,8 +1,9 @@
 'use strict'
 
 /**
- * React linting rules
- * https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
+ * Plugin rules for React codebases
+ *
+ * 📝 https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
  */
 module.exports = {
   // Don't enforce .jsx file extension, it doesn't provide a clear benefit and

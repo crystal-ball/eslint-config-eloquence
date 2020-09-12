@@ -1,8 +1,9 @@
 'use strict'
 
 /**
- * Node.js rules from `eslint-plugin-node`
- * https://github.com/mysticatea/eslint-plugin-node
+ * Plugin rules for Node.js codebases
+ *
+ * 📝 https://github.com/mysticatea/eslint-plugin-node
  */
 module.exports = {
   // Disable duplicated no-process-exit included by ESLint Node plugin

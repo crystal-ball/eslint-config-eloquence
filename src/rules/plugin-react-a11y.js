@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Plugin for linting accessibility of React applications
+ *
+ * 📝 https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+ */
 module.exports = {
   // Enforce that anchors have content
   // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md

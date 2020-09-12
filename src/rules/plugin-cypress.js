@@ -1,7 +1,9 @@
 'use strict'
 
 /**
- * Rules for Cypress acceptance tests
+ * Plugin rules for writing effective Cypress tests
+ *
+ * 📝 https://github.com/cypress-io/eslint-plugin-cypress
  */
 module.exports = {
   // Require an assertion before a screenshot to help ensure consistent screenshots
