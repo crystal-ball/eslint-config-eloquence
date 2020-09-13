@@ -252,7 +252,11 @@ module.exports = function eloquence({
         env: {
           'cypress/globals': true,
         },
-        rules: pluginCypress,
+        rules: {
+          ...pluginCypress,
+          // Screen utility isn't available in Cypress tests
+          'testing-library/prefer-screen-queries': 'off',
+        },
       },
 
       // --- ⚙️ Configuration files  --------------------------
@@ -260,7 +264,6 @@ module.exports = function eloquence({
         files: [
           '.eslintrc.js',
           '.storybook/main.js',
-          'cypress/plugins/index.js',
           'babel.config.js',
           'jest.config.js',
           'webpack.config.js',
