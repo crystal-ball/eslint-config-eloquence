@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [15.2.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.2.0...v15.2.1) (2020-09-13)
+
+
+#### 🛠 Fix
+
+* Cypress fixes 🌲 (#245)([6899371](https://github.com/crystal-ball/eslint-config-eloquence/commit/68993711e381380e5e7d29bfff0a12a787f6fe37)), closes [#245](https://github.com/crystal-ball/eslint-config-eloquence/issue/245)
+
 ## [15.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.1.0...v15.2.0) (2020-09-13)
 
 
