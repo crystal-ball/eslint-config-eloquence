@@ -144,6 +144,7 @@ Object {
         "cypress/require-data-selectors": "error",
         "func-names": "off",
         "spaced-comment": "off",
+        "testing-library/prefer-screen-queries": "off",
       },
     },
     Object {
@@ -153,7 +154,6 @@ Object {
       "files": Array [
         ".eslintrc.js",
         ".storybook/main.js",
-        "cypress/plugins/index.js",
         "babel.config.js",
         "jest.config.js",
         "webpack.config.js",
@@ -1171,6 +1171,7 @@ Object {
         "cypress/require-data-selectors": "error",
         "func-names": "off",
         "spaced-comment": "off",
+        "testing-library/prefer-screen-queries": "off",
       },
     },
     Object {
@@ -1180,7 +1181,6 @@ Object {
       "files": Array [
         ".eslintrc.js",
         ".storybook/main.js",
-        "cypress/plugins/index.js",
         "babel.config.js",
         "jest.config.js",
         "webpack.config.js",
