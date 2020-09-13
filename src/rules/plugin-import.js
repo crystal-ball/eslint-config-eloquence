@@ -180,9 +180,9 @@ module.exports = {
   // configure a useful number.
   'import/max-dependencies': 'off',
 
-  // Prevents unassigned imports, this should be disabled as necessary in a codebase with
-  // an explanation of the side effect caused by the import
-  'import/no-unassigned-import': 'error',
+  // Allow unassigned imports, it's surprisingly irritating to have to allow
+  // each occurence
+  'import/no-unassigned-import': 'off',
 
   // Prevent importing the default as if it were named
   'import/no-named-default': 'error',
