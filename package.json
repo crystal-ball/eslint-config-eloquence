@@ -45,9 +45,9 @@
   },
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.8.0",
-    "@crystal-ball/prettier-base": "2.3.0",
-    "@crystal-ball/semantic-release-base": "2.20.0",
-    "@types/jest": "26.0.13",
+    "@crystal-ball/prettier-base": "2.4.0",
+    "@crystal-ball/semantic-release-base": "2.21.0",
+    "@types/jest": "26.0.14",
     "husky": "4.3.0",
     "jest": "26.4.2"
   },
