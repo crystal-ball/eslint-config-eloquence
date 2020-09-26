@@ -80,6 +80,7 @@ const targetConfigs = {
  * Eloquence ESLint configs generator
  * @param {Object} opts
  * @param {boolean} [opts.enableESM] Enables ESModule linting features
+ * @param {boolean} [opts.enableMDX] Enables MDX linting features
  * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
  * @param {{[key: string]: unknown}} [opts.rules]
@@ -87,6 +88,7 @@ const targetConfigs = {
  */
 module.exports = function eloquence({
   enableESM = true,
+  enableMDX = false,
   enableTS = true,
   ignorePatterns,
   rules = {},
@@ -278,6 +280,29 @@ module.exports = function eloquence({
         },
       },
     ],
+  }
+
+  // If MDX is enabled add rules
+  if (enableMDX) {
+    baseConfigs.plugins.push('mdx')
+    baseConfigs.overrides.push({
+      files: ['*.mdx'],
+
+      parser: 'eslint-mdx',
+      globals: {
+        React: false, // MDX injects React
+      },
+
+      rules: {
+        'react/react-in-jsx-scope': 'off',
+        'react/no-unescaped-entities': 'off',
+        'react/jsx-sort-props': 'off', // Move to React configs
+        'mdx/no-jsx-html-comments': 'error',
+        'mdx/no-unescaped-entities': 'error',
+        'mdx/no-unused-expressions': 'error',
+        'mdx/remark': 'error',
+      },
+    })
   }
 
   // IF TypeScript isn't enabled remove configs that will break ESLint
