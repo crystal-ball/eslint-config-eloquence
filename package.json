@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eloquence",
-  "version": "15.3.0",
+  "version": "15.4.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "./src/index.js",
   "type": "commonjs",

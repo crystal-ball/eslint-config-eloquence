@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [15.4.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.3.0...v15.4.0) (2020-09-26)
+
+
+#### 💖 New
+
+* Opt in MDX linting 💖 (#248)([3feaa4b](https://github.com/crystal-ball/eslint-config-eloquence/commit/3feaa4b0fc35048bc86b69185db8b9fade73c8cc)), closes [#248](https://github.com/crystal-ball/eslint-config-eloquence/issue/248)
+
+#### Chore
+
+* Update devDependencies 🆙 (#247)([fdd401d](https://github.com/crystal-ball/eslint-config-eloquence/commit/fdd401d6248bb92ac6cd67cf36cc44651f1941a5)), closes [#247](https://github.com/crystal-ball/eslint-config-eloquence/issue/247)
+
 ## [15.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.2.1...v15.3.0) (2020-09-22)
 
 
