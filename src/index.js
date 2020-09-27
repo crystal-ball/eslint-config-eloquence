@@ -192,12 +192,12 @@ module.exports = function eloquence({
     }),
 
     // --------------------------------------------------------
-    // File overrides
+    // File overrides (Override directories, then extensions, then files)
 
     overrides: [
-      // --- 1️⃣ Source --------------------------
+      // --- 1️⃣ Source directory --------------------------
       {
-        files: ['src/**'],
+        files: ['src/**/*'],
 
         rules: {
           // ℹ️ Prevent forgotten console.logs only needed in project source
@@ -216,7 +216,22 @@ module.exports = function eloquence({
         },
       },
 
-      // --- 🚔 TypeScript --------------------------
+      // --- 🌲 Cypress directory --------------------------
+      {
+        files: ['cypress/**/*'],
+
+        plugins: ['cypress'],
+        env: {
+          'cypress/globals': true,
+        },
+        rules: {
+          ...pluginCypress,
+          // Screen utility isn't available in Cypress tests
+          'testing-library/prefer-screen-queries': 'off',
+        },
+      },
+
+      // --- 🚔 TypeScript files --------------------------
       {
         files: ['*.ts', '*.tsx'],
 
@@ -251,18 +266,23 @@ module.exports = function eloquence({
         },
       },
 
-      // --- 🌲 Cypress files --------------------------
+      // --- 📝 MDX files --------------------------
       {
-        files: ['cypress/**/*'],
+        files: ['*.mdx'],
 
-        plugins: ['cypress'],
-        env: {
-          'cypress/globals': true,
+        parser: 'eslint-mdx',
+        globals: {
+          React: false, // MDX injects React
         },
+
         rules: {
-          ...pluginCypress,
-          // Screen utility isn't available in Cypress tests
-          'testing-library/prefer-screen-queries': 'off',
+          'react/react-in-jsx-scope': 'off',
+          'react/no-unescaped-entities': 'off',
+          'react/jsx-sort-props': 'off', // Move to React configs
+          'mdx/no-jsx-html-comments': 'error',
+          'mdx/no-unescaped-entities': 'error',
+          'mdx/no-unused-expressions': 'error',
+          'mdx/remark': 'error',
         },
       },
 
@@ -289,31 +309,19 @@ module.exports = function eloquence({
 
   // If MDX is enabled add rules
   if (enableMDX) {
-    baseConfigs.plugins.push('mdx')
-    baseConfigs.overrides.push({
-      files: ['*.mdx'],
-
-      parser: 'eslint-mdx',
-      globals: {
-        React: false, // MDX injects React
-      },
-
-      rules: {
-        'react/react-in-jsx-scope': 'off',
-        'react/no-unescaped-entities': 'off',
-        'react/jsx-sort-props': 'off', // Move to React configs
-        'mdx/no-jsx-html-comments': 'error',
-        'mdx/no-unescaped-entities': 'error',
-        'mdx/no-unused-expressions': 'error',
-        'mdx/remark': 'error',
-      },
-    })
+    baseConfigs.plugins = baseConfigs.plugins.filter((plugin) => !plugin.includes('mdx'))
+    baseConfigs.overrides = baseConfigs.overrides.filter(
+      (override) => !override.files.includes('*.mdx'),
+    )
   }
 
   // IF TypeScript isn't enabled remove configs that will break ESLint
   if (!enableTS) {
     baseConfigs.plugins = baseConfigs.plugins.filter(
-      (plugin) => !plugin.includes('@typescript-eslint'),
+      (plugin) => !plugin.includes('@typescript'),
+    )
+    baseConfigs.overrides = baseConfigs.overrides.filter(
+      (override) => !override.files.includes('*.ts'),
     )
 
     delete baseConfigs.settings['import/parsers']['@typescript-eslint/parser']

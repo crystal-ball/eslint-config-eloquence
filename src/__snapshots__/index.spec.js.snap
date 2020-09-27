@@ -19,7 +19,7 @@ Object {
   "overrides": Array [
     Object {
       "files": Array [
-        "src/**",
+        "src/**/*",
       ],
       "rules": Object {
         "import/no-extraneous-dependencies": Array [
@@ -33,6 +33,27 @@ Object {
         "no-console": "error",
         "node/no-process-env": "error",
         "node/no-process-exit": "error",
+      },
+    },
+    Object {
+      "env": Object {
+        "cypress/globals": true,
+      },
+      "files": Array [
+        "cypress/**/*",
+      ],
+      "plugins": Array [
+        "cypress",
+      ],
+      "rules": Object {
+        "cypress/assertion-before-screenshot": "error",
+        "cypress/no-assigning-return-values": "error",
+        "cypress/no-force": "error",
+        "cypress/no-unnecessary-waiting": "error",
+        "cypress/require-data-selectors": "error",
+        "func-names": "off",
+        "spaced-comment": "off",
+        "testing-library/prefer-screen-queries": "off",
       },
     },
     Object {
@@ -127,24 +148,21 @@ Object {
       },
     },
     Object {
-      "env": Object {
-        "cypress/globals": true,
-      },
       "files": Array [
-        "cypress/**/*",
+        "*.mdx",
       ],
-      "plugins": Array [
-        "cypress",
-      ],
+      "globals": Object {
+        "React": false,
+      },
+      "parser": "eslint-mdx",
       "rules": Object {
-        "cypress/assertion-before-screenshot": "error",
-        "cypress/no-assigning-return-values": "error",
-        "cypress/no-force": "error",
-        "cypress/no-unnecessary-waiting": "error",
-        "cypress/require-data-selectors": "error",
-        "func-names": "off",
-        "spaced-comment": "off",
-        "testing-library/prefer-screen-queries": "off",
+        "mdx/no-jsx-html-comments": "error",
+        "mdx/no-unescaped-entities": "error",
+        "mdx/no-unused-expressions": "error",
+        "mdx/remark": "error",
+        "react/jsx-sort-props": "off",
+        "react/no-unescaped-entities": "off",
+        "react/react-in-jsx-scope": "off",
       },
     },
     Object {
@@ -1049,7 +1067,7 @@ Object {
   "overrides": Array [
     Object {
       "files": Array [
-        "src/**",
+        "src/**/*",
       ],
       "rules": Object {
         "import/no-extraneous-dependencies": Array [
@@ -1061,6 +1079,27 @@ Object {
           },
         ],
         "no-console": "error",
+      },
+    },
+    Object {
+      "env": Object {
+        "cypress/globals": true,
+      },
+      "files": Array [
+        "cypress/**/*",
+      ],
+      "plugins": Array [
+        "cypress",
+      ],
+      "rules": Object {
+        "cypress/assertion-before-screenshot": "error",
+        "cypress/no-assigning-return-values": "error",
+        "cypress/no-force": "error",
+        "cypress/no-unnecessary-waiting": "error",
+        "cypress/require-data-selectors": "error",
+        "func-names": "off",
+        "spaced-comment": "off",
+        "testing-library/prefer-screen-queries": "off",
       },
     },
     Object {
@@ -1155,24 +1194,21 @@ Object {
       },
     },
     Object {
-      "env": Object {
-        "cypress/globals": true,
-      },
       "files": Array [
-        "cypress/**/*",
+        "*.mdx",
       ],
-      "plugins": Array [
-        "cypress",
-      ],
+      "globals": Object {
+        "React": false,
+      },
+      "parser": "eslint-mdx",
       "rules": Object {
-        "cypress/assertion-before-screenshot": "error",
-        "cypress/no-assigning-return-values": "error",
-        "cypress/no-force": "error",
-        "cypress/no-unnecessary-waiting": "error",
-        "cypress/require-data-selectors": "error",
-        "func-names": "off",
-        "spaced-comment": "off",
-        "testing-library/prefer-screen-queries": "off",
+        "mdx/no-jsx-html-comments": "error",
+        "mdx/no-unescaped-entities": "error",
+        "mdx/no-unused-expressions": "error",
+        "mdx/remark": "error",
+        "react/jsx-sort-props": "off",
+        "react/no-unescaped-entities": "off",
+        "react/react-in-jsx-scope": "off",
       },
     },
     Object {
