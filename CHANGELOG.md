@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.0.1...v16.1.0) (2020-09-27)
+
+
+#### ✨ Update
+
+* Allow multiple stateless component definitions 🤩 (#251)([06a0494](https://github.com/crystal-ball/eslint-config-eloquence/commit/06a0494086d6a1c220c21b37139f8df9e9bf2254)), closes [#251](https://github.com/crystal-ball/eslint-config-eloquence/issue/251)
+
 ### [16.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.0.0...v16.0.1) (2020-09-27)
 
 
