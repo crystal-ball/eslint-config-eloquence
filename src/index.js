@@ -91,6 +91,7 @@ module.exports = function eloquence({
   enableMDX = false,
   enableTS = true,
   ignorePatterns,
+  reportUnusedDisableDirectives = true,
   rules = {},
   target,
 }) {
@@ -102,6 +103,9 @@ module.exports = function eloquence({
     // Project custom ignore patterns, defaults to ignoring build directories
     // and forcing linting of dot files and directories
     ignorePatterns: ignorePatterns || ['!.*', 'public/*', 'dist/*'],
+
+    // Provides warnings for eslint-disable directives that aren't necessary
+    reportUnusedDisableDirectives,
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
