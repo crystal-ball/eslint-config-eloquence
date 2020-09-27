@@ -56,12 +56,13 @@ code quality, style and formatting.
 - 🔋 Manages all ESLint dependencies for simple setup and version maintenance
 - 🧐 Intelligently adjusts error severity for style and formatting rules for
   development workflows
-- 😲 Smartly overrides configurations for Storybook, Cypress, webpack and Jest
-  files.
+- 😲 Smartly overrides configurations for Storybook, Cypress, webpack, MDX and
+  Jest files.
 - ✅ React Testing Library and Jest DOM rules
 - 😍 Fully integrated with linting for Prettier formatting
 - 🌲 Includes Cypress tests specific ruleset
 - 👮‍♀️ Supports linting TypeScript projects
+- 📝 Supports linting MDX files
 
 The most important opinion of Eloquence is that linters shouldn't get in your
 way while developing, so outside test environments all rules related to styling
@@ -100,15 +101,20 @@ module.exports = eloquence({ target: 'react|node' })
 - Pass `'node'` - for Node services and NPM packages
 - Pass `'react'` - for React applications bundled with webpack
 
-#### Option `esm`
+#### Option `enableESM`
 
-The `esm` option can be used to explicitly declare whether a project is using
-ESModules or CommonJS. The default value is `true`.
+The `enableESM` option can be used to explicitly declare whether a project is
+using ESModules or CommonJS. The default value is `true`.
 
 #### Option `ignorePatterns`
 
-Files and directories can be ignored by passing an array of string patterns. Ref
-[ignorePatterns in config files](https://eslint.org/docs/user-guide/configuring#ignorepatterns-in-config-files)
+Files and directories can be ignored by passing an array of string patterns. The
+default value of `['!.*', 'public/*', 'dist/*']` will ignore two common build
+output directories (public and dist), and will force linting in dotfiles and
+directories beginning with dots (which are ignored by default by ESLint).
+
+_Note that code coverage output already has ignore configurations and shouldn't
+need addtiional configs._
 
 #### Option `rules`
 
@@ -116,14 +122,31 @@ Final rule values can be overridden in a project by passing a `rules` option
 with the override values. _(Values are used as is, it isn't possible to pass
 only a severity override at this time.)_
 
+#### Option reportUnusedDisableDirectives
+
+Any unnecessary `eslint-disable` directive will cause a warning _(This helps
+with maintenance of linting overrides)_. This default behavior can be overridden
+with the `reportUnusedDisableDirectives` prop:
+
+```javascript
+'use strict'
+
+const eloquence = require('eslint-config-eloquence')
+
+module.exports = eloquence({
+  target: 'react',
+  reportUnusedDisableDirectives: false,
+})
+```
+
 #### Pretty print output
 
 The [`eslint-formatter-pretty`][] package is included in the dependencies and
 can be used to output pretty formatted results. The pretty printed results
 include hyperlinks to the rule docs and the files.
 
-```
-eslint --format=pretty src
+```sh
+NODE_ENV=test npx eslint --format=pretty .
 ```
 
 ![Pretty prints links](./docs/assets/pretty.png)
@@ -150,7 +173,6 @@ const eloquence = require('eslint-config-eloquence')
 
 module.exports = eloquence({
   target: 'react',
-  ignorePatterns: ['!.*', 'public/*'],
 })
 ```
 
@@ -221,6 +243,25 @@ if you haven't.
 }
 ```
 
+## 📝 MDX
+
+You can opt in to linting MDX files with the `eslint-plugin-mdx` package:
+
+```sh
+npm i eslint-plugin-mdx -DE
+```
+
+```javascript
+'use strict'
+
+const eloquence = require('eslint-config-eloquence')
+
+module.exports = eloquence({
+  target: 'react',
+  enableMDX: true,
+})
+```
+
 ## File overrides
 
 Eloquence overrides the base project rules and settings for specific file
@@ -228,7 +269,9 @@ patterns to eliminate the need for ESLint configuration comments:
 
 | Files                 | Updates                        |
 | --------------------- | ------------------------------ |
+| `[src/**/*]`          | Rules specific to source code  |
 | `['*.ts', '*.tsx']`   | TypeScript rules enabled       |
+| `['*.mdx']`           | MDX linting                    |
 | `['*.spec.js']`       | Adds Jest globals              |
 | `['cypress/**/*']`    | Adds Cypress globals and rules |
 | `['.storybook/**/*']` | Support ESmodules              |
