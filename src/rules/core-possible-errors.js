@@ -28,8 +28,8 @@ module.exports = {
   // disallow assignment in conditional expressions
   'no-cond-assign': ['error', 'always'],
 
-  // disallow use of console (in production code)
-  // ⚙️ explicitly set in /src
+  // Allow console.log as a default everywhere for tooling, production code is
+  // covered by /src override
   'no-console': 'off',
 
   // disallow use of constant expressions in conditions

@@ -1,9 +1,9 @@
 'use strict'
 
 const severityOverrides = {
-  // Allow dev tools in dev environment
-  'no-console': 'off',
-  'no-debugger': 'off',
+  // Warnings only for debuggers
+  'no-debugger': 'warning',
+  'testing-library/no-debug': 'warning',
 
   // These rules are non critical, stylistic rules, warn only in dev for them
   'arrow-body-style': 'warn',
@@ -15,10 +15,6 @@ const severityOverrides = {
 
   // Imports style preferences rules
   'import/order': 'warn',
-
-  // Don't show any Prettier formatting errors during dev b/c they're SUPER
-  // noisy and annoying and NOT helpful at that time
-  'prettier/prettier': 'off',
 
   // React style preferences rules
   'react/default-props-match-prop-types': 'warn',
@@ -36,8 +32,9 @@ const severityOverrides = {
   'react/require-default-props': 'warn',
   'react/self-closing-comp': 'warn',
 
-  // Allow dev tools writing tests
-  'testing-library/no-debug': 'off',
+  // Don't show any Prettier formatting errors during dev b/c they're SUPER
+  // noisy and annoying and NOT helpful at that time
+  'prettier/prettier': 'off',
 }
 
 module.exports = (env, rules) => {
