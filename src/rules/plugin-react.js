@@ -169,9 +169,11 @@ module.exports = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
   'react/no-is-mounted': 'error',
 
-  // Prevent multiple component definition per file
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-  'react/no-multi-comp': 'off',
+  // Prevent defining multiple stateful components in a single file. Allow multiple
+  // stateless components: it's often useful to pull out small blocks of JSX into a
+  // stateless component in the same file it's used in for organization of a large
+  // component, eg a form or a windowed list.
+  'react/no-multi-comp': ['error', { ignoreStateless: true }],
 
   // Prevent usage of setState
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md

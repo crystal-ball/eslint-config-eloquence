@@ -23,7 +23,6 @@ const severityOverrides = {
   'react/jsx-sort-default-props': 'warn',
   'react/jsx-sort-props': 'warn',
   'react/sort-prop-types': 'warn',
-  'react/no-multi-comp': 'warn',
   'react/no-unescaped-entities': 'warn',
   'react/no-unused-prop-types': 'warn',
   'react/no-unused-state': 'warn',
