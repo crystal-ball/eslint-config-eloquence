@@ -14,6 +14,19 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.4.0...v16.0.0) (2020-09-27)
+
+
+### 💥 Breaking Changes!
+
+* Shorthand props must come after regular props, console.warn is now a warning in dev
+to allow enforcing directives
+
+
+#### ✨ Update
+
+* Console dev level and React shorthand props ordering 💥 (#249)([f502e5d](https://github.com/crystal-ball/eslint-config-eloquence/commit/f502e5d2aac06b339bd6a8fad895a420545ea5cb)), closes [#249](https://github.com/crystal-ball/eslint-config-eloquence/issue/249)
+
 ## [15.4.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v15.3.0...v15.4.0) (2020-09-26)
 
 
