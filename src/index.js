@@ -197,7 +197,7 @@ module.exports = function eloquence({
         rules: {
           // ℹ️ Prevent forgotten console.logs only needed in project source
           // code
-          'no-console': NODE_ENV === 'test' ? 'error' : 'off',
+          'no-console': NODE_ENV === 'test' ? 'error' : 'warning',
 
           // ℹ️ Imported modules in project source need to be declared as
           // dependencies to ensure they're available in production

@@ -117,16 +117,16 @@ module.exports = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
   'react/sort-prop-types': 'error',
 
-  // Enforce props are alphabetically sorted, with reserved props and shorthand props first,
-  // and callbacks last
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+  // Enforce that reserved props are first, then regular props, then shorthand props, and
+  // finally callback props, eg:
+  // <Button key={id} variant="secondary" disabled onClick={handleClick} />
   'react/jsx-sort-props': [
     'error',
     {
       ignoreCase: false,
       callbacksLast: true,
-      shorthandFirst: true,
-      shorthandLast: false,
+      shorthandFirst: false,
+      shorthandLast: true,
       noSortAlphabetically: true,
       reservedFirst: true,
     },
