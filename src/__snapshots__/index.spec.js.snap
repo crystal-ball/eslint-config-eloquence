@@ -177,6 +177,7 @@ Object {
     "prettier",
     "node",
   ],
+  "reportUnusedDisableDirectives": true,
   "root": true,
   "rules": Object {
     "accessor-pairs": "error",
@@ -1208,6 +1209,7 @@ Object {
     "react-hooks",
     "testing-library",
   ],
+  "reportUnusedDisableDirectives": true,
   "root": true,
   "rules": Object {
     "accessor-pairs": "error",

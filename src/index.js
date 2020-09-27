@@ -83,6 +83,7 @@ const targetConfigs = {
  * @param {boolean} [opts.enableMDX] Enables MDX linting features
  * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
+ * @param {boolean} [opts.reportUnusedDisableDirectives] Warns on unnecessary eslint-disable directives
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
  */
@@ -91,6 +92,7 @@ module.exports = function eloquence({
   enableMDX = false,
   enableTS = true,
   ignorePatterns,
+  reportUnusedDisableDirectives = true,
   rules = {},
   target,
 }) {
@@ -102,6 +104,9 @@ module.exports = function eloquence({
     // Project custom ignore patterns, defaults to ignoring build directories
     // and forcing linting of dot files and directories
     ignorePatterns: ignorePatterns || ['!.*', 'public/*', 'dist/*'],
+
+    // Provides warnings for eslint-disable directives that aren't necessary
+    reportUnusedDisableDirectives,
 
     extends: ['prettier', ...targetConfigs[target].extends],
 
