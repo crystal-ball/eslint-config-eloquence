@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.1.0...v16.2.0) (2020-09-27)
+
+
+#### ✨ Update
+
+* Include reportUnusedDisableDirectives by default ⚙️ (#252)([78976c8](https://github.com/crystal-ball/eslint-config-eloquence/commit/78976c8f28498cce860ba088b86ffda2d867ec52)), closes [#252](https://github.com/crystal-ball/eslint-config-eloquence/issue/252)
+
 ## [16.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.0.1...v16.1.0) (2020-09-27)
 
 
