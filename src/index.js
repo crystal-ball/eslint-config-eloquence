@@ -83,6 +83,7 @@ const targetConfigs = {
  * @param {boolean} [opts.enableMDX] Enables MDX linting features
  * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
+ * @param {boolean} [opts.reportUnusedDisableDirectives] Warns on unnecessary eslint-disable directives
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
  */
