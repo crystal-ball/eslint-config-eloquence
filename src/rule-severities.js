@@ -2,8 +2,8 @@
 
 const severityOverrides = {
   // Warnings only for debuggers
-  'no-debugger': 'warning',
-  'testing-library/no-debug': 'warning',
+  'no-debugger': 'warn',
+  'testing-library/no-debug': 'warn',
 
   // These rules are non critical, stylistic rules, warn only in dev for them
   'arrow-body-style': 'warn',
