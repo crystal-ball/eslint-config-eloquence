@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [16.3.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.3.0...v16.3.1) (2020-09-28)
+
+
+#### 🛠 Fix
+
+* MDX configs ⚙️ (#254)([2099f4a](https://github.com/crystal-ball/eslint-config-eloquence/commit/2099f4ab69902de285bd382b494e0137446a6a7c)), closes [#254](https://github.com/crystal-ball/eslint-config-eloquence/issue/254)
+
 ## [16.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.2.0...v16.3.0) (2020-09-27)
 
 
