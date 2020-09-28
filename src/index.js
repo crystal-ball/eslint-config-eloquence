@@ -125,6 +125,7 @@ module.exports = function eloquence({
     plugins: [
       '@typescript-eslint',
       'import',
+      'mdx',
       'prettier',
       ...targetConfigs[target].plugins,
     ],
@@ -307,8 +308,8 @@ module.exports = function eloquence({
     ],
   }
 
-  // If MDX is enabled add rules
-  if (enableMDX) {
+  // If MDX isn't enabled remove configs
+  if (!enableMDX) {
     baseConfigs.plugins = baseConfigs.plugins.filter((plugin) => !plugin.includes('mdx'))
     baseConfigs.overrides = baseConfigs.overrides.filter(
       (override) => !override.files.includes('*.mdx'),
