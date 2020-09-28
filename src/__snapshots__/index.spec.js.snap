@@ -148,24 +148,6 @@ Object {
       },
     },
     Object {
-      "files": Array [
-        "*.mdx",
-      ],
-      "globals": Object {
-        "React": false,
-      },
-      "parser": "eslint-mdx",
-      "rules": Object {
-        "mdx/no-jsx-html-comments": "error",
-        "mdx/no-unescaped-entities": "error",
-        "mdx/no-unused-expressions": "error",
-        "mdx/remark": "error",
-        "react/jsx-sort-props": "off",
-        "react/no-unescaped-entities": "off",
-        "react/react-in-jsx-scope": "off",
-      },
-    },
-    Object {
       "env": Object {
         "node": true,
       },
@@ -1191,24 +1173,6 @@ Object {
       ],
       "rules": Object {
         "import/first": "off",
-      },
-    },
-    Object {
-      "files": Array [
-        "*.mdx",
-      ],
-      "globals": Object {
-        "React": false,
-      },
-      "parser": "eslint-mdx",
-      "rules": Object {
-        "mdx/no-jsx-html-comments": "error",
-        "mdx/no-unescaped-entities": "error",
-        "mdx/no-unused-expressions": "error",
-        "mdx/remark": "error",
-        "react/jsx-sort-props": "off",
-        "react/no-unescaped-entities": "off",
-        "react/react-in-jsx-scope": "off",
       },
     },
     Object {
