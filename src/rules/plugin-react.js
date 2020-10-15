@@ -132,9 +132,8 @@ module.exports = {
     },
   ],
 
-  // Prevent React to be incorrectly marked as unused
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
-  'react/jsx-uses-react': 'error',
+  // Rule no longer needed with Babel JSX transform
+  'react/jsx-uses-react': 'off',
 
   // Prevent variables used in JSX to be incorrectly marked as unused
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
@@ -206,9 +205,8 @@ module.exports = {
     },
   ],
 
-  // Prevent missing React when using JSX
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
-  'react/react-in-jsx-scope': 'error',
+  // Rule no longer needed with Babel JSX transform
+  'react/react-in-jsx-scope': 'off',
 
   // Require render() methods to return something
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
