@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.5.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.4.0...v16.5.0) (2020-10-15)
+
+
+#### ✨ Update
+
+* Turn off React JSX checks for new Babel transform 🤩 (#258)([eb1a199](https://github.com/crystal-ball/eslint-config-eloquence/commit/eb1a199c5e1ac8af4c991840506689a341a4655b)), closes [#258](https://github.com/crystal-ball/eslint-config-eloquence/issue/258)
+
 ## [16.4.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.3.1...v16.4.0) (2020-10-15)
 
 
