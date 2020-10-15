@@ -277,7 +277,6 @@ module.exports = function eloquence({
         },
 
         rules: {
-          'react/react-in-jsx-scope': 'off',
           'react/no-unescaped-entities': 'off',
           'react/jsx-sort-props': 'off', // Move to React configs
           'mdx/no-jsx-html-comments': 'error',
