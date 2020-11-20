@@ -25,23 +25,23 @@
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.5.0",
-    "@typescript-eslint/parser": "4.5.0",
+    "@typescript-eslint/eslint-plugin": "4.8.1",
+    "@typescript-eslint/parser": "4.8.1",
     "babel-eslint": "10.1.0",
     "confusing-browser-globals": "1.0.10",
-    "eslint": "7.12.0",
-    "eslint-config-prettier": "6.14.0",
+    "eslint": "7.14.0",
+    "eslint-config-prettier": "6.15.0",
     "eslint-formatter-pretty": "4.0.0",
     "eslint-import-resolver-node": "0.3.4",
     "eslint-plugin-cypress": "2.11.2",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jest-dom": "3.2.4",
-    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-testing-library": "3.9.2"
+    "eslint-plugin-testing-library": "3.10.1"
   },
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.8.0",
