@@ -14,6 +14,19 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.6.0...v16.7.0) (2020-11-21)
+
+
+#### ✨ Update
+
+* Package dependencies 🆙 (#267)([78a9027](https://github.com/crystal-ball/eslint-config-eloquence/commit/78a90274d7b571e8287897fb7b0fe69b99e13039)), closes [#267](https://github.com/crystal-ball/eslint-config-eloquence/issue/267)
+
+#### Chore
+
+* Update package jest to v26.6.1 🆙 (#263)([c7f948e](https://github.com/crystal-ball/eslint-config-eloquence/commit/c7f948e6b311522634ad2b9be19e40f42056a440)), closes [#263](https://github.com/crystal-ball/eslint-config-eloquence/issue/263)
+* Update package jest to v26.6.2 🆙 (#265)([18303fc](https://github.com/crystal-ball/eslint-config-eloquence/commit/18303fce6f0ddd7f565ed505db885cb897966967)), closes [#265](https://github.com/crystal-ball/eslint-config-eloquence/issue/265)
+* Update package jest to v26.6.3 🆙 (#266)([387a4e4](https://github.com/crystal-ball/eslint-config-eloquence/commit/387a4e401d07b2ee5e3b8bde98c72a35ba4c7aeb)), closes [#266](https://github.com/crystal-ball/eslint-config-eloquence/issue/266)
+
 ## [16.6.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.5.0...v16.6.0) (2020-10-25)
 
 
