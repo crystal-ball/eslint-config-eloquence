@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [16.7.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.7.0...v16.7.1) (2020-11-21)
+
+
+#### 🛠 Fix
+
+* Update testing-library version (#269)([5b10807](https://github.com/crystal-ball/eslint-config-eloquence/commit/5b1080752aedc2c612264420e2bb46c5c1646c4e)), closes [#269](https://github.com/crystal-ball/eslint-config-eloquence/issue/269)
+
+#### Chore
+
+* Add caching to CI ⚙️ (#268)([3b108da](https://github.com/crystal-ball/eslint-config-eloquence/commit/3b108daf069ff1ceff837e6c917c7ca2ae977543)), closes [#268](https://github.com/crystal-ball/eslint-config-eloquence/issue/268)
+
 ## [16.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.6.0...v16.7.0) (2020-11-21)
 
 
