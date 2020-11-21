@@ -59,6 +59,14 @@ module.exports = {
   '@typescript-eslint/ban-types': 'error',
   '@typescript-eslint/explicit-module-boundary-types': 'warn',
   '@typescript-eslint/no-array-constructor': 'error',
+
+  // Helps avoid possible confusing return statements that happen to be void,
+  // ignoreVoidOperator allows returning those values by explicityl marking them void, eg:
+  // if (missingSomeValue) return void console.error('oh no')
+  '@typescript-eslint/no-confusing-void-expression': [
+    'error',
+    { ignoreVoidOperator: true },
+  ],
   '@typescript-eslint/no-empty-function': 'error',
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-explicit-any': 'warn',
@@ -69,6 +77,10 @@ module.exports = {
   '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
   '@typescript-eslint/no-non-null-assertion': 'warn',
   '@typescript-eslint/no-this-alias': 'error',
+
+  // Prevents unnecessary type constraints, eg: <T extends unknown>
+  '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+
   '@typescript-eslint/no-unused-vars': 'warn',
   '@typescript-eslint/no-var-requires': 'error',
   '@typescript-eslint/prefer-as-const': 'error',
