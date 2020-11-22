@@ -247,6 +247,16 @@ module.exports = function eloquence({
         },
 
         rules: envRuleSeverities(NODE_ENV, {
+          // If react is enabled disable rules better handled by TS
+          ...(target === 'react'
+            ? {
+                // TS requires that fn params are typed so this rule is unnecessary
+                'react/prop-types': 'off',
+                // TS will error if required props aren't passed or default props without
+                // initializers are used in an unsafe way
+                'react/require-default-props': 'off',
+              }
+            : {}),
           ...pluginTypescript,
           ...targetTypeScript,
         }),
