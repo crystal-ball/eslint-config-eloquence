@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [16.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.7.2...v16.8.0) (2020-11-22)
+
+
+#### ✨ Update
+
+* Disable React prop rules in TS scope 🤩 (#273)([d979751](https://github.com/crystal-ball/eslint-config-eloquence/commit/d9797510c0e0323ae4e0b72e33bf882054e75f89)), closes [#273](https://github.com/crystal-ball/eslint-config-eloquence/issue/273) [#270](https://github.com/crystal-ball/eslint-config-eloquence/issue/270)
+
 ### [16.7.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.7.1...v16.7.2) (2020-11-22)
 
 
