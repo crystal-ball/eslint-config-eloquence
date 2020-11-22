@@ -81,7 +81,8 @@ module.exports = {
   // Prevents unnecessary type constraints, eg: <T extends unknown>
   '@typescript-eslint/no-unnecessary-type-constraint': 'error',
 
-  '@typescript-eslint/no-unused-vars': 'warn',
+  // Disallow unused variables (including types)
+  '@typescript-eslint/no-unused-vars': 'error',
   '@typescript-eslint/no-var-requires': 'error',
   '@typescript-eslint/prefer-as-const': 'error',
   '@typescript-eslint/prefer-namespace-keyword': 'error',
