@@ -1179,6 +1179,8 @@ Object {
         "prefer-const": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
         "valid-typeof": "off",
       },
     },
