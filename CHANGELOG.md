@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [17.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.9.0...v17.0.0) (2020-11-28)
+
+
+### 💥 Breaking Changes!
+
+* TypeScript enums are no longer allowed
+
+
+#### ✨ Update
+
+* Forbid using TypeScript enums 💥 (#276)([e6a135e](https://github.com/crystal-ball/eslint-config-eloquence/commit/e6a135eab6af140e8876c8505634a670541e6e5e)), closes [#276](https://github.com/crystal-ball/eslint-config-eloquence/issue/276)
+
 ## [16.9.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v16.8.0...v16.9.0) (2020-11-28)
 
 
