@@ -74,11 +74,7 @@ are downgraded to warnings and all formatting rules are silenced. See
 #### Install Dependencies
 
 ```sh
-# All projects:
 npm i eslint-config-eloquence prettier -D
-
-# TypeScript projects
-npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
 _Eloquence recommends adding [Prettier][] as an exact version project dependency
@@ -222,9 +218,11 @@ In general, the Eloquence ruleset tries to encourage these coding practices:
 ## 👮‍♀️ TypeScript
 
 TypeScript rules are supported out of the box for React and Node configurations
-using an `override`. Projects using TS must install
-`@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` and provide a
-`tsconfig` in the project root.
+using an `override`. Projects using TS must provide a `tsconfig` in the project
+root.
+
+Eloquence supports TS as a supertype for adding types only and forbids using TS
+enums.
 
 #### VSCode
 

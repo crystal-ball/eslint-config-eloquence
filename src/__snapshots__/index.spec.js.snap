@@ -707,6 +707,10 @@ Object {
     "no-restricted-syntax": Array [
       "error",
       Object {
+        "message": "Prefer using string literal unions or discriminated unions over enums",
+        "selector": "TSEnumDeclaration",
+      },
+      Object {
         "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
         "selector": "ForInStatement",
       },
@@ -1996,6 +2000,10 @@ Object {
     ],
     "no-restricted-syntax": Array [
       "error",
+      Object {
+        "message": "Prefer using string literal unions or discriminated unions over enums",
+        "selector": "TSEnumDeclaration",
+      },
       Object {
         "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
         "selector": "ForInStatement",

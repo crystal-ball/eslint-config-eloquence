@@ -246,6 +246,10 @@ module.exports = {
   'no-restricted-syntax': [
     'error',
     {
+      selector: 'TSEnumDeclaration',
+      message: 'Prefer using string literal unions or discriminated unions over enums',
+    },
+    {
       selector: 'ForInStatement',
       message:
         'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
