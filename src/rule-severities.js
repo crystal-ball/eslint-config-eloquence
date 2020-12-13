@@ -6,7 +6,6 @@ const severityOverrides = {
   'testing-library/no-debug': 'warn',
 
   // These rules are non critical, stylistic rules, warn only in dev for them
-  'arrow-body-style': 'warn',
   'class-methods-use-this': 'warn',
   'no-unused-vars': 'warn',
   'prefer-const': 'warn',

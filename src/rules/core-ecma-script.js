@@ -4,6 +4,8 @@
  * ESLint core 'ES6' rules provide linting for new syntax features
  */
 module.exports = {
+  // ⓘ arrow-body-style is managed/disabled by the Prettier plugin
+
   // disallow modifying variables that are declared using const
   // https://eslint.org/docs/rules/no-const-assign
   'no-const-assign': 'error',
@@ -27,6 +29,8 @@ module.exports = {
   // Disallow renaming destructuring assignments, imports, and exports to the same name
   // https://eslint.org/docs/rules/no-useless-rename
   'no-useless-rename': 'error',
+
+  // ⓘ prefer-arrow-callback is managed/disabled by the Prettier plugin
 
   // disallow generator functions that do not have yield
   // https://eslint.org/docs/rules/require-yield
