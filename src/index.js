@@ -108,7 +108,7 @@ module.exports = function eloquence({
     // Provides warnings for eslint-disable directives that aren't necessary
     reportUnusedDisableDirectives,
 
-    extends: ['prettier', ...targetConfigs[target].extends],
+    extends: [...targetConfigs[target].extends, 'plugin:prettier/recommended'],
 
     // Set parser to Babel using latest ECMA version and ESModules with the goal of
     // staying as close to current syntax as possible
@@ -122,13 +122,7 @@ module.exports = function eloquence({
     },
 
     // Plugins for imports, accessibility and react
-    plugins: [
-      '@typescript-eslint',
-      'import',
-      'mdx',
-      'prettier',
-      ...targetConfigs[target].plugins,
-    ],
+    plugins: ['@typescript-eslint', 'import', 'mdx', ...targetConfigs[target].plugins],
 
     settings: {
       // Increase import cache lifetime to 60s
@@ -187,9 +181,7 @@ module.exports = function eloquence({
       // Custom project rules have priority over package rules
       ...rules,
 
-      // Prettier formatting enforcement via Prettier *plugin*
-      // (this is different from the rule overrides set in the Prettier *config*)
-      'prettier/prettier': 'error',
+      // ⓘ Prettier formatting enforcement enabled by Prettier *plugin*
     }),
 
     // --------------------------------------------------------
