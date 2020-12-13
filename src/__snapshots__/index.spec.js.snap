@@ -8,8 +8,8 @@ Object {
     "node": true,
   },
   "extends": Array [
-    "prettier",
     "plugin:node/recommended",
+    "plugin:prettier/recommended",
   ],
   "ignorePatterns": Array [
     "!.*",
@@ -183,7 +183,6 @@ Object {
   "plugins": Array [
     "@typescript-eslint",
     "import",
-    "prettier",
     "node",
   ],
   "reportUnusedDisableDirectives": true,
@@ -944,7 +943,6 @@ Object {
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "prettier/prettier": "error",
     "radix": "error",
     "require-atomic-updates": "off",
     "require-await": "off",
@@ -1052,7 +1050,7 @@ Object {
     "node": false,
   },
   "extends": Array [
-    "prettier",
+    "plugin:prettier/recommended",
   ],
   "ignorePatterns": Array [
     "!.*",
@@ -1226,7 +1224,6 @@ Object {
   "plugins": Array [
     "@typescript-eslint",
     "import",
-    "prettier",
     "jest-dom",
     "jsx-a11y",
     "react",
@@ -2164,7 +2161,6 @@ Object {
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "prettier/prettier": "error",
     "radix": "error",
     "react-hooks/exhaustive-deps": "error",
     "react-hooks/rules-of-hooks": "error",
