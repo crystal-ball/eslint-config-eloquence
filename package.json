@@ -47,8 +47,8 @@
     "@crystal-ball/commitizen-base": "2.9.0",
     "@crystal-ball/prettier-base": "2.6.0",
     "@crystal-ball/semantic-release-base": "2.25.0",
-    "@types/jest": "26.0.19",
-    "husky": "4.3.6",
+    "@types/jest": "26.0.20",
+    "husky": "4.3.7",
     "jest": "26.6.3"
   },
   "prettier": "@crystal-ball/prettier-base",
