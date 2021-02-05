@@ -14,6 +14,19 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [17.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.2.0...v17.3.0) (2021-02-05)
+
+
+#### ✨ Update
+
+* Dependencies 🆙 (#284)([e40e1d4](https://github.com/crystal-ball/eslint-config-eloquence/commit/e40e1d458cedb8ef58efac90b56157da8bf459f1)), closes [#284](https://github.com/crystal-ball/eslint-config-eloquence/issue/284)
+
+#### Chore, Upgrade
+
+* Update devDependencies 🆙 (#288)([d6b5016](https://github.com/crystal-ball/eslint-config-eloquence/commit/d6b5016c6e98c88d8511c7bbfa9a161bf1804448)), closes [#288](https://github.com/crystal-ball/eslint-config-eloquence/issue/288)
+* Update package husky to v4.3.8 🆙 (#289)([8d4416b](https://github.com/crystal-ball/eslint-config-eloquence/commit/8d4416b6c7c68a3ffc4c5f5dde10ba9495045373)), closes [#289](https://github.com/crystal-ball/eslint-config-eloquence/issue/289)
+* Bump node-notifier from 8.0.0 to 8.0.1 (#285)([3aecc9c](https://github.com/crystal-ball/eslint-config-eloquence/commit/3aecc9c2c4f9d6df5fbba416abf07c5af8f10b8c)), closes [#285](https://github.com/crystal-ball/eslint-config-eloquence/issue/285)
+
 ## [17.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.1.0...v17.2.0) (2020-12-13)
 
 
