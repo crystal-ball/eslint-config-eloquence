@@ -410,3 +410,21 @@ module.exports = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
   'react/prefer-read-only-props': 'off',
 }
+
+// React rules managed by Prettier
+// Ref: (https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+// react/jsx-child-element-spacing
+// react/jsx-closing-bracket-location
+// react/jsx-closing-tag-location
+// react/jsx-curly-newline
+// react/jsx-curly-spacing
+// react/jsx-equals-spacing
+// react/jsx-first-prop-new-line
+// react/jsx-indent
+// react/jsx-indent-props
+// react/jsx-max-props-per-line
+// react/jsx-newline
+// react/jsx-one-expression-per-line
+// react/jsx-props-no-multi-spaces
+// react/jsx-tag-spacing
+// react/jsx-wrap-multilines
