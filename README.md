@@ -334,3 +334,5 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [prettier options]:https://prettier.io/docs/en/options.html
 [prettier]:https://prettier.io/
 <!-- prettier-ignore-end -->
+
+<!-- release -->
