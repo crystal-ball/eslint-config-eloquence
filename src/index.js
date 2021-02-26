@@ -34,7 +34,6 @@ const pluginTypescript = require('./rules/plugin-typescript')
 
 const targetNode = require('./rules/target-node')
 const targetReact = require('./rules/target-react')
-const targetTypeScript = require('./rules/target-typescript')
 
 const envRuleSeverities = require('./rule-severities')
 
@@ -108,7 +107,7 @@ module.exports = function eloquence({
     // Provides warnings for eslint-disable directives that aren't necessary
     reportUnusedDisableDirectives,
 
-    extends: [...targetConfigs[target].extends, 'plugin:prettier/recommended'],
+    extends: targetConfigs[target].extends,
 
     // Set parser to Babel using latest ECMA version and ESModules with the goal of
     // staying as close to current syntax as possible
@@ -122,7 +121,13 @@ module.exports = function eloquence({
     },
 
     // Plugins for imports, accessibility and react
-    plugins: ['@typescript-eslint', 'import', 'mdx', ...targetConfigs[target].plugins],
+    plugins: [
+      '@typescript-eslint',
+      'import',
+      'mdx',
+      'prettier',
+      ...targetConfigs[target].plugins,
+    ],
 
     settings: {
       // Increase import cache lifetime to 60s
@@ -182,6 +187,10 @@ module.exports = function eloquence({
       ...rules,
 
       // ⓘ Prettier formatting enforcement enabled by Prettier *plugin*
+      'prettier/prettier': 'error',
+      // Core rules that conflict with Prettier not disabled by eslint-config-prettier
+      'arrow-body-style': 'off',
+      'prefer-arrow-callback': 'off',
     }),
 
     // --------------------------------------------------------
@@ -239,18 +248,13 @@ module.exports = function eloquence({
         },
 
         rules: envRuleSeverities(NODE_ENV, {
-          // If react is enabled disable rules better handled by TS
-          ...(target === 'react'
-            ? {
-                // TS requires that fn params are typed so this rule is unnecessary
-                'react/prop-types': 'off',
-                // TS will error if required props aren't passed or default props without
-                // initializers are used in an unsafe way
-                'react/require-default-props': 'off',
-              }
-            : {}),
+          // TS requires that fn params are typed so this rule is unnecessary
+          'react/prop-types': 'off',
+          // TS will error if required props aren't passed or default props without
+          // initializers are used in an unsafe way
+          'react/require-default-props': 'off',
+
           ...pluginTypescript,
-          ...targetTypeScript,
         }),
       },
 

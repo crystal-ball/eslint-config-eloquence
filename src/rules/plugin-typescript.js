@@ -88,3 +88,20 @@ module.exports = {
   '@typescript-eslint/prefer-namespace-keyword': 'error',
   '@typescript-eslint/triple-slash-reference': 'error',
 }
+
+// TypeScript rules managed by Prettier
+// Ref: (https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+// @typescript-eslint/brace-style
+// @typescript-eslint/comma-dangle
+// @typescript-eslint/comma-spacing
+// @typescript-eslint/func-call-spacing
+// @typescript-eslint/indent
+// @typescript-eslint/keyword-spacing
+// @typescript-eslint/member-delimiter-style
+// @typescript-eslint/no-extra-parens
+// @typescript-eslint/no-extra-semi
+// @typescript-eslint/object-curly-spacing
+// @typescript-eslint/semi
+// @typescript-eslint/space-before-function-paren
+// @typescript-eslint/space-infix-ops
+// @typescript-eslint/type-annotation-spacing
