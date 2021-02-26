@@ -47,7 +47,7 @@ jobs:
   publish:
     name: Continuous Deployment
     needs: test
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -65,7 +65,7 @@ jobs:
       - name: Install
         run: CI=true npm ci
       - name: Release
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: npx semantic-release
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_GH_TOKEN }}
