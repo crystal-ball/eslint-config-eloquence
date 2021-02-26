@@ -19,7 +19,7 @@
   ],
   "license": "ISC",
   "scripts": {
-    "commit": "cz commit",
+    "commit": "cz",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "NODE_ENV=test eslint --format=pretty *.js src",
     "test:unit": "NODE_ENV=test jest src",
@@ -50,21 +50,5 @@
     "@crystal-ball/semantic-release-base": "2.28.0",
     "@types/jest": "26.0.20",
     "jest": "26.6.3"
-  },
-  "prettier": "@crystal-ball/prettier-base",
-  "config": {
-    "commitizen": {
-      "path": "@crystal-ball/commitizen-base"
-    }
-  },
-  "release": {
-    "extends": [
-      "@crystal-ball/semantic-release-base"
-    ]
-  },
-  "renovate": {
-    "extends": [
-      "github>crystal-ball/renovate-base:library"
-    ]
   }
 }
