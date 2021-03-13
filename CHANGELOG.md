@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [17.7.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.6.0...v17.7.0) (2021-03-13)
+
+
+#### ✨ Update
+
+* Dependencies 🆙 (#305)([8aee4f9](https://github.com/crystal-ball/eslint-config-eloquence/commit/8aee4f95e90fada0e7bd4530b90fe4e3ae7f6dcc)), closes [#305](https://github.com/crystal-ball/eslint-config-eloquence/issue/305)
+
+#### Chore
+
+* Fix semantic-release branch configuration ⚙️ (#304)([19d8e57](https://github.com/crystal-ball/eslint-config-eloquence/commit/19d8e578d1d8e2f1c2311c27d41286d5e3a3bc88)), closes [#304](https://github.com/crystal-ball/eslint-config-eloquence/issue/304)
+* Rename default branch to main 💖 (#303)([db8accf](https://github.com/crystal-ball/eslint-config-eloquence/commit/db8accf7e6bcccb6dc3eeaffe99cee615d55eac6)), closes [#303](https://github.com/crystal-ball/eslint-config-eloquence/issue/303)
+
 ## [17.6.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.5.0...v17.6.0) (2021-02-26)
 
 
