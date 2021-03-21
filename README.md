@@ -293,7 +293,9 @@ this package.)_
 - [`eslint-config-prettier`][]
 - [`eslint-plugin-cypress`][]
 - [`eslint-plugin-import`][]
+- [`eslint-plugin-jest][]
 - [`eslint-plugin-jest-dom`][]
+- [`eslint-plugin-jest-formatting][]
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
 - [`eslint-plugin-react`][]
@@ -323,7 +325,9 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
 [`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
+[`eslint-plugin-jest]:https://github.com/jest-community/eslint-plugin-jest
 [`eslint-plugin-jest-dom`]:https://github.com/testing-library/eslint-plugin-jest-dom
+[`eslint-plugin-jest-formatting]:https://github.com/dangreenisrael/eslint-plugin-jest-formatting
 [`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react
