@@ -3,31 +3,35 @@
 const ruleSeverities = require('./rule-severities')
 
 describe('ruleSeverities', () => {
-  test('Rules are not downgraded in test', () => {
+  it('Rules are not downgraded in test', () => {
     const rules = ruleSeverities('test', { 'no-unused-vars': 'error' })
-    expect(rules['no-unused-vars']).toEqual('error')
+
+    expect(rules['no-unused-vars']).toStrictEqual('error')
   })
 
-  test('String value rules are downgraded', () => {
+  it('String value rules are downgraded', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'error' })
-    expect(rules['no-unused-vars']).toEqual('warn')
+
+    expect(rules['no-unused-vars']).toStrictEqual('warn')
   })
 
-  test('Array value rules are downgraded', () => {
+  it('Array value rules are downgraded', () => {
     const rules = ruleSeverities('development', {
       'no-unused-vars': [
         'error',
         { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
       ],
     })
-    expect(rules['no-unused-vars']).toEqual([
+
+    expect(rules['no-unused-vars']).toStrictEqual([
       'warn',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
     ])
   })
 
-  test('Disabled rules stay disabled', () => {
+  it('Disabled rules stay disabled', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'off' })
-    expect(rules['no-unused-vars']).toEqual('off')
+
+    expect(rules['no-unused-vars']).toStrictEqual('off')
   })
 })

@@ -15,6 +15,7 @@ module.exports = {
   'jest-dom/prefer-in-document': 'error',
   'jest-dom/prefer-required': 'error',
   'jest-dom/prefer-to-have-attribute': 'error',
+  'jest-dom/prefer-to-have-class': 'error',
   'jest-dom/prefer-to-have-style': 'error',
   'jest-dom/prefer-to-have-text-content': 'error',
 }

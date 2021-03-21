@@ -12,6 +12,9 @@ module.exports = {
   // Use closures to access the async values returned by Commands
   'cypress/no-assigning-return-values': 'error',
 
+  // Prevent accidentally making Cypress tests async
+  'cypress/no-async-tests': 'error',
+
   // Disallow using force:true with action commands
   'cypress/no-force': 'error',
 
