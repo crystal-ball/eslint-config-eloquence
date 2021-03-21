@@ -24,7 +24,9 @@ const coreVariables = require('./rules/core-variables')
 
 const pluginCypress = require('./rules/plugin-cypress')
 const pluginImport = require('./rules/plugin-import')
+const pluginJest = require('./rules/plugin-jest')
 const pluginJestDom = require('./rules/plugin-jest-dom')
+const pluginJestFormatting = require('./rules/plugin-jest-formatting')
 const pluginNode = require('./rules/plugin-node')
 const pluginReact = require('./rules/plugin-react')
 const pluginReactA11y = require('./rules/plugin-react-a11y')
@@ -124,7 +126,6 @@ module.exports = function eloquence({
     plugins: [
       '@typescript-eslint',
       'import',
-      'mdx',
       'prettier',
       ...targetConfigs[target].plugins,
     ],
@@ -262,6 +263,7 @@ module.exports = function eloquence({
       {
         files: ['*.spec.js'],
 
+        plugins: ['jest', 'jest-formatting'],
         env: {
           jest: true,
         },
@@ -270,24 +272,33 @@ module.exports = function eloquence({
           // Under the hood Jest hoists these to the top of the file and it helps
           // visually distinguish modules that are being replaced with mocks
           'import/first': 'off',
+          ...pluginJest,
+          ...pluginJestFormatting,
         },
       },
 
       // --- 📝 MDX files --------------------------
+      // 📝: https://github.com/mdx-js/eslint-mdx/blob/master/packages/eslint-plugin-mdx/src/configs/recommended.ts
       {
         files: ['*.mdx'],
-
         parser: 'eslint-mdx',
+        plugins: ['mdx'],
+        processor: 'mdx/remark',
+
         globals: {
-          React: false, // MDX injects React
+          React: 'readonly',
         },
 
         rules: {
-          'react/no-unescaped-entities': 'off',
-          'react/jsx-sort-props': 'off', // Move to React configs
+          'lines-between-class-members': 'off',
+          'no-unused-expressions': 'off',
+          'react/react-in-jsx-scope': 'off',
+          'react/jsx-no-undef': ['error', { allowGlobals: true }],
+          // HTML style comments are not valid in MDX
           'mdx/no-jsx-html-comments': 'error',
-          'mdx/no-unescaped-entities': 'error',
+          // Not sure what this is...
           'mdx/no-unused-expressions': 'error',
+          // Integration with remark plugins
           'mdx/remark': 'error',
         },
       },
