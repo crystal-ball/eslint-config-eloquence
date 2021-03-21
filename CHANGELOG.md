@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [18.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.8.0...v18.0.0) (2021-03-21)
+
+
+### 💥 Breaking Changes!
+
+* Jest tests are now more strictly linted, small updates likely needed
+
+
+#### 💖 New
+
+* Linting plugins for Jest 💖 (#307)([7b8a3ba](https://github.com/crystal-ball/eslint-config-eloquence/commit/7b8a3ba74a95325f2029d0b61a04803d42cbc4a2)), closes [#307](https://github.com/crystal-ball/eslint-config-eloquence/issue/307)
+
 ## [17.8.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.7.0...v17.8.0) (2021-03-20)
 
 
