@@ -87,6 +87,7 @@ const targetConfigs = {
  * @param {boolean} [opts.reportUnusedDisableDirectives] Warns on unnecessary eslint-disable directives
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
+ * @param {string[]} [opts.tsconfigs] Project
  */
 module.exports = function eloquence({
   enableESM = true,
@@ -96,6 +97,7 @@ module.exports = function eloquence({
   reportUnusedDisableDirectives = true,
   rules = {},
   target,
+  tsconfigs = ['./tsconfig.json'],
 }) {
   const baseConfigs = {
     // Default expectation is a single config at root of project, with overrides
@@ -244,8 +246,9 @@ module.exports = function eloquence({
         parserOptions: {
           // TS always uses ESM
           sourceType: 'module',
-          // Projects must provide a TS config
-          project: './tsconfig.json',
+          // Projects must provide a TS config, this needs to be configurable to support
+          // applications possibly including multiple tsConfigs for Cypress
+          project: tsconfigs,
         },
 
         rules: envRuleSeverities(NODE_ENV, {

@@ -63,7 +63,9 @@ Object {
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": Object {
-        "project": "./tsconfig.json",
+        "project": Array [
+          "./tsconfig.json",
+        ],
         "sourceType": "module",
       },
       "rules": Object {
@@ -1152,7 +1154,9 @@ Object {
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": Object {
-        "project": "./tsconfig.json",
+        "project": Array [
+          "./tsconfig.json",
+        ],
         "sourceType": "module",
       },
       "rules": Object {
