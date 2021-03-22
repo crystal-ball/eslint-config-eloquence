@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [18.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v18.0.0...v18.1.0) (2021-03-22)
+
+
+#### ✨ Update
+
+* Add ability to configure TS parser projects 🤩 (#310)([d3afaf5](https://github.com/crystal-ball/eslint-config-eloquence/commit/d3afaf519b7260bd9083088f9e95a1a557a77c4d)), closes [#310](https://github.com/crystal-ball/eslint-config-eloquence/issue/310)
+
+#### Chore, Docs
+
+* Lockfile maintenance ⚙️ (#308)([4b1aa2d](https://github.com/crystal-ball/eslint-config-eloquence/commit/4b1aa2d73adfbc1570a2af4966474f4dec6b1c76)), closes [#308](https://github.com/crystal-ball/eslint-config-eloquence/issue/308)
+* Add new Jest plugins to README 📝 (#309)([517a55a](https://github.com/crystal-ball/eslint-config-eloquence/commit/517a55a6acce0e07b9c5b2ce0577b8a7f64ffd6c)), closes [#309](https://github.com/crystal-ball/eslint-config-eloquence/issue/309)
+
 ## [18.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v17.8.0...v18.0.0) (2021-03-21)
 
 
