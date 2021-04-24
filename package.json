@@ -29,9 +29,10 @@
     "format": "prettier --write '*.{js,json,md}' '**/*.{js,json,md,mdx,scss}' !CHANGELOG.md"
   },
   "dependencies": {
+    "@babel/core": "7",
+    "@babel/eslint-parser": "7.13.14",
     "@typescript-eslint/eslint-plugin": "4.21.0",
     "@typescript-eslint/parser": "4.21.0",
-    "babel-eslint": "10.1.0",
     "confusing-browser-globals": "1.0.10",
     "eslint": "7.23.0",
     "eslint-config-prettier": "8.1.0",

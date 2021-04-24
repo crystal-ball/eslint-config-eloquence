@@ -84,6 +84,7 @@ const targetConfigs = {
  * @param {boolean} [opts.enableMDX] Enables MDX linting features
  * @param {boolean} [opts.enableTS] Enables TypeScript linting features
  * @param {string[]} [opts.ignorePatterns] Array of paths that will be ignored
+ * @param {'default' | '@babel/eslint-parser'} [opts.parser] Parser override option
  * @param {boolean} [opts.reportUnusedDisableDirectives] Warns on unnecessary eslint-disable directives
  * @param {{[key: string]: unknown}} [opts.rules]
  * @param {'node'|'react'} opts.target
@@ -94,6 +95,7 @@ module.exports = function eloquence({
   enableMDX = false,
   enableTS = true,
   ignorePatterns,
+  parser = '@babel/eslint-parser',
   reportUnusedDisableDirectives = true,
   rules = {},
   target,
@@ -115,7 +117,7 @@ module.exports = function eloquence({
 
     // Set parser to Babel using latest ECMA version and ESModules with the goal of
     // staying as close to current syntax as possible
-    parser: 'babel-eslint',
+    parser: parser === 'default' ? undefined : parser,
     parserOptions: {
       ecmaVersion: 12,
       sourceType: enableESM ? 'module' : 'script',
