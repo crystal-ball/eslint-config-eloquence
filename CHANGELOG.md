@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [19.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v18.3.0...v19.0.0) (2021-04-24)
+
+
+### 💥 Breaking Changes!
+
+* Projects without a Babel config must pass `parser: "default"`
+
+
+#### 💖 New
+
+* Babel parser package update 💥 (#316)([7ae0f7c](https://github.com/crystal-ball/eslint-config-eloquence/commit/7ae0f7c68250d55503f77e84e9f9ac4fadfba856)), closes [#316](https://github.com/crystal-ball/eslint-config-eloquence/issue/316)
+
 ## [18.3.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v18.2.0...v18.3.0) (2021-04-09)
 
 
