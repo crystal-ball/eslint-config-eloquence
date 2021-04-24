@@ -221,7 +221,7 @@ Object {
       },
     },
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "jsx": true,
@@ -1312,7 +1312,7 @@ Object {
       },
     },
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": Object {
     "ecmaFeatures": Object {
       "jsx": true,
