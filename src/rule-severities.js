@@ -38,6 +38,11 @@ const severityOverrides = {
   'prettier/prettier': 'off',
 }
 
+/**
+ * @param {string | undefined} env
+ * @param {Record<string, any>} rules
+ * @returns {Record<string,any>} Env adjusted rules
+ */
 module.exports = (env, rules) => {
   // During tests linting, rule severity levels are not overridden
   if (env === 'test') return rules

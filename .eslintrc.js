@@ -1,10 +1,12 @@
 'use strict'
 
-const eloquence = require('./src/index')
+module.exports = {
+  extends: ['./node.js'],
 
-module.exports = eloquence({
-  target: 'node',
-  enableESM: false,
-  enableTS: false,
-  parser: 'default',
-})
+  rules: {
+    // CommonJS rule overrides
+    'import/extensions': 'off',
+    'import/no-useless-path-segments': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+  },
+}
