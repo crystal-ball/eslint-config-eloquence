@@ -55,6 +55,6 @@
     "@crystal-ball/prettier-base": "2.7.0",
     "@crystal-ball/semantic-release-base": "2.32.0",
     "@types/jest": "26.0.23",
-    "jest": "27.0.3"
+    "jest": "27.0.6"
   }
 }
