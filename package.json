@@ -52,9 +52,9 @@
   },
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.11.0",
-    "@crystal-ball/prettier-base": "2.7.0",
-    "@crystal-ball/semantic-release-base": "2.32.0",
+    "@crystal-ball/prettier-base": "2.8.0",
+    "@crystal-ball/semantic-release-base": "2.33.0",
     "@types/jest": "26.0.24",
-    "jest": "27.0.6"
+    "jest": "27.1.0"
   }
 }
