@@ -14,6 +14,27 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [20.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v19.1.0...v20.0.0) (2021-09-24)
+
+
+### 💥 Breaking Changes!
+
+* Projects are assumed to be using ESModules and TS by default
+
+
+#### 💖 New
+
+* All in on ESM and TS (#323)([ed59cfa](https://github.com/crystal-ball/eslint-config-eloquence/commit/ed59cfacc7f275d30bdbd0779e73e8ba1557724e)), closes [#323](https://github.com/crystal-ball/eslint-config-eloquence/issue/323)
+
+#### Chore
+
+* Update devDependencies 🆙 (#324)([c8bbb3b](https://github.com/crystal-ball/eslint-config-eloquence/commit/c8bbb3bd4857c13045f23e93f811c7c3e2ba0e5f)), closes [#324](https://github.com/crystal-ball/eslint-config-eloquence/issue/324)
+* Update devDependencies 🆙 (#329)([8922f3f](https://github.com/crystal-ball/eslint-config-eloquence/commit/8922f3f1bbbd402aba94120de27cf2656b5ff2f8)), closes [#329](https://github.com/crystal-ball/eslint-config-eloquence/issue/329)
+* Update package @types/jest to v26.0.24 🆙 (#328)([9f48e18](https://github.com/crystal-ball/eslint-config-eloquence/commit/9f48e183719b9f7b566352cc9ccbf26936452e06)), closes [#328](https://github.com/crystal-ball/eslint-config-eloquence/issue/328)
+* Update package @types/jest to v27 🆙 (#330)([25bc422](https://github.com/crystal-ball/eslint-config-eloquence/commit/25bc42211a5317c91713f5bd742bfa3ec7f2f1f2)), closes [#330](https://github.com/crystal-ball/eslint-config-eloquence/issue/330)
+* Update package jest to v27 🆙 (#326)([28d34bb](https://github.com/crystal-ball/eslint-config-eloquence/commit/28d34bbd6adc4cb3ed8a1e5f62819a6ed24bd780)), closes [#326](https://github.com/crystal-ball/eslint-config-eloquence/issue/326)
+* Update package jest to v27.0.6 🆙 (#327)([b171b53](https://github.com/crystal-ball/eslint-config-eloquence/commit/b171b5378d86401651cd174c7f067b798770359d)), closes [#327](https://github.com/crystal-ball/eslint-config-eloquence/issue/327)
+
 ## [19.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v19.0.0...v19.1.0) (2021-05-02)
 
 
