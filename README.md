@@ -74,12 +74,14 @@ are downgraded to warnings and all formatting rules are silenced. See
 #### Install Dependencies
 
 ```sh
-npm i eslint-config-eloquence prettier -D
+npm i eslint-config-eloquence prettier typescript -D
 ```
 
-_Eloquence recommends adding [Prettier][] as an exact version project dependency
-to ensure all contributors are using the same version of Prettier, while still
-allowing projects to update Prettier versions on their own schedule._
+_[Prettier][] and [TypeScript][] are peer dependencies of Eloquence, they are
+not installed as dependencies to encourage each project installs them as an
+exact version project dependency to ensure all contributors are using the same
+version, and still allowing projects to update Prettier versions on their own
+schedule._
 
 #### Configure ESLint
 
@@ -89,50 +91,58 @@ The minimum configuration is the `target` option:
 // .eslintrc.js
 'use strict'
 
-const eloquence = require('eslint-config-eloquence')
-
-module.exports = eloquence({ target: 'react|node' })
+module.exports = {
+  // Extend either the React or Node base configs
+  extends: ['eloquence/{react,node}'],
+}
 ```
 
-- Pass `'node'` - for Node services and NPM packages
-- Pass `'react'` - for React applications bundled with webpack
+- Extend `'eloquence/node'` - for Node services and NPM packages
+- Extend `'eloquence/react'` - for React applications bundled with webpack
 
-#### Option `enableESM`
+#### ESM configs
 
-The `enableESM` option can be used to explicitly declare whether a project is
-using ESModules or CommonJS. The default value is `true`.
+Note all projects are configured for ESM. Node.js projects using CommonJS will
+need to override these rules:
 
-#### Option `ignorePatterns`
+```javascript
+// .eslintrc.js
+'use strict'
 
-Files and directories can be ignored by passing an array of string patterns. The
-default value of `['!.*', 'public/*', 'dist/*']` will ignore two common build
-output directories (public and dist), and will force linting in dotfiles and
-directories beginning with dots (which are ignored by default by ESLint).
+module.exports = {
+  extends: ['eloquence/node'],
+  rules: {
+    // CommonJS rule overrides
+    'import/extensions': 'off',
+    'import/no-useless-path-segments': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+  },
+}
+```
+
+#### Ignore patterns config `ignorePatterns`
+
+By default `ignorePatterns` is configured to `['!.*', 'public/*', 'dist/*']`
+which will ignore two common build output directories, and will force linting in
+dotfiles and directories beginning with dots (which are ignored by default by
+ESLint).
 
 _Note that code coverage output already has ignore configurations and shouldn't
 need addtiional configs._
 
-#### Option `rules`
-
-Final rule values can be overridden in a project by passing a `rules` option
-with the override values. _(Values are used as is, it isn't possible to pass
-only a severity override at this time.)_
-
-#### Option reportUnusedDisableDirectives
+#### Report unused disable directives
 
 Any unnecessary `eslint-disable` directive will cause a warning _(This helps
-with maintenance of linting overrides)_. This default behavior can be overridden
-with the `reportUnusedDisableDirectives` prop:
+with maintenance of linting overrides)_. This can be overridden by changing the
+`reportUnusedDisableDirectives` value:
 
 ```javascript
 'use strict'
 
-const eloquence = require('eslint-config-eloquence')
-
-module.exports = eloquence({
-  target: 'react',
+module.exports = {
+  extends: ['eloquence/node'],
   reportUnusedDisableDirectives: false,
-})
+}
 ```
 
 #### Pretty print output

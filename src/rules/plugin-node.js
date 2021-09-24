@@ -37,8 +37,7 @@ module.exports = {
   // Disallow process.exit(), ansyc stdout operations or logging may be terminated
   // it's better to call process.exitCode() and use an exception to allow Node
   // to terminate the process.
-  // ⚙️ Explicitly set in src overrides
-  'node/no-process-exit': 'off',
+  'node/no-process-exit': 'error',
 
   // Any bin file must be published
   'node/no-unpublished-bin': 'error',

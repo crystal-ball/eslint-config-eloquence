@@ -30,7 +30,7 @@ const resolve = function resolve(source, file, config) {
   })
 
   return nodeResolver.resolve(dealiasedSource, file, {
-    extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx'],
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     ...config,
   })
 }

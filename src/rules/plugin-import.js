@@ -140,8 +140,7 @@ module.exports = {
   'import/no-namespace': 'off',
 
   // Ensure consistent use of file extension within the import path
-  // ⚙️ Configured explicitly by Node/React target
-  'import/extensions': 'off',
+  'import/extensions': ['error', 'never'],
 
   // Require that Node built-ins and node_module imports are grouped before
   // application imports.
