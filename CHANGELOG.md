@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [20.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.0...v20.0.1) (2021-09-25)
+
+
+#### 🛠 Fix
+
+* Ignore pattern matching ⚙️([e344169](https://github.com/crystal-ball/eslint-config-eloquence/commit/e3441693a38bf8a6a263cd7aea205b6cfb6e4671))
+
 ## [20.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v19.1.0...v20.0.0) (2021-09-24)
 
 
