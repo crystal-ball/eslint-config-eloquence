@@ -33,7 +33,7 @@ module.exports = {
 
   // Project custom ignore patterns, defaults to ignoring build directories
   // and forcing linting of dot files and directories
-  ignorePatterns: ['!.*', 'coverage/*', 'public/*', 'dist/*'],
+  ignorePatterns: ['!.*', 'coverage', 'node_modules', 'public', 'dist'],
 
   // Provides warnings for eslint-disable directives that aren't necessary
   reportUnusedDisableDirectives: true,
