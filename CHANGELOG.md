@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [20.0.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.1...v20.0.2) (2021-11-21)
+
+
+#### 🛠 Fix
+
+* React import and override fixes 🎊 (#335)([c963c0f](https://github.com/crystal-ball/eslint-config-eloquence/commit/c963c0faeb8755629e251bba18d0bd3204d5445e)), closes [#335](https://github.com/crystal-ball/eslint-config-eloquence/issue/335)
+
+#### Chore
+
+* Update devDependencies 🆙 (#331)([46571cb](https://github.com/crystal-ball/eslint-config-eloquence/commit/46571cb82c3daf96d2a7f4ee39c3d418a3ac1077)), closes [#331](https://github.com/crystal-ball/eslint-config-eloquence/issue/331)
+* Update devDependencies 🆙 (#332)([c30f78a](https://github.com/crystal-ball/eslint-config-eloquence/commit/c30f78a440bf900f228134e704cbdd69c33b65e4)), closes [#332](https://github.com/crystal-ball/eslint-config-eloquence/issue/332)
+
 ### [20.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.0...v20.0.1) (2021-09-25)
 
 
