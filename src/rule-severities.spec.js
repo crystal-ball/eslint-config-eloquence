@@ -6,13 +6,13 @@ describe('ruleSeverities', () => {
   it('Rules are not downgraded in test', () => {
     const rules = ruleSeverities('test', { 'no-unused-vars': 'error' })
 
-    expect(rules['no-unused-vars']).toStrictEqual('error')
+    expect(rules['no-unused-vars']).toBe('error')
   })
 
   it('String value rules are downgraded', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'error' })
 
-    expect(rules['no-unused-vars']).toStrictEqual('warn')
+    expect(rules['no-unused-vars']).toBe('warn')
   })
 
   it('Array value rules are downgraded', () => {
@@ -32,6 +32,6 @@ describe('ruleSeverities', () => {
   it('Disabled rules stay disabled', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'off' })
 
-    expect(rules['no-unused-vars']).toStrictEqual('off')
+    expect(rules['no-unused-vars']).toBe('off')
   })
 })
