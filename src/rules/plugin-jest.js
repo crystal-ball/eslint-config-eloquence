@@ -11,9 +11,6 @@ module.exports = {
   'jest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
   // Require that every test has at least one assertion with `expect`
   'jest/expect-expect': 'error',
-  // Requires that all test and describe names are all lowercase for readability,
-  // off b/c it's not value added to enforce that
-  'jest/lowercase-name': 'off',
   // Requires that only canonical Jest methods are used, aliases are not allowed
   // for easier searching and better consistency
   'jest/no-alias-methods': 'error',
@@ -64,14 +61,15 @@ module.exports = {
   'jest/prefer-expect-assertions': 'off',
   // Define setup/teardown before tests for better organization
   'jest/prefer-hooks-on-top': 'error',
+  // Requires that all test and describe names are all lowercase for readability,
+  // off b/c it's not value added to enforce that
+  'jest/prefer-lowercase-title': 'off',
   // Prefer setting up mocks with spyOn to not accidentally overwrite real methods
   'jest/prefer-spy-on': 'error',
   // Assert that object structure matches
   'jest/prefer-strict-equal': 'error',
   // Better tests and consistency
-  'jest/prefer-to-be-null': 'error',
-  // Better tests and consistency
-  'jest/prefer-to-be-undefined': 'error',
+  'jest/prefer-to-be': 'error',
   // // Better tests and consistency for array elements
   'jest/prefer-to-contain': 'error',
   // Better tests and consistency for array length
@@ -83,7 +81,7 @@ module.exports = {
   // Require at least one top level describe in each test
   'jest/require-top-level-describe': 'error',
   // Describe call validations
-  'jest/valid-describe': 'error',
+  'jest/valid-describe-callback': 'error',
   // Expect call validations
   'jest/valid-expect': ['error', { alwaysAwait: true }],
   // Don't return promises, use async-await
