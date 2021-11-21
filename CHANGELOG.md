@@ -14,6 +14,18 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [21.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.2...v21.0.0) (2021-11-21)
+
+
+### 💥 Breaking Changes!
+
+* ESLint major version update
+
+
+#### 💖 New
+
+* ESLint v8 💖 (#336)([14031eb](https://github.com/crystal-ball/eslint-config-eloquence/commit/14031eb8f7ac6b16e1f1b5567a773f6233695ba3)), closes [#336](https://github.com/crystal-ball/eslint-config-eloquence/issue/336)
+
 ### [20.0.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.1...v20.0.2) (2021-11-21)
 
 

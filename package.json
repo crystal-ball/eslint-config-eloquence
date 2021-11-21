@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eloquence",
-  "version": "20.0.2",
+  "version": "21.0.0",
   "description": "Adaptive, robust, elqouent ESLint configuration",
   "main": "./src/index.js",
   "type": "commonjs",
