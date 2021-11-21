@@ -166,21 +166,17 @@ module.exports = {
     // --- 🌲 Cypress directory --------------------------
     {
       files: ['cypress/**/*'],
-
       env: { 'cypress/globals': true },
-
-      rules: {
-        ...pluginCypress,
-        // Screen utility isn't available in Cypress tests
-        'testing-library/prefer-screen-queries': 'off',
-      },
+      rules: pluginCypress,
     },
 
     // --- 🚔 TypeScript files --------------------------
     {
       files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
 
       rules: envRuleSeverities(NODE_ENV, {
+        'no-unused-vars': 'off', // Prefer TS no-unused-vars
         // TS requires that fn params are typed so this rule is unnecessary
         'react/prop-types': 'off',
         // TS will error if required props aren't passed or default props without
