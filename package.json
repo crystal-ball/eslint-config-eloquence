@@ -36,16 +36,16 @@
   "dependencies": {
     "@babel/core": "7",
     "@babel/eslint-parser": "7.15.7",
-    "@typescript-eslint/eslint-plugin": "4.31.2",
-    "@typescript-eslint/parser": "4.31.2",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
     "confusing-browser-globals": "1.0.10",
-    "eslint": "7.32.0",
+    "eslint": "8.3.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-formatter-pretty": "4.1.0",
     "eslint-import-resolver-node": "0.3.6",
     "eslint-plugin-cypress": "2.12.1",
     "eslint-plugin-import": "2.24.2",
-    "eslint-plugin-jest": "24.4.2",
+    "eslint-plugin-jest": "25.2.4",
     "eslint-plugin-jest-dom": "3.9.2",
     "eslint-plugin-jest-formatting": "3.0.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
@@ -53,7 +53,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.26.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-testing-library": "4.12.4"
+    "eslint-plugin-testing-library": "5.0.0"
   },
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.11.0",
