@@ -147,6 +147,12 @@ module.exports = {
   'import/order': [
     'error',
     {
+      'pathGroups': [
+        {
+          pattern: '@/**',
+          group: 'parent',
+        },
+      ],
       'groups': [
         'builtin',
         'external', // includes configured `import/external-module-folders`
@@ -209,12 +215,7 @@ module.exports = {
   // in a single file.
   'import/group-exports': 'off',
 
-  // dynamic imports require a leading comment with a webpackChunkName
-  'import/dynamic-import-chunkname': [
-    'error',
-    {
-      importFunctions: [],
-      webpackChunknameFormat: '[a-zA-Z-_/.]+',
-    },
-  ],
+  // Prefer webpack5 default chunkname behavior (provides named chunks in dev and
+  // deterministic chunks in prod)
+  'import/dynamic-import-chunkname': 'off',
 }
