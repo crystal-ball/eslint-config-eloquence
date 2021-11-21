@@ -67,9 +67,6 @@ module.exports = {
     // Increase import cache lifetime to 60s
     'import/cache': 60,
 
-    // Mark `@/..` imports as "internal", used by the `import/order` rule
-    'import/internal-regex': /^@\//,
-
     // Use Node resolver upgraded with `@` alias support
     'import/resolver': path.resolve(__dirname, 'src/resolver'),
 
@@ -148,6 +145,24 @@ module.exports = {
       },
     },
 
+    // --- ✅ Test files --------------------------
+    {
+      files: ['src/**/*.spec.js'],
+
+      env: { jest: true },
+
+      rules: {
+        // In Jest test files allow defining `jest.mock()` calls before imports
+        // Under the hood Jest hoists these to the top of the file and it helps
+        // visually distinguish modules that are being replaced with mocks
+        'import/first': 'off',
+        ...pluginJest,
+        ...pluginJestDom,
+        ...pluginJestFormatting,
+        ...pluginTestingLibrary,
+      },
+    },
+
     // --- 🌲 Cypress directory --------------------------
     {
       files: ['cypress/**/*'],
@@ -174,24 +189,6 @@ module.exports = {
       }),
     },
 
-    // --- ✅ Test files --------------------------
-    {
-      files: ['*.spec.js'],
-
-      env: { jest: true },
-
-      rules: {
-        // In Jest test files allow defining `jest.mock()` calls before imports
-        // Under the hood Jest hoists these to the top of the file and it helps
-        // visually distinguish modules that are being replaced with mocks
-        'import/first': 'off',
-        ...pluginJest,
-        ...pluginJestDom,
-        ...pluginJestFormatting,
-        ...pluginTestingLibrary,
-      },
-    },
-
     // --- ⚙️ Configuration files --------------------------
     {
       files: [
@@ -202,6 +199,7 @@ module.exports = {
         'next.config.js',
         'tailwind.config.js',
         'webpack.config.js',
+        'webpack/**',
       ],
 
       parserOptions: {
