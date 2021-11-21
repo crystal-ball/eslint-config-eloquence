@@ -14,6 +14,17 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [21.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v21.0.0...v21.0.1) (2021-11-21)
+
+
+#### 🛠 Fix
+
+* React testing and typescript rule fixes (#338)([b128f2d](https://github.com/crystal-ball/eslint-config-eloquence/commit/b128f2d9bfee066f724386198600681446d8a7c9)), closes [#338](https://github.com/crystal-ball/eslint-config-eloquence/issue/338)
+
+#### Chore
+
+* Bump Node version support to 14 and 16 ⚙️ (#337)([e92310a](https://github.com/crystal-ball/eslint-config-eloquence/commit/e92310a08b200997340807237dbe91b26e3b5b35)), closes [#337](https://github.com/crystal-ball/eslint-config-eloquence/issue/337)
+
 ## [21.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v20.0.2...v21.0.0) (2021-11-21)
 
 
