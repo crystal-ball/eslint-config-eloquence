@@ -122,14 +122,35 @@ module.exports = {
   overrides: [
     // --- 1️⃣ Source directory --------------------------
     {
-      files: ['src/**/*'],
-
+      files: ['src/**/*.js', 'src/**/*.jsx'],
       parser: '@typescript-eslint/parser',
+      rules: {
+        // ℹ️ Prevent forgotten console.logs only needed in project source
+        // code
+        'no-console': NODE_ENV === 'test' ? 'error' : 'warn',
 
+        // ℹ️ Imported modules in project source need to be declared as
+        // dependencies to ensure they're available in production
+        'import/no-extraneous-dependencies': [
+          'error',
+          // Allow imports from devDependencies in story and test files
+          { devDependencies: ['**/*.{spec,stories}.{cjs,mjs,js}'] },
+        ],
+      },
+    },
+    {
+      files: ['src/**/*.ts', 'src/**/*.tsx'],
+      parser: '@typescript-eslint/parser',
       rules: {
         // TS rules include type-checking rules which requires files are part of the
         // TSConfig project so they're scoped to just the src/ directory
         ...pluginTypescript,
+
+        // TS requires that fn params are typed so this rule is unnecessary
+        'react/prop-types': 'off',
+        // TS will error if required props aren't passed or default props without
+        // initializers are used in an unsafe way
+        'react/require-default-props': 'off',
 
         // ℹ️ Prevent forgotten console.logs only needed in project source
         // code
@@ -145,12 +166,10 @@ module.exports = {
       },
     },
 
-    // --- ✅ Test files --------------------------
+    // --- ✅ Unit+Component test files --------------------------
     {
       files: ['src/**/*.spec.js'],
-
       env: { jest: true },
-
       rules: {
         // In Jest test files allow defining `jest.mock()` calls before imports
         // Under the hood Jest hoists these to the top of the file and it helps
@@ -170,38 +189,28 @@ module.exports = {
       rules: pluginCypress,
     },
 
-    // --- 🚔 TypeScript files --------------------------
+    // --- 🚔 ALL TypeScript files --------------------------
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
-
-      rules: envRuleSeverities(NODE_ENV, {
-        'no-unused-vars': 'off', // Prefer TS no-unused-vars
-        // TS requires that fn params are typed so this rule is unnecessary
-        'react/prop-types': 'off',
-        // TS will error if required props aren't passed or default props without
-        // initializers are used in an unsafe way
-        'react/require-default-props': 'off',
-      }),
+      rules: envRuleSeverities(NODE_ENV, pluginTypescript),
     },
 
     // --- ⚙️ Configuration files --------------------------
     {
       files: [
+        '.babelrc.js',
         '.eslintrc.js',
         '.storybook/main.js',
         'babel.config.js',
         'jest.config.js',
         'next.config.js',
+        'postcss.config.js',
         'tailwind.config.js',
         'webpack.config.js',
         'webpack/**',
       ],
-
-      parserOptions: {
-        sourceType: 'script',
-      },
-
+      parserOptions: { sourceType: 'script' },
       env: { node: true },
     },
   ],
