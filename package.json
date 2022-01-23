@@ -58,7 +58,7 @@
   "devDependencies": {
     "@crystal-ball/commitizen-base": "2.11.0",
     "@crystal-ball/prettier-base": "2.10.0",
-    "@crystal-ball/semantic-release-base": "2.34.0",
+    "@crystal-ball/semantic-release-base": "2.36.0",
     "@types/jest": "27.4.0",
     "jest": "27.4.5",
     "node-notifier": "10.0.0",
