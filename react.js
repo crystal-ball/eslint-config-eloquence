@@ -2,12 +2,12 @@
 
 const path = require('path')
 
+const envRuleSeverities = require('./src/rule-severities')
 const coreBestPractices = require('./src/rules/core-best-practices')
 const coreEcmaScript = require('./src/rules/core-ecma-script')
 const corePossibleErrors = require('./src/rules/core-possible-errors')
 const coreStylisticIssues = require('./src/rules/core-stylistic-issues')
 const coreVariables = require('./src/rules/core-variables')
-
 const pluginCypress = require('./src/rules/plugin-cypress')
 const pluginImport = require('./src/rules/plugin-import')
 const pluginJest = require('./src/rules/plugin-jest')
@@ -18,8 +18,6 @@ const pluginReactA11y = require('./src/rules/plugin-react-a11y')
 const pluginReactHooks = require('./src/rules/plugin-react-hooks')
 const pluginTestingLibrary = require('./src/rules/plugin-testing-library')
 const pluginTypescript = require('./src/rules/plugin-typescript')
-
-const envRuleSeverities = require('./src/rule-severities')
 
 const { NODE_ENV } = process.env
 
@@ -38,12 +36,10 @@ module.exports = {
   // Provides warnings for eslint-disable directives that aren't necessary
   reportUnusedDisableDirectives: true,
 
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    // Projects must provide a TS config, this needs to be configurable to support
-    // applications possibly including multiple tsConfigs for Cypress
-    project: ['./tsconfig.json'],
     ecmaFeatures: {
       jsx: true,
     },
@@ -64,19 +60,14 @@ module.exports = {
   ],
 
   settings: {
-    // Increase import cache lifetime to 60s
-    'import/cache': 60,
-
+    // --- Import plugin settings ---
+    // Assumes tools like eslint-loader aren't used
+    'import/cache': Infinity,
     // Use Node resolver upgraded with `@` alias support
     'import/resolver': path.resolve(__dirname, 'src/resolver'),
-
-    // ℹ️ Import plugin TS configs apply to all projects, ref plugin:import/typescript
-
-    // Extensions that will be parsed to check for exports, including JS, TS,
-    // React extenions, Node ESM, and type definitions
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-
-    // Ensure that types are considered external imports
+    // TS Support - Extensions that plugin-import will be parse to check for exports
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    // TS Support - Ensure that modules resolved with type definitions are considered external imports
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
 
     // --- React plugin settings ---
@@ -120,38 +111,29 @@ module.exports = {
   // --------------------------------------------------------
   // File overrides (Override directories, then extensions, then files)
   overrides: [
-    // --- 1️⃣ Source directory --------------------------
+    // --- 💡 TypeScript files --------------------------
     {
-      files: ['src/**/*.js', 'src/**/*.jsx'],
-      parser: '@typescript-eslint/parser',
-      rules: {
-        // ℹ️ Prevent forgotten console.logs only needed in project source
-        // code
-        'no-console': NODE_ENV === 'test' ? 'error' : 'warn',
-
-        // ℹ️ Imported modules in project source need to be declared as
-        // dependencies to ensure they're available in production
-        'import/no-extraneous-dependencies': [
-          'error',
-          // Allow imports from devDependencies in story and test files
-          { devDependencies: ['**/*.{spec,stories}.{cjs,mjs,js}'] },
-        ],
+      files: ['*.ts', '*.tsx'],
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'],
       },
-    },
-    {
-      files: ['src/**/*.ts', 'src/**/*.tsx'],
-      parser: '@typescript-eslint/parser',
       rules: {
-        // TS rules include type-checking rules which requires files are part of the
-        // TSConfig project so they're scoped to just the src/ directory
-        ...pluginTypescript,
+        ...envRuleSeverities(NODE_ENV, pluginTypescript),
 
         // TS requires that fn params are typed so this rule is unnecessary
         'react/prop-types': 'off',
         // TS will error if required props aren't passed or default props without
         // initializers are used in an unsafe way
         'react/require-default-props': 'off',
+      },
+    },
 
+    // --- 1️⃣ Source directory --------------------------
+    {
+      files: ['src/**/*'],
+
+      rules: {
         // ℹ️ Prevent forgotten console.logs only needed in project source
         // code
         'no-console': NODE_ENV === 'test' ? 'error' : 'warn',
@@ -189,16 +171,10 @@ module.exports = {
       rules: pluginCypress,
     },
 
-    // --- 🚔 ALL TypeScript files --------------------------
-    {
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      rules: envRuleSeverities(NODE_ENV, pluginTypescript),
-    },
-
     // --- ⚙️ Configuration files --------------------------
     {
       files: [
+        'webpack/**/*',
         '.babelrc.js',
         '.eslintrc.js',
         '.storybook/main.js',
@@ -208,7 +184,6 @@ module.exports = {
         'postcss.config.js',
         'tailwind.config.js',
         'webpack.config.js',
-        'webpack/**',
       ],
       parserOptions: { sourceType: 'script' },
       env: { node: true },

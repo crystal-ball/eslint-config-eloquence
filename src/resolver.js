@@ -4,6 +4,7 @@
 
 const fs = require('fs')
 const path = require('path')
+
 const nodeResolver = require('eslint-import-resolver-node')
 
 const interfaceVersion = 2
