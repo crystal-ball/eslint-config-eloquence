@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [22.0.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.1...v22.0.2) (2022-04-09)
+
+
+#### 🛠 Fix
+
+* Turn off named exports rule in TS contexts (#355)([dc06d70](https://github.com/crystal-ball/eslint-config-eloquence/commit/dc06d7023e8ffefa17d68c88d03aabf43720f6c1)), closes [#355](https://github.com/crystal-ball/eslint-config-eloquence/issue/355)
+
 ### [22.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.0...v22.0.1) (2022-04-09)
 
 
