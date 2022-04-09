@@ -123,12 +123,13 @@ module.exports = {
   'react/jsx-sort-props': [
     'error',
     {
-      ignoreCase: false,
       callbacksLast: true,
-      shorthandFirst: false,
       shorthandLast: true,
-      noSortAlphabetically: true,
       reservedFirst: true,
+
+      // Enforce alphabetical ordering
+      ignoreCase: false, // when true the rule *ignores* the case-sensitivity of the props order
+      noSortAlphabetically: false, // when true, alphabetical order is *not* enforced
     },
   ],
 
