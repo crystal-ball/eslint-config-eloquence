@@ -123,12 +123,13 @@ module.exports = {
   'react/jsx-sort-props': [
     'error',
     {
-      ignoreCase: false,
       callbacksLast: true,
-      shorthandFirst: false,
       shorthandLast: true,
-      noSortAlphabetically: true,
       reservedFirst: true,
+
+      // Enforce alphabetical ordering
+      ignoreCase: false, // when true the rule *ignores* the case-sensitivity of the props order
+      noSortAlphabetically: false, // when true, alphabetical order is *not* enforced
     },
   ],
 
@@ -309,8 +310,27 @@ module.exports = {
   'react/style-prop-object': 'error',
 
   // Prevent invalid characters from appearing in markup
+  //
+  // Note: Removing ' and " from entities that require escaping, this rule is
+  // intended to help accidentally messing up the JSX but linting/highlighting
+  // catch 99% of that and escaping quotes is cumbersome
+  //
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
-  'react/no-unescaped-entities': 'error',
+  'react/no-unescaped-entities': [
+    'error',
+    {
+      forbid: [
+        {
+          char: '>',
+          alternatives: ['&gt;'],
+        },
+        {
+          char: '}',
+          alternatives: ['&#125;'],
+        },
+      ],
+    },
+  ],
 
   // Prevent passing of children as props
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md

@@ -147,29 +147,22 @@ module.exports = {
   'import/order': [
     'error',
     {
+      // Map alias imports to internal group - otherwise they're unknown
       'pathGroups': [
         {
           pattern: '@/**',
-          group: 'parent',
+          group: 'internal',
         },
       ],
-      'groups': [
-        'builtin',
-        'external', // includes configured `import/external-module-folders`
-        'internal', // includes configured `import/internal-regex`
-        'parent',
-        'sibling',
-        'index',
-        'unknown',
-      ],
+      // Require a newline between builtins+external and source code modules.
+      // Allow but don't require a newline inside groups
+      'newlines-between': 'always',
       // Currently not enforced... validate that alphabetize doesn't require mixing
       // within larger groups, eg node built-in and a node_module
       'alphabetize': {
-        order: 'ignore',
+        order: 'asc',
       },
-      // Require a newline between builtins+external and source code modules.
-      // Allow but don't require a newline inside groups
-      'newlines-between': 'ignore',
+      'groups': [['builtin'], ['external'], ['parent', 'sibling', 'index', 'unknown']],
     },
   ],
 
