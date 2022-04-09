@@ -14,6 +14,28 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [22.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v21.2.0...v22.0.0) (2022-04-09)
+
+
+### 💥 Breaking Changes!
+
+* Imports and props must be sorted.
+
+
+#### 💖 New
+
+* Version updates for dependencies and sorting rules 🆙([52ec6a7](https://github.com/crystal-ball/eslint-config-eloquence/commit/52ec6a72acde34fa3056662081c76c6e1740bdae))
+
+#### Chore
+
+* Update actions/cache action to v3 (#349)([d67dde3](https://github.com/crystal-ball/eslint-config-eloquence/commit/d67dde3de0989163dee0483ae1fe702f8d04daf0)), closes [#349](https://github.com/crystal-ball/eslint-config-eloquence/issue/349)
+* Update actions/checkout action to v3 (#350)([2bf8705](https://github.com/crystal-ball/eslint-config-eloquence/commit/2bf870587ba86807a031b59efeec167d3bc664f7)), closes [#350](https://github.com/crystal-ball/eslint-config-eloquence/issue/350)
+* Update actions/setup-node action to v3 (#347)([1019181](https://github.com/crystal-ball/eslint-config-eloquence/commit/1019181be026dd27ee6c35a841c9f5353691a1bd)), closes [#347](https://github.com/crystal-ball/eslint-config-eloquence/issue/347)
+* Update devDependencies 🆙 (#342)([3713841](https://github.com/crystal-ball/eslint-config-eloquence/commit/37138412f47d0eeb711500318d5c8bb2989c1c2d)), closes [#342](https://github.com/crystal-ball/eslint-config-eloquence/issue/342)
+* Update devDependencies 🆙 (#345)([600e6c4](https://github.com/crystal-ball/eslint-config-eloquence/commit/600e6c400de920e3a8d5a43c2ba1467d69e7ef3f)), closes [#345](https://github.com/crystal-ball/eslint-config-eloquence/issue/345)
+* Update devDependencies 🆙 (#346)([4103de7](https://github.com/crystal-ball/eslint-config-eloquence/commit/4103de7f9c6ce4b32e9917e9a1293d6cb0e8de1f)), closes [#346](https://github.com/crystal-ball/eslint-config-eloquence/issue/346)
+* Update devDependencies 🆙 (#348)([2dde1be](https://github.com/crystal-ball/eslint-config-eloquence/commit/2dde1becd1416a07e742ff938e5987e2fa8a894d)), closes [#348](https://github.com/crystal-ball/eslint-config-eloquence/issue/348)
+
 ## [21.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v21.1.0...v21.2.0) (2021-12-19)
 
 
