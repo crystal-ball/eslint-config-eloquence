@@ -14,6 +14,13 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+### [22.0.1](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.0...v22.0.1) (2022-04-09)
+
+
+#### 🛠 Fix
+
+* Sorting groups order (#354)([96929e5](https://github.com/crystal-ball/eslint-config-eloquence/commit/96929e5d3db1580938cf6be0526f1e66159b3eb9)), closes [#354](https://github.com/crystal-ball/eslint-config-eloquence/issue/354)
+
 ## [22.0.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v21.2.0...v22.0.0) (2022-04-09)
 
 
