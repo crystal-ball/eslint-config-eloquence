@@ -117,19 +117,17 @@ module.exports = {
   // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
   'react/sort-prop-types': 'error',
 
-  // Enforce that reserved props are first, then regular props, then shorthand props, and
-  // finally callback props, eg:
+  // Props sorting - tldr; don't enforce alphabetical sorting of props, it's not *that*
+  // helpful and for some things like design system components alphabetical is less
+  // important than structural
+  // DO - enforce reserved keys are first and callbacks are last to provide "structural" sorting
   // <Button key={id} variant="secondary" disabled onClick={handleClick} />
   'react/jsx-sort-props': [
     'error',
     {
-      callbacksLast: true,
-      shorthandLast: true,
+      noSortAlphabetically: true, // Do _NOT_ enforce alphabetical ordering
       reservedFirst: true,
-
-      // Enforce alphabetical ordering
-      ignoreCase: false, // when true the rule *ignores* the case-sensitivity of the props order
-      noSortAlphabetically: false, // when true, alphabetical order is *not* enforced
+      callbacksLast: true,
     },
   ],
 
