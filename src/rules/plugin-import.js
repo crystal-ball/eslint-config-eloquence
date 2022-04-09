@@ -142,8 +142,10 @@ module.exports = {
   // Ensure consistent use of file extension within the import path
   'import/extensions': ['error', 'never'],
 
-  // Require that Node built-ins and node_module imports are grouped before
-  // application imports.
+  // 📍 Put a pin in it - Helpful import sorting without being pedantic:
+  // Create 4 "tiers" of imports and require alphabetical sorting within them,
+  // no spacing requirements between b/c there's not a simple heuristic that
+  // works well for long and short lists.
   'import/order': [
     'error',
     {
@@ -154,15 +156,16 @@ module.exports = {
           group: 'internal',
         },
       ],
-      // Require a newline between builtins+external and source code modules.
-      // Allow but don't require a newline inside groups
-      'newlines-between': 'always',
-      // Currently not enforced... validate that alphabetize doesn't require mixing
-      // within larger groups, eg node built-in and a node_module
-      'alphabetize': {
-        order: 'asc',
-      },
-      'groups': [['builtin'], ['external'], ['parent', 'sibling', 'index', 'unknown']],
+      // Skipping requirement for newlines - no always helpful heuristic available
+      'newlines-between': 'ignore',
+      // Alphabetize imports within their groups - easy and consistent
+      'alphabetize': { order: 'asc' },
+      'groups': [
+        'builtin',
+        'external',
+        'internal',
+        ['parent', 'sibling', 'index', 'unknown'],
+      ],
     },
   ],
 
@@ -179,7 +182,7 @@ module.exports = {
   'import/max-dependencies': 'off',
 
   // Allow unassigned imports, it's surprisingly irritating to have to allow
-  // each occurence
+  // each occurrence
   'import/no-unassigned-import': 'off',
 
   // Prevent importing the default as if it were named
