@@ -14,6 +14,20 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [22.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.2...v22.1.0) (2022-06-18)
+
+
+#### ✨ Update
+
+* Package depdencies 🆙 (#362)([cd8df89](https://github.com/crystal-ball/eslint-config-eloquence/commit/cd8df89f1d9fb32738ab45c45b971666f2cdb261)), closes [#362](https://github.com/crystal-ball/eslint-config-eloquence/issue/362)
+
+#### Chore
+
+* Update devDependencies 🆙 (#356)([dbee00e](https://github.com/crystal-ball/eslint-config-eloquence/commit/dbee00e8f903977eb2d9843393db379b7d8ddd59)), closes [#356](https://github.com/crystal-ball/eslint-config-eloquence/issue/356)
+* Update devDependencies 🆙 (#359)([6c7b03f](https://github.com/crystal-ball/eslint-config-eloquence/commit/6c7b03f0efdffcf37ee7ab9efbd761ec1f5e568f)), closes [#359](https://github.com/crystal-ball/eslint-config-eloquence/issue/359)
+* Update github/codeql-action action to v2 (#358)([6f417a1](https://github.com/crystal-ball/eslint-config-eloquence/commit/6f417a1932c172d59bf9f39de6651c0154747fe3)), closes [#358](https://github.com/crystal-ball/eslint-config-eloquence/issue/358)
+* Update package jest to v28 🆙 (#357)([0398e55](https://github.com/crystal-ball/eslint-config-eloquence/commit/0398e550ee08fca2c7269d4bdd095294da2c8b6c)), closes [#357](https://github.com/crystal-ball/eslint-config-eloquence/issue/357)
+
 ### [22.0.2](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.1...v22.0.2) (2022-04-09)
 
 
