@@ -57,8 +57,8 @@
     "@crystal-ball/commitizen-base": "2.12.0",
     "@crystal-ball/prettier-base": "2.13.0",
     "@crystal-ball/semantic-release-base": "2.40.0",
-    "@types/jest": "29.1.1",
-    "jest": "29.1.2",
+    "@types/jest": "29.2.1",
+    "jest": "29.2.2",
     "node-notifier": "10.0.1",
     "prettier": "2.7.1",
     "typescript": "4.8.4"
