@@ -58,9 +58,9 @@
     "@crystal-ball/prettier-base": "2.13.0",
     "@crystal-ball/semantic-release-base": "2.40.0",
     "@types/jest": "29.4.0",
-    "jest": "29.4.1",
+    "jest": "29.4.3",
     "node-notifier": "10.0.1",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "typescript": "4.9.5"
   }
 }
