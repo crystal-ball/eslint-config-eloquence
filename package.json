@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "prettier": "2",
-    "typescript": "4"
+    "typescript": "4 || 5"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.28.0",
