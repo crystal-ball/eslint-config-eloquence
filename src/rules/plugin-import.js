@@ -150,7 +150,7 @@ module.exports = {
     'error',
     {
       // Map alias imports to internal group - otherwise they're unknown
-      'pathGroups': [
+      pathGroups: [
         {
           pattern: '@/**',
           group: 'internal',
@@ -159,8 +159,8 @@ module.exports = {
       // Skipping requirement for newlines - no always helpful heuristic available
       'newlines-between': 'ignore',
       // Alphabetize imports within their groups - easy and consistent
-      'alphabetize': { order: 'asc' },
-      'groups': [
+      alphabetize: { order: 'asc' },
+      groups: [
         'builtin',
         'external',
         'internal',

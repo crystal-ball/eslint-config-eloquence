@@ -19,7 +19,7 @@ module.exports = {
 
   // Match the default `module` prevent adding 'use strict' as ESModules are
   // strict by default
-  'strict': 'error',
+  strict: 'error',
 
   // Params with defaults are optional and should be last in a set of fn params
   // so that they can be ommitted
@@ -66,7 +66,7 @@ module.exports = {
   'block-scoped-var': 'error',
 
   // specify the maximum cyclomatic complexity allowed in a program
-  'complexity': ['off', 11],
+  complexity: ['off', 11],
 
   // enforce that class methods use "this"
   // https://eslint.org/docs/rules/class-methods-use-this
@@ -88,7 +88,7 @@ module.exports = {
 
   // require the use of === and !==
   // https://eslint.org/docs/rules/eqeqeq
-  'eqeqeq': ['error', 'always', { null: 'ignore' }],
+  eqeqeq: ['error', 'always', { null: 'ignore' }],
 
   // make sure for-in loops have an if statement
   'guard-for-in': 'error',
@@ -386,7 +386,7 @@ module.exports = {
   'prefer-named-capture-group': 'off',
 
   // require use of the second argument for parseInt()
-  'radix': 'error',
+  radix: 'error',
 
   // allow using async fns without explicitly using await, it can be useful
   // when you know a fn should be async
@@ -401,5 +401,5 @@ module.exports = {
   'vars-on-top': 'error',
 
   // require or disallow Yoda conditions
-  'yoda': 'error',
+  yoda: 'error',
 }
