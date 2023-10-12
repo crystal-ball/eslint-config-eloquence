@@ -14,6 +14,30 @@ with [@crystal-ball/semantic-release-base](https://github.com/crystal-ball/seman
 > - 🛠 - Fixes
 
 
+## [22.2.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.1.0...v22.2.0) (2023-10-12)
+
+
+#### ✨ Update
+
+* Node.js to v18 (#373)([6fa7232](https://github.com/crystal-ball/eslint-config-eloquence/commit/6fa7232ce42a62113cfe7b110b7428b2aef234eb)), closes [#373](https://github.com/crystal-ball/eslint-config-eloquence/issue/373)
+
+#### Chore
+
+* Update actions/checkout action to v4 (#385)([acb9a48](https://github.com/crystal-ball/eslint-config-eloquence/commit/acb9a488fe2c7976bf082f60648d00f6b4eb0cec)), closes [#385](https://github.com/crystal-ball/eslint-config-eloquence/issue/385)
+* Update devDependencies to v29 🆙 (#368)([f87af2f](https://github.com/crystal-ball/eslint-config-eloquence/commit/f87af2ff4c3344a758f9660e944a1dbb390d855a)), closes [#368](https://github.com/crystal-ball/eslint-config-eloquence/issue/368)
+* Update devDependencies 🆙 (#364)([fdbcf2d](https://github.com/crystal-ball/eslint-config-eloquence/commit/fdbcf2de73262dbc00119ed90278b47fad2dcc7d)), closes [#364](https://github.com/crystal-ball/eslint-config-eloquence/issue/364)
+* Update devDependencies 🆙 (#366)([61ee4b6](https://github.com/crystal-ball/eslint-config-eloquence/commit/61ee4b6ae0c1e7d8163b5ce19b37ee4dc11751c7)), closes [#366](https://github.com/crystal-ball/eslint-config-eloquence/issue/366)
+* Update devDependencies 🆙 (#367)([3b5822c](https://github.com/crystal-ball/eslint-config-eloquence/commit/3b5822cc407da7a95f2f8fdb18e440431a91135a)), closes [#367](https://github.com/crystal-ball/eslint-config-eloquence/issue/367)
+* Update devDependencies 🆙 (#371)([7070f3d](https://github.com/crystal-ball/eslint-config-eloquence/commit/7070f3d64be52785839ca2c51d57c8ad39ce8466)), closes [#371](https://github.com/crystal-ball/eslint-config-eloquence/issue/371)
+* Update devDependencies 🆙 (#372)([ed76cab](https://github.com/crystal-ball/eslint-config-eloquence/commit/ed76cabba513d0c3ea3029edbe3ed6457a3fde32)), closes [#372](https://github.com/crystal-ball/eslint-config-eloquence/issue/372)
+* Update devDependencies 🆙 (#374)([6092104](https://github.com/crystal-ball/eslint-config-eloquence/commit/60921043fa384ea4a1c77a6f96ea7d2f4cce23ac)), closes [#374](https://github.com/crystal-ball/eslint-config-eloquence/issue/374)
+* Update devDependencies 🆙 (#375)([5978369](https://github.com/crystal-ball/eslint-config-eloquence/commit/5978369136fb31ad0f5868abe97e5ca4fb5c216f)), closes [#375](https://github.com/crystal-ball/eslint-config-eloquence/issue/375)
+* Update devDependencies 🆙 (#377)([fca44f0](https://github.com/crystal-ball/eslint-config-eloquence/commit/fca44f042a579137f5983adfd5db03af9e4c768c)), closes [#377](https://github.com/crystal-ball/eslint-config-eloquence/issue/377)
+* Update devDependencies 🆙 (#378)([751b594](https://github.com/crystal-ball/eslint-config-eloquence/commit/751b594a1b6497619bf2929596673872864eb301)), closes [#378](https://github.com/crystal-ball/eslint-config-eloquence/issue/378)
+* Update devDependencies 🆙 (#379)([55368d4](https://github.com/crystal-ball/eslint-config-eloquence/commit/55368d4ee7da8cbff6d5620ff619bc15cec9a888)), closes [#379](https://github.com/crystal-ball/eslint-config-eloquence/issue/379)
+* Update package @types/jest to v29.5.2 🆙 (#381)([a6e54b5](https://github.com/crystal-ball/eslint-config-eloquence/commit/a6e54b5c80476589b347e0e9fb7314da1c44364e)), closes [#381](https://github.com/crystal-ball/eslint-config-eloquence/issue/381)
+* Update package typescript to v5 🆙 (#380)([e7bc027](https://github.com/crystal-ball/eslint-config-eloquence/commit/e7bc0272909b8f4addae889b238eb291e4ed142b)), closes [#380](https://github.com/crystal-ball/eslint-config-eloquence/issue/380)
+
 ## [22.1.0](https://github.com/crystal-ball/eslint-config-eloquence/compare/v22.0.2...v22.1.0) (2022-06-18)
 
 
