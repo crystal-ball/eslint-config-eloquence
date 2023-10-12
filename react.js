@@ -71,7 +71,7 @@ module.exports = {
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
 
     // --- React plugin settings ---
-    'react': {
+    react: {
       pragma: 'React',
       version: 'detect',
       // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
