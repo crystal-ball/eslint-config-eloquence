@@ -216,7 +216,7 @@ This means linting related to code quality is always surfaced as a priority, but
 during development non critical feedback related to code style and formatting is
 moderated.
 
-#### Linting philosphy
+#### Linting philosophy
 
 In general, the Eloquence ruleset tries to encourage these coding practices:
 
@@ -293,19 +293,20 @@ executed by Node.js.
 This package will automatically include all of the packages needed to run
 ESLint. Projects should allow this package to "own" the dependency management
 for packages related to ESLint. _(When possible ensure that the only version of
-`eslint` and `babel-eslint` included in a project are the versions specified by
-this package.)_
+`eslint` included in a project is the versions specified by this package.)_
 
 #### Included dependencies:
 
 - [`eslint`][]
-- [`babel-eslint`][]
+- [`@typescript-eslint/eslint-plugin`][]
+- [`@typescript-eslint/parser`][]
 - [`eslint-config-prettier`][]
 - [`eslint-plugin-cypress`][]
 - [`eslint-plugin-import`][]
-- [`eslint-plugin-jest][]
+- [`eslint-plugin-jest`][]
 - [`eslint-plugin-jest-dom`][]
-- [`eslint-plugin-jest-formatting][]
+- [`eslint-plugin-jest-extended`][]
+- [`eslint-plugin-jest-formatting`][]
 - [`eslint-plugin-jsx-a11y`][]
 - [`eslint-plugin-prettier`][]
 - [`eslint-plugin-react`][]
@@ -332,12 +333,12 @@ everyone 🎉. <br /> Please read the [Code of Conduct](./CODE_OF_CONDUCT.md) an
 [`babel-eslint`]:https://github.com/babel/babel-eslint
 [`eslint-config-prettier`]:https://github.com/prettier/eslint-config-prettier
 [`eslint-formatter-pretty`]:https://github.com/sindresorhus/eslint-formatter-pretty
-[`eslint-import-resolver-webpack`]:https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack
 [`eslint-plugin-cypress`]:https://github.com/cypress-io/eslint-plugin-cypress
 [`eslint-plugin-import`]:https://github.com/benmosher/eslint-plugin-import
-[`eslint-plugin-jest]:https://github.com/jest-community/eslint-plugin-jest
+[`eslint-plugin-jest`]:https://github.com/jest-community/eslint-plugin-jest
 [`eslint-plugin-jest-dom`]:https://github.com/testing-library/eslint-plugin-jest-dom
-[`eslint-plugin-jest-formatting]:https://github.com/dangreenisrael/eslint-plugin-jest-formatting
+[`eslint-plugin-jest-extended`]:https://github.com/jest-community/eslint-plugin-jest-extended
+[`eslint-plugin-jest-formatting`]:https://github.com/dangreenisrael/eslint-plugin-jest-formatting
 [`eslint-plugin-jsx-a11y`]:https://github.com/evcohen/eslint-plugin-jsx-a11y
 [`eslint-plugin-prettier`]:https://github.com/prettier/eslint-plugin-prettier
 [`eslint-plugin-react`]:https://github.com/yannickcr/eslint-plugin-react

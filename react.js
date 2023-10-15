@@ -10,13 +10,9 @@ const coreStylisticIssues = require('./src/rules/core-stylistic-issues')
 const coreVariables = require('./src/rules/core-variables')
 const pluginCypress = require('./src/rules/plugin-cypress')
 const pluginImport = require('./src/rules/plugin-import')
-const pluginJest = require('./src/rules/plugin-jest')
-const pluginJestDom = require('./src/rules/plugin-jest-dom')
-const pluginJestFormatting = require('./src/rules/plugin-jest-formatting')
 const pluginReact = require('./src/rules/plugin-react')
 const pluginReactA11y = require('./src/rules/plugin-react-a11y')
 const pluginReactHooks = require('./src/rules/plugin-react-hooks')
-const pluginTestingLibrary = require('./src/rules/plugin-testing-library')
 const pluginTypescript = require('./src/rules/plugin-typescript')
 
 const { NODE_ENV } = process.env
@@ -49,14 +45,10 @@ module.exports = {
     '@typescript-eslint',
     'cypress',
     'import',
-    'jest',
-    'jest-dom',
-    'jest-formatting',
     'jsx-a11y',
     'prettier',
     'react',
     'react-hooks',
-    'testing-library',
   ],
 
   settings: {
@@ -148,23 +140,32 @@ module.exports = {
       },
     },
 
-    // --- ✅ Unit+Component test files --------------------------
+    // --- ✅ Jest tests --------------------------
     {
       files: ['src/**/*.spec.js'],
+      extends: [
+        'plugin:jest-formatting/strict',
+        'plugin:jest/all',
+        'plugin:jest-extended/all',
+        'plugin:jest-dom/recommended',
+        'plugin:testing-library/react',
+      ],
+      plugins: [
+        'jest',
+        'jest-dom',
+        'jest-extended',
+        'jest-formatting',
+        'testing-library',
+      ],
       env: { jest: true },
       rules: {
-        // In Jest test files allow defining `jest.mock()` calls before imports
-        // Under the hood Jest hoists these to the top of the file and it helps
-        // visually distinguish modules that are being replaced with mocks
-        'import/first': 'off',
-        ...pluginJest,
-        ...pluginJestDom,
-        ...pluginJestFormatting,
-        ...pluginTestingLibrary,
+        'jest/unbound-method': 'off', // requires addl ts configs to enable
+        'jest/prefer-expect-assertions': 'off', // just a little toooo opinionated
+        'testing-library/prefer-user-event': 'error', // opt in to stricter user-event
       },
     },
 
-    // --- 🌲 Cypress directory --------------------------
+    // --- 🌲 Cypress tests --------------------------
     {
       files: ['cypress/**/*'],
       env: { 'cypress/globals': true },
