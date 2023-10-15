@@ -2,20 +2,20 @@
 
 const ruleSeverities = require('./rule-severities')
 
-describe('ruleSeverities', () => {
-  it('Rules are not downgraded in test', () => {
+describe('ruleSeverities()', () => {
+  it('rules are not downgraded in test', () => {
     const rules = ruleSeverities('test', { 'no-unused-vars': 'error' })
 
     expect(rules['no-unused-vars']).toBe('error')
   })
 
-  it('String value rules are downgraded', () => {
+  it('string value rules are downgraded', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'error' })
 
     expect(rules['no-unused-vars']).toBe('warn')
   })
 
-  it('Array value rules are downgraded', () => {
+  it('array value rules are downgraded', () => {
     const rules = ruleSeverities('development', {
       'no-unused-vars': [
         'error',
@@ -29,7 +29,7 @@ describe('ruleSeverities', () => {
     ])
   })
 
-  it('Disabled rules stay disabled', () => {
+  it('disabled rules stay disabled', () => {
     const rules = ruleSeverities('development', { 'no-unused-vars': 'off' })
 
     expect(rules['no-unused-vars']).toBe('off')

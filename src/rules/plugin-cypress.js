@@ -25,23 +25,6 @@ module.exports = {
   // help encourage test resiliency
   'cypress/require-data-selectors': 'error',
 
-  // --- ⬆️ Rule overrides ---
-
-  // Allow using `function () {}` instead of arrow funcs to support accessing
-  // `this` inside of tests, where an arrow function will bind `this` to the
-  // incorrect scope:
-  //
-  // beforeEach(function () {
-  //   cy.get('button').invoke('text').as('text')
-  // })
-  //
-  // it('has access to text', function () {
-  //   this.text
-  // })
-  // TODO: verify that arrow funcs do indeed break this
-  'func-names': 'off',
-
-  // Allow triple slash type directives in order to include TypeScript
-  // <reference types="Cypress" /> directives
-  'spaced-comment': 'off',
+  // Disallow unsafe cy.*() commands that can hang the Cypress runner
+  'cypress/unsafe-to-chain-command': 'error',
 }

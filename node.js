@@ -20,8 +20,6 @@ const corePossibleErrors = require('./src/rules/core-possible-errors')
 const coreStylisticIssues = require('./src/rules/core-stylistic-issues')
 const coreVariables = require('./src/rules/core-variables')
 const pluginImport = require('./src/rules/plugin-import')
-const pluginJest = require('./src/rules/plugin-jest')
-const pluginJestFormatting = require('./src/rules/plugin-jest-formatting')
 const pluginNode = require('./src/rules/plugin-node')
 const pluginTypescript = require('./src/rules/plugin-typescript')
 
@@ -52,7 +50,7 @@ module.exports = {
     ecmaFeatures: {},
   },
 
-  plugins: ['@typescript-eslint', 'import', 'jest', 'jest-formatting', 'prettier'],
+  plugins: ['@typescript-eslint', 'import', 'prettier'],
 
   settings: {
     // Assumes tools like eslint-loader aren't used
@@ -136,17 +134,18 @@ module.exports = {
     // --- ✅ Test files --------------------------
     {
       files: ['*.spec.js'],
+      extends: [
+        'plugin:jest-formatting/strict',
+        'plugin:jest/all',
+        'plugin:jest-extended/all',
+      ],
+      plugins: ['jest', 'jest-extended', 'jest-formatting'],
+      rules: {
+        'jest/unbound-method': 'off', // requires addl ts configs to enable
+        'jest/prefer-expect-assertions': 'off', // just a little toooo opinionated
+      },
 
       env: { jest: true },
-
-      rules: {
-        // In Jest test files allow defining `jest.mock()` calls before imports
-        // Under the hood Jest hoists these to the top of the file and it helps
-        // visually distinguish modules that are being replaced with mocks
-        'import/first': 'off',
-        ...pluginJest,
-        ...pluginJestFormatting,
-      },
     },
 
     // --- 💾 CommonJS files --------------------------

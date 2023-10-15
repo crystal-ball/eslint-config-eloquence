@@ -142,29 +142,25 @@ module.exports = {
   // Ensure consistent use of file extension within the import path
   'import/extensions': ['error', 'never'],
 
-  // 📍 Put a pin in it - Helpful import sorting without being pedantic:
-  // Create 4 "tiers" of imports and require alphabetical sorting within them,
-  // no spacing requirements between b/c there's not a simple heuristic that
-  // works well for long and short lists.
   'import/order': [
     'error',
     {
-      // Map alias imports to internal group - otherwise they're unknown
-      pathGroups: [
-        {
-          pattern: '@/**',
-          group: 'internal',
-        },
-      ],
+      // Alphabetize imports within their groups - easy and consistent
+      alphabetize: { order: 'asc', orderImportKind: 'asc' },
       // Skipping requirement for newlines - no always helpful heuristic available
       'newlines-between': 'ignore',
-      // Alphabetize imports within their groups - easy and consistent
-      alphabetize: { order: 'asc' },
+      // Allow imports with side effects to be anywhere
+      warnOnUnassignedImports: false,
+      // Map alias imports to internal group - otherwise they're unknown
+      pathGroups: [{ pattern: '@/**', group: 'internal' }],
       groups: [
         'builtin',
         'external',
         'internal',
-        ['parent', 'sibling', 'index', 'unknown'],
+        'parent',
+        'sibling',
+        'index',
+        'unknown',
       ],
     },
   ],
