@@ -9,7 +9,7 @@
     "url": "https://github.com/crystal-ball/eslint-config-eloquence.git"
   },
   "engines": {
-    "node": "16 || 18"
+    "node": "16 || 18 || 20"
   },
   "keywords": [
     "eloquent",
